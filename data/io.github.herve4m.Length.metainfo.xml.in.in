@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>@application_id@</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Length</name>
+  <summary>A ruler to measure objects on screen</summary>
+  <description>
+    <p>
+      GNOME application for measuring distances on screen to help you design and inspect layouts and graphics.
+      Length includes the following features:
+    </p>
+    <ul>
+      <li>Pixels, centimeters, inches, or percentages as units</li>
+      <li>Horizontal or vertical orientation</li>
+      <li>Left-to-right or right-to-left orientation</li>
+      <li>Transparency levels</li>
+      <li>Track pointer position</li>
+    </ul>
+  </description>
+
+  <developer id="io.github.herve4m">
+    <name translate="no">Hervé Quatremain</name>
+  </developer>
+
+  <url type="homepage">https://github.com/herve4m/length</url>
+  <url type="vcs-browser">https://github.com/herve4m/length</url>
+  <url type="bugtracker">https://github.com/herve4m/length/issues</url>
+  <url type="translate">https://github.com/herve4m/length/tree/main/po</url>
+  <url type="contribute">https://github.com/herve4m/length/blob/main/CONTRIBUTING.md</url>
+
+  <translation type="gettext">length</translation>
+  <launchable type="desktop-id">@application_id@.desktop</launchable>
+  <content_rating type="oars-1.1" />
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/horizontal-pixels.png</image>
+      <caption>Horizontal view of Length with pixels as units</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/vertical-inches.png</image>
+      <caption>Vertical view of Length with inches as units</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/menu.png</image>
+      <caption>Length main menu</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/preferences.png</image>
+      <caption>Preferences window</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/track-pointer.png</image>
+      <caption>Pointer tracking enabled</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/right-to-left.png</image>
+      <caption>Right to left ruler orientation</caption>
+    </screenshot>
+    <screenshot>
+      <video container="webm" codec="vp9">https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/orientation.webm</video>
+      <caption>Changing Length orientation</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.1.0" date="2025-01-31">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v010</url>
+      <description translate="no">
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
+
+</component>

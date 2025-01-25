@@ -1,0 +1,40 @@
+---
+# Development build
+# $ flatpak remote-add --user --if-not-exists gnome-nightly \
+#   https://nightly.gnome.org/gnome-nightly.flatpakrepo
+# $ flatpak-builder --force-clean --user --install-deps-from=gnome-nightly \
+#   --repo=repo --install builddir io.github.herve4m.yaml
+#
+# See build-aux/flatpak/io.github.herve4m.Length.yaml for the release version.
+#
+id: io.github.herve4m.Length.Devel
+runtime: org.gnome.Platform
+runtime-version: master
+sdk: org.gnome.Sdk
+command: length
+finish-args:
+  - --allow=devel
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  - --device=dri
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /man
+  - /share/doc
+  - /share/gtk-doc
+  - /share/man
+  - /share/pkgconfig
+  - "*.la"
+  - "*.a"
+modules:
+  - name: length
+    builddir: true
+    buildsystem: meson
+    config-opts:
+      - -Ddevelopment=true
+    sources:
+      - type: dir
+        path: .
+...

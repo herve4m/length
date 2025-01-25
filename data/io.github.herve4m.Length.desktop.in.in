@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Length
+GenericName=Screen ruler
+Comment=Measure objects on screen
+Exec=length
+Icon=@icon@
+Terminal=false
+Type=Application
+Categories=Utility
+Keywords=GTK;GNOME;ruler;measure;
+StartupNotify=true
+DBusActivatable=true

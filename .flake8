@@ -1,0 +1,3 @@
+[flake8]
+max-line-length=94
+extend-ignore=E402,F821

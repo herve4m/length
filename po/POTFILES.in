@@ -1,0 +1,19 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/io.github.herve4m.Length.desktop.in
+data/io.github.herve4m.Length.metainfo.xml.in
+data/io.github.herve4m.Length.gschema.xml
+data/ui/help-overlay.ui
+data/ui/offset.ui
+data/ui/opacity.ui
+data/ui/orientation.ui
+data/ui/pointer_tracking.ui
+data/ui/preferences.ui
+data/ui/window.ui
+src/draw_context.py
+src/main.py
+src/preferences.py
+src/unit_cm.py
+src/unit_inch.py
+src/unit_pct.py
+src/unit_px.py

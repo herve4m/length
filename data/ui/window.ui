@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 Hervé Quatremain
+
+  This file is part of Length.
+
+  Length is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  Length is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  Length. If not, see <https://www.gnu.org/licenses/>.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="LengthWindow" parent="AdwApplicationWindow">
+    <style>
+      <class name="length-main" />
+    </style>
+    <property name="title" translatable="no">Length</property>
+    <property name="width-request">43</property>
+    <property name="height-request">43</property>
+    <property name="opacity">1</property>
+    <property name="content">
+      <object class="GtkWindowHandle">
+        <child>
+          <object class="GtkOverlay" id="overlay">
+            <child>
+              <object class="GtkDrawingArea" id="drawing_area">
+                <child>
+                  <object class="GtkEventControllerMotion">
+                    <signal name="motion" handler="_on_motion_event"/>
+                    <signal name="leave" handler="_on_leave_event"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkGestureClick" id="middle_click">
+                    <property name="button">0</property>
+                    <signal name="pressed" handler="_on_button_pressed_event"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="overlay">
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="primary">true</property>
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                <property name="menu-model">primary_menu</property>
+                <property name="has-frame">false</property>
+                <property name="halign">GTK_ALIGN_START</property>
+                <property name="valign">GTK_ALIGN_START</property>
+                <property name="margin-start">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-top">5</property>
+                <property name="margin-bottom">5</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEventControllerKey">
+                <signal name="key_pressed" handler="_on_key_pressed_event"/>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+    <signal name="close-request" handler="on_close"/>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="custom">opacity</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="custom">pointer_tracking</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="custom">offset</attribute>
+      </item>
+    </section>
+    <!--
+    <section>
+      <item>
+        <attribute name="custom">orientation</attribute>
+      </item>
+    </section>
+    -->
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Length</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Quit</attribute>
+        <attribute name="action">app.quit</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

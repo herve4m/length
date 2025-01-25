@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  Copyright 2025 Hervé Quatremain
+
+  This file is part of Length.
+
+  Length is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  Length is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  Length. If not, see <https://www.gnu.org/licenses/>.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="OpacityControl" parent="GtkBox">
+    <property name="margin-end">18</property>
+    <property name="margin-start">18</property>
+    <property name="spacing">12</property>
+    <child>
+      <object class="GtkLabel" id="opacity_label">
+        <property name="label" translatable="no">100%</property>
+        <property name="tooltip-text" translatable="yes">Opacity</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkScale">
+        <property name="adjustment">
+          <object class="GtkAdjustment" id="opacity_adjustment">
+            <property name="page-increment">10.0</property>
+            <property name="step-increment">1.0</property>
+            <property name="upper">100.0</property>
+            <signal name="value-changed" handler="_opacity_changed_event"/>
+          </object>
+        </property>
+        <property name="digits">0</property>
+        <property name="draw-value">false</property>
+        <property name="hexpand">true</property>
+        <property name="value-pos">1</property>
+        <property name="tooltip-text" translatable="yes">Opacity</property>
+      </object>
+    </child>
+  </template>
+</interface>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 Hervé Quatremain
+
+  This file is part of Length.
+
+  Length is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  Length is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  Length. If not, see <https://www.gnu.org/licenses/>.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<gresources>
+  <gresource prefix="/io/github/herve4m/Length">
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/offset.ui</file>
+    <file preprocess="xml-stripblanks">ui/opacity.ui</file>
+    <file preprocess="xml-stripblanks">ui/orientation.ui</file>
+    <file preprocess="xml-stripblanks">ui/pointer_tracking.ui</file>
+    <file preprocess="xml-stripblanks">ui/preferences.ui</file>
+    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/help-overlay.ui</file>
+    <file alias="style.css">media/css/style.css</file>
+    <file alias="Devel/style.css">media/css/style.css</file>
+    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/format-text-direction-ltr-symbolic.svg">media/icons/format-text-direction-ltr-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/format-text-direction-rtl-symbolic.svg">media/icons/format-text-direction-rtl-symbolic.svg</file>
+  </gresource>
+</gresources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 Hervé Quatremain
+
+  This file is part of Length.
+
+  Length is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  Length is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  Length. If not, see <https://www.gnu.org/licenses/>.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<schemalist gettext-domain="length">
+  <schema id="@application_id@" path="@application_schema_path@">
+    <key name="opacity" type="i">
+      <default>100</default>
+      <range min="0" max="100"/>
+      <summary>Ruler Opacity</summary>
+      <description>Opacity percentage of the Length interface</description>
+    </key>
+
+    <key name="compute-monitor-size" type="b">
+      <default>true</default>
+      <summary>Compute Monitor Size</summary>
+      <description>
+        Whether let Length try to compute the monitor size, or let you provide
+        your monitor size in "monitor-size".
+        In some environments, that computation might fail or report an
+        inaccurate size.
+      </description>
+    </key>
+
+    <key name="monitor-size" type="d">
+      <default>24.0</default>
+      <summary>Monitor Size</summary>
+      <description>
+        Monitor diagonal size in inches.
+        Used only when "compute-monitor-size" is FALSE.
+      </description>
+      <range min="10" max="100"/>
+    </key>
+
+    <key name="unit" type="s">
+      <choices>
+        <choice value="px"/>
+        <choice value="cm"/>
+        <choice value="inch"/>
+        <choice value="pct"/>
+      </choices>
+      <default>"px"</default>
+      <summary>Ruler Unit</summary>
+      <description>Unit to use for the ruler</description>
+    </key>
+
+    <key name="track-pointer" type="b">
+      <default>false</default>
+      <summary>Track the pointer</summary>
+      <description>Display the pointer position in the ruler.</description>
+    </key>
+
+    <key name="offset" type="d">
+      <default>0.0</default>
+      <summary>Origin of the Ruler</summary>
+      <description>Point of origin in ruler units.</description>
+    </key>
+
+    <key name="direction-left-to-right" type="b">
+      <default>true</default>
+      <summary>Direction from Left to Right</summary>
+      <description>
+        Display the scale from left to right if TRUE, else from right to left.
+      </description>
+    </key>
+
+    <key name="use-default-font" type="b">
+      <default>true</default>
+      <summary>Use default font</summary>
+      <description>Whether to use the default font</description>
+    </key>
+
+    <key name="font-name" type="s">
+      <default>'Monospace 10'</default>
+      <summary>Font Name</summary>
+      <description>
+        The font to use when "use-default-font" is FALSE.
+      </description>
+    </key>
+
+    <key name="window-size" type="(ii)">
+      <default>(640, 43)</default>
+      <summary>Window Size</summary>
+      <description>
+        Window size (width and height) of the last closed window.
+      </description>
+    </key>
+
+    <key name="use-default-color" type="b">
+      <default>true</default>
+      <summary>Use default color scheme</summary>
+      <description>Whether to use the default color scheme</description>
+    </key>
+
+    <key name="foreground-color" type="(dddd)">
+      <default>(0.0, 0.0, 0.20, 1.0)</default>
+      <summary>Foreground Color</summary>
+      <description>
+        Color (red, green, blue, alpha) for the ruler ticks and the labels
+      </description>
+    </key>
+
+    <key name="background-color" type="(dddd)">
+      <default>(1.0, 1.0, 0.0, 1.0)</default>
+      <summary>Background Color</summary>
+      <description>
+        Color (red, green, blue, alpha) for the ruler background
+      </description>
+    </key>
+  </schema>
+</schemalist>
