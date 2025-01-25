@@ -1,0 +1,22 @@
+---
+# This workflow action runs pre-commit.
+# See .pre-commit-config.yaml for more details
+name: Pre-commit
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install required packages
+        run: pip install -Iv flake8 yamllint black
+
+      - uses: pre-commit/action@v3.0.1
+...
