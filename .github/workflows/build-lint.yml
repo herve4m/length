@@ -1,0 +1,59 @@
+---
+# This workflow action builds the flatpak package and runs linter tests.
+name: Build Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  flatpack-build-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install flatpak
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder meson
+
+      - name: Configure flatpak
+        run: |
+          flatpak remote-add --user --if-not-exists flathub \
+            https://flathub.org/repo/flathub.flatpakrepo
+          flatpak remote-add --user --if-not-exists gnome-nightly \
+            https://nightly.gnome.org/gnome-nightly.flatpakrepo
+
+      - uses: actions/checkout@v4
+
+      - name: Build the flatpak package
+        run: |
+          flatpak-builder --force-clean --user \
+            --install-deps-from=gnome-nightly --repo=repo builddir \
+            io.github.herve4m.Length.Devel.yaml
+
+      - name: Install linter dependencies
+        run: flatpak install -y --user flathub org.flatpak.Builder
+
+      - name: Linting the Metainfo file
+        run: |
+          flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            appstream io.github.herve4m.Length.Devel.metainfo.xml
+        working-directory: builddir/files/share/metainfo
+
+      - name: Linting the manifest file
+        run: |
+          flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            manifest io.github.herve4m.Length.Devel.yaml
+
+      - name: OSTree repository check
+        run: |
+          flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            --exceptions --user-exceptions .github/files/exceptions.json \
+            repo repo
+
+      - name: Build directory check
+        run: |
+          flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            builddir builddir
+...
