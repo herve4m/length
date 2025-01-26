@@ -26,9 +26,8 @@
       <class name="length-main" />
     </style>
     <property name="title" translatable="no">Length</property>
-    <property name="width-request">43</property>
-    <property name="height-request">43</property>
-    <property name="opacity">1</property>
+    <property name="width-request">24</property>
+    <property name="height-request">24</property>
     <property name="content">
       <object class="GtkWindowHandle">
         <child>
@@ -51,17 +50,20 @@
             </child>
             <child type="overlay">
               <object class="GtkMenuButton" id="menu_button">
+                <style>
+                  <class name="opaque" />
+                </style>
                 <property name="primary">true</property>
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="tooltip-text" translatable="yes">Main Menu</property>
                 <property name="menu-model">primary_menu</property>
-                <property name="has-frame">false</property>
+                <property name="opacity">0.6</property>
                 <property name="halign">GTK_ALIGN_START</property>
                 <property name="valign">GTK_ALIGN_START</property>
                 <property name="margin-start">5</property>
                 <property name="margin-end">5</property>
-                <property name="margin-top">5</property>
-                <property name="margin-bottom">5</property>
+                <property name="margin-top">10</property>
+                <property name="margin-bottom">10</property>
               </object>
             </child>
             <child>
