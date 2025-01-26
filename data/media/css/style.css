@@ -20,3 +20,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 .length-main {
   --window-radius: 0px;
 }
+
+menubutton button {
+  min-height: 10px;
+  min-width: 10px;
+}
