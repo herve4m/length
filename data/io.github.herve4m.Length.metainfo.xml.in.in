@@ -5,7 +5,7 @@
   <project_license>GPL-3.0-or-later</project_license>
 
   <name>Length</name>
-  <summary>A ruler to measure objects on screen</summary>
+  <summary>Measure objects on screen</summary>
   <description>
     <p>
       GNOME application for measuring distances on screen to help you design and inspect layouts and graphics.
@@ -23,6 +23,11 @@
   <developer id="io.github.herve4m">
     <name translate="no">Hervé Quatremain</name>
   </developer>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#ffffbb</color>
+    <color type="primary" scheme_preference="dark">#ff8000</color>
+  </branding>
 
   <url type="homepage">https://github.com/herve4m/length</url>
   <url type="vcs-browser">https://github.com/herve4m/length</url>
@@ -66,6 +71,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.2.0" date="2025-01-31">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v020</url>
+      <description translate="no">
+        <p>Fix quality issues</p>
+        <p>Italian translation</p>
+      </description>
+    </release>
     <release version="0.1.1" date="2025-01-31">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v011</url>
       <description translate="no">

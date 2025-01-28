@@ -4,6 +4,20 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.2.0
+======
+
+Bugfixes
+--------
+
+- Fix quality issues per the quality guidelines.
+
+Translations
+------------
+
+- Italian translation
+
+
 v0.1.1
 ======
 

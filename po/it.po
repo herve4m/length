@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-21 09:43+0100\n"
+"POT-Creation-Date: 2025-01-28 17:40+0100\n"
 "PO-Revision-Date: 2025-01-27 11:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
@@ -17,195 +17,195 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/io.github.herve4m.Length.desktop.in:3
-#: data/io.github.herve4m.Length.metainfo.xml.in:7
+#: data/io.github.herve4m.Length.desktop.in.in:3
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:7
 msgid "Length"
 msgstr "Length"
 
-#: data/io.github.herve4m.Length.desktop.in:4
+#: data/io.github.herve4m.Length.desktop.in.in:4
 msgid "Screen ruler"
 msgstr "Righello dello schermo"
 
-#: data/io.github.herve4m.Length.desktop.in:5
+#: data/io.github.herve4m.Length.desktop.in.in:5
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:8
 msgid "Measure objects on screen"
 msgstr "Misura gli oggetti sullo schermo"
 
-#: data/io.github.herve4m.Length.desktop.in:11
+#: data/io.github.herve4m.Length.desktop.in.in:11
 msgid "GTK;GNOME;ruler;measure;"
 msgstr "GTK;GNOME;righello;misura;"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:8
-msgid "A ruler to measure objects on screen"
-msgstr "Un righello per misurare gli oggetti sullo schermo"
-
-#: data/io.github.herve4m.Length.metainfo.xml.in:10
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:10
+#, fuzzy
 msgid ""
-"Measure distances on screen to help you design and inspect layouts and "
-"graphics. Length includes the following features:"
+"GNOME application for measuring distances on screen to help you design and "
+"inspect layouts and graphics. Length includes the following features:"
 msgstr ""
-"Misura le distanze sullo schermo per aiutarti a progettare e ispezionare layout e "
-"grafica. La lunghezza include le seguenti funzionalità:"
+"Misura le distanze sullo schermo per aiutarti a progettare e ispezionare "
+"layout e grafica. La lunghezza include le seguenti funzionalità:"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:15
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:15
 msgid "Pixels, centimeters, inches, or percentages as units"
 msgstr "Pixel, centimetri, pollici o percentuali come unità"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:16
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:16
 msgid "Horizontal or vertical orientation"
 msgstr "Orientamento orizzontale o verticale"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:17
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:17
 msgid "Left-to-right or right-to-left orientation"
 msgstr "Orientamento da sinistra a destra o da destra a sinistra"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:18
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:18
 msgid "Transparency levels"
 msgstr "Livelli di trasparenza"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:19
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:19
 msgid "Track pointer position"
 msgstr "Tracciamento della posizione del puntatore"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:40
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:45
 msgid "Horizontal view of Length with pixels as units"
 msgstr "Vista orizzontale della lunghezza con pixel come unità"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:44
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:49
 msgid "Vertical view of Length with inches as units"
 msgstr "Vista verticale della lunghezza con pollici come unità"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:48
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:53
 msgid "Length main menu"
 msgstr "Menu principale di Length"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:52
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:57
 msgid "Preferences window"
 msgstr "Preferenze"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:56
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:61
 msgid "Pointer tracking enabled"
 msgstr "Tracciamento del puntatore abilitato"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:60
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:65
 msgid "Right to left ruler orientation"
 msgstr "Orientamento del righello da destra a sinistra"
 
-#: data/io.github.herve4m.Length.metainfo.xml.in:64
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:69
 msgid "Changing Length orientation"
 msgstr "Modifica dell'orientamento del righello"
 
-#: data/io.github.herve4m.Length.gschema.xml:26
+#: data/io.github.herve4m.Length.gschema.xml.in:26
 msgid "Ruler Opacity"
 msgstr "Opacitò del righello"
 
-#: data/io.github.herve4m.Length.gschema.xml:27
+#: data/io.github.herve4m.Length.gschema.xml.in:27
 msgid "Opacity percentage of the Length interface"
 msgstr "Opacità come percentuale del righello"
 
-#: data/io.github.herve4m.Length.gschema.xml:32
+#: data/io.github.herve4m.Length.gschema.xml.in:32
 msgid "Compute Monitor Size"
 msgstr "Calcola la dimensione dello schermo"
 
-#: data/io.github.herve4m.Length.gschema.xml:33
+#: data/io.github.herve4m.Length.gschema.xml.in:33
 msgid ""
 "Whether let Length try to compute the monitor size, or let you provide your "
 "monitor size in \"monitor-size\". In some environments, that computation "
 "might fail or report an inaccurate size."
 msgstr ""
-"Se si lascia che Length provi a calcolare la dimensione del monitor o si lascia che tu fornisca la "
-"dimensione del monitor in \"monitor-size\". In alcuni ambienti, tale calcolo "
-"potrebbe fallire o segnalare una dimensione non accurata."
+"Se si lascia che Length provi a calcolare la dimensione del monitor o si "
+"lascia che tu fornisca la dimensione del monitor in \"monitor-size\". In "
+"alcuni ambienti, tale calcolo potrebbe fallire o segnalare una dimensione "
+"non accurata."
 
-#: data/io.github.herve4m.Length.gschema.xml:43
+#: data/io.github.herve4m.Length.gschema.xml.in:43
 msgid "Monitor Size"
 msgstr "Dimensioni del monitor"
 
-#: data/io.github.herve4m.Length.gschema.xml:44
+#: data/io.github.herve4m.Length.gschema.xml.in:44
 msgid ""
 "Monitor diagonal size in inches. Used only when \"compute-monitor-size\" is "
 "FALSE."
 msgstr ""
-"Dimensione diagonale del monitor in pollici. Utilizzata solo quando le \"dimensione-monitor\" è "
-"FALSE."
+"Dimensione diagonale del monitor in pollici. Utilizzata solo quando le "
+"\"dimensione-monitor\" è FALSE."
 
-#: data/io.github.herve4m.Length.gschema.xml:59
+#: data/io.github.herve4m.Length.gschema.xml.in:59
 msgid "Ruler Unit"
 msgstr "Unità del righello"
 
-#: data/io.github.herve4m.Length.gschema.xml:60
+#: data/io.github.herve4m.Length.gschema.xml.in:60
 msgid "Unit to use for the ruler"
 msgstr "Unità da utilizzare per il righello"
 
-#: data/io.github.herve4m.Length.gschema.xml:65
+#: data/io.github.herve4m.Length.gschema.xml.in:65
 msgid "Track the pointer"
 msgstr "Segui il puntatore"
 
-#: data/io.github.herve4m.Length.gschema.xml:66
+#: data/io.github.herve4m.Length.gschema.xml.in:66
 msgid "Display the pointer position in the ruler."
 msgstr "Mostra la posizione del puntatore sul righello."
 
-#: data/io.github.herve4m.Length.gschema.xml:71
+#: data/io.github.herve4m.Length.gschema.xml.in:71
 msgid "Origin of the Ruler"
 msgstr "Punto di origine"
 
-#: data/io.github.herve4m.Length.gschema.xml:72
+#: data/io.github.herve4m.Length.gschema.xml.in:72
 msgid "Point of origin in ruler units."
 msgstr "Punto di origine nell'unità righello."
 
-#: data/io.github.herve4m.Length.gschema.xml:77
+#: data/io.github.herve4m.Length.gschema.xml.in:77
 msgid "Direction from Left to Right"
 msgstr "Orientamento da sinistra a destra"
 
-#: data/io.github.herve4m.Length.gschema.xml:78
+#: data/io.github.herve4m.Length.gschema.xml.in:78
 msgid "Display the scale from left to right if TRUE, else from right to left."
 msgstr ""
-"Mostra il righello da sinistra a destra se VERO, altrimenti da destra a sinistra."
+"Mostra il righello da sinistra a destra se VERO, altrimenti da destra a "
+"sinistra."
 
-#: data/io.github.herve4m.Length.gschema.xml:85
+#: data/io.github.herve4m.Length.gschema.xml.in:85
 msgid "Use default font"
 msgstr "Utilizza il carattere predefinito"
 
-#: data/io.github.herve4m.Length.gschema.xml:86
+#: data/io.github.herve4m.Length.gschema.xml.in:86
 msgid "Whether to use the default font"
 msgstr "Se utilizzare o meno il carattere predefinito"
 
-#: data/io.github.herve4m.Length.gschema.xml:91
+#: data/io.github.herve4m.Length.gschema.xml.in:91
 msgid "Font Name"
 msgstr "Nome del carattere"
 
-#: data/io.github.herve4m.Length.gschema.xml:92
+#: data/io.github.herve4m.Length.gschema.xml.in:92
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr "Carattere da utilizzare quando \"use-default-font\" è FALSE."
 
-#: data/io.github.herve4m.Length.gschema.xml:99
+#: data/io.github.herve4m.Length.gschema.xml.in:99
 msgid "Window Size"
 msgstr "Dimensione della finestra"
 
-#: data/io.github.herve4m.Length.gschema.xml:100
+#: data/io.github.herve4m.Length.gschema.xml.in:100
 msgid "Window size (width and height) of the last closed window."
 msgstr "Dimensioni (larghezza e altezza) dell'ultima finestra chiusa."
 
-#: data/io.github.herve4m.Length.gschema.xml:107
+#: data/io.github.herve4m.Length.gschema.xml.in:107
 msgid "Use default color scheme"
 msgstr "Utilizza la combinazione di colori predefinita"
 
-#: data/io.github.herve4m.Length.gschema.xml:108
+#: data/io.github.herve4m.Length.gschema.xml.in:108
 msgid "Whether to use the default color scheme"
 msgstr "Se utilizzare o meno la combinazione di colori predefinita"
 
-#: data/io.github.herve4m.Length.gschema.xml:113
+#: data/io.github.herve4m.Length.gschema.xml.in:113
 msgid "Foreground Color"
 msgstr "Colore di primo piano"
 
-#: data/io.github.herve4m.Length.gschema.xml:114
+#: data/io.github.herve4m.Length.gschema.xml.in:114
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr "Colore (rosso, verde, blu, alfa) dei segni sul righello"
 
-#: data/io.github.herve4m.Length.gschema.xml:121
+#: data/io.github.herve4m.Length.gschema.xml.in:121
 msgid "Background Color"
 msgstr "Colore di sfondo"
 
-#: data/io.github.herve4m.Length.gschema.xml:122
+#: data/io.github.herve4m.Length.gschema.xml.in:122
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr "Colore di sfondo del righello (rosso, verde, blu, alfa)"
 
@@ -352,23 +352,23 @@ msgstr "Utilizza il carattere predefinito"
 msgid "Custom Font"
 msgstr "Carattere personalizzato"
 
-#: data/ui/window.ui:56
+#: data/ui/window.ui:58
 msgid "Main Menu"
 msgstr "Menu principale"
 
-#: data/ui/window.ui:103
+#: data/ui/window.ui:105
 msgid "_Preferences"
 msgstr "_Preferenze"
 
-#: data/ui/window.ui:107
+#: data/ui/window.ui:109
 msgid "_Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
 
-#: data/ui/window.ui:111
+#: data/ui/window.ui:113
 msgid "_About Length"
 msgstr "Informazioni su Length"
 
-#: data/ui/window.ui:117
+#: data/ui/window.ui:119
 msgid "_Quit"
 msgstr "_Esci"
 
@@ -383,7 +383,8 @@ msgid ""
 "In the meantime, computations are done for a "
 msgstr ""
 "Impossibile determinare la dimensione del monitor.\n"
-"Utilizza la finestra di dialogo Preferenze per calibrare Length per la dimensione del tuo monitor.\n"
+"Utilizza la finestra di dialogo Preferenze per calibrare Length per la "
+"dimensione del tuo monitor.\n"
 "Nel frattempo, vengono eseguiti calcoli per un "
 
 #: src/draw_context.py:134
@@ -392,11 +393,11 @@ msgstr "OK"
 
 #. Translators: Replace "translator-credits" with your name/username,
 #. and optionally an email or URL.
-#: src/main.py:82
+#: src/main.py:81
 msgid "translator-credits"
 msgstr "Albano Battistella"
 
-#: src/preferences.py:154
+#: src/preferences.py:167
 msgid "Select Font"
 msgstr "Scegli il carattere"
 
@@ -439,3 +440,6 @@ msgstr "px"
 #: src/unit_px.py:31
 msgid "Pixels"
 msgstr "Pixel"
+
+#~ msgid "A ruler to measure objects on screen"
+#~ msgstr "Un righello per misurare gli oggetti sullo schermo"
