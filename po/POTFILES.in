@@ -1,8 +1,8 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/io.github.herve4m.Length.desktop.in
-data/io.github.herve4m.Length.metainfo.xml.in
-data/io.github.herve4m.Length.gschema.xml
+data/io.github.herve4m.Length.desktop.in.in
+data/io.github.herve4m.Length.metainfo.xml.in.in
+data/io.github.herve4m.Length.gschema.xml.in
 data/ui/help-overlay.ui
 data/ui/offset.ui
 data/ui/opacity.ui
