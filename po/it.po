@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-28 17:40+0100\n"
+"POT-Creation-Date: 2025-01-29 19:23+0100\n"
 "PO-Revision-Date: 2025-01-28 21:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
@@ -40,8 +40,9 @@ msgid ""
 "GNOME application for measuring distances on screen to help you design and "
 "inspect layouts and graphics. Length includes the following features:"
 msgstr ""
-"Applicazione GNOME per misurare le distanze sullo schermo per aiutarti a progettare e "
-"ispezionare layout e grafica. Length include le seguenti funzionalità:"
+"Applicazione GNOME per misurare le distanze sullo schermo per aiutarti a "
+"progettare e ispezionare layout e grafica. Length include le seguenti "
+"funzionalità:"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:15
 msgid "Pixels, centimeters, inches, or percentages as units"
@@ -86,10 +87,6 @@ msgstr "Tracciamento del puntatore abilitato"
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:65
 msgid "Right to left ruler orientation"
 msgstr "Orientamento del righello da destra a sinistra"
-
-#: data/io.github.herve4m.Length.metainfo.xml.in.in:69
-msgid "Changing Length orientation"
-msgstr "Modifica dell'orientamento del righello"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:26
 msgid "Ruler Opacity"
@@ -439,6 +436,9 @@ msgstr "px"
 #: src/unit_px.py:31
 msgid "Pixels"
 msgstr "Pixel"
+
+#~ msgid "Changing Length orientation"
+#~ msgstr "Modifica dell'orientamento del righello"
 
 #~ msgid "A ruler to measure objects on screen"
 #~ msgstr "Un righello per misurare gli oggetti sullo schermo"
