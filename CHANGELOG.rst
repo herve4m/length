@@ -4,6 +4,16 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.2.1
+======
+
+Bugfixes
+--------
+
+- Fix quality issues per the quality guidelines.
+- Fix issue for when GdkMonitor is None.
+
+
 v0.2.0
 ======
 
