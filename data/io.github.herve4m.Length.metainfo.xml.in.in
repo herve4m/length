@@ -25,8 +25,8 @@
   </developer>
 
   <branding>
-    <color type="primary" scheme_preference="light">#ffffbb</color>
-    <color type="primary" scheme_preference="dark">#ff8000</color>
+    <color type="primary" scheme_preference="light">#fcf9c2</color>
+    <color type="primary" scheme_preference="dark">#adadd2</color>
   </branding>
 
   <url type="homepage">https://github.com/herve4m/length</url>
