@@ -64,10 +64,6 @@
       <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/right-to-left.png</image>
       <caption>Right to left ruler orientation</caption>
     </screenshot>
-    <screenshot>
-      <video container="webm" codec="vp9">https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/orientation.webm</video>
-      <caption>Changing Length orientation</caption>
-    </screenshot>
   </screenshots>
 
   <releases>
