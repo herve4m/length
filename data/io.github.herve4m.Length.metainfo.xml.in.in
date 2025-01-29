@@ -25,8 +25,8 @@
   </developer>
 
   <branding>
-    <color type="primary" scheme_preference="light">#ffffbb</color>
-    <color type="primary" scheme_preference="dark">#ff8000</color>
+    <color type="primary" scheme_preference="light">#fcf9c2</color>
+    <color type="primary" scheme_preference="dark">#adadd2</color>
   </branding>
 
   <url type="homepage">https://github.com/herve4m/length</url>
@@ -64,13 +64,16 @@
       <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/right-to-left.png</image>
       <caption>Right to left ruler orientation</caption>
     </screenshot>
-    <screenshot>
-      <video container="webm" codec="vp9">https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/orientation.webm</video>
-      <caption>Changing Length orientation</caption>
-    </screenshot>
   </screenshots>
 
   <releases>
+    <release version="0.2.1" date="2025-01-31">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v021</url>
+      <description translate="no">
+        <p>Fix quality issues</p>
+        <p>Fix issue for when the monitor details cannot be retrieved</p>
+      </description>
+    </release>
     <release version="0.2.0" date="2025-01-31">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v020</url>
       <description translate="no">

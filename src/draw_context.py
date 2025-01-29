@@ -61,8 +61,8 @@ class DrawContext:
         self.offset: float = 0.0
 
         # Colors (RGBA)
-        self.color_fg: list[float] = [0, 0, 0.20, 1.0]
-        self.color_bg: list[float] = [1.0, 1.0, 0.0, 1.0]
+        self.color_fg: list[float] = [0.0, 0.0, 0.0, 1.0]
+        self.color_bg: list[float] = [1.0, 1.0, 1.0, 1.0]
         self.color_track: list[float] = [1.0, 0.0, 0.0, 1.0]
 
         # Font
@@ -86,8 +86,8 @@ class DrawContext:
 
         # Colors
         if self.settings.get_boolean("use-default-color"):
-            self.color_fg = [0, 0, 0.20, 1.0]
-            self.color_bg = [1.0, 1.0, 0.0, 1.0]
+            self.color_fg = [0.0, 0.0, 0.0, 1.0]
+            self.color_bg = [1.0, 1.0, 1.0, 1.0]
         else:
             self.color_fg = self.settings.get_value("foreground-color")
             self.color_bg = self.settings.get_value("background-color")

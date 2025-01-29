@@ -36,7 +36,7 @@ class Unit:
         """
 
         self._monitor = monitor
-        self._monitor_geometry = monitor.get_geometry()
+        self._monitor_geometry = monitor.get_geometry() if monitor else None
         self._ppmm = None
 
         self.context = context
@@ -60,12 +60,12 @@ class Unit:
     @property
     def monitor_width(self) -> int:
         """Return the monitor width in pixels."""
-        return self._monitor_geometry.width
+        return self._monitor_geometry.width if self._monitor_geometry else 1280
 
     @property
     def monitor_height(self) -> int:
         """Return the monitor height in pixels."""
-        return self._monitor_geometry.height
+        return self._monitor_geometry.height if self._monitor_geometry else 720
 
     @property
     def ppmm_width(self) -> float:
@@ -76,7 +76,7 @@ class Unit:
         if not self.context.compute_monitor_size:
             return self._compute_ppmm()
 
-        if mm := self._monitor.get_width_mm():
+        if self._monitor and (mm := self._monitor.get_width_mm()):
             return self.monitor_width / mm
         else:
             # Some environments do not provide the monitor size (mm == 0).
@@ -94,7 +94,7 @@ class Unit:
         if not self.context.compute_monitor_size:
             return self._compute_ppmm()
 
-        if mm := self._monitor.get_height_mm():
+        if self._monitor and (mm := self._monitor.get_height_mm()):
             return self.monitor_height / mm
         else:
             # Some environments do not provide the monitor size (mm == 0).

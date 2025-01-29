@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-28 17:40+0100\n"
+"POT-Creation-Date: 2025-01-29 19:23+0100\n"
 "PO-Revision-Date: 2025-01-18 13:44+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -87,10 +87,6 @@ msgstr "Suivi du pointeur activé"
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:65
 msgid "Right to left ruler orientation"
 msgstr "Orientation de la règle de droite à gauche"
-
-#: data/io.github.herve4m.Length.metainfo.xml.in.in:69
-msgid "Changing Length orientation"
-msgstr "Changement d'orientation de la règle"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:26
 msgid "Ruler Opacity"
@@ -437,6 +433,9 @@ msgstr "px"
 #: src/unit_px.py:31
 msgid "Pixels"
 msgstr "Pixels"
+
+#~ msgid "Changing Length orientation"
+#~ msgstr "Changement d'orientation de la règle"
 
 #~ msgid "A ruler to measure objects on screen"
 #~ msgstr "Une règle pour mesurer des objets à l'écran"

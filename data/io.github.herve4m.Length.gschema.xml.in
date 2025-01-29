@@ -109,7 +109,7 @@
     </key>
 
     <key name="foreground-color" type="(dddd)">
-      <default>(0.0, 0.0, 0.20, 1.0)</default>
+      <default>(0.0, 0.0, 0.0, 1.0)</default>
       <summary>Foreground Color</summary>
       <description>
         Color (red, green, blue, alpha) for the ruler ticks and the labels
@@ -117,7 +117,7 @@
     </key>
 
     <key name="background-color" type="(dddd)">
-      <default>(1.0, 1.0, 0.0, 1.0)</default>
+      <default>(1.0, 1.0, 1.0, 1.0)</default>
       <summary>Background Color</summary>
       <description>
         Color (red, green, blue, alpha) for the ruler background
