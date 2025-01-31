@@ -25,6 +25,7 @@
     <style>
       <class name="length-main" />
     </style>
+    <signal name="map" handler="on_map" after="yes"/>
     <property name="title" translatable="no">Length</property>
     <property name="width-request">24</property>
     <property name="height-request">24</property>
