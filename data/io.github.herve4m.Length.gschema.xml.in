@@ -27,6 +27,14 @@
       <description>Opacity percentage of the Length interface</description>
     </key>
 
+    <key name="calibration" type="aa{ss}">
+      <default>[]</default>
+      <summary>Monitor Calibration</summary>
+      <description>
+        XX YY ZZ.
+      </description>
+    </key>
+
     <key name="compute-monitor-size" type="b">
       <default>true</default>
       <summary>Compute Monitor Size</summary>

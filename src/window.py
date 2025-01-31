@@ -29,6 +29,8 @@ from .offset import OffsetControl
 from .settings import Settings
 from .draw_context import DrawContext
 
+from .calibration_settings import CalibrationSetting
+
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/window.ui")
 class LengthWindow(Adw.ApplicationWindow):
@@ -48,6 +50,9 @@ class LengthWindow(Adw.ApplicationWindow):
         self.settings = Settings.new(self.application.get_application_id())
         self.context = DrawContext(self.settings)
         self.unit_obj = None
+
+        self.calibration = CalibrationSetting(self.settings)
+        self.calibration.get_settings()
 
         popover = self.menu_button.get_popover()
         self.opacity_control = OpacityControl(self)
@@ -95,6 +100,18 @@ class LengthWindow(Adw.ApplicationWindow):
         reported. In that case the monitor-size configuration parameter is used.
         """
         self.context.set_monitor(monitor)
+        print("==== Monitor")
+        print("== description")
+        print(monitor.get_description())
+        print("== model")
+        print(monitor.get_model())
+        display = monitor.get_display()
+        print("==== Display")
+        print("== name")
+        print(display.get_name())
+        print("== number of monitors")
+        print(len(display.get_monitors()))
+        self.calibration.set_settings()
         self.drawing_area.set_draw_func(self.draw)
 
     @Gtk.Template.Callback()

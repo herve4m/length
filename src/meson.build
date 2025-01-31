@@ -21,6 +21,7 @@ configure_file(
 
 length_sources = [
   '__init__.py',
+  'calibration_settings.py',
   'main.py',
   'window.py',
   'unit_mng.py',
