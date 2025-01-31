@@ -25,83 +25,13 @@ from gi.repository import Pango, PangoCairo
 
 class Unit:
 
-    def __init__(self, monitor, context) -> None:
+    def __init__(self, context) -> None:
         """Initialize the object.
 
-        :param monitor: The object that the method uses to convert the unit
-                        into pixels.
-        :type monitor: :py:class:``Gdk.Monitor``
         :param context: Object that stores the parameters for drawing the ruler
-        :type monitor: :py:class:``DrawContext``
+        :type context: :py:class:``DrawContext``
         """
-
-        self._monitor = monitor
-        self._monitor_geometry = monitor.get_geometry() if monitor else None
-        self._ppmm = None
-
         self.context = context
-
-    def _compute_ppmm(self) -> float:
-        """Compute and return the number of pixels per millimeter (ppmm).
-
-        The computation uses the user provided monitor diagonal size (in the
-        ``monitor-size`` GSettings parameter).
-        """
-
-        if self._ppmm:
-            return self._ppmm
-        ppi = self.monitor_width / math.sqrt(
-            (self.context.monitor_diagonal_inch**2)
-            / (1 + (self.monitor_height / self.monitor_width) ** 2)
-        )
-        self._ppmm = ppi / 25.4  # Convert from inch to millimeter
-        return self._ppmm
-
-    @property
-    def monitor_width(self) -> int:
-        """Return the monitor width in pixels."""
-        return self._monitor_geometry.width if self._monitor_geometry else 1280
-
-    @property
-    def monitor_height(self) -> int:
-        """Return the monitor height in pixels."""
-        return self._monitor_geometry.height if self._monitor_geometry else 720
-
-    @property
-    def ppmm_width(self) -> float:
-        """Return the number of pixels per millimeter (ppmm) for the width."""
-
-        # If the user specifies their monitor size through the Preferences
-        # dialog, then use that size for computing the ppmm.
-        if not self.context.compute_monitor_size:
-            return self._compute_ppmm()
-
-        if self._monitor and (mm := self._monitor.get_width_mm()):
-            return self.monitor_width / mm
-        else:
-            # Some environments do not provide the monitor size (mm == 0).
-            # In that case, use a default monitor size of 24 inches, and
-            # warn the the user
-            self.context.warning()
-            return self._compute_ppmm()
-
-    @property
-    def ppmm_height(self) -> float:
-        """Return the number of pixels per millimeter (ppmm) for the height."""
-
-        # If the user specifies their monitor size through the Preferences
-        # dialog, then use that size for computing the ppmm.
-        if not self.context.compute_monitor_size:
-            return self._compute_ppmm()
-
-        if self._monitor and (mm := self._monitor.get_height_mm()):
-            return self.monitor_height / mm
-        else:
-            # Some environments do not provide the monitor size (mm == 0).
-            # In that case, use a default monitor size of 24 inches, and
-            # warn the the user
-            self.context.warning()
-            return self._compute_ppmm()
 
     def unit2tick(self, offset: float) -> int:
         """Convert an offset in ruler units into unit ticks."""
@@ -175,9 +105,7 @@ class Unit:
         extends = ctx_text.get_extents(label)
         self.context.ctx.set_source_rgba(*(self.context.color_bg))
         ctx_text.draw_text(
-            x - extends.width / 2,
-            self.context.height / 2 - extends.height / 2,
-            label,
+            x - extends.width / 2, self.context.height / 2 - extends.height / 2, label
         )
         self.context.ctx.stroke()
 

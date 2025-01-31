@@ -43,16 +43,13 @@ class UnitPct(Unit):
     # Number of decimals to display in the spin button
     offset_decimals = 0
 
-    def __init__(self, monitor, context) -> None:
+    def __init__(self, context) -> None:
         """Initialize the object.
 
-        :param monitor: The object that the method uses to convert the unit
-                        into pixels.
-        :type monitor: :py:class:``Gdk.Monitor``
         :param context: Object that stores the parameters for drawing the ruler
-        :type monitor: :py:class:``DrawContext``
+        :type context: :py:class:``DrawContext``
         """
-        super().__init__(monitor, context)
+        super().__init__(context)
 
         self.ticks = {
             1: {"length": 4, "label": False, "show_when_wide": False},
@@ -62,5 +59,5 @@ class UnitPct(Unit):
         self.tick_max_length = 15
 
         self.unit_multiplier = 1
-        self.px_per_tick_width = self.monitor_width / 100
-        self.px_per_tick_height = self.monitor_height / 100
+        self.px_per_tick_width = context.monitor_width / 100
+        self.px_per_tick_height = context.monitor_height / 100

@@ -46,7 +46,6 @@ class LengthWindow(Adw.ApplicationWindow):
 
         self.application = kwargs["application"]
         self.settings = Settings.new(self.application.get_application_id())
-        self.drawing_area.set_draw_func(self.draw)
         self.context = DrawContext(self.settings)
         self.unit_obj = None
 
@@ -66,20 +65,6 @@ class LengthWindow(Adw.ApplicationWindow):
     def draw(self, da, ctx, width: int, height: int) -> None:
         """Gtk.DrawingArea drawing function."""
 
-        # Retrieve the Gdk.Monitor object that provides the physical monitor
-        # details. This object is used to retrieve the screen size in pixels
-        # and the physical size of the monitor.
-        # When the selected unit is centimeters or inches, these values are
-        # used to compute the number of pixels per unit.
-        #
-        # In some environments, the physical size of the monitor is not
-        # reported. In that case the monitor-size configuration parameter is
-        # used.
-        # In other environments, the returned physical size is wrong.
-        surface = self.get_surface()
-        display = Gdk.Display.get_default()
-        monitor = display.get_monitor_at_surface(surface)
-
         self.context.ctx = ctx
         self.context.width = width
         self.context.height = height
@@ -87,7 +72,7 @@ class LengthWindow(Adw.ApplicationWindow):
 
         unit = self.settings.get_string("unit")
         unit_class = UnitMng.get_unit_class(unit)
-        self.unit_obj = unit_class(monitor, self.context)
+        self.unit_obj = unit_class(self.context)
 
         w, h = self.unit_obj.draw()
         if w:
@@ -96,6 +81,28 @@ class LengthWindow(Adw.ApplicationWindow):
             da.set_content_height(h)
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
+
+    def _on_enter_monitor(self, surface, monitor):
+        """Retrieve the Gdk.Monitor object from the Gdk.Surface.
+
+        The Gdk.Monitor object provides the physical monitor details. This
+        object is used to retrieve the screen size in pixels and the physical
+        size of the monitor.
+        When the selected unit is centimeters or inches, these values are
+        used to compute the number of pixels per unit.
+
+        In some environments, the physical size of the monitor is not
+        reported. In that case the monitor-size configuration parameter is used.
+        """
+        self.context.set_monitor(monitor)
+        self.drawing_area.set_draw_func(self.draw)
+
+    @Gtk.Template.Callback()
+    def on_map(self, win) -> None:
+        """Retrieve the Gdk.Surface object for the ruler window, and listen to
+        the enter-monitor signal to retrieve the Gdk.Monitor object."""
+        surface = win.get_surface()
+        surface.connect("enter-monitor", self._on_enter_monitor)
 
     @Gtk.Template.Callback()
     def on_close(self, *args) -> None:

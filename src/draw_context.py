@@ -18,6 +18,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import math
+
 from gi.repository import Pango, Adw
 
 
@@ -33,6 +35,15 @@ class DrawContext:
 
         self.settings = settings
         self._warning_dialog = None
+
+        # Gdk.Monitor
+        self._monitor = None
+        # Monitor width
+        self.monitor_width: int = 0
+        # Monitor height
+        self.monitor_height: int = 0
+        # Pixels per millimeter
+        self._ppmm: float = 0.0
 
         # Cairo context
         self.ctx = None
@@ -135,3 +146,71 @@ class DrawContext:
             self._warning_dialog.set_default_response("ok")
             self._warning_dialog.set_close_response("ok")
             self._warning_dialog.present()
+
+    def set_monitor(self, monitor) -> None:
+        """Set the monitor object that is used to compute some ruler units.
+
+        :param monitor: The object used to convert the unit into pixels.
+        :type monitor: :py:class:``Gdk.Monitor``
+        """
+        self._monitor = monitor
+        if monitor:
+            geometry = monitor.get_geometry()
+            self.monitor_width = geometry.width
+            self.monitor_height = geometry.height
+        else:
+            # monitor should not be None
+            self.monitor_width = 1920
+            self.monitor_height = 1080
+        self._ppmm = 0.0
+
+    def _compute_ppmm(self) -> float:
+        """Compute and return the number of pixels per millimeter (ppmm).
+
+        The computation uses the user provided monitor diagonal size (in the
+        ``monitor-size`` GSettings parameter).
+        """
+        if self._ppmm:
+            return self._ppmm
+        ppi = self.monitor_width / math.sqrt(
+            (self.monitor_diagonal_inch**2)
+            / (1 + (self.monitor_height / self.monitor_width) ** 2)
+        )
+        self._ppmm = ppi / 25.4  # Convert from inch to millimeter
+        return self._ppmm
+
+    @property
+    def ppmm_width(self) -> float:
+        """Return the number of pixels per millimeter (ppmm) for the width."""
+
+        # If the user specifies their monitor size through the Preferences
+        # dialog, then use that size for computing the ppmm.
+        if not self.compute_monitor_size:
+            return self._compute_ppmm()
+
+        if self._monitor and (mm := self._monitor.get_width_mm()):
+            return self.monitor_width / mm
+        else:
+            # Some environments do not provide the monitor size (mm == 0).
+            # In that case, use a default monitor size of 24 inches, and
+            # warn the the user
+            self.warning()
+            return self._compute_ppmm()
+
+    @property
+    def ppmm_height(self) -> float:
+        """Return the number of pixels per millimeter (ppmm) for the height."""
+
+        # If the user specifies their monitor size through the Preferences
+        # dialog, then use that size for computing the ppmm.
+        if not self.compute_monitor_size:
+            return self._compute_ppmm()
+
+        if self._monitor and (mm := self._monitor.get_height_mm()):
+            return self.monitor_height / mm
+        else:
+            # Some environments do not provide the monitor size (mm == 0).
+            # In that case, use a default monitor size of 24 inches, and
+            # warn the the user
+            self.warning()
+            return self._compute_ppmm()
