@@ -4,6 +4,15 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.2.2
+======
+
+Bugfixes
+--------
+
+- Fix wrong monitor detection.
+
+
 v0.2.1
 ======
 
