@@ -18,8 +18,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import logging
 import math
+
 from gi.repository import Gdk, GLib
+
+logger = logging.getLogger(__name__)
 
 
 class Monitor:
@@ -39,22 +43,29 @@ class Monitor:
 
         # Name of the monitor
         self.name = monitor.get_description()
+        logger.debug(f"init ============= {self.name} =============")
 
         # Size in millimeters. In some environments, the information is not
         # available, and the two methods return 0.
         self.width_mm: int = monitor.get_width_mm()
         self.height_mm: int = monitor.get_height_mm()
+        logger.debug(f"     width_mm: {self.width_mm}")
+        logger.debug(f"    height_mm: {self.height_mm}")
 
         # Size in pixels
         geometry = monitor.get_geometry()
         self.width_px: int = geometry.width
         self.height_px: int = geometry.height
+        logger.debug(f"     width_px: {self.width_px}")
+        logger.debug(f"    height_px: {self.height_px}")
 
         # Coordinates of the monitor in the display. When several monitors are
         # installed, these coordinates help sorting the monitors in the
         # Preferences window: the left/top most monitor is listed first.
         self.display_x: int = geometry.x
         self.display_y: int = geometry.y
+        logger.debug(f"    display_x: {self.display_x}")
+        logger.debug(f"    display_y: {self.display_y}")
 
         # Some environments do not provide the monitor size (*mm == 0).
         if self.width_mm and self.height_mm:
@@ -63,8 +74,12 @@ class Monitor:
             self.height_ppmm: float = self.height_px / self.height_mm
             # Compute the diagonal size of the monitor
             self.diag_inch: float = math.sqrt(self.width_mm**2 + self.height_mm**2) / 25.4
+
         else:
             self.width_ppmm = self.height_ppmm = self.diag_inch = 0.0
+        logger.debug(f"   width_ppmm: {self.width_ppmm}")
+        logger.debug(f"  height_ppmm: {self.height_ppmm}")
+        logger.debug(f"    diag_inch: {self.diag_inch}")
 
     def __lt__(self, other):
         """Compare Monitor objects.
@@ -91,6 +106,10 @@ class Monitor:
             (diag**2) / (1 + (self.height_px / self.width_px) ** 2)
         )
         self.width_ppmm = self.height_ppmm = ppi / 25.4  # Convert from inch to millimeter
+        logger.debug(f"set_diagonal_inch ============= {self.name} =============")
+        logger.debug(f"  width_ppmm: {self.width_ppmm}")
+        logger.debug(f" height_ppmm: {self.height_ppmm}")
+        logger.debug(f"   diag_inch: {self.diag_inch}")
 
 
 class MonitorMngt:
@@ -150,6 +169,7 @@ class MonitorMngt:
                 elif k == "diagonal":
                     v = float(v)
                 monitor[k] = v
+                logger.debug(f"Get settings:       calibration: {k} -> {v}")
             if monitor_obj := self.get_monitor(monitor.get("monitor")):
                 if not monitor.get("compute", True) and monitor.get("diagonal"):
                     monitor_obj.set_diagonal_inch(monitor.get("diagonal"))
@@ -165,23 +185,6 @@ class MonitorMngt:
             monitors[monitor_obj.name] = monitor_obj
         self.monitors = monitors
         self.monitor_list = sorted(monitors.values())
-
-        # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        # print("== Ordered monitor list")
-        # for m in self.monitor_list:
-        #     print(f"== {m.name}")
-        #     print(f"      width_mm = {m.width_mm}")
-        #     print(f"      width_px = {m.width_px}")
-        #     print(f"    width_ppmm = {m.width_ppmm}")
-        #     print(f"     height_mm = {m.height_mm}")
-        #     print(f"     height_px = {m.height_px}")
-        #     print(f"   height_ppmm = {m.height_ppmm}")
-        #     print(f"     display_x = {m.display_x}")
-        #     print(f"     display_y = {m.display_y}")
-        #     print(f"     diag_inch = {m.diag_inch}")
-
-        # Update the monitor list from the GSettings
-        self.get_settings()
 
     def get_monitor(self, monitor_name: str):
         """Return the Monitor object that correspond to the given name.

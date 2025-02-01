@@ -18,6 +18,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import logging
+
 from gi.repository import Adw, Gtk, Gdk, GLib
 
 from .unit_mng import UnitMng
@@ -29,6 +31,8 @@ from .offset import OffsetControl
 from .settings import Settings
 from .draw_context import DrawContext
 from .monitor_mngt import MonitorMngt
+
+logger = logging.getLogger(__name__)
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/window.ui")
@@ -48,7 +52,6 @@ class LengthWindow(Adw.ApplicationWindow):
         self.application = kwargs["application"]
         self.settings = Settings.new(self.application.get_application_id())
         self.monitors = MonitorMngt(self.settings)
-        self.monitors.retrieve_monitors()
         self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
 
@@ -102,20 +105,9 @@ class LengthWindow(Adw.ApplicationWindow):
         :param monitor: The monitor object.
         :type monitor: :py:class:``Gdk.Monitor``
         """
-        self.context.set_monitor(self.monitors.get_monitor(monitor.get_description()))
-        # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        # print("==== Monitor")
-        # print("== description")
-        # print(monitor.get_description())
-        # print("== model")
-        # print(monitor.get_model())
-        # display = monitor.get_display()
-        # print("==== Display")
-        # print("== name")
-        # print(display.get_name())
-        # print("== number of monitors")
-        # print(len(display.get_monitors()))
-        # self.monitors.set_settings()
+        name = monitor.get_description()
+        logger.debug(f"Switching to monitor <{name}>")
+        self.context.set_monitor(self.monitors.get_monitor(name))
         self.drawing_area.set_draw_func(self.draw)
 
     @Gtk.Template.Callback()

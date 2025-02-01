@@ -18,9 +18,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
 import sys
 import gi
+import logging
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
@@ -41,16 +41,22 @@ class LengthApplication(Adw.Application):
             application_id=application_id, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
         )
 
-        # https://python-gtk-3-tutorial.readthedocs.io/en/latest/application.html#command-line
+        # Command-line options
         opt = GLib.OptionEntry()
         opt.long_name = "version"
-        opt.short_name = ord("v")
         opt.flags = GLib.OptionFlags.NONE
-        # opt.arg = GLib.OptionArg.NONE
         opt.arg_data = None
-        opt.description = "My description"
-        opt.arg_description = "My arg description"
-        self.add_main_option_entries([opt])
+        opt.description = "Output version information and exit"
+        options = [opt]
+
+        opt = GLib.OptionEntry()
+        opt.long_name = "debug"
+        opt.flags = GLib.OptionFlags.NONE
+        opt.arg_data = None
+        opt.description = "Output debug messages"
+        options.append(opt)
+
+        self.add_main_option_entries(options)
 
         self.create_action("quit", self.on_quit, ["<primary>q"])
         self.create_action("about", self.on_about_action)
@@ -61,20 +67,29 @@ class LengthApplication(Adw.Application):
         self.preferences_dialog = None
 
     def do_command_line(self, command_line):
+        """Process command-line options.
 
-        # command_line is Gio.ApplicationCommandLine
+        :param command_line: The command-line options.
+        :type command_line: :py:class:``Gio.ApplicationCommandLine``
+        """
+        # options type GVariantDict
         options = command_line.get_options_dict()
 
-        # convert GVariantDict -> GVariant -> dict
-
+        # Convert GVariantDict -> GVariant -> dict
         options = options.end().unpack()
 
         if "version" in options:
-
-            # This is printed on the main instance
-
-            print("Test argument recieved: %s" % options["version"])
+            print(
+                f"""Length {self.version}
+Copyright (C) 2025 Hervé Quatremain
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law."""
+            )
             return 0
+        if "debug" in options:
+            logging.basicConfig(level=logging.DEBUG)
+
         self.activate()
 
         return 0

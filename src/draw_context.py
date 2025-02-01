@@ -18,7 +18,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import logging
+
 from gi.repository import Pango, Adw
+
+logger = logging.getLogger(__name__)
 
 
 class DrawContext:
@@ -35,7 +39,9 @@ class DrawContext:
 
         self.settings = settings
         self.monitors = monitors
-        self._warning_dialog = None
+
+        # Warning dialog window per monitor
+        self._warning_dialogs = {}
 
         # Monitor currently used by the ruler (monitor_mngt.Monitor)
         self.current_monitor = None
@@ -86,13 +92,20 @@ class DrawContext:
         self.track_pointer = self.settings.get_boolean("track-pointer")
         self.offset = self.settings.get_double("offset")
 
+        logger.debug(f"Get settings:     track-pointer: {self.track_pointer}")
+        logger.debug(f"Get settings:            offset: {self.offset}")
+
         # Colors
         if self.settings.get_boolean("use-default-color"):
             self.color_fg = [0.0, 0.0, 0.0, 1.0]
             self.color_bg = [1.0, 1.0, 1.0, 1.0]
+            logger.debug("Get settings: use-default-color: True")
         else:
             self.color_fg = self.settings.get_value("foreground-color")
             self.color_bg = self.settings.get_value("background-color")
+            logger.debug("Get settings: use-default-color: False")
+            logger.debug(f"Get settings:  foreground-color: {self.color_fg}")
+            logger.debug(f"Get settings:  background-color: {self.color_bg}")
 
         # Font
         font = (
@@ -100,6 +113,7 @@ class DrawContext:
             if self.settings.get_boolean("use-default-font")
             else self.settings.get_string("font-name")
         )
+        logger.debug(f"Get settings:              font: {font}")
         if font != self.font_name:
             self.font_name = font
             self.font_desc = Pango.font_description_from_string(font)
@@ -109,6 +123,7 @@ class DrawContext:
 
         # Scale direction
         self.left2right = self.settings.get_boolean("direction-left-to-right")
+        logger.debug(f"Get settings: direction-left-to-right: {self.left2right}")
 
         # Monitor calibration parameters
         self.monitors.get_settings()
@@ -116,15 +131,15 @@ class DrawContext:
     def warning(self) -> None:
         """Display a warning message when the system does not provide the monitor size.
 
-        The dialog is only displayed once.
+        The dialog is only displayed once per monitor.
         """
-
-        if not self._warning_dialog:
-            self._warning_dialog = Adw.AlertDialog()
-            self._warning_dialog.set_heading(_("Monitor Size Unknown"))
-            self._warning_dialog.set_body(
+        monitor_name = self.current_monitor.name
+        if not self._warning_dialogs.get(monitor_name):
+            dialog = Adw.AlertDialog()
+            dialog.set_heading(_("Monitor Size Unknown"))
+            dialog.set_body(
                 _(
-                    "The monitor size cannot be determined.\n"
+                    f"The size of the {monitor_name} monitor cannot be determined.\n"
                     "Use the Preferences dialog to calibrate Length for "
                     "your monitor size.\n"
                     "In the meantime, computations are done for a "
@@ -132,10 +147,11 @@ class DrawContext:
                     "inches monitor."
                 )
             )
-            self._warning_dialog.add_response("ok", _("OK"))
-            self._warning_dialog.set_default_response("ok")
-            self._warning_dialog.set_close_response("ok")
-            self._warning_dialog.present()
+            dialog.add_response("ok", _("OK"))
+            dialog.set_default_response("ok")
+            dialog.set_close_response("ok")
+            dialog.present()
+            self._warning_dialogs[monitor_name] = dialog
 
     def set_monitor(self, monitor) -> None:
         """Set the monitor object that is used to compute some ruler units.
@@ -153,6 +169,7 @@ class DrawContext:
             # Some environments do not provide the monitor size.
             # In that case, use a default monitor size of 24 inches, and
             # warn the the user.
+            logger.debug("width_ppmm == 0")
             self.current_monitor.set_diagonal_inch(24.0)
             self.warning()
         return self.current_monitor.width_ppmm
@@ -165,6 +182,7 @@ class DrawContext:
             # Some environments do not provide the monitor size.
             # In that case, use a default monitor size of 24 inches, and
             # warn the the user.
+            logger.debug("height_ppmm == 0")
             self.current_monitor.set_diagonal_inch(24.0)
             self.warning()
         return self.current_monitor.height_ppmm
