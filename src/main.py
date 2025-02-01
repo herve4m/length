@@ -27,7 +27,7 @@ gi.require_version("Adw", "1")
 gi.require_version("Pango", "1.0")
 gi.require_version("PangoCairo", "1.0")
 
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GLib
 from .window import LengthWindow
 from .preferences import PreferencesDialog
 
@@ -38,8 +38,20 @@ class LengthApplication(Adw.Application):
     def __init__(self, version: str, application_id: str) -> None:
         """Initialize the object."""
         super().__init__(
-            application_id=application_id, flags=Gio.ApplicationFlags.DEFAULT_FLAGS
+            application_id=application_id, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
         )
+
+        # https://python-gtk-3-tutorial.readthedocs.io/en/latest/application.html#command-line
+        opt = GLib.OptionEntry()
+        opt.long_name = "version"
+        opt.short_name = ord("v")
+        opt.flags = GLib.OptionFlags.NONE
+        # opt.arg = GLib.OptionArg.NONE
+        opt.arg_data = None
+        opt.description = "My description"
+        opt.arg_description = "My arg description"
+        self.add_main_option_entries([opt])
+
         self.create_action("quit", self.on_quit, ["<primary>q"])
         self.create_action("about", self.on_about_action)
         self.create_action("preferences", self.on_preferences_action, ["<Control>comma"])
@@ -47,6 +59,25 @@ class LengthApplication(Adw.Application):
         self.win = None
         self.about_dialog = None
         self.preferences_dialog = None
+
+    def do_command_line(self, command_line):
+
+        # command_line is Gio.ApplicationCommandLine
+        options = command_line.get_options_dict()
+
+        # convert GVariantDict -> GVariant -> dict
+
+        options = options.end().unpack()
+
+        if "version" in options:
+
+            # This is printed on the main instance
+
+            print("Test argument recieved: %s" % options["version"])
+            return 0
+        self.activate()
+
+        return 0
 
     def do_activate(self) -> None:
         """Called when the application is activated.
