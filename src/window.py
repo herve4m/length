@@ -18,7 +18,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk, Gdk, GLib  # , Graphene
+from gi.repository import Adw, Gtk, Gdk, GLib
 
 from .unit_mng import UnitMng
 from .opacity import OpacityControl
@@ -28,8 +28,7 @@ from .offset import OffsetControl
 # from .orientation import OrientationControl
 from .settings import Settings
 from .draw_context import DrawContext
-
-from .calibration_settings import CalibrationSetting
+from .monitor_mngt import MonitorMngt
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/window.ui")
@@ -48,11 +47,10 @@ class LengthWindow(Adw.ApplicationWindow):
 
         self.application = kwargs["application"]
         self.settings = Settings.new(self.application.get_application_id())
-        self.context = DrawContext(self.settings)
+        self.monitors = MonitorMngt(self.settings)
+        self.monitors.retrieve_monitors()
+        self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
-
-        self.calibration = CalibrationSetting(self.settings)
-        self.calibration.get_settings()
 
         popover = self.menu_button.get_popover()
         self.opacity_control = OpacityControl(self)
@@ -87,8 +85,8 @@ class LengthWindow(Adw.ApplicationWindow):
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
 
-    def _on_enter_monitor(self, surface, monitor):
-        """Retrieve the Gdk.Monitor object from the Gdk.Surface.
+    def _on_enter_monitor(self, surface, monitor) -> None:
+        """Switch monitor.
 
         The Gdk.Monitor object provides the physical monitor details. This
         object is used to retrieve the screen size in pixels and the physical
@@ -98,32 +96,42 @@ class LengthWindow(Adw.ApplicationWindow):
 
         In some environments, the physical size of the monitor is not
         reported. In that case the monitor-size configuration parameter is used.
+
+        :param surface: The surface object.
+        :type surface: :py:class:``Gdk.Surface``
+        :param monitor: The monitor object.
+        :type monitor: :py:class:``Gdk.Monitor``
         """
-        self.context.set_monitor(monitor)
-        print("==== Monitor")
-        print("== description")
-        print(monitor.get_description())
-        print("== model")
-        print(monitor.get_model())
-        display = monitor.get_display()
-        print("==== Display")
-        print("== name")
-        print(display.get_name())
-        print("== number of monitors")
-        print(len(display.get_monitors()))
-        self.calibration.set_settings()
+        self.context.set_monitor(self.monitors.get_monitor(monitor.get_description()))
+        # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        # print("==== Monitor")
+        # print("== description")
+        # print(monitor.get_description())
+        # print("== model")
+        # print(monitor.get_model())
+        # display = monitor.get_display()
+        # print("==== Display")
+        # print("== name")
+        # print(display.get_name())
+        # print("== number of monitors")
+        # print(len(display.get_monitors()))
+        # self.monitors.set_settings()
         self.drawing_area.set_draw_func(self.draw)
 
     @Gtk.Template.Callback()
-    def on_map(self, win) -> None:
+    def _on_map(self, win) -> None:
         """Retrieve the Gdk.Surface object for the ruler window, and listen to
-        the enter-monitor signal to retrieve the Gdk.Monitor object."""
+        the enter-monitor signal to retrieve the Gdk.Monitor object.
+
+        :param win: The application window.
+        :type win: :py:class:``Adw.ApplicationWindow``
+        """
         surface = win.get_surface()
         surface.connect("enter-monitor", self._on_enter_monitor)
 
     @Gtk.Template.Callback()
     def on_close(self, *args) -> None:
-        """Save the window side in GSettings on exit."""
+        """Save the window size in GSettings on exit."""
         self.settings.set_value("window-size", GLib.Variant("(ii)", self.get_default_size()))
 
     @Gtk.Template.Callback()

@@ -21,7 +21,7 @@ configure_file(
 
 length_sources = [
   '__init__.py',
-  'calibration_settings.py',
+  'monitor_mngt.py',
   'main.py',
   'window.py',
   'unit_mng.py',
@@ -36,7 +36,8 @@ length_sources = [
   'orientation.py',
   'pointer_tracking.py',
   'settings.py',
-  'preferences.py'
+  'preferences.py',
+  'preferences_display.py'
 ]
 
 install_data(length_sources, install_dir: moduledir)
