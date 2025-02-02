@@ -12,7 +12,7 @@
       Length includes the following features:
     </p>
     <ul>
-      <li>Pixels, centimeters, inches, or percentages as units</li>
+      <li>Pixels, centimeters, inches, picas, points, or percentages as units</li>
       <li>Horizontal or vertical orientation</li>
       <li>Left-to-right or right-to-left orientation</li>
       <li>Transparency levels</li>

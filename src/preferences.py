@@ -22,6 +22,7 @@ import gi
 from gi.repository import Adw, Gtk, Gio, GObject, Pango, Gdk, GLib
 
 from .unit_mng import UnitMng
+from .preferences_display import PreferencesDisplay
 
 
 class Unit(GObject.Object):
@@ -51,6 +52,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
     use_default_color = Gtk.Template.Child()
     fg_color = Gtk.Template.Child()
     bg_color = Gtk.Template.Child()
+    display_group = Gtk.Template.Child()
 
     def __init__(self, application_window) -> None:
         """Initialize the object."""
@@ -59,6 +61,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
         self.application_window = application_window
         self.settings = application_window.settings
+        self.monitors = application_window.monitors
 
         # Length units
         unit_list = Gio.ListStore.new(Unit)
@@ -129,6 +132,9 @@ class PreferencesDialog(Adw.PreferencesDialog):
         color_rgba.blue = color_setting[2]
         color_rgba.alpha = color_setting[3]
         self.bg_color.set_rgba(color_rgba)
+
+        for monitor in self.monitors.monitor_list:
+            self.display_group.add(PreferencesDisplay(monitor, self.monitors, self.settings))
 
     def sync_units(self, unit_id: str) -> None:
         """Ensure the unit combo box reflect the provided unit."""

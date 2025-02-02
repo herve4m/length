@@ -90,8 +90,20 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Percentages</property>
+                <property name="title" translatable="yes" context="shortcut window">Picas</property>
                 <property name="accelerator">4</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Points</property>
+                <property name="accelerator">5</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Percentages</property>
+                <property name="accelerator">6</property>
               </object>
             </child>
           </object>
