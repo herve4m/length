@@ -146,6 +146,12 @@ class LengthWindow(Adw.ApplicationWindow):
         elif key_val == Gdk.KEY_4:
             unit_changed = True
             unit_index = 3
+        elif key_val == Gdk.KEY_5:
+            unit_changed = True
+            unit_index = 4
+        elif key_val == Gdk.KEY_6:
+            unit_changed = True
+            unit_index = 5
         elif key_val == Gdk.KEY_t:
             self.context.track_locked = False
             self.context.track_pointer = not self.context.track_pointer

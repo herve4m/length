@@ -21,23 +21,27 @@ configure_file(
 
 length_sources = [
   '__init__.py',
-  'monitor_mngt.py',
-  'main.py',
-  'window.py',
-  'unit_mng.py',
-  'unit_cm.py',
-  'unit_inch.py',
-  'unit_pct.py',
-  'unit_px.py',
-  'unit.py',
   'draw_context.py',
+  'length.in',
+  'main.py',
+  'meson.build',
+  'monitor_mngt.py',
   'offset.py',
   'opacity.py',
   'orientation.py',
   'pointer_tracking.py',
-  'settings.py',
+  'preferences_display.py',
   'preferences.py',
-  'preferences_display.py'
+  'settings.py',
+  'unit_cm.py',
+  'unit_inch.py',
+  'unit_mng.py',
+  'unit_pct.py',
+  'unit_pica.py',
+  'unit_point.py',
+  'unit_px.py',
+  'unit.py',
+  'window.py'
 ]
 
 install_data(length_sources, install_dir: moduledir)

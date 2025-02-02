@@ -61,6 +61,8 @@
         <choice value="px"/>
         <choice value="cm"/>
         <choice value="inch"/>
+        <choice value="pica"/>
+        <choice value="point"/>
         <choice value="pct"/>
       </choices>
       <default>"px"</default>
