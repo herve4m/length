@@ -19,7 +19,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from gi.repository import Adw, Gtk
+from gi.repository import Adw, Gtk, Gdk
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/preferences_display.ui")
@@ -36,18 +36,27 @@ class PreferencesDisplay(Adw.ExpanderRow):
     # use_default_color = Gtk.Template.Child()
     # fg_color = Gtk.Template.Child()
     # bg_color = Gtk.Template.Child()
+    compute_monitor_size = Gtk.Template.Child()
     monitor_adjustment = Gtk.Template.Child()
 
-    def __init__(self, title, diag) -> None:
+    def __init__(self, monitor, monitors, settings) -> None:
         """Initialize the object."""
 
         super().__init__()
 
+        self.monitors = monitors
+        self.monitor = monitor
+        self.settings = settings
+
+        self.set_title(monitor.name)
+        if monitor.diag_inch:
+            self.monitor_adjustment.set_value(monitor.diag_inch)
+        self.compute_monitor_size.set_active(monitor.compute)
         # monitor_adjustment = Gtk.Template.Child("monitor_adjustment")
         print(self.monitor_adjustment)
         print(type(self.monitor_adjustment))
-        self.set_title(title)
-        self.monitor_adjustment.set_value(diag)
+        # self.set_title(title)
+        # self.monitor_adjustment.set_value(diag)
         # self.application_window = application_window
         # self.settings = application_window.settings
 
@@ -120,3 +129,17 @@ class PreferencesDisplay(Adw.ExpanderRow):
         # color_rgba.blue = color_setting[2]
         # color_rgba.alpha = color_setting[3]
         # self.bg_color.set_rgba(color_rgba)
+
+    @Gtk.Template.Callback()
+    def _on_compute_monitor_size(self, widget, value) -> None:
+        print("== _on_compute_monitor_size")
+        print(value)
+        # self.application_window.drawing_area.queue_draw()
+        return Gdk.EVENT_PROPAGATE
+
+    @Gtk.Template.Callback()
+    def _monitor_size_changed_event(self, adjustment) -> None:
+        print("== _monitor_size_changed_event")
+        print(adjustment.get_value())
+        # self.application_window.drawing_area.queue_draw()
+        return Gdk.EVENT_PROPAGATE

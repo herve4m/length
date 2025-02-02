@@ -61,6 +61,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
         self.application_window = application_window
         self.settings = application_window.settings
+        self.monitors = application_window.monitors
 
         # Length units
         unit_list = Gio.ListStore.new(Unit)
@@ -132,9 +133,8 @@ class PreferencesDialog(Adw.PreferencesDialog):
         color_rgba.alpha = color_setting[3]
         self.bg_color.set_rgba(color_rgba)
 
-        self.display_group.add(PreferencesDisplay("Hello 1", 10.1))
-        self.display_group.add(PreferencesDisplay("Hello 2", 20.2))
-        self.display_group.add(PreferencesDisplay("Test 3", 30.3))
+        for monitor in self.monitors.monitor_list:
+            self.display_group.add(PreferencesDisplay(monitor, self.monitors, self.settings))
 
     def sync_units(self, unit_id: str) -> None:
         """Ensure the unit combo box reflect the provided unit."""

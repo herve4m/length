@@ -123,9 +123,9 @@ class MonitorMngt:
         """
         self.settings = settings
 
-        # List of the Monitor objects ordered by their position in the display
-        self.monitors = {}
         # Monitor list as a dictionary. The key is the monitor name/description
+        self.monitors = {}
+        # List of the Monitor objects ordered by their position in the display
         self.monitor_list = []
 
     def set_settings(self) -> None:
