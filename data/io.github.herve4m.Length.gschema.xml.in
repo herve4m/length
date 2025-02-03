@@ -29,12 +29,13 @@
 
     <key name="calibration" type="aa{ss}">
       <default>[]</default>
-      <summary>Monitor Calibration</summary>
+      <summary>Monitor Calibration Parameters</summary>
       <description>
         XX YY ZZ.
       </description>
     </key>
 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
     <key name="compute-monitor-size" type="b">
       <default>true</default>
       <summary>Compute Monitor Size</summary>
@@ -55,6 +56,7 @@
       </description>
       <range min="10" max="100"/>
     </key>
+-->
 
     <key name="unit" type="s">
       <choices>

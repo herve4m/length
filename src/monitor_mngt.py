@@ -75,8 +75,11 @@ class Monitor:
             # Compute the diagonal size of the monitor
             self.diag_inch: float = math.sqrt(self.width_mm**2 + self.height_mm**2) / 25.4
 
+            # Save the parameters from the hardware
+            self.save = [self.width_ppmm, self.height_ppmm, self.diag_inch]
         else:
             self.width_ppmm = self.height_ppmm = self.diag_inch = 0.0
+            self.save = []
         logger.debug(f"   width_ppmm: {self.width_ppmm}")
         logger.debug(f"  height_ppmm: {self.height_ppmm}")
         logger.debug(f"    diag_inch: {self.diag_inch}")
@@ -91,15 +94,14 @@ class Monitor:
         :type other: :py:class:``Monitor``
 
         """
-        x_abs = abs(self.display_x, other.display_x)
-        y_abs = abs(self.display_y, other.display_y)
+        x_abs = abs(self.display_x - other.display_x)
+        y_abs = abs(self.display_y - other.display_y)
         if x_abs > y_abs:
             return self.display_x < other.display_x
         return self.display_y < other.display_y
 
     def set_diagonal_inch(self, diag: float) -> None:
         """Force setting the diagonal size of the display."""
-        self.compute = False
         self.diag_inch = diag
         # Compute the *ppm attributes according to the given diagonal size
         ppi = self.width_px / math.sqrt(
@@ -107,9 +109,18 @@ class Monitor:
         )
         self.width_ppmm = self.height_ppmm = ppi / 25.4  # Convert from inch to millimeter
         logger.debug(f"set_diagonal_inch ============= {self.name} =============")
+        logger.debug(f"     compute: {self.compute}")
         logger.debug(f"  width_ppmm: {self.width_ppmm}")
         logger.debug(f" height_ppmm: {self.height_ppmm}")
         logger.debug(f"   diag_inch: {self.diag_inch}")
+
+    def set_compute(self, compute: bool) -> None:
+        """Whether to retrieve the monitor size from the hardware."""
+        self.compute = compute
+        logger.debug(f"set_compute ============= {self.name} =============")
+        logger.debug(f"     compute: {self.compute}")
+        if compute and self.save:
+            self.width_ppmm, self.height_ppmm, self.diag_inch = self.save
 
 
 class MonitorMngt:
@@ -151,8 +162,6 @@ class MonitorMngt:
 
             array.add_value(d_monitor.end())
         self.settings.set_value("calibration", array.end())
-        # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx
-        # print(self.settings.get_value("calibration"))
 
     def get_settings(self) -> None:
         """Update the monitor list with the GSettings parameters."""
@@ -165,19 +174,19 @@ class MonitorMngt:
                 k = m.get_child_value(0).get_string()
                 v = m.get_child_value(1).get_string()
                 if k == "compute":
-                    v = bool(v)
+                    v = False if v == "False" else True
                 elif k == "diagonal":
                     v = float(v)
                 monitor[k] = v
                 logger.debug(f"Get settings:       calibration: {k} -> {v}")
             if monitor_obj := self.get_monitor(monitor.get("monitor")):
-                if not monitor.get("compute", True) and monitor.get("diagonal"):
+                compute = monitor.get("compute", True)
+                monitor_obj.set_compute(compute)
+                if not compute:
                     monitor_obj.set_diagonal_inch(monitor.get("diagonal"))
 
     def retrieve_monitors(self) -> None:
-        """Build the monitor lists from the monitors discovered in the system"""
-
-        # Retrieve the monitors from the hardware
+        """Build the monitor lists from the monitors discovered in the system."""
         display = Gdk.Display.get_default()
         monitors = {}
         for monitor in display.get_monitors():

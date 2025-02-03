@@ -94,11 +94,11 @@ class LengthWindow(Adw.ApplicationWindow):
         The Gdk.Monitor object provides the physical monitor details. This
         object is used to retrieve the screen size in pixels and the physical
         size of the monitor.
-        When the selected unit is centimeters or inches, these values are
-        used to compute the number of pixels per unit.
+        When the selected unit is centimeters, inches, picas, or points, these
+        values are used to compute the number of pixels per unit.
 
         In some environments, the physical size of the monitor is not
-        reported. In that case the monitor-size configuration parameter is used.
+        reported.
 
         :param surface: The surface object.
         :type surface: :py:class:``Gdk.Surface``

@@ -171,6 +171,7 @@ class DrawContext:
             # warn the the user.
             logger.debug("width_ppmm == 0")
             self.current_monitor.set_diagonal_inch(24.0)
+            self.current_monitor.set_compute(False)
             self.warning()
         return self.current_monitor.width_ppmm
 
@@ -184,6 +185,7 @@ class DrawContext:
             # warn the the user.
             logger.debug("height_ppmm == 0")
             self.current_monitor.set_diagonal_inch(24.0)
+            self.current_monitor.set_compute(False)
             self.warning()
         return self.current_monitor.height_ppmm
 

@@ -19,7 +19,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from gi.repository import Adw, Gtk, Gdk
+from gi.repository import Adw, Gtk
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/preferences_display.ui")
@@ -39,22 +39,23 @@ class PreferencesDisplay(Adw.ExpanderRow):
     compute_monitor_size = Gtk.Template.Child()
     monitor_adjustment = Gtk.Template.Child()
 
-    def __init__(self, monitor, monitors, settings) -> None:
+    def __init__(self, application_window, monitor) -> None:
         """Initialize the object."""
 
         super().__init__()
 
-        self.monitors = monitors
+        # self.settings = application_window.settings
+        self.application_window = application_window
+        self.monitors = application_window.monitors
         self.monitor = monitor
-        self.settings = settings
 
         self.set_title(monitor.name)
         if monitor.diag_inch:
             self.monitor_adjustment.set_value(monitor.diag_inch)
         self.compute_monitor_size.set_active(monitor.compute)
         # monitor_adjustment = Gtk.Template.Child("monitor_adjustment")
-        print(self.monitor_adjustment)
-        print(type(self.monitor_adjustment))
+        # print(self.monitor_adjustment)
+        # print(type(self.monitor_adjustment))
         # self.set_title(title)
         # self.monitor_adjustment.set_value(diag)
         # self.application_window = application_window
@@ -133,13 +134,18 @@ class PreferencesDisplay(Adw.ExpanderRow):
     @Gtk.Template.Callback()
     def _on_compute_monitor_size(self, widget, value) -> None:
         print("== _on_compute_monitor_size")
-        print(value)
-        # self.application_window.drawing_area.queue_draw()
-        return Gdk.EVENT_PROPAGATE
+        print(widget.get_active())
+        compute = widget.get_active()
+        self.monitor.set_compute(compute)
+        if not compute:
+            self.monitor.set_diagonal_inch(self.monitor_adjustment.get_value())
+        self.monitors.set_settings()
+        self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
     def _monitor_size_changed_event(self, adjustment) -> None:
         print("== _monitor_size_changed_event")
         print(adjustment.get_value())
-        # self.application_window.drawing_area.queue_draw()
-        return Gdk.EVENT_PROPAGATE
+        self.monitor.set_diagonal_inch(adjustment.get_value())
+        self.monitors.set_settings()
+        self.application_window.drawing_area.queue_draw()

@@ -45,8 +45,9 @@ class PreferencesDialog(Adw.PreferencesDialog):
     unit_comborow = Gtk.Template.Child()
     lr_toggle = Gtk.Template.Child()
     rl_toggle = Gtk.Template.Child()
-    compute_monitor_size = Gtk.Template.Child()
-    monitor_adjustment = Gtk.Template.Child()
+    # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx
+    # compute_monitor_size = Gtk.Template.Child()
+    # monitor_adjustment = Gtk.Template.Child()
     use_default_font = Gtk.Template.Child()
     font_name = Gtk.Template.Child()
     use_default_color = Gtk.Template.Child()
@@ -87,18 +88,19 @@ class PreferencesDialog(Adw.PreferencesDialog):
         )
         self.rl_toggle.set_active(not self.settings.get_boolean("direction-left-to-right"))
 
-        self.settings.bind(
-            "compute-monitor-size",
-            self.compute_monitor_size,
-            "active",
-            Gio.SettingsBindFlags.DEFAULT,
-        )
-        self.settings.bind(
-            "monitor-size",
-            self.monitor_adjustment,
-            "value",
-            Gio.SettingsBindFlags.DEFAULT,
-        )
+        # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        # self.settings.bind(
+        #     "compute-monitor-size",
+        #     self.compute_monitor_size,
+        #     "active",
+        #     Gio.SettingsBindFlags.DEFAULT,
+        # )
+        # self.settings.bind(
+        #     "monitor-size",
+        #     self.monitor_adjustment,
+        #     "value",
+        #     Gio.SettingsBindFlags.DEFAULT,
+        # )
 
         self.settings.bind(
             "use-default-font",
@@ -134,7 +136,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
         self.bg_color.set_rgba(color_rgba)
 
         for monitor in self.monitors.monitor_list:
-            self.display_group.add(PreferencesDisplay(monitor, self.monitors, self.settings))
+            self.display_group.add(PreferencesDisplay(application_window, monitor))
 
     def sync_units(self, unit_id: str) -> None:
         """Ensure the unit combo box reflect the provided unit."""
@@ -154,13 +156,15 @@ class PreferencesDialog(Adw.PreferencesDialog):
     def _lr_toggled(self, _widget) -> None:
         self.application_window.drawing_area.queue_draw()
 
-    @Gtk.Template.Callback()
-    def _on_compute_monitor_size(self, _widget, _value) -> None:
-        self.application_window.drawing_area.queue_draw()
+    # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    # @Gtk.Template.Callback()
+    # def _on_compute_monitor_size(self, _widget, _value) -> None:
+    #     self.application_window.drawing_area.queue_draw()
 
-    @Gtk.Template.Callback()
-    def _monitor_size_changed_event(self, adjustment) -> None:
-        self.application_window.drawing_area.queue_draw()
+    # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    # @Gtk.Template.Callback()
+    # def _monitor_size_changed_event(self, adjustment) -> None:
+    #     self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
     def _on_use_default_font(self, _widget, _value) -> None:
