@@ -8,6 +8,7 @@ data/ui/offset.ui
 data/ui/opacity.ui
 data/ui/orientation.ui
 data/ui/pointer_tracking.ui
+data/ui/preferences_display.ui
 data/ui/preferences.ui
 data/ui/window.ui
 src/draw_context.py
@@ -16,4 +17,6 @@ src/preferences.py
 src/unit_cm.py
 src/unit_inch.py
 src/unit_pct.py
+src/unit_pica.py
+src/unit_point.py
 src/unit_px.py
