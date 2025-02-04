@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-04 16:51+0100\n"
+"POT-Creation-Date: 2025-02-04 17:07+0100\n"
 "PO-Revision-Date: 2025-01-28 21:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
@@ -294,6 +294,14 @@ msgstr "Verticale"
 msgid "_Track Pointer"
 msgstr "_Segui il puntatore"
 
+#: data/ui/preferences_display.ui:27
+msgid "Compute Monitor Size"
+msgstr "Calcola la dimensione dello schermo"
+
+#: data/ui/preferences_display.ui:34
+msgid "Custom Monitor Size"
+msgstr "Dimensioni personalizzate"
+
 #: data/ui/preferences.ui:27
 #, fuzzy
 msgid "General"
@@ -425,6 +433,26 @@ msgid "Percentages"
 msgstr "Percentuali"
 
 #. Short name that is used to display the unit on the ruler
+#: src/unit_pica.py:29
+msgid "pica"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_pica.py:31
+msgid "Picas"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_point.py:29
+msgid "pt"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_point.py:31
+msgid "Points"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
 #: src/unit_px.py:29
 msgid "px"
 msgstr "px"
@@ -433,9 +461,6 @@ msgstr "px"
 #: src/unit_px.py:31
 msgid "Pixels"
 msgstr "Pixel"
-
-#~ msgid "Compute Monitor Size"
-#~ msgstr "Calcola la dimensione dello schermo"
 
 #~ msgid ""
 #~ "Whether let Length try to compute the monitor size, or let you provide "
@@ -459,9 +484,6 @@ msgstr "Pixel"
 
 #~ msgid "Compute _Monitor Size"
 #~ msgstr "Calcola le dimensioni dello schermo"
-
-#~ msgid "Custom Monitor Size"
-#~ msgstr "Dimensioni personalizzate"
 
 #~ msgid "Changing Length orientation"
 #~ msgstr "Modifica dell'orientamento del righello"
