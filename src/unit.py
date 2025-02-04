@@ -159,10 +159,10 @@ class Unit:
                 if unit_x % ticks[i] == 0:
                     show_when_wide = self.ticks[ticks[i]]["show_when_wide"]
                     length = self.ticks[ticks[i]]["length"]
-                    if self.ticks[ticks[i]]["label"]:
+                    # Do not draw the tick if x < 40 to prevent it from
+                    # being hidden by the menu button
+                    if self.ticks[ticks[i]]["label"] and pos_x >= 40:
                         i = round(unit_x / self.unit_multiplier)
-                        # Do not draw the unit if x < 50 to prevent it from
-                        # being hidden by the menu button
                         if unit_name_displayed or pos_x < 50:
                             label = f"{i}"
                         else:
