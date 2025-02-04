@@ -31,32 +31,9 @@
       <default>[]</default>
       <summary>Monitor Calibration Parameters</summary>
       <description>
-        XX YY ZZ.
+        For each monitor, specify whether to let the ruler retrieve the monitor size from the system, or use the provided monitor size for the computations.
       </description>
     </key>
-
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
-    <key name="compute-monitor-size" type="b">
-      <default>true</default>
-      <summary>Compute Monitor Size</summary>
-      <description>
-        Whether let Length try to compute the monitor size, or let you provide
-        your monitor size in "monitor-size".
-        In some environments, that computation might fail or report an
-        inaccurate size.
-      </description>
-    </key>
-
-    <key name="monitor-size" type="d">
-      <default>24.0</default>
-      <summary>Monitor Size</summary>
-      <description>
-        Monitor diagonal size in inches.
-        Used only when "compute-monitor-size" is FALSE.
-      </description>
-      <range min="10" max="100"/>
-    </key>
--->
 
     <key name="unit" type="s">
       <choices>

@@ -18,8 +18,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import logging
 
 from gi.repository import Gtk
+
+logger = logging.getLogger(__name__)
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/orientation.ui")
@@ -36,7 +39,7 @@ class OrientationControl(Gtk.Box):
         w, h = self.application_window.get_default_size()
         if toggle.get_active():
             if w < h:
-                print("Going from vertical to horizontal")
+                logger.debug("Going from vertical to horizontal")
                 self.application_window.set_default_size(h, w)
                 # self.application_window.set_visible(False)
                 self.application_window.set_visible(True)
@@ -45,7 +48,7 @@ class OrientationControl(Gtk.Box):
                 # self.application_window.set_resizable(True)
         else:
             if w > h:
-                print("Going from horizontal to vertical")
+                logger.debug("Going from horizontal to vertical")
                 self.application_window.set_default_size(h, w)
                 # self.application_window.set_visible(False)
                 self.application_window.set_visible(True)

@@ -19,8 +19,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import sys
-import gi
 import logging
+import gi
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
@@ -66,7 +66,7 @@ class LengthApplication(Adw.Application):
         self.about_dialog = None
         self.preferences_dialog = None
 
-    def do_command_line(self, command_line):
+    def do_command_line(self, command_line) -> int:
         """Process command-line options.
 
         :param command_line: The command-line options.
@@ -91,7 +91,6 @@ There is NO WARRANTY, to the extent permitted by law."""
             logging.basicConfig(level=logging.DEBUG)
 
         self.activate()
-
         return 0
 
     def do_activate(self) -> None:

@@ -29,7 +29,7 @@ from .unit_px import UnitPx
 class UnitMng:
     """Manage ruler scale units."""
 
-    # List of the classes for each units.
+    # List of the class for each units.
     # The order of the classes in this list is used for mapping keyboard
     # shortcuts to units: key 1 switches to pixels, key 2 to centimeters, ...
     unit_classes = [UnitPx, UnitCm, UnitInch, UnitPica, UnitPoint, UnitPct]

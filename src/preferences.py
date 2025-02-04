@@ -18,7 +18,6 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import gi
 from gi.repository import Adw, Gtk, Gio, GObject, Pango, Gdk, GLib
 
 from .unit_mng import UnitMng
@@ -31,7 +30,7 @@ class Unit(GObject.Object):
     name = GObject.Property(type=str)
     id = GObject.Property(type=str)
 
-    def __init__(self, name, id, **kwargs) -> None:
+    def __init__(self, name: str, id: str, **kwargs) -> None:
         """Initialize the object."""
         super().__init__(**kwargs)
         self.name: str = name
@@ -45,9 +44,6 @@ class PreferencesDialog(Adw.PreferencesDialog):
     unit_comborow = Gtk.Template.Child()
     lr_toggle = Gtk.Template.Child()
     rl_toggle = Gtk.Template.Child()
-    # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx
-    # compute_monitor_size = Gtk.Template.Child()
-    # monitor_adjustment = Gtk.Template.Child()
     use_default_font = Gtk.Template.Child()
     font_name = Gtk.Template.Child()
     use_default_color = Gtk.Template.Child()
@@ -87,20 +83,6 @@ class PreferencesDialog(Adw.PreferencesDialog):
             Gio.SettingsBindFlags.DEFAULT,
         )
         self.rl_toggle.set_active(not self.settings.get_boolean("direction-left-to-right"))
-
-        # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        # self.settings.bind(
-        #     "compute-monitor-size",
-        #     self.compute_monitor_size,
-        #     "active",
-        #     Gio.SettingsBindFlags.DEFAULT,
-        # )
-        # self.settings.bind(
-        #     "monitor-size",
-        #     self.monitor_adjustment,
-        #     "value",
-        #     Gio.SettingsBindFlags.DEFAULT,
-        # )
 
         self.settings.bind(
             "use-default-font",
@@ -155,16 +137,6 @@ class PreferencesDialog(Adw.PreferencesDialog):
     @Gtk.Template.Callback()
     def _lr_toggled(self, _widget) -> None:
         self.application_window.drawing_area.queue_draw()
-
-    # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    # @Gtk.Template.Callback()
-    # def _on_compute_monitor_size(self, _widget, _value) -> None:
-    #     self.application_window.drawing_area.queue_draw()
-
-    # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    # @Gtk.Template.Callback()
-    # def _monitor_size_changed_event(self, adjustment) -> None:
-    #     self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
     def _on_use_default_font(self, _widget, _value) -> None:

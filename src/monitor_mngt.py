@@ -84,7 +84,7 @@ class Monitor:
         logger.debug(f"  height_ppmm: {self.height_ppmm}")
         logger.debug(f"    diag_inch: {self.diag_inch}")
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         """Compare Monitor objects.
 
         This method is used to sort the monitors according to their position in
@@ -92,7 +92,6 @@ class Monitor:
 
         :param other: The monitor object to compare.
         :type other: :py:class:``Monitor``
-
         """
         x_abs = abs(self.display_x - other.display_x)
         y_abs = abs(self.display_y - other.display_y)

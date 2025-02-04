@@ -36,7 +36,6 @@ class DrawContext:
         :param monitors: Application settings.
         :type monitors: :py:class:``monitor_mngt.MonitorMngt``
         """
-
         self.settings = settings
         self.monitors = monitors
 
@@ -88,7 +87,6 @@ class DrawContext:
 
     def refresh_from_settings(self) -> None:
         """Reload the parameter from GSettings."""
-
         self.track_pointer = self.settings.get_boolean("track-pointer")
         self.offset = self.settings.get_double("offset")
 
@@ -164,7 +162,6 @@ class DrawContext:
     @property
     def ppmm_width(self) -> float:
         """Return the number of pixels per millimeter (ppmm) for the width."""
-
         if not self.current_monitor.width_ppmm:
             # Some environments do not provide the monitor size.
             # In that case, use a default monitor size of 24 inches, and
@@ -178,7 +175,6 @@ class DrawContext:
     @property
     def ppmm_height(self) -> float:
         """Return the number of pixels per millimeter (ppmm) for the height."""
-
         if not self.current_monitor.height_ppmm:
             # Some environments do not provide the monitor size.
             # In that case, use a default monitor size of 24 inches, and
@@ -191,8 +187,10 @@ class DrawContext:
 
     @property
     def monitor_width(self) -> int:
+        """Return the display width in pixels."""
         return self.current_monitor.width_px
 
     @property
     def monitor_height(self) -> int:
+        """Return the display height in pixels."""
         return self.current_monitor.height_px

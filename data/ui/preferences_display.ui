@@ -30,8 +30,7 @@
     </child>
     <child>
       <object class="AdwSpinRow">
-        <property name="sensitive" bind-source="compute_monitor_size" bind-property="active" bind-flags="sync-create|invert-boolean"/>
-        <!-- <property name="sensitive" bind-source="compute_monitor_size" bind-property="active" bind-flags="sync-create|bidirectional|invert-boolean"/> -->
+        <property name="sensitive" bind-source="compute_monitor_size" bind-property="active" bind-flags="sync-create|bidirectional|invert-boolean"/>
         <property name="title" translatable="yes">Custom Monitor Size</property>
         <property name="digits">1</property>
         <property name="adjustment">
