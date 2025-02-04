@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-04 17:07+0100\n"
 "PO-Revision-Date: 2025-01-18 13:44+0100\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Hervé Quatremain\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -45,9 +45,8 @@ msgstr ""
 "fonctionnalités suivantes :"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:15
-#, fuzzy
 msgid "Pixels, centimeters, inches, picas, points, or percentages as units"
-msgstr "Unités en pixels, centimètres, pouces ou pourcentages"
+msgstr "Unités en pixels, centimètres, pouces, picas, points ou pourcentages"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:16
 msgid "Horizontal or vertical orientation"
@@ -99,13 +98,15 @@ msgstr "Opacité en pourcentage de la règle"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:32
 msgid "Monitor Calibration Parameters"
-msgstr ""
+msgstr "Paramètres de calibration des écrans"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:33
 msgid ""
 "For each monitor, specify whether to let the ruler retrieve the monitor size "
 "from the system, or use the provided monitor size for the computations."
 msgstr ""
+"Indique pour chaque écran si Length obtient la taille de l'écran du système, "
+"ou si les calculs sont fait à partir de la taille d'écran fourni."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:48
 msgid "Ruler Unit"
@@ -261,12 +262,12 @@ msgstr "Pouces"
 #: data/ui/help-overlay.ui:111
 msgctxt "shortcut window"
 msgid "Picas"
-msgstr ""
+msgstr "Picas"
 
 #: data/ui/help-overlay.ui:117
 msgctxt "shortcut window"
 msgid "Points"
-msgstr ""
+msgstr "Points"
 
 #: data/ui/help-overlay.ui:123
 msgctxt "shortcut window"
@@ -302,7 +303,6 @@ msgid "Custom Monitor Size"
 msgstr "Dimensions personnalisées"
 
 #: data/ui/preferences.ui:27
-#, fuzzy
 msgid "General"
 msgstr "Général"
 
@@ -343,13 +343,12 @@ msgid "Custom Font"
 msgstr "Police personnalisée"
 
 #: data/ui/preferences.ui:173
-#, fuzzy
 msgid "Calibrating"
 msgstr "Calibration"
 
 #: data/ui/preferences.ui:177
 msgid "Displays"
-msgstr ""
+msgstr "Écrans"
 
 #: data/ui/window.ui:59
 msgid "Main Menu"
@@ -376,13 +375,13 @@ msgid "Monitor Size Unknown"
 msgstr "Taille d'écran inconnue"
 
 #: src/draw_context.py:140
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
 "In the meantime, computations are done for a "
 msgstr ""
-"La taille de l'écran ne peut être calculée.\n"
+"La taille de l'écran {monitor_name} ne peut être calculée.\n"
 "Utiliser les Préférences pour calibrer Length pour votre taille d'écran.\n"
 "En attendant, les calculs sont faits pour un écran de "
 
@@ -433,22 +432,22 @@ msgstr "Pourcentages"
 #. Short name that is used to display the unit on the ruler
 #: src/unit_pica.py:29
 msgid "pica"
-msgstr ""
+msgstr "pica"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_pica.py:31
 msgid "Picas"
-msgstr ""
+msgstr "Picas"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_point.py:29
 msgid "pt"
-msgstr ""
+msgstr "pt"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_point.py:31
 msgid "Points"
-msgstr ""
+msgstr "Points"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_px.py:29
