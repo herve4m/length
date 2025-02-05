@@ -4,6 +4,16 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.3.0
+======
+
+Minor Changes
+-------------
+
+- Add picas and points as units for the ruler.
+- Enable calibration of each monitor in a multiple display environment.
+
+
 v0.2.2
 ======
 

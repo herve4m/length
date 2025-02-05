@@ -18,7 +18,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk, Gdk, GLib  # , Graphene
+import logging
+
+from gi.repository import Adw, Gtk, Gdk, GLib
 
 from .unit_mng import UnitMng
 from .opacity import OpacityControl
@@ -28,6 +30,9 @@ from .offset import OffsetControl
 # from .orientation import OrientationControl
 from .settings import Settings
 from .draw_context import DrawContext
+from .monitor_mngt import MonitorMngt
+
+logger = logging.getLogger(__name__)
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/window.ui")
@@ -46,7 +51,8 @@ class LengthWindow(Adw.ApplicationWindow):
 
         self.application = kwargs["application"]
         self.settings = Settings.new(self.application.get_application_id())
-        self.context = DrawContext(self.settings)
+        self.monitors = MonitorMngt(self.settings)
+        self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
 
         popover = self.menu_button.get_popover()
@@ -82,31 +88,42 @@ class LengthWindow(Adw.ApplicationWindow):
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
 
-    def _on_enter_monitor(self, surface, monitor):
-        """Retrieve the Gdk.Monitor object from the Gdk.Surface.
+    def _on_enter_monitor(self, surface, monitor) -> None:
+        """Switch monitor.
 
         The Gdk.Monitor object provides the physical monitor details. This
         object is used to retrieve the screen size in pixels and the physical
         size of the monitor.
-        When the selected unit is centimeters or inches, these values are
-        used to compute the number of pixels per unit.
+        When the selected unit is centimeters, inches, picas, or points, these
+        values are used to compute the number of pixels per unit.
 
         In some environments, the physical size of the monitor is not
-        reported. In that case the monitor-size configuration parameter is used.
+        reported.
+
+        :param surface: The surface object.
+        :type surface: :py:class:``Gdk.Surface``
+        :param monitor: The monitor object.
+        :type monitor: :py:class:``Gdk.Monitor``
         """
-        self.context.set_monitor(monitor)
+        name = monitor.get_description()
+        logger.debug(f"Switching to monitor <{name}>")
+        self.context.set_monitor(self.monitors.get_monitor(name))
         self.drawing_area.set_draw_func(self.draw)
 
     @Gtk.Template.Callback()
-    def on_map(self, win) -> None:
+    def _on_map(self, win) -> None:
         """Retrieve the Gdk.Surface object for the ruler window, and listen to
-        the enter-monitor signal to retrieve the Gdk.Monitor object."""
+        the enter-monitor signal to retrieve the Gdk.Monitor object.
+
+        :param win: The application window.
+        :type win: :py:class:``Adw.ApplicationWindow``
+        """
         surface = win.get_surface()
         surface.connect("enter-monitor", self._on_enter_monitor)
 
     @Gtk.Template.Callback()
     def on_close(self, *args) -> None:
-        """Save the window side in GSettings on exit."""
+        """Save the window size in GSettings on exit."""
         self.settings.set_value("window-size", GLib.Variant("(ii)", self.get_default_size()))
 
     @Gtk.Template.Callback()
@@ -129,6 +146,12 @@ class LengthWindow(Adw.ApplicationWindow):
         elif key_val == Gdk.KEY_4:
             unit_changed = True
             unit_index = 3
+        elif key_val == Gdk.KEY_5:
+            unit_changed = True
+            unit_index = 4
+        elif key_val == Gdk.KEY_6:
+            unit_changed = True
+            unit_index = 5
         elif key_val == Gdk.KEY_t:
             self.context.track_locked = False
             self.context.track_pointer = not self.context.track_pointer

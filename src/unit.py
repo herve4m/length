@@ -39,7 +39,6 @@ class Unit:
 
     def _draw_track(self, px_per_unit: int) -> None:
         """Draw the pointer tracker label and tick."""
-
         if not self.context.track_pointer:
             return
 
@@ -117,7 +116,6 @@ class Unit:
         drawing area.
         This returned parameter can be 0 if no resize is required.
         """
-
         ctx_text = CtxText(self.context.ctx, self.context.font_desc)
         self.context.ctx.set_line_width(1)
         self.context.ctx.set_source_rgba(*self.context.color_bg)
@@ -161,10 +159,10 @@ class Unit:
                 if unit_x % ticks[i] == 0:
                     show_when_wide = self.ticks[ticks[i]]["show_when_wide"]
                     length = self.ticks[ticks[i]]["length"]
-                    if self.ticks[ticks[i]]["label"]:
+                    # Do not draw the tick if x < 40 to prevent it from
+                    # being hidden by the menu button
+                    if self.ticks[ticks[i]]["label"] and pos_x >= 40:
                         i = round(unit_x / self.unit_multiplier)
-                        # Do not draw the unit if x < 50 to prevent it from
-                        # being hidden by the menu button
                         if unit_name_displayed or pos_x < 50:
                             label = f"{i}"
                         else:
@@ -221,7 +219,6 @@ class Unit:
 class CtxText:
     def __init__(self, ctx, pango_font_description) -> None:
         """Initialize the object."""
-
         self.ctx = ctx
         self.font_desc = pango_font_description
 
@@ -233,7 +230,6 @@ class CtxText:
 
     def get_extents(self, text: str):
         """Return the size of the provided text in pixels."""
-
         self.layout.set_text(text)
         _, logical_extents = self.layout.get_extents()
         logical_extents.width = logical_extents.width / Pango.SCALE

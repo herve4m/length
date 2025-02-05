@@ -12,7 +12,7 @@
       Length includes the following features:
     </p>
     <ul>
-      <li>Pixels, centimeters, inches, or percentages as units</li>
+      <li>Pixels, centimeters, inches, picas, points, or percentages as units</li>
       <li>Horizontal or vertical orientation</li>
       <li>Left-to-right or right-to-left orientation</li>
       <li>Transparency levels</li>
@@ -67,6 +67,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.3.0" date="2025-02-05">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v030</url>
+      <description translate="no">
+        <p>Add picas and points as units for the ruler</p>
+        <p>Enable calibration of each monitor in a multiple display environment</p>
+      </description>
+    </release>
     <release version="0.2.2" date="2025-01-31">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v022</url>
       <description translate="no">

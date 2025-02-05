@@ -69,6 +69,24 @@
 
         <child>
           <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes" context="shortcut window">Pointer Tracking</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Activate/Deactivate</property>
+                <property name="accelerator">t</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Lock/Unlock Position</property>
+                <property name="accelerator">p</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkShortcutsGroup">
             <property name="title" translatable="yes" context="shortcut window">Units</property>
             <child>
               <object class="GtkShortcutsShortcut">
@@ -90,26 +108,20 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Percentages</property>
+                <property name="title" translatable="yes" context="shortcut window">Picas</property>
                 <property name="accelerator">4</property>
               </object>
             </child>
-          </object>
-        </child>
-
-        <child>
-          <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes" context="shortcut window">Pointer Tracking</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Activate/Deactivate</property>
-                <property name="accelerator">t</property>
+                <property name="title" translatable="yes" context="shortcut window">Points</property>
+                <property name="accelerator">5</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Lock/Unlock Position</property>
-                <property name="accelerator">p</property>
+                <property name="title" translatable="yes" context="shortcut window">Percentages</property>
+                <property name="accelerator">6</property>
               </object>
             </child>
           </object>

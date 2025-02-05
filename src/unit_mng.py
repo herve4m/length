@@ -18,19 +18,21 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from .unit_px import UnitPx
 from .unit_cm import UnitCm
 from .unit_inch import UnitInch
 from .unit_pct import UnitPct
+from .unit_pica import UnitPica
+from .unit_point import UnitPoint
+from .unit_px import UnitPx
 
 
 class UnitMng:
     """Manage ruler scale units."""
 
-    # List of the classes for each units.
+    # List of the class for each units.
     # The order of the classes in this list is used for mapping keyboard
     # shortcuts to units: key 1 switches to pixels, key 2 to centimeters, ...
-    unit_classes = [UnitPx, UnitCm, UnitInch, UnitPct]
+    unit_classes = [UnitPx, UnitCm, UnitInch, UnitPica, UnitPoint, UnitPct]
 
     @classmethod
     def array(cls) -> list[dict]:

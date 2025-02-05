@@ -18,10 +18,10 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import gi
 from gi.repository import Adw, Gtk, Gio, GObject, Pango, Gdk, GLib
 
 from .unit_mng import UnitMng
+from .preferences_display import PreferencesDisplay
 
 
 class Unit(GObject.Object):
@@ -30,7 +30,7 @@ class Unit(GObject.Object):
     name = GObject.Property(type=str)
     id = GObject.Property(type=str)
 
-    def __init__(self, name, id, **kwargs) -> None:
+    def __init__(self, name: str, id: str, **kwargs) -> None:
         """Initialize the object."""
         super().__init__(**kwargs)
         self.name: str = name
@@ -44,13 +44,12 @@ class PreferencesDialog(Adw.PreferencesDialog):
     unit_comborow = Gtk.Template.Child()
     lr_toggle = Gtk.Template.Child()
     rl_toggle = Gtk.Template.Child()
-    compute_monitor_size = Gtk.Template.Child()
-    monitor_adjustment = Gtk.Template.Child()
     use_default_font = Gtk.Template.Child()
     font_name = Gtk.Template.Child()
     use_default_color = Gtk.Template.Child()
     fg_color = Gtk.Template.Child()
     bg_color = Gtk.Template.Child()
+    display_group = Gtk.Template.Child()
 
     def __init__(self, application_window) -> None:
         """Initialize the object."""
@@ -59,6 +58,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
         self.application_window = application_window
         self.settings = application_window.settings
+        self.monitors = application_window.monitors
 
         # Length units
         unit_list = Gio.ListStore.new(Unit)
@@ -83,19 +83,6 @@ class PreferencesDialog(Adw.PreferencesDialog):
             Gio.SettingsBindFlags.DEFAULT,
         )
         self.rl_toggle.set_active(not self.settings.get_boolean("direction-left-to-right"))
-
-        self.settings.bind(
-            "compute-monitor-size",
-            self.compute_monitor_size,
-            "active",
-            Gio.SettingsBindFlags.DEFAULT,
-        )
-        self.settings.bind(
-            "monitor-size",
-            self.monitor_adjustment,
-            "value",
-            Gio.SettingsBindFlags.DEFAULT,
-        )
 
         self.settings.bind(
             "use-default-font",
@@ -130,6 +117,9 @@ class PreferencesDialog(Adw.PreferencesDialog):
         color_rgba.alpha = color_setting[3]
         self.bg_color.set_rgba(color_rgba)
 
+        for monitor in self.monitors.monitor_list:
+            self.display_group.add(PreferencesDisplay(application_window, monitor))
+
     def sync_units(self, unit_id: str) -> None:
         """Ensure the unit combo box reflect the provided unit."""
         for i, unit in enumerate(UnitMng.array()):
@@ -146,14 +136,6 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
     @Gtk.Template.Callback()
     def _lr_toggled(self, _widget) -> None:
-        self.application_window.drawing_area.queue_draw()
-
-    @Gtk.Template.Callback()
-    def _on_compute_monitor_size(self, _widget, _value) -> None:
-        self.application_window.drawing_area.queue_draw()
-
-    @Gtk.Template.Callback()
-    def _monitor_size_changed_event(self, adjustment) -> None:
         self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()

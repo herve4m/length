@@ -18,8 +18,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
 import sys
+import logging
 import gi
 
 gi.require_version("Gtk", "4.0")
@@ -27,7 +27,7 @@ gi.require_version("Adw", "1")
 gi.require_version("Pango", "1.0")
 gi.require_version("PangoCairo", "1.0")
 
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GLib
 from .window import LengthWindow
 from .preferences import PreferencesDialog
 
@@ -38,8 +38,26 @@ class LengthApplication(Adw.Application):
     def __init__(self, version: str, application_id: str) -> None:
         """Initialize the object."""
         super().__init__(
-            application_id=application_id, flags=Gio.ApplicationFlags.DEFAULT_FLAGS
+            application_id=application_id, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
         )
+
+        # Command-line options
+        opt = GLib.OptionEntry()
+        opt.long_name = "version"
+        opt.flags = GLib.OptionFlags.NONE
+        opt.arg_data = None
+        opt.description = "Output version information and exit"
+        options = [opt]
+
+        opt = GLib.OptionEntry()
+        opt.long_name = "debug"
+        opt.flags = GLib.OptionFlags.NONE
+        opt.arg_data = None
+        opt.description = "Output debug messages"
+        options.append(opt)
+
+        self.add_main_option_entries(options)
+
         self.create_action("quit", self.on_quit, ["<primary>q"])
         self.create_action("about", self.on_about_action)
         self.create_action("preferences", self.on_preferences_action, ["<Control>comma"])
@@ -47,6 +65,33 @@ class LengthApplication(Adw.Application):
         self.win = None
         self.about_dialog = None
         self.preferences_dialog = None
+
+    def do_command_line(self, command_line) -> int:
+        """Process command-line options.
+
+        :param command_line: The command-line options.
+        :type command_line: :py:class:``Gio.ApplicationCommandLine``
+        """
+        # options type GVariantDict
+        options = command_line.get_options_dict()
+
+        # Convert GVariantDict -> GVariant -> dict
+        options = options.end().unpack()
+
+        if "version" in options:
+            print(
+                f"""Length {self.version}
+Copyright (C) 2025 Hervé Quatremain
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law."""
+            )
+            return 0
+        if "debug" in options:
+            logging.basicConfig(level=logging.DEBUG)
+
+        self.activate()
+        return 0
 
     def do_activate(self) -> None:
         """Called when the application is activated.
