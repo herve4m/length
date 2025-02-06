@@ -4,6 +4,15 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.3.1
+======
+
+Bugfixes
+--------
+
+- In some environments, the system does not provide a monitor description, which resulted in Length ignoring the monitor. With this fix, Length uses the monitor manufacturer and model when the description is not available.
+
+
 v0.3.0
 ======
 

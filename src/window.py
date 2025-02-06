@@ -30,7 +30,7 @@ from .offset import OffsetControl
 # from .orientation import OrientationControl
 from .settings import Settings
 from .draw_context import DrawContext
-from .monitor_mngt import MonitorMngt
+from .monitor_mngt import MonitorMngt, Monitor
 
 logger = logging.getLogger(__name__)
 
@@ -105,7 +105,7 @@ class LengthWindow(Adw.ApplicationWindow):
         :param monitor: The monitor object.
         :type monitor: :py:class:``Gdk.Monitor``
         """
-        name = monitor.get_description()
+        name = Monitor.get_name(monitor)
         logger.debug(f"Switching to monitor <{name}>")
         self.context.set_monitor(self.monitors.get_monitor(name))
         self.drawing_area.set_draw_func(self.draw)
