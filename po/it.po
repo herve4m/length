@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-04 17:07+0100\n"
+"POT-Creation-Date: 2025-02-06 19:42+0100\n"
 "PO-Revision-Date: 2025-02-06 16:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
@@ -105,8 +105,9 @@ msgid ""
 "For each monitor, specify whether to let the ruler retrieve the monitor size "
 "from the system, or use the provided monitor size for the computations."
 msgstr ""
-"Per ogni monitor, specifica se lasciare che il righello recuperi la dimensione del monitor "
-"dal sistema, oppure utilizzare la dimensione del monitor fornita per i calcoli."
+"Per ogni monitor, specifica se lasciare che il righello recuperi la "
+"dimensione del monitor dal sistema, oppure utilizzare la dimensione del "
+"monitor fornita per i calcoli."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:48
 msgid "Ruler Unit"
@@ -376,13 +377,15 @@ msgid "Monitor Size Unknown"
 msgstr "Dimensioni dello schermo sconosciute"
 
 #: src/draw_context.py:140
+#, python-brace-format
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
 "In the meantime, computations are done for a "
 msgstr ""
 "Impossibile determinare la dimensione del monitor {monitor_name}.\n"
-"Utilizza la finestra di dialogo Preferenze per calibrare la Lunghezza per la dimensione del tuo monitor.\n"
+"Utilizza la finestra di dialogo Preferenze per calibrare la Lunghezza per la "
+"dimensione del tuo monitor.\n"
 "Nel frattempo, vengono eseguiti calcoli per un "
 
 #: src/draw_context.py:148

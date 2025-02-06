@@ -42,7 +42,7 @@ class Monitor:
         self.compute: bool = True
 
         # Name of the monitor
-        self.name = monitor.get_description()
+        self.name = self.get_name(monitor)
         logger.debug(f"init ============= {self.name} =============")
 
         # Size in millimeters. In some environments, the information is not
@@ -120,6 +120,17 @@ class Monitor:
         logger.debug(f"     compute: {self.compute}")
         if compute and self.save:
             self.width_ppmm, self.height_ppmm, self.diag_inch = self.save
+
+    @classmethod
+    def get_name(cls, monitor) -> str:
+        """Return the monitor name.
+
+        When the monitor description is not available, compose the
+        monitor name from the manufacturer and the model.
+        """
+        if name := monitor.get_description():
+            return name
+        return monitor.get_manufacturer() + "/" + monitor.get_model()
 
 
 class MonitorMngt:
