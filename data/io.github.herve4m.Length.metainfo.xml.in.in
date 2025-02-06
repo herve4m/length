@@ -67,6 +67,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.3.1" date="2025-02-05">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v031</url>
+      <description translate="no">
+        <p>In some environments, the system does not provide a monitor description, which resulted in Length ignoring the monitor. With this release, Length uses the monitor manufacturer and model when the description is not available.
+</p>
+      </description>
+    </release>
     <release version="0.3.0" date="2025-02-05">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v030</url>
       <description translate="no">
