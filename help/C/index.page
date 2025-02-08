@@ -1,0 +1,37 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide"
+      id="index">
+
+  <info>
+    <title type="link" role="trail">Length</title>
+    <title type="link">Length</title>
+    <title type="text">Length</title>
+
+    <keywords>length, ruler, measure</keywords>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Learn to use Length for measuring objects on screen.</desc>
+  </info>
+
+  <title>
+    <media its:translate="no" type="image" width="48px" height="48px" src="figures/io.github.herve4m.Length.svg"/>
+    Length
+  </title>
+
+</page>
