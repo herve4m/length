@@ -1,5 +1,15 @@
 help_files = [
+  'adjusting.page',
+  'calibrating.page',
+  'colors.page',
+  'direction.page',
+  'fonts.page',
   'index.page',
+  'offset.page',
+  'resizing.page',
+  'tracking.page',
+  'transparency.page',
+  'units.page',
   'legal.xml',
 ]
 

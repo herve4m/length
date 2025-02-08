@@ -34,4 +34,19 @@
     Length
   </title>
 
+  <p><app>Length</app> is an application for measuring distances on screen to help you design and inspect layouts and graphics.</p>
+
+  <section id="start" style="2column">
+    <title>Getting Started</title>
+  </section>
+
+  <section id="use" style="2column">
+    <title>Using Length</title>
+  </section>
+
+  <section id="preferences" style="2column">
+    <title>Preferences</title>
+  </section>
+
+
 </page>
