@@ -6,7 +6,7 @@
 Length is a GNOME application that enables you to measure distances on screen.
 You can use it to design and inspect layouts and graphics.
 
-Length supports pixels, centimeters, inches, and percentages for the ruler markings.
+Length supports pixels, centimeters, inches, picas, points, and percentages for the ruler markings.
 You can change the orientation of the markings from left-to-right to right-to left, and you can also introduce an offset to change the point of origin.
 
 You can make the ruler semi-transparent to help you measure objects behind the ruler, and you can track the pointer position.
