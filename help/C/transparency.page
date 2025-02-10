@@ -27,4 +27,24 @@
 
   <title>Adjusting Transparency</title>
 
+  <p>
+    To help you measure objects behind the ruler, you can adjust the ruler's opacity.
+    By making the ruler semi-transparent, you can see the objects behind the ruler.
+  </p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item>
+      <p>
+        Adjust the opacity percentage.
+        A 100% opacity means that the ruler is not transparent at all, and it masks the objects behind it.
+        Because a 0% opacity would render the ruler completely transparent, you cannot reduce the opacity below 10%.
+      </p>
+    </item>
+  </steps>
+
+  <p>Alternatively, you can adjust the opacity by using the arrow keys: <key>Left</key> or <key>Down</key> to reduce the opacity and render the ruler semi-transparent, and <key>Right</key> or <key>Up</key> to increase the opacity.</p>
+
+  <p>To prevent the object to measure from covering the ruler, right click the ruler and select <gui style="menuitem">Always on Top</gui>.</p>
 </page>

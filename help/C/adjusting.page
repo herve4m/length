@@ -27,4 +27,19 @@
 
   <title>Adjusting the Ruler Accurately</title>
 
+  <p>To accurately measure objects, you might have to precisely position the ruler.</p>
+
+  <p>
+    To align the ruler with the object's window, move the ruler while pressing <key>Ctrl</key>.
+    When the ruler gets close to the object side, the rule snaps to the window.
+  </p>
+
+  <p>
+    You can also move the ruler by using the arrow keys.
+    Press <keyseq><key>Alt</key><key>F7</key></keyseq> and use the arrow keys to move the ruler.
+    For an accurate adjustment, press <key>Ctrl</key> while moving the ruler with the arrow keys.
+    Press <key>Esc</key> to exit the keyboard mode.
+  </p>
+
+  <p>To prevent the object to measure from covering the ruler, right click the ruler and select <gui style="menuitem">Always on Top</gui>.</p>
 </page>
