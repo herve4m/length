@@ -27,6 +27,10 @@
 
   <title>Changing Fonts</title>
 
+  <media type="image" src="figures/fonts.png">
+    <p><app>Length</app> using different fonts for the markings</p>
+  </media>
+
   <p>You can change the font used for the ruler markings.</p>
 
   <steps>

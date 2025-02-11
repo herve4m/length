@@ -27,6 +27,10 @@
 
   <title>Changing Colors</title>
 
+  <media type="image" src="figures/colors.png">
+    <p><app>Length</app> in different colors</p>
+  </media>
+
   <p>You can change the color of ruler, and the color of the markings.</p>
 
   <steps>

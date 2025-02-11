@@ -27,6 +27,10 @@
 
   <title>Changing Markings Direction</title>
 
+  <media type="image" src="figures/direction.png">
+    <p>Left-o-right and right-to-left markings</p>
+  </media>
+
   <p>You can change the direction of the ruler markings.</p>
 
   <steps>

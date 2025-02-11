@@ -27,4 +27,8 @@
 
   <title>Tracking the Pointer</title>
 
+  <media type="image" src="figures/tracking.png">
+    <p>Pointer tracking enabled</p>
+  </media>
+
 </page>
