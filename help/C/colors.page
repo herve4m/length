@@ -40,9 +40,9 @@
 
     <item>
       <p>
-        In the <gui style="tab">General</gui> page, in the <gui style="group">Appearance</gui> section, uncheck <gui style="button">Use Default Colors</gui>.
-        When <gui style="button">Use Default Colors</gui> is checked, the ruler is white and the markings are black.
-        When <gui style="button">Use Default Colors</gui> is not checked, you can select the colors.
+        In the <gui style="tab">General</gui> page, in the <gui style="group">Appearance</gui> section, clear the <gui style="button">Use Default Colors</gui> checkbox.
+        When <gui style="button">Use Default Colors</gui> is enabled, the ruler is white and the markings are black.
+        When the <gui style="button">Use Default Colors</gui> checkbox is cleared, you can select the colors.
       </p>
     </item>
 

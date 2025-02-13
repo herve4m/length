@@ -40,9 +40,9 @@
 
     <item>
       <p>
-        In the <gui style="tab">General</gui> page, in the <gui style="group">Appearance</gui> section, uncheck <gui style="button">Use Default Font</gui>.
-        When <gui style="button">Use Default Font</gui> is checked, the ruler uses the font that comes with <app>Length</app>.
-        When <gui style="button">Use Default Font</gui> is not checked, you can select a custom font.
+        In the <gui style="tab">General</gui> page, in the <gui style="group">Appearance</gui> section, clear the <gui style="button">Use Default Font</gui> checkbox.
+        When <gui style="button">Use Default Font</gui> is enabled, the ruler uses the font that comes with <app>Length</app>.
+        When the <gui style="button">Use Default Font</gui> checkbox is cleared, you can select a custom font.
       </p>
     </item>
 

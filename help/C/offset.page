@@ -31,4 +31,12 @@
     <p>Changing the origin</p>
   </media>
 
+  <p>You can change the origin of the ruler by adding an offset.</p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Adjust the offset.</p></item>
+  </steps>
+
 </page>
