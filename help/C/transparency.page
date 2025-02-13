@@ -1,0 +1,58 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="transparency">
+
+  <info>
+    <link type="guide" xref="index#use"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Adjust the transparency to measure objects behind the ruler.</desc>
+  </info>
+
+  <title>Adjusting Transparency</title>
+
+  <media type="image" src="figures/transparency.png">
+    <p>Making the ruler semitransparent</p>
+  </media>
+
+  <p>
+    To help you measure objects behind the ruler, you can adjust the ruler's opacity.
+    By making the ruler semitransparent, you can see the objects behind the ruler.
+  </p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item>
+      <p>
+        Adjust the opacity percentage.
+        A 100% opacity means that the ruler is not transparent at all, and it masks the objects behind it.
+        Because a 0% opacity would render the ruler completely transparent, you cannot reduce the opacity below 10%.
+      </p>
+    </item>
+  </steps>
+
+  <p>Alternatively, you can adjust the opacity by using the arrow keys: <key>Left</key> or <key>Down</key> to reduce the opacity and render the ruler semitransparent, and <key>Right</key> or <key>Up</key> to increase the opacity.</p>
+
+  <p>To prevent the object to measure from covering the ruler, right click the ruler and select <gui style="menuitem">Always on Top</gui>:</p>
+
+  <media type="image" src="figures/always-on-top.png">
+    <p>Use the context menu and select <gui style="menuitem">Always on Top</gui>.</p>
+  </media>
+</page>

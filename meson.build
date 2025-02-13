@@ -17,6 +17,7 @@ endif
 
 subdir('data')
 subdir('src')
+subdir('help')
 subdir('po')
 
 gnome.post_install(

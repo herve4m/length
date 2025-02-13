@@ -111,6 +111,10 @@
         <attribute name="action">win.show-help-overlay</attribute>
       </item>
       <item>
+        <attribute name="label" translatable="yes">_Help</attribute>
+        <attribute name="action">app.help</attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">_About Length</attribute>
         <attribute name="action">app.about</attribute>
       </item>
