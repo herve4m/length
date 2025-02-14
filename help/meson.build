@@ -14,7 +14,20 @@ help_files = [
 ]
 
 help_media = [
+  'figures/always-on-top.png',
+  'figures/calibrating.png',
+  'figures/colors.png',
+  'figures/direction.png',
+  'figures/fonts.png',
+  'figures/format-text-direction-ltr-symbolic.svg',
+  'figures/format-text-direction-rtl-symbolic.svg',
   'figures/io.github.herve4m.Length.svg',
+  'figures/offset.png',
+  'figures/open-menu-symbolic.svg',
+  'figures/size.png',
+  'figures/tracking.png',
+  'figures/transparency.png',
+  'figures/units.png',
 ]
 
 gnome.yelp(meson.project_name(),
