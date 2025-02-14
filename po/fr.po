@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-06 19:42+0100\n"
+"POT-Creation-Date: 2025-02-14 17:07+0100\n"
 "PO-Revision-Date: 2025-01-18 13:44+0100\n"
 "Last-Translator: Hervé Quatremain\n"
 "Language-Team: none\n"
@@ -196,80 +196,85 @@ msgstr "Général"
 
 #: data/ui/help-overlay.ui:33
 msgctxt "shortcut window"
+msgid "Help"
+msgstr "Aide"
+
+#: data/ui/help-overlay.ui:39
+msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Afficher les raccourcis"
 
-#: data/ui/help-overlay.ui:39
+#: data/ui/help-overlay.ui:46
 msgctxt "shortcut window"
 msgid "Preferences Dialog"
 msgstr "Préférences"
 
-#: data/ui/help-overlay.ui:45
+#: data/ui/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quitter"
 
-#: data/ui/help-overlay.ui:54
+#: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
 msgid "Opacity"
 msgstr "Opacité"
 
-#: data/ui/help-overlay.ui:57
+#: data/ui/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Increase Opacity"
 msgstr "Augmenter l'opacité"
 
-#: data/ui/help-overlay.ui:63
+#: data/ui/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Decrease Opacity"
 msgstr "Réduire l'opacité"
 
-#: data/ui/help-overlay.ui:72
+#: data/ui/help-overlay.ui:81
 msgctxt "shortcut window"
 msgid "Pointer Tracking"
 msgstr "Suivi du pointeur"
 
-#: data/ui/help-overlay.ui:75
+#: data/ui/help-overlay.ui:84
 msgctxt "shortcut window"
 msgid "Activate/Deactivate"
 msgstr "Activer/Désactiver"
 
-#: data/ui/help-overlay.ui:81
+#: data/ui/help-overlay.ui:90
 msgctxt "shortcut window"
 msgid "Lock/Unlock Position"
 msgstr "Vérouiller/Dévérouiller la position"
 
-#: data/ui/help-overlay.ui:90
+#: data/ui/help-overlay.ui:99
 msgctxt "shortcut window"
 msgid "Units"
 msgstr "Unités"
 
-#: data/ui/help-overlay.ui:93
+#: data/ui/help-overlay.ui:102
 msgctxt "shortcut window"
 msgid "Pixels"
 msgstr "Pixels"
 
-#: data/ui/help-overlay.ui:99
+#: data/ui/help-overlay.ui:108
 msgctxt "shortcut window"
 msgid "Centimeters"
 msgstr "Centimètres"
 
-#: data/ui/help-overlay.ui:105
+#: data/ui/help-overlay.ui:114
 msgctxt "shortcut window"
 msgid "Inches"
 msgstr "Pouces"
 
-#: data/ui/help-overlay.ui:111
+#: data/ui/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Picas"
 msgstr "Picas"
 
-#: data/ui/help-overlay.ui:117
+#: data/ui/help-overlay.ui:126
 msgctxt "shortcut window"
 msgid "Points"
 msgstr "Points"
 
-#: data/ui/help-overlay.ui:123
+#: data/ui/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Percentages"
 msgstr "Pourcentages"
@@ -278,7 +283,7 @@ msgstr "Pourcentages"
 msgid "_Offset"
 msgstr "_Offset"
 
-#: data/ui/opacity.ui:30 data/ui/opacity.ui:47
+#: data/ui/opacity.ui:30 data/ui/opacity.ui:48
 msgid "Opacity"
 msgstr "Opacité"
 
@@ -299,8 +304,8 @@ msgid "Compute Monitor Size"
 msgstr "Calculer la taille de l'écran"
 
 #: data/ui/preferences_display.ui:34
-msgid "Custom Monitor Size"
-msgstr "Dimensions personnalisées"
+msgid "Custom Monitor Size in Inches"
+msgstr "Dimensions personnalisées en pouces"
 
 #: data/ui/preferences.ui:27
 msgid "General"
@@ -363,10 +368,14 @@ msgid "_Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
 #: data/ui/window.ui:114
+msgid "_Help"
+msgstr "_Aide"
+
+#: data/ui/window.ui:118
 msgid "_About Length"
 msgstr "À propos de Length"
 
-#: data/ui/window.ui:120
+#: data/ui/window.ui:124
 msgid "_Quit"
 msgstr "_Quitter"
 
@@ -391,7 +400,7 @@ msgstr "OK"
 
 #. Translators: Replace "translator-credits" with your name/username,
 #. and optionally an email or URL.
-#: src/main.py:126
+#: src/main.py:151
 msgid "translator-credits"
 msgstr "Hervé Quatremain"
 
