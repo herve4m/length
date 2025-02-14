@@ -22,7 +22,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Calibrate your displays to accurately measure distances.</desc>
+    <desc>Provide your monitor size to accurately measure distances.</desc>
   </info>
 
   <title>Calibrating Displays</title>
@@ -31,4 +31,37 @@
     <p>Calibrating the monitors</p>
   </media>
 
+  <p>To accurately represent some units, <app>Length</app> uses the physical size of your display.</p>
+
+  <p>
+    In some environments, <app>Length</app> retrieves this information from the system.
+    Other environments to do provide that size.
+    In that case, you must calibrate <app>Length</app> for you display:
+  </p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Go to <gui style="menuitem">Preferences</gui>.</p></item>
+
+    <item>
+      <p>
+        The <gui style="tab">Calibrating</gui> page lists your displays.
+        For each display, you can let <app>Length</app> compute your display size, or you can provide your monitor diagonal size in inches.
+      </p>
+      <p>
+        When <gui style="button">Compute Monitor Size</gui> is enabled, <app>Length</app> retrieves the monitor size from the system.
+        When the <gui style="button">Compute Monitor Size</gui> checkbox is cleared, you can provide your monitor diagonal size in inches.
+      </p>
+    </item>
+
+    <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
+  </steps>
+
+  <note style="important">
+    <p>
+      You must provide your display size when <app>Length</app> cannot retrieve the size from the system.
+      If you do not provide the size, then <app>Length</app> bases its computations on a 24 inches monitor, which might result in inaccurate measures for the selected unit.
+    </p>
+  </note>
 </page>

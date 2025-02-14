@@ -22,7 +22,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Select a font the the ruler markings.</desc>
+    <desc>Select a font the ruler markings.</desc>
   </info>
 
   <title>Changing Fonts</title>
@@ -49,7 +49,7 @@
     <item>
       <p>
         To select a font for the ruler markings, click <gui style="button">Custom Font</gui>.
-        In the font selection window, you can pick a font and its size.
+        In the font selection window, you can pick a font and a size.
       </p>
     </item>
 
