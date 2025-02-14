@@ -1,0 +1,52 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide"
+      id="index">
+
+  <info>
+    <title type="link" role="trail">Length</title>
+    <title type="link">Length</title>
+    <title type="text">Length</title>
+
+    <keywords>length, ruler, measure</keywords>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Learn to use <app>Length</app> for measuring objects on screen.</desc>
+  </info>
+
+  <title>
+    <media its:translate="no" type="image" width="48px" height="48px" src="figures/io.github.herve4m.Length.svg"/>
+    Length
+  </title>
+
+  <p><app>Length</app> is an application for measuring distances on screen to help you design and inspect layouts and graphics.</p>
+
+  <section id="start" style="2column">
+    <title>Getting Started</title>
+  </section>
+
+  <section id="use" style="2column">
+    <title>Using <app>Length</app></title>
+  </section>
+
+  <section id="preferences" style="2column">
+    <title>Preferences</title>
+  </section>
+
+
+</page>

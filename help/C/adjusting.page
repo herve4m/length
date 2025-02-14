@@ -1,0 +1,49 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="adjusting">
+
+  <info>
+    <link type="guide" xref="index#use"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Adjust the position of the ruler to accurately measure objects.</desc>
+  </info>
+
+  <title>Adjusting the Ruler Accurately</title>
+
+  <p>To accurately measure objects, you might have to precisely position the ruler.</p>
+
+  <p>
+    To align the ruler with the object's window, drag the ruler while pressing <key>Ctrl</key>.
+    When the ruler gets close to the object's edge, the rule snaps to the window.
+  </p>
+
+  <p>
+    You can also move the ruler by using the arrow keys.
+    Press <keyseq><key>Alt</key><key>F7</key></keyseq> and use the arrow keys to move the ruler.
+    For an accurate adjustment, press <key>Ctrl</key> while moving the ruler with the arrow keys.
+    Press <key>Esc</key> to exit the keyboard mode.
+  </p>
+
+  <p>To prevent the object to measure from covering the ruler, right click the ruler and select <gui style="menuitem">Always on Top</gui>:</p>
+
+  <media type="image" src="figures/always-on-top.png">
+    <p>Use the context menu and select <gui style="menuitem">Always on Top</gui>.</p>
+  </media>
+</page>

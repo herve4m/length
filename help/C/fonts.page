@@ -1,0 +1,58 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="fonts">
+
+  <info>
+    <link type="guide" xref="index#preferences"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Select a font the ruler markings.</desc>
+  </info>
+
+  <title>Changing Fonts</title>
+
+  <media type="image" src="figures/fonts.png">
+    <p><app>Length</app> using different fonts for the markings</p>
+  </media>
+
+  <p>You can change the font used for the ruler markings.</p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Go to <gui style="menuitem">Preferences</gui>.</p></item>
+
+    <item>
+      <p>
+        In the <gui style="tab">General</gui> page, in the <gui style="group">Appearance</gui> section, clear the <gui style="button">Use Default Font</gui> checkbox.
+        When <gui style="button">Use Default Font</gui> is enabled, the ruler uses the font that comes with <app>Length</app>.
+        When the <gui style="button">Use Default Font</gui> checkbox is cleared, you can select a custom font.
+      </p>
+    </item>
+
+    <item>
+      <p>
+        To select a font for the ruler markings, click <gui style="button">Custom Font</gui>.
+        In the font selection window, you can pick a font and a size.
+      </p>
+    </item>
+
+    <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
+  </steps>
+</page>

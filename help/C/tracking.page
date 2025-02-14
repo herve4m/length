@@ -1,0 +1,56 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="tracking">
+
+  <info>
+    <link type="guide" xref="index#use"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Display the pointer position.</desc>
+  </info>
+
+  <title>Tracking the Pointer</title>
+
+  <media type="image" src="figures/tracking.png">
+    <p>Pointer tracking enabled</p>
+  </media>
+
+  <p>
+    For accurate measurements, you can activate the pointer tracker.
+    When activated, the ruler shows the current pointer position.
+    You can also lock the tracker to mark a position in the ruler.
+  </p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Enable the <gui style="button">Track Pointer</gui> checkbox.</p></item>
+
+    <item>
+      <p>
+        To lock the position of the tracker, press <key>P</key>.
+        Press <key>P</key> again to unlock the tracker.
+        Alternatively, use the middle mouse button to lock and unlock the tracker.
+        In some environments however, the middle mouse button might be associated with another function.
+      </p>
+    </item>
+  </steps>
+
+  <p>You can also enable and disable the tracker by pressing <key>T</key>.</p>
+</page>

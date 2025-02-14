@@ -1,0 +1,45 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="direction">
+
+  <info>
+    <link type="guide" xref="index#preferences"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Display markings from left-to-right or from right-to-left.</desc>
+  </info>
+
+  <title>Changing Markings Direction</title>
+
+  <media its:translate="no" type="image" src="figures/direction.png">
+    <p>Left-to-right and right-to-left markings</p>
+  </media>
+
+  <p>You can change the direction of the ruler markings.</p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Go to <gui style="menuitem">Preferences</gui>.</p></item>
+
+    <item><p>In the <gui style="tab">General</gui> page, click the left-to-right direction button (<media its:translate="no" type="image" src="figures/format-text-direction-ltr-symbolic.svg"/>), or the right-to-left button (<media its:translate="no" type="image" src="figures/format-text-direction-rtl-symbolic.svg"/>).</p></item>
+
+    <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
+  </steps>
+</page>

@@ -27,7 +27,7 @@ gi.require_version("Adw", "1")
 gi.require_version("Pango", "1.0")
 gi.require_version("PangoCairo", "1.0")
 
-from gi.repository import Gtk, Gio, Adw, GLib
+from gi.repository import Gtk, Gio, Adw, GLib, Gdk
 from .window import LengthWindow
 from .preferences import PreferencesDialog
 
@@ -58,13 +58,15 @@ class LengthApplication(Adw.Application):
 
         self.add_main_option_entries(options)
 
-        self.create_action("quit", self.on_quit, ["<primary>q"])
-        self.create_action("about", self.on_about_action)
         self.create_action("preferences", self.on_preferences_action, ["<Control>comma"])
+        self.create_action("help", self.on_help_action, ["F1"])
+        self.create_action("about", self.on_about_action)
+        self.create_action("quit", self.on_quit, ["<primary>q"])
         self.version = version
         self.win = None
-        self.about_dialog = None
         self.preferences_dialog = None
+        # self.help_launcher = None
+        self.about_dialog = None
 
     def do_command_line(self, command_line) -> int:
         """Process command-line options.
@@ -103,9 +105,32 @@ There is NO WARRANTY, to the extent permitted by law."""
             self.win = LengthWindow(application=self)
         self.win.present()
 
-    def on_quit(self, *args) -> None:
-        self.win.on_close()
-        self.quit()
+    def on_preferences_action(self, widget, _) -> None:
+        """Callback for the app.preferences action."""
+        if not self.preferences_dialog:
+            self.preferences_dialog = PreferencesDialog(self.win)
+        self.preferences_dialog.present()
+
+    # Does not work with flatpak.
+    # See https://gitlab.gnome.org/GNOME/gtk/-/issues/6135
+    #
+    # def _on_help_action_finish(self, obj, res) -> None:
+    #     """Callback for the help launcher."""
+    #     try:
+    #         self.help_launcher.launch_finish(res)
+    #     except GLib.GError:
+    #         pass
+    #
+    # def on_help_action(self, *args) -> None:
+    #     """Callback for the app.help action."""
+    #     if not self.help_launcher:
+    #         self.help_launcher = Gtk.UriLauncher()
+    #         self.help_launcher.set_uri("help:length")
+    #     self.help_launcher.launch(self.win, None, self._on_help_action_finish)
+
+    def on_help_action(self, *args) -> None:
+        """Callback for the app.help action."""
+        Gtk.show_uri(self.win, "help:length", Gdk.CURRENT_TIME)
 
     def on_about_action(self, *args) -> None:
         """Callback for the app.about action."""
@@ -126,11 +151,9 @@ There is NO WARRANTY, to the extent permitted by law."""
             self.about_dialog.set_translator_credits(_("translator-credits"))
         self.about_dialog.present()  # self.props.active_window)
 
-    def on_preferences_action(self, widget, _) -> None:
-        """Callback for the app.preferences action."""
-        if not self.preferences_dialog:
-            self.preferences_dialog = PreferencesDialog(self.win)
-        self.preferences_dialog.present()
+    def on_quit(self, *args) -> None:
+        self.win.on_close()
+        self.quit()
 
     def create_action(self, name: str, callback, shortcuts=None) -> None:
         """Add an application action.

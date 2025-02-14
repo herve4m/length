@@ -1,0 +1,71 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="units">
+
+  <info>
+    <link type="guide" xref="index#use"/>
+    <link type="topic" xref="calibrating"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Change the unit of the ruler markings.</desc>
+  </info>
+
+  <title>Selecting Units</title>
+
+  <media type="image" src="figures/units.png">
+    <p>Changing the ruler's unit</p>
+  </media>
+
+  <p><app>Length</app> comes in several units that you can select from the <gui>Preferences</gui> dialog.</p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Go to <gui style="menuitem">Preferences</gui>.</p></item>
+
+    <item><p>In the <gui style="tab">General</gui> page, in the <gui style="group">Scale</gui> section, select the ruler's unit.</p></item>
+
+    <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
+  </steps>
+
+  <p>Alternatively, use the number keys to switch between units:</p>
+  <list>
+    <item><p><key>1</key> for pixels</p></item>
+    <item><p><key>2</key> for centimeters</p></item>
+    <item><p><key>3</key> for inches</p></item>
+    <item><p><key>4</key> for picas (1/6 of an inch)</p></item>
+    <item><p><key>5</key> for points (1/72 of an inch)</p></item>
+    <item><p><key>6</key> for percentage of the display size</p></item>
+  </list>
+
+  <note style="tip">
+    <title>Calibrating <app>Length</app></title>
+    <p>
+      To accurately represent some units, <app>Length</app> uses the physical size of your display.
+    </p>
+    <p>
+      In some environments, <app>Length</app> retrieves this information from the system.
+      Other environments do not provide that size.
+      In that case, you must calibrate <app>Length</app> for you display.
+    </p>
+    <p>
+      See <link xref="calibrating"/> for information on configuring <app>Length</app> for the size of your display.
+    </p>
+  </note>
+</page>
