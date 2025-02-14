@@ -28,7 +28,22 @@
   <title>Resizing and Orienting the Ruler</title>
 
   <media type="image" src="figures/size.png">
-    <p>Changing the ruler's dimension</p>
+    <p>Changing the ruler's dimension and orientation</p>
   </media>
 
+  <p>
+    You can resize the ruler to adjust it to the object to measure.
+    You can also rotate the ruler in vertical position.
+  </p>
+
+  <list>
+    <item><p>Resize the ruler by dragging the edges.</p></item>
+    <item><p>Change the orientation of the ruler by dragging the corners.</p></item>
+  </list>
+
+  <p>To prevent the object to measure from covering the ruler, right click the ruler and select <gui style="menuitem">Always on Top</gui>:</p>
+
+  <media type="image" src="figures/always-on-top.png">
+    <p>Use the context menu and select <gui style="menuitem">Always on Top</gui>.</p>
+  </media>
 </page>
