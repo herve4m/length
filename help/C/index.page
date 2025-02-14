@@ -26,7 +26,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Learn to use Length for measuring objects on screen.</desc>
+    <desc>Learn to use <app>Length</app> for measuring objects on screen.</desc>
   </info>
 
   <title>
@@ -41,7 +41,7 @@
   </section>
 
   <section id="use" style="2column">
-    <title>Using Length</title>
+    <title>Using <app>Length</app></title>
   </section>
 
   <section id="preferences" style="2column">

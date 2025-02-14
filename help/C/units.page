@@ -61,7 +61,7 @@
     </p>
     <p>
       In some environments, <app>Length</app> retrieves this information from the system.
-      Other environments to do provide that size.
+      Other environments do not provide that size.
       In that case, you must calibrate <app>Length</app> for you display.
     </p>
     <p>
