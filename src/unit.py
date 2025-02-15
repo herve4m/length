@@ -25,6 +25,10 @@ from gi.repository import Pango, PangoCairo
 
 class Unit:
 
+    # The minimum ruler length for drawing the markings. If the width or height
+    # of the drawing area is under this value, then the markings are not drawn.
+    MIN_LENGTH = 40
+
     def __init__(self, context) -> None:
         """Initialize the object.
 
@@ -108,6 +112,147 @@ class Unit:
         )
         self.context.ctx.stroke()
 
+    def draw_vertical(self, ctx_text, min_size: int) -> None:
+        """Draw the vertical markings.
+
+        :param ctx_text: The text context.
+        :type ctx_text: :py:class:``CtxText``
+        :param min_size: The minimum window heigh under which the markings are
+                         not drawn.
+        :type min_size: int
+        """
+        if self.context.height < self.MIN_LENGTH or self.context.height <= min_size:
+            return
+
+        # Rotate 90° and call the horizontal drawing method
+        self.context.ctx.translate(self.context.width, 0)
+        self.context.ctx.rotate(math.pi / 2.0)
+        self.draw_horizontal(
+            ctx_text,
+            min_size,
+            self.px_per_tick_height,
+            self.context.height,
+            self.context.width,
+        )
+        # Rotate back
+        self.context.ctx.rotate(-math.pi / 2.0)
+        self.context.ctx.translate(-self.context.width, 0)
+
+    def draw_horizontal(
+        self,
+        ctx_text,
+        min_size: int,
+        px_per_tick: float = 0.0,
+        width: int = 0,
+        height: int = 0,
+    ) -> None:
+        """Draw the horizontal markings.
+
+        :param ctx_text: The text context.
+        :type ctx_text: :py:class:``CtxText``
+        :param min_size: The minimum window width under which the markings are
+                         not drawn.
+        :type min_size: int
+        :param px_per_tick: Number of pixels per unit tick.
+        :type px_per_tick: float
+        :param width: Width of the drawing area.
+        :type width: int
+        :param height: Height of the drawing area.
+        :type height: int
+        """
+        if width == 0:
+            width = self.context.width
+        if height == 0:
+            height = self.context.height
+        if px_per_tick == 0.0:
+            px_per_tick = self.px_per_tick_width
+        if width < self.MIN_LENGTH or width <= min_size:
+            return
+
+        offset = self.unit2tick(self.context.offset)
+        ticks = sorted(self.ticks.keys())
+        nb_tick_types = len(self.ticks)
+        unit_name_displayed = False
+
+        for unit_x in range(1 + offset, math.ceil(width / px_per_tick) + offset):
+            # pos_x is the X coordinate of the tick
+            if self.context.left2right:
+                pos_x = (unit_x - offset) * px_per_tick + 0.5
+            else:
+                pos_x = width - ((unit_x - offset) * px_per_tick + 0.5)
+
+            i = nb_tick_types - 1
+            while i >= 0:
+                if unit_x % ticks[i] == 0:
+                    show_when_wide = self.ticks[ticks[i]]["show_when_wide"]
+                    length = self.ticks[ticks[i]]["length"]
+
+                    # Draw the label
+                    if self.ticks[ticks[i]]["label"]:
+                        tick_val = round(unit_x / self.unit_multiplier)
+                        # Append the unit name to the label if the unit name
+                        # has not been displayed yet
+                        if not unit_name_displayed:
+                            label = f"{tick_val} {self.short_name}"
+                            e = ctx_text.get_extents(label)
+                            half_text_w = e.width / 2.0
+                            # If the label would overwrite the menu button,
+                            # then do not show the unit name
+                            if pos_x - half_text_w <= self.MIN_LENGTH:
+                                label = f"{tick_val}"
+                            else:
+                                unit_name_displayed = True
+                        else:
+                            label = f"{tick_val}"
+
+                        e = ctx_text.get_extents(label)
+                        half_text_w = e.width / 2.0
+                        # Do not draw the label if it goes beyound the width of
+                        # the ruler
+                        if pos_x + half_text_w < width:
+                            x = pos_x - half_text_w
+                            if x > self.MIN_LENGTH:
+                                ctx_text.draw_text(x, self.tick_max_length, label)
+
+                            # If the ruler is wide, then draw also the label at
+                            # the bottom
+                            if height > 6 * e.height:
+                                ctx_text.draw_text(
+                                    x, height - self.tick_max_length - e.height, label
+                                )
+
+                    break
+                i -= 1
+            else:
+                continue
+
+            # Draw the tick at the top
+            self.context.ctx.move_to(pos_x, 0)
+            self.context.ctx.line_to(pos_x, length)
+
+            # Draw the tick at the bottom
+            self.context.ctx.move_to(pos_x, height - length)
+            self.context.ctx.line_to(pos_x, height)
+            self.context.ctx.stroke()
+
+            # Draw the grid
+            if (
+                show_when_wide
+                and pos_x > self.MIN_LENGTH
+                and width - pos_x > self.MIN_LENGTH
+                and height > 10 * ctx_text.default_height
+            ):
+                self.context.ctx.set_line_width(0.2)
+                self.context.ctx.move_to(
+                    pos_x, self.tick_max_length + ctx_text.default_height + 5
+                )
+                self.context.ctx.line_to(
+                    pos_x,
+                    height - self.tick_max_length - ctx_text.default_height - 5,
+                )
+                self.context.ctx.stroke()
+                self.context.ctx.set_line_width(1)
+
     def draw(self):
         """Draw the ruler.
 
@@ -117,103 +262,32 @@ class Unit:
         This returned parameter can be 0 if no resize is required.
         """
         ctx_text = CtxText(self.context.ctx, self.context.font_desc)
-        self.context.ctx.set_line_width(1)
+
+        # Minimum drawing area size to draw the labels and the ticks
+        min_size = ctx_text.default_height + 2 * self.tick_max_length
+        if min_size > self.context.width or min_size > self.context.height:
+            return (
+                min_size if min_size > self.context.width else 0,
+                min_size if min_size > self.context.height else 0,
+            )
+
+        # Background
         self.context.ctx.set_source_rgba(*self.context.color_bg)
         self.context.ctx.rectangle(0, 0, self.context.width, self.context.height)
         self.context.ctx.fill()
 
-        if self.context.height > self.context.width:
-            self.context.is_horizontal = False
-            self.context.ctx.translate(self.context.width, 0)
-            self.context.ctx.rotate(math.pi / 2.0)
-            self.context.height, self.context.width = (
-                self.context.width,
-                self.context.height,
-            )
-            px_per_tick = self.px_per_tick_height
-        else:
-            self.context.is_horizontal = True
-            px_per_tick = self.px_per_tick_width
-
-        offset = self.unit2tick(self.context.offset)
-
-        # Verify whether the context height is sufficient for the drawing
-        total_height = ctx_text.default_height + 2 * self.tick_max_length
-        if total_height > self.context.height:
-            return (0, total_height) if self.context.is_horizontal else (total_height, 0)
-
-        ticks = sorted(self.ticks.keys())
-        nb_tick_types = len(self.ticks)
+        # Foreground context
         self.context.ctx.set_source_rgba(*self.context.color_fg)
-        unit_name_displayed = False
-        for unit_x in range(1 + offset, math.ceil(self.context.width / px_per_tick) + offset):
+        self.context.ctx.set_line_width(1)
 
-            # pos_x is the X coordinate of the tick
-            if self.context.left2right:
-                pos_x = (unit_x - offset) * px_per_tick + 0.5
-            else:
-                pos_x = self.context.width - ((unit_x - offset) * px_per_tick + 0.5)
+        px_per_tick = self.px_per_tick_width
 
-            i = nb_tick_types - 1
-            while i >= 0:
-                if unit_x % ticks[i] == 0:
-                    show_when_wide = self.ticks[ticks[i]]["show_when_wide"]
-                    length = self.ticks[ticks[i]]["length"]
-                    # Do not draw the tick if x < 40 to prevent it from
-                    # being hidden by the menu button
-                    if self.ticks[ticks[i]]["label"] and pos_x >= 40:
-                        i = round(unit_x / self.unit_multiplier)
-                        if unit_name_displayed or pos_x < 50:
-                            label = f"{i}"
-                        else:
-                            label = f"{i} {self.short_name}"
-                            unit_name_displayed = True
-                    else:
-                        label = None
-                    break
-                i -= 1
-            else:
-                continue
+        self.draw_horizontal(ctx_text, min_size)
+        self.draw_vertical(ctx_text, min_size)
 
-            # Draw the tick
-            self.context.ctx.move_to(pos_x, 0)
-            self.context.ctx.line_to(pos_x, length)
-
-            if label:
-                e = ctx_text.get_extents(label)
-                half_text_w = e.width / 2.0
-                if pos_x + half_text_w < self.context.width:
-                    x = pos_x - half_text_w
-                else:
-                    x = self.context.width - e.width - 1
-
-                ctx_text.draw_text(x, self.tick_max_length, label)
-
-                if self.context.height > 6 * e.height:
-                    ctx_text.draw_text(
-                        x, self.context.height - self.tick_max_length - e.height, label
-                    )
-
-            self.context.ctx.move_to(pos_x, self.context.height - length)
-            self.context.ctx.line_to(pos_x, self.context.height)
-            self.context.ctx.stroke()
-
-            if show_when_wide and self.context.height > 10 * ctx_text.default_height:
-                self.context.ctx.set_line_width(0.2)
-                self.context.ctx.move_to(
-                    pos_x, self.tick_max_length + ctx_text.default_height + 5
-                )
-                self.context.ctx.line_to(
-                    pos_x,
-                    self.context.height - self.tick_max_length - ctx_text.default_height - 5,
-                )
-                self.context.ctx.stroke()
-                self.context.ctx.set_line_width(1)
-
-        self.context.ctx.stroke()
         self._draw_track(px_per_tick * self.unit_multiplier)
 
-        return (0, total_height) if self.context.is_horizontal else (total_height, 0)
+        return (min_size, min_size)
 
 
 class CtxText:
