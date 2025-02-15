@@ -160,11 +160,8 @@ class LengthWindow(Adw.ApplicationWindow):
         elif key_val == Gdk.KEY_p:
             if self.context.track_pointer:
                 self.context.track_locked = not self.context.track_locked
-                self.context.track_pos = (
-                    self.context.pointer_x
-                    if self.context.is_horizontal
-                    else self.context.pointer_y
-                )
+                self.context.track_pos_x = self.context.pointer_x
+                self.context.track_pos_y = self.context.pointer_y
                 self.drawing_area.queue_draw()
 
         if unit_changed:
@@ -196,5 +193,6 @@ class LengthWindow(Adw.ApplicationWindow):
         # Middle button
         if gesture.get_current_button() == 2 and self.context.track_pointer:
             self.context.track_locked = not self.context.track_locked
-            self.context.track_pos = x if self.context.is_horizontal else y
+            self.context.track_pos_x = x
+            self.context.track_pos_y = y
             self.drawing_area.queue_draw()

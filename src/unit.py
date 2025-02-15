@@ -26,7 +26,8 @@ from gi.repository import Pango, PangoCairo
 class Unit:
 
     # The minimum ruler length for drawing the markings. If the width or height
-    # of the drawing area is under this value, then the markings are not drawn.
+    # of the drawing area is lower than this value, then the markings are
+    # not drawn.
     MIN_LENGTH = 40
 
     def __init__(self, context) -> None:
@@ -41,20 +42,21 @@ class Unit:
         """Convert an offset in ruler units into unit ticks."""
         return round(offset * self.unit_multiplier)
 
-    def _draw_track(self, px_per_unit: int) -> None:
-        """Draw the pointer tracker label and tick."""
-        if not self.context.track_pointer:
+    def _draw_track_horizontal(self, min_size: int) -> None:
+        """Draw the pointer tracking horizontal line.
+
+        :param min_size: The minimum window width under which the pointer
+                         tracking line is not drawn.
+        :type min_size: int
+        """
+        if self.context.width < self.MIN_LENGTH or self.context.width <= min_size:
             return
 
-        if self.context.track_locked:
-            x = self.context.track_pos
-        elif self.context.is_horizontal:
-            x = self.context.pointer_x
-        else:
-            x = self.context.pointer_y
-
+        x = self.context.track_pos_x if self.context.track_locked else self.context.pointer_x
         if x <= 0 or x >= self.context.width:
             return
+
+        px_per_unit = self.px_per_tick_width * self.unit_multiplier
 
         # Convert the x coordinate into unit coordinate
         if self.context.left2right:
@@ -75,7 +77,7 @@ class Unit:
 
         ctx_text = CtxText(self.context.ctx, self.context.font_desc_small)
         # Compute the width of the widest label. This is used to draw the
-        # background box
+        # background box.
         extends_bg = ctx_text.get_extents(label_max)
 
         # Background box, which uses the foreground color
@@ -112,33 +114,79 @@ class Unit:
         )
         self.context.ctx.stroke()
 
-    def draw_vertical(self, ctx_text, min_size: int) -> None:
-        """Draw the vertical markings.
+    def _draw_track_vertical(self, min_size: int):
+        """Draw the pointer tracking vertical line.
 
-        :param ctx_text: The text context.
-        :type ctx_text: :py:class:``CtxText``
-        :param min_size: The minimum window heigh under which the markings are
-                         not drawn.
+        :param min_size: The minimum window height under which the pointer
+                         tracking line is not drawn.
         :type min_size: int
         """
         if self.context.height < self.MIN_LENGTH or self.context.height <= min_size:
             return
 
-        # Rotate 90° and call the horizontal drawing method
-        self.context.ctx.translate(self.context.width, 0)
-        self.context.ctx.rotate(math.pi / 2.0)
-        self.draw_horizontal(
-            ctx_text,
-            min_size,
-            self.px_per_tick_height,
-            self.context.height,
-            self.context.width,
-        )
-        # Rotate back
-        self.context.ctx.rotate(-math.pi / 2.0)
-        self.context.ctx.translate(-self.context.width, 0)
+        y = self.context.track_pos_y if self.context.track_locked else self.context.pointer_y
+        if y <= 0 or y >= self.context.height:
+            return
 
-    def draw_horizontal(
+        px_per_unit = self.px_per_tick_width * self.unit_multiplier
+
+        # Convert the y coordinate into unit coordinate
+        if self.context.left2right:
+            unit_y = y / px_per_unit + self.context.offset
+        else:
+            unit_y = (self.context.height - y) / px_per_unit + self.context.offset
+        max_y = self.context.height / px_per_unit
+        if px_per_unit == 1:
+            # Do not show decimals
+            label = str(round(unit_y))
+            # Add a white space to get a little bit wider background box
+            label_max = str(round(max_y)) + " "
+        else:
+            # Keep two decimals
+            label = f"{unit_y:.2f}"
+            # Add a white space to get a little bit wider background box
+            label_max = f"{max_y:.2f} "
+
+        ctx_text = CtxText(self.context.ctx, self.context.font_desc_small)
+        # Compute the width of the widest label. This is used to draw the
+        # background box.
+        extends_bg = ctx_text.get_extents(label_max)
+
+        # Background box, which uses the foreground color
+        self.context.ctx.set_source_rgba(*(self.context.color_fg))
+        self.context.ctx.rectangle(
+            self.context.width / 2 - extends_bg.width / 2,
+            y - extends_bg.height / 2,
+            extends_bg.width,
+            extends_bg.height,
+        )
+        self.context.ctx.fill()
+
+        # Line
+        self.context.ctx.move_to(0, y)
+        self.context.ctx.line_to(self.context.width, y)
+        self.context.ctx.stroke()
+
+        if self.context.track_locked:
+            # Background box border highlight when the pointer track is locked
+            self.context.ctx.set_source_rgba(*(self.context.color_track))
+            self.context.ctx.rectangle(
+                self.context.width / 2 - extends_bg.width / 2 - 1,
+                y - extends_bg.height / 2 - 1,
+                extends_bg.width + 2,
+                extends_bg.height + 2,
+            )
+            self.context.ctx.stroke()
+
+        # Label in the box, which uses the background color
+        extends = ctx_text.get_extents(label)
+        self.context.ctx.set_source_rgba(*(self.context.color_bg))
+        ctx_text.draw_text(
+            self.context.width / 2 - extends.width / 2, y - extends.height / 2, label
+        )
+        self.context.ctx.stroke()
+
+    def _draw_horizontal(
         self,
         ctx_text,
         min_size: int,
@@ -253,6 +301,33 @@ class Unit:
                 self.context.ctx.stroke()
                 self.context.ctx.set_line_width(1)
 
+    def _draw_vertical(self, ctx_text, min_size: int) -> None:
+        """Draw the vertical markings.
+
+        :param ctx_text: The text context.
+        :type ctx_text: :py:class:``CtxText``
+        :param min_size: The minimum window heigh under which the markings are
+                         not drawn.
+        :type min_size: int
+        """
+        if self.context.height < self.MIN_LENGTH or self.context.height <= min_size:
+            return
+
+        # Rotate 90° and call the horizontal drawing method
+        self.context.ctx.translate(self.context.width, 0)
+        self.context.ctx.rotate(math.pi / 2.0)
+        self._draw_horizontal(
+            ctx_text,
+            min_size,
+            self.px_per_tick_height,
+            self.context.height,
+            self.context.width,
+        )
+
+        # Rotate back
+        self.context.ctx.rotate(-math.pi / 2.0)
+        self.context.ctx.translate(-self.context.width, 0)
+
     def draw(self):
         """Draw the ruler.
 
@@ -280,12 +355,12 @@ class Unit:
         self.context.ctx.set_source_rgba(*self.context.color_fg)
         self.context.ctx.set_line_width(1)
 
-        px_per_tick = self.px_per_tick_width
+        self._draw_horizontal(ctx_text, min_size)
+        self._draw_vertical(ctx_text, min_size)
 
-        self.draw_horizontal(ctx_text, min_size)
-        self.draw_vertical(ctx_text, min_size)
-
-        self._draw_track(px_per_tick * self.unit_multiplier)
+        if self.context.track_pointer:
+            self._draw_track_horizontal(min_size)
+            self._draw_track_vertical(min_size)
 
         return (min_size, min_size)
 
