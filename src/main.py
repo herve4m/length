@@ -41,6 +41,8 @@ class LengthApplication(Adw.Application):
             application_id=application_id, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
         )
 
+        self.set_resource_base_path("/io/github/herve4m/Length")
+
         # Command-line options
         opt = GLib.OptionEntry()
         opt.long_name = "version"

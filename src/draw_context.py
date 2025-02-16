@@ -52,9 +52,6 @@ class DrawContext:
         self.width: int = 0
         self.height: int = 0
 
-        # Orientation
-        self.is_horizontal: bool = True
-
         # Pointer position in the Drawing area
         self.pointer_x: float = 0.0
         self.pointer_y: float = 0.0
@@ -65,8 +62,9 @@ class DrawContext:
         # Whether the pointer tracker is locked in position
         self.track_locked: bool = False
 
-        # Position of the pointer tracker
-        self.track_pos: float = 0.0
+        # Position of the pointer tracker when locked
+        self.track_pos_x: float = 0.0
+        self.track_pos_y: float = 0.0
 
         # Offset (in ruler units)
         self.offset: float = 0.0

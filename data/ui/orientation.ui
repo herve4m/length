@@ -29,14 +29,15 @@
     </style>
     <child>
       <object class="GtkToggleButton" id="h_toggle">
-        <property name="label" translatable="yes">Horizontal</property>
-        <property name="active">1</property>
+        <property name="icon-name">horizontal-symbolic</property>
+        <!-- <property name="label" translatable="yes">Horizontal</property> -->
         <signal name="toggled" handler="_orientation_toggled"/>
       </object>
     </child>
     <child>
-      <object class="GtkToggleButton">
-        <property name="label" translatable="yes">Vertical</property>
+      <object class="GtkToggleButton" id="v_toggle">
+        <property name="icon-name">vertical-symbolic</property>
+        <!-- <property name="label" translatable="yes">Vertical</property> -->
         <property name="group">h_toggle</property>
       </object>
     </child>
