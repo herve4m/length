@@ -94,13 +94,11 @@
         <attribute name="custom">offset</attribute>
       </item>
     </section>
-    <!--
     <section>
       <item>
         <attribute name="custom">orientation</attribute>
       </item>
     </section>
-    -->
     <section>
       <item>
         <attribute name="label" translatable="yes">_Preferences</attribute>

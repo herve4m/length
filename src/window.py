@@ -27,7 +27,7 @@ from .opacity import OpacityControl
 from .pointer_tracking import PointerTrackingControl
 from .offset import OffsetControl
 
-# from .orientation import OrientationControl
+from .orientation import OrientationControl
 from .settings import Settings
 from .draw_context import DrawContext
 from .monitor_mngt import MonitorMngt, Monitor
@@ -55,6 +55,9 @@ class LengthWindow(Adw.ApplicationWindow):
         self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
 
+        w, h = self.settings.get_value("window-size")
+        self.set_default_size(w, h)
+
         popover = self.menu_button.get_popover()
         self.opacity_control = OpacityControl(self)
         popover.add_child(self.opacity_control, "opacity")
@@ -62,11 +65,8 @@ class LengthWindow(Adw.ApplicationWindow):
         popover.add_child(self.pointer_tracking_control, "pointer_tracking")
         self.offset_control = OffsetControl(self)
         popover.add_child(self.offset_control, "offset")
-        # self.orientation_control = OrientationControl(self)
-        # popover.add_child(self.orientation_control, "orientation")
-
-        w, h = self.settings.get_value("window-size")
-        self.set_default_size(w, h)
+        self.orientation_control = OrientationControl(self)
+        popover.add_child(self.orientation_control, "orientation")
 
     def draw(self, da, ctx, width: int, height: int) -> None:
         """Gtk.DrawingArea drawing function."""
@@ -87,6 +87,7 @@ class LengthWindow(Adw.ApplicationWindow):
             da.set_content_height(h)
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
+        self.orientation_control.update_orientation()
 
     def _on_enter_monitor(self, surface, monitor) -> None:
         """Switch monitor.
