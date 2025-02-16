@@ -29,13 +29,9 @@
     <file preprocess="xml-stripblanks">ui/preferences_display.ui</file>
     <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/help-overlay.ui</file>
     <file alias="style.css">media/css/style.css</file>
-    <file alias="Devel/style.css">media/css/style.css</file>
-    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/format-text-direction-ltr-symbolic.svg">media/icons/format-text-direction-ltr-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/format-text-direction-rtl-symbolic.svg">media/icons/format-text-direction-rtl-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/direction-ltr-symbolic.svg">media/icons/direction-ltr-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/direction-rtl-symbolic.svg">media/icons/direction-rtl-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="icons/scalable/actions/horizontal-symbolic.svg">media/icons/horizontal-symbolic.svg</file>
-    <!-- <file preprocess="xml-stripblanks" alias="icons/scalable/actions/vertical-symbolic.svg">media/icons/vertical-symbolic.svg</file> -->
-    <file preprocess="xml-stripblanks" alias="icons/vertical-symbolic.svg">media/icons/vertical-symbolic.svg</file>
-    <!--
-    https://www.reddit.com/r/gnome/comments/ug0dtc/gtk4_how_to_import_a_custom_icon_from_an_svg_file/?rdt=57228 -->
+    <file preprocess="xml-stripblanks" alias="icons/scalable/actions/vertical-symbolic.svg">media/icons/vertical-symbolic.svg</file>
   </gresource>
 </gresources>

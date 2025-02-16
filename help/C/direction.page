@@ -38,7 +38,7 @@
 
     <item><p>Go to <gui style="menuitem">Preferences</gui>.</p></item>
 
-    <item><p>In the <gui style="tab">General</gui> page, click the left-to-right direction button (<media its:translate="no" type="image" src="figures/format-text-direction-ltr-symbolic.svg"/>), or the right-to-left button (<media its:translate="no" type="image" src="figures/format-text-direction-rtl-symbolic.svg"/>).</p></item>
+    <item><p>In the <gui style="tab">General</gui> page, click the left-to-right direction button (<media its:translate="no" type="image" src="figures/direction-ltr-symbolic.svg"/>), or the right-to-left button (<media its:translate="no" type="image" src="figures/direction-rtl-symbolic.svg"/>).</p></item>
 
     <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
   </steps>
