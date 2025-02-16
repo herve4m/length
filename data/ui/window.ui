@@ -91,12 +91,12 @@
     </section>
     <section>
       <item>
-        <attribute name="custom">offset</attribute>
+        <attribute name="custom">orientation</attribute>
       </item>
     </section>
     <section>
       <item>
-        <attribute name="custom">orientation</attribute>
+        <attribute name="custom">offset</attribute>
       </item>
     </section>
     <section>
