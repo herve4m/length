@@ -164,6 +164,9 @@ class LengthWindow(Adw.ApplicationWindow):
                 self.context.track_pos_x = self.context.pointer_x
                 self.context.track_pos_y = self.context.pointer_y
                 self.drawing_area.queue_draw()
+        # elif key_val == Gdk.KEY_r:
+        #     self.orientation_control.rotate()
+        #     self.drawing_area.queue_draw()
 
         if unit_changed:
             id = UnitMng.array()[unit_index]["id"]

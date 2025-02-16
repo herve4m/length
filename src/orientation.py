@@ -43,26 +43,27 @@ class OrientationControl(Gtk.Box):
         self.h_toggle.set_active(w > h)
         self.v_toggle.set_active(w <= h)
 
+    def rotate(self, w: int = 0, h: int = 0) -> None:
+        if w == 0 or h == 0:
+            w, h = self.application_window.get_default_size()
+
+        # Although the window should automatically change size when
+        # setting the default size, it is not always the case. As a
+        # workaround, maximizing, unmaximizing, and presenting the
+        # window does the trick.
+        self.application_window.set_default_size(h, w)
+        self.application_window.maximize()
+        self.application_window.unmaximize()
+        self.application_window.present()
+
     @Gtk.Template.Callback()
     def _orientation_toggled(self, toggle) -> None:
         w, h = self.application_window.get_default_size()
         if toggle.get_active():
             if w < h:
                 logger.debug(f"Going from vertical to horizontal w={w} h={h}")
-
-                # Although the window should automatically change size when
-                # setting the default size, it is not always the case. As a
-                # workaround, maximizing, unmaximizing, and presenting the
-                # window does the trick.
-                self.application_window.set_default_size(h, w)
-                self.application_window.maximize()
-                self.application_window.unmaximize()
-                self.application_window.present()
+                self.rotate(w, h)
         else:
             if w > h:
                 logger.debug(f"Going from horizontal to vertical w={w} h={h}")
-
-                self.application_window.set_default_size(h, w)
-                self.application_window.maximize()
-                self.application_window.unmaximize()
-                self.application_window.present()
+                self.rotate(w, h)
