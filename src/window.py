@@ -70,7 +70,6 @@ class LengthWindow(Adw.ApplicationWindow):
 
     def draw(self, da, ctx, width: int, height: int) -> None:
         """Gtk.DrawingArea drawing function."""
-
         self.context.ctx = ctx
         self.context.width = width
         self.context.height = height
@@ -166,7 +165,6 @@ class LengthWindow(Adw.ApplicationWindow):
                 self.drawing_area.queue_draw()
         # elif key_val == Gdk.KEY_r:
         #     self.orientation_control.rotate()
-        #     self.drawing_area.queue_draw()
 
         if unit_changed:
             id = UnitMng.array()[unit_index]["id"]

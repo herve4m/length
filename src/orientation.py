@@ -63,7 +63,6 @@ class OrientationControl(Gtk.Box):
             if w < h:
                 logger.debug(f"Going from vertical to horizontal w={w} h={h}")
                 self.rotate(w, h)
-        else:
-            if w > h:
-                logger.debug(f"Going from horizontal to vertical w={w} h={h}")
-                self.rotate(w, h)
+        elif w > h:
+            logger.debug(f"Going from horizontal to vertical w={w} h={h}")
+            self.rotate(w, h)
