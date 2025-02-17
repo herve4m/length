@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-14 17:07+0100\n"
-"PO-Revision-Date: 2025-02-06 16:44+0100\n"
+"PO-Revision-Date: 2025-02-16 17:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
 "Language: it\n"
@@ -199,7 +199,7 @@ msgstr "Generale"
 #: data/ui/help-overlay.ui:33
 msgctxt "shortcut window"
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 #: data/ui/help-overlay.ui:39
 msgctxt "shortcut window"
@@ -306,9 +306,8 @@ msgid "Compute Monitor Size"
 msgstr "Calcola la dimensione dello schermo"
 
 #: data/ui/preferences_display.ui:34
-#, fuzzy
 msgid "Custom Monitor Size in Inches"
-msgstr "Dimensioni personalizzate"
+msgstr "Dimensioni personalizzate del monitor in pollici"
 
 #: data/ui/preferences.ui:27
 msgid "General"
@@ -356,7 +355,7 @@ msgstr "Calibrazione"
 
 #: data/ui/preferences.ui:177
 msgid "Displays"
-msgstr ""
+msgstr "Display"
 
 #: data/ui/window.ui:59
 msgid "Main Menu"
@@ -372,7 +371,7 @@ msgstr "Scorciatoie da tastiera"
 
 #: data/ui/window.ui:114
 msgid "_Help"
-msgstr ""
+msgstr "_Aiuto"
 
 #: data/ui/window.ui:118
 msgid "_About Length"
