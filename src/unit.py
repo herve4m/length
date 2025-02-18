@@ -255,7 +255,7 @@ class Unit:
 
                         e = ctx_text.get_extents(label)
                         half_text_w = e.width / 2.0
-                        # Do not draw the label if it goes beyound the width of
+                        # Do not draw the label if it goes beyond the width of
                         # the ruler
                         if pos_x + half_text_w < width:
                             x = pos_x - half_text_w
@@ -306,7 +306,7 @@ class Unit:
 
         :param ctx_text: The text context.
         :type ctx_text: :py:class:``CtxText``
-        :param min_size: The minimum window heigh under which the markings are
+        :param min_size: The minimum window height under which the markings are
                          not drawn.
         :type min_size: int
         """
@@ -327,6 +327,93 @@ class Unit:
         # Rotate back
         self.context.ctx.rotate(-math.pi / 2.0)
         self.context.ctx.translate(-self.context.width, 0)
+
+    def _draw_diag_1(self, ctx_text, min_size: int) -> None:
+        """Draw the diagonal markings.
+
+        :param ctx_text: The text context.
+        :type ctx_text: :py:class:``CtxText``
+        :param min_size: The minimum window width and height under which the
+                         markings are not drawn.
+        :type min_size: int
+        """
+        if (
+            self.context.width < self.MIN_LENGTH
+            or self.context.width <= min_size
+            or self.context.height < self.MIN_LENGTH
+            or self.context.height <= min_size
+        ):
+            return
+
+        px_per_tick = (
+            self.px_per_tick_width
+            if self.context.width >= self.context.height
+            else self.px_per_tick_height
+        )
+        diagonal = math.sqrt(self.context.width**2 + self.context.height**2)
+        width_per_diag = self.context.width / diagonal
+        height_per_diag = self.context.height / diagonal
+        offset_label_x = height_per_diag * self.tick_max_length / 2
+        offset_label_y = width_per_diag * self.tick_max_length / 2
+
+        offset = self.unit2tick(self.context.offset)
+        ticks = sorted(self.ticks.keys())
+        nb_tick_types = len(self.ticks)
+
+        # Draw the diagonal
+        self.context.ctx.set_line_width(0.2)
+        # Do not draw on the menu button
+        self.context.ctx.move_to(min_size * width_per_diag, min_size * height_per_diag)
+        self.context.ctx.line_to(self.context.width, self.context.height)
+        self.context.ctx.stroke()
+        self.context.ctx.set_line_width(1)
+
+        for unit_x in range(1 + offset, math.ceil(diagonal / px_per_tick) + offset):
+            if self.context.left2right:
+                pos = (unit_x - offset) * px_per_tick
+            else:
+                pos = diagonal - ((unit_x - offset) * px_per_tick)
+            # X and Y coordinates
+            pos_x = pos * width_per_diag
+            pos_y = pos * height_per_diag
+            # Do not draw on the menu button
+            if pos_x < min_size and pos_y < min_size:
+                continue
+
+            i = nb_tick_types - 1
+            while i >= 0:
+                if unit_x % ticks[i] == 0:
+                    length = self.ticks[ticks[i]]["length"]
+
+                    # Draw the label
+                    if self.ticks[ticks[i]]["label"]:
+                        tick_val = round(unit_x / self.unit_multiplier)
+                        label = f"{tick_val}"
+                        e = ctx_text.get_extents(label)
+                        pos_label_x = pos_x + offset_label_x
+                        pos_label_y = pos_y - offset_label_y - e.height
+                        # Do not draw the label if it would overwrite the
+                        # vertical or horizontal labels
+                        if (
+                            pos_label_x + e.width
+                            < self.context.width - self.tick_max_length - e.height
+                            and pos_label_x > self.tick_max_length + e.height
+                            and pos_label_y
+                            < self.context.height - self.tick_max_length - 2 * e.height
+                            and pos_label_y > self.tick_max_length + e.height
+                        ):
+                            ctx_text.draw_text(pos_label_x, pos_label_y, label)
+                    break
+                i -= 1
+            else:
+                continue
+
+            # Draw the tick
+            offset_x = height_per_diag * length / 2
+            offset_y = width_per_diag * length / 2
+            self.context.ctx.move_to(pos_x + offset_x, pos_y - offset_y)
+            self.context.ctx.line_to(pos_x - offset_x, pos_y + offset_y)
+        self.context.ctx.stroke()
 
     def draw(self):
         """Draw the ruler.
@@ -357,6 +444,7 @@ class Unit:
 
         self._draw_horizontal(ctx_text, min_size)
         self._draw_vertical(ctx_text, min_size)
+        self._draw_diag_1(ctx_text, min_size)
 
         if self.context.track_pointer:
             self._draw_track_horizontal(min_size)
