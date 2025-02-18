@@ -427,25 +427,22 @@ msgstr "Ajuster l'offset"
 
 #. (itstool) path: info/desc
 #: ../help/C/resizing.page:25
-#, fuzzy
 msgid "Adjust the size of the ruler."
-msgstr "Ajuster la taille et l'orientation de la règle."
+msgstr "Ajuster la taille de la règle."
 
 #. (itstool) path: page/title
 #: ../help/C/resizing.page:28
-#, fuzzy
 msgid "Resizing the Ruler"
-msgstr "Redimentionner et orienter la règle"
+msgstr "Redimentionner la règle"
 
 #. (itstool) path: page/p
 #: ../help/C/resizing.page:34
-#, fuzzy
 msgid ""
 "You can resize the ruler to adjust it to the object to measure. You resize "
 "the ruler by dragging the edges."
 msgstr ""
-"Vous pouvez redimentionner la règle pour l'ajuster à l'objet à mesurer. Vous "
-"pouvez aussi orienter la règle verticalement."
+"Vous pouvez redimentionner la règle pour l'ajuster à l'objet à mesurer. "
+"Tirer les bords de la règle pour la redimentionner."
 
 #. (itstool) path: info/desc
 #: ../help/C/tracking.page:25

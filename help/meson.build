@@ -6,6 +6,7 @@ help_files = [
   'fonts.page',
   'index.page',
   'offset.page',
+  'orientation.page',
   'resizing.page',
   'tracking.page',
   'transparency.page',

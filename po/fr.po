@@ -137,7 +137,6 @@ msgid "Direction from Left to Right"
 msgstr "Orientation de gauche à droite"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:67
-#, fuzzy
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
