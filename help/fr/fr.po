@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-02-18 16:12+0100\n"
+"POT-Creation-Date: 2025-02-18 16:37+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
@@ -12,9 +12,9 @@ msgstr ""
 #. (itstool) path: credit/years
 #: ../help/C/adjusting.page:13 ../help/C/calibrating.page:13
 #: ../help/C/colors.page:13 ../help/C/direction.page:13 ../help/C/fonts.page:13
-#: ../help/C/index.page:17 ../help/C/offset.page:13 ../help/C/resizing.page:13
-#: ../help/C/tracking.page:13 ../help/C/transparency.page:13
-#: ../help/C/units.page:14
+#: ../help/C/index.page:17 ../help/C/offset.page:13 ../help/C/rotating.page:13
+#: ../help/C/resizing.page:13 ../help/C/tracking.page:13
+#: ../help/C/transparency.page:13 ../help/C/units.page:14
 msgid "2025"
 msgstr ""
 
@@ -141,8 +141,8 @@ msgstr ""
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:43 ../help/C/colors.page:37
 #: ../help/C/direction.page:37 ../help/C/fonts.page:37 ../help/C/offset.page:37
-#: ../help/C/tracking.page:41 ../help/C/transparency.page:40
-#: ../help/C/units.page:38
+#: ../help/C/rotating.page:37 ../help/C/tracking.page:41
+#: ../help/C/transparency.page:40 ../help/C/units.page:38
 msgid ""
 "Click the menu button (<_:media-1/>) in the left-side corner of the ruler."
 msgstr "Cliquer le menu (<_:media-1/>) dans le coin gauche de la règle."
@@ -426,6 +426,37 @@ msgid "Adjust the offset."
 msgstr "Ajuster l'offset"
 
 #. (itstool) path: info/desc
+#: ../help/C/rotating.page:25
+#, fuzzy
+msgid "Rotate the ruler."
+msgstr "Redimentionner la règle"
+
+#. (itstool) path: page/title
+#: ../help/C/rotating.page:28
+#, fuzzy
+msgid "Changing the Ruler Orientation"
+msgstr "Changer la longueur et l'orientation de la règle"
+
+#. (itstool) path: page/p
+#: ../help/C/rotating.page:34
+msgid "You can rotate the ruler in vertical position."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/rotating.page:40
+msgid ""
+"Click the vertical button to rotate the ruler vertically. Click the "
+"horizontal button to rotate the ruler back in the horizontal position."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/rotating.page:47
+#, fuzzy
+msgid ""
+"You can also change the orientation of the ruler by dragging its corners."
+msgstr "Changer l'orientation de la règle en tirant sur les coins."
+
+#. (itstool) path: info/desc
 #: ../help/C/resizing.page:25
 msgid "Adjust the size of the ruler."
 msgstr "Ajuster la taille de la règle."
@@ -687,14 +718,8 @@ msgstr "Ce travail est sous licence <_:link-1/>."
 #~ msgid "Resize the ruler by dragging the edges."
 #~ msgstr "Redimentionner la règle en tirant sur les bords."
 
-#~ msgid "Change the orientation of the ruler by dragging the corners."
-#~ msgstr "Changer l'orientation de la règle en tirant sur les coins."
-
 #~ msgid "<app>Length</app> in different colors"
 #~ msgstr "<app>Length</app> dans différentes couleurs"
 
 #~ msgid "Left-to-right and right-to-left markings"
 #~ msgstr "Inscriptions de gaucheà droite et de droite à gauche"
-
-#~ msgid "Changing the ruler's dimension and orientation"
-#~ msgstr "Changer la longueur et l'orientation de la règle"
