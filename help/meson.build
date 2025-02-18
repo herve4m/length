@@ -25,6 +25,7 @@ help_media = [
   'figures/io.github.herve4m.Length.svg',
   'figures/offset.png',
   'figures/open-menu-symbolic.svg',
+  'figures/orientation.png',
   'figures/size.png',
   'figures/tracking.png',
   'figures/transparency.png',
