@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 17:07+0100\n"
+"POT-Creation-Date: 2025-02-18 16:12+0100\n"
 "PO-Revision-Date: 2025-01-18 13:44+0100\n"
 "Last-Translator: Hervé Quatremain\n"
 "Language-Team: none\n"
@@ -97,10 +97,26 @@ msgid "Opacity percentage of the Length interface"
 msgstr "Opacité en pourcentage de la règle"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:32
+msgid "Track the pointer"
+msgstr "Suivre le pointeur"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:33
+msgid "Display the pointer position in the ruler."
+msgstr "Affiche la position du pointeur sur la règle."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:38
+msgid "Origin of the Ruler"
+msgstr "Point d'origine"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:39
+msgid "Point of origin in ruler units."
+msgstr "Point d'origine dans l'unité de la règle."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:44
 msgid "Monitor Calibration Parameters"
 msgstr "Paramètres de calibration des écrans"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:33
+#: data/io.github.herve4m.Length.gschema.xml.in:45
 msgid ""
 "For each monitor, specify whether to let the ruler retrieve the monitor size "
 "from the system, or use the provided monitor size for the computations."
@@ -108,36 +124,22 @@ msgstr ""
 "Indique pour chaque écran si Length obtient la taille de l'écran du système, "
 "ou si les calculs sont fait à partir de la taille d'écran fourni."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:48
+#: data/io.github.herve4m.Length.gschema.xml.in:60
 msgid "Ruler Unit"
 msgstr "Unités de la règle"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:49
+#: data/io.github.herve4m.Length.gschema.xml.in:61
 msgid "Unit to use for the ruler"
 msgstr "Unitè à utiliser pour la règle"
-
-#: data/io.github.herve4m.Length.gschema.xml.in:54
-msgid "Track the pointer"
-msgstr "Suivre le pointeur"
-
-#: data/io.github.herve4m.Length.gschema.xml.in:55
-msgid "Display the pointer position in the ruler."
-msgstr "Affiche la position du pointeur sur la règle."
-
-#: data/io.github.herve4m.Length.gschema.xml.in:60
-msgid "Origin of the Ruler"
-msgstr "Point d'origine"
-
-#: data/io.github.herve4m.Length.gschema.xml.in:61
-msgid "Point of origin in ruler units."
-msgstr "Point d'origine dans l'unité de la règle."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:66
 msgid "Direction from Left to Right"
 msgstr "Orientation de gauche à droite"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:67
-msgid "Display the scale from left to right if TRUE, else from right to left."
+#, fuzzy
+msgid ""
+"Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
 "Afficher la règle de gauche à droite si VRAI, sinon de droite à gauche."
 
@@ -287,11 +289,16 @@ msgstr "_Offset"
 msgid "Opacity"
 msgstr "Opacité"
 
-#: data/ui/orientation.ui:32
+#: data/ui/orientation.ui:30
+#, fuzzy
+msgid "O_rientation"
+msgstr "_Direction"
+
+#: data/ui/orientation.ui:46
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: data/ui/orientation.ui:39
+#: data/ui/orientation.ui:53
 msgid "Vertical"
 msgstr "Vertical"
 
@@ -359,31 +366,31 @@ msgstr "Écrans"
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: data/ui/window.ui:106
+#: data/ui/window.ui:104
 msgid "_Preferences"
 msgstr "_Préférences"
 
-#: data/ui/window.ui:110
+#: data/ui/window.ui:108
 msgid "_Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: data/ui/window.ui:114
+#: data/ui/window.ui:112
 msgid "_Help"
 msgstr "_Aide"
 
-#: data/ui/window.ui:118
+#: data/ui/window.ui:116
 msgid "_About Length"
 msgstr "À propos de Length"
 
-#: data/ui/window.ui:124
+#: data/ui/window.ui:122
 msgid "_Quit"
 msgstr "_Quitter"
 
-#: src/draw_context.py:137
+#: src/draw_context.py:135
 msgid "Monitor Size Unknown"
 msgstr "Taille d'écran inconnue"
 
-#: src/draw_context.py:140
+#: src/draw_context.py:138
 #, python-brace-format
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
@@ -394,13 +401,13 @@ msgstr ""
 "Utiliser les Préférences pour calibrer Length pour votre taille d'écran.\n"
 "En attendant, les calculs sont faits pour un écran de "
 
-#: src/draw_context.py:148
+#: src/draw_context.py:146
 msgid "OK"
 msgstr "OK"
 
 #. Translators: Replace "translator-credits" with your name/username,
 #. and optionally an email or URL.
-#: src/main.py:151
+#: src/main.py:153
 msgid "translator-credits"
 msgstr "Hervé Quatremain"
 
