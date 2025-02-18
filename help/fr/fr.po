@@ -427,20 +427,18 @@ msgstr "Ajuster l'offset"
 
 #. (itstool) path: info/desc
 #: ../help/C/rotating.page:25
-#, fuzzy
 msgid "Rotate the ruler."
-msgstr "Redimentionner la règle"
+msgstr "Orienter la règle"
 
 #. (itstool) path: page/title
 #: ../help/C/rotating.page:28
-#, fuzzy
 msgid "Changing the Ruler Orientation"
-msgstr "Changer la longueur et l'orientation de la règle"
+msgstr "Changer l'orientation de la règle"
 
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:34
 msgid "You can rotate the ruler in vertical position."
-msgstr ""
+msgstr "Vous pouvez orienter la règle verticalement."
 
 #. (itstool) path: item/p
 #: ../help/C/rotating.page:40
@@ -448,13 +446,15 @@ msgid ""
 "Click the vertical button to rotate the ruler vertically. Click the "
 "horizontal button to rotate the ruler back in the horizontal position."
 msgstr ""
+"Cliquer le bouton vertical pour orienter la règle verticalement. Cliquer "
+"le bouton horizontal pour orienter la règle horizontalement."
 
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:47
-#, fuzzy
 msgid ""
 "You can also change the orientation of the ruler by dragging its corners."
-msgstr "Changer l'orientation de la règle en tirant sur les coins."
+msgstr ""
+"Vous pouvez aussi changer l'orientation de la règle en tirant sur ses coins."
 
 #. (itstool) path: info/desc
 #: ../help/C/resizing.page:25
