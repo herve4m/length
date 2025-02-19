@@ -1,5 +1,6 @@
 {
   "io.github.herve4m.Length.Devel": [
-    "appstream-external-screenshot-url"
+    "appstream-external-screenshot-url",
+    "appstream-screenshots-not-mirrored-in-ostree"
   ]
 }
