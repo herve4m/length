@@ -55,5 +55,6 @@ jobs:
       - name: Build directory check
         run: |
           flatpak run --command=flatpak-builder-lint org.flatpak.Builder \
+            --exceptions --user-exceptions .github/files/exceptions.json \
             builddir builddir
 ...
