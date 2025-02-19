@@ -4,6 +4,17 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.4.0
+======
+
+Minor Changes
+-------------
+
+- Add a control in the main menu to change the orientation of the ruler.
+- Add help (yelp) content.
+- Add diagonal rulers when the ruler window is extended.
+
+
 v0.3.1
 ======
 

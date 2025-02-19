@@ -67,11 +67,21 @@
   </screenshots>
 
   <releases>
+    <release version="0.4.0" date="2025-02-19">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v040</url>
+      <description translate="no">
+        <p>Add a control in the main menu to change the orientation of the ruler</p>
+        <p>Add help pages</p>
+        <p>Add diagonal rulers when the ruler window is extended</p>
+      </description>
+    </release>
     <release version="0.3.1" date="2025-02-05">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v031</url>
       <description translate="no">
-        <p>In some environments, the system does not provide a monitor description, which resulted in Length ignoring the monitor. With this release, Length uses the monitor manufacturer and model when the description is not available.
-</p>
+        <p>
+          In some environments, the system does not provide a monitor description, which resulted in Length ignoring the monitor.
+          With this release, Length uses the monitor manufacturer and model when the description is not available.
+       </p>
       </description>
     </release>
     <release version="0.3.0" date="2025-02-05">
