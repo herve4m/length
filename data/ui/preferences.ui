@@ -57,14 +57,14 @@
                     <property name="margin-bottom">10</property>
                     <child>
                       <object class="GtkToggleButton" id="lr_toggle">
-                        <property name="icon-name">format-text-direction-ltr-symbolic</property>
+                        <property name="icon-name">direction-ltr-symbolic</property>
                         <property name="width-request">60</property>
                         <signal name="toggled" handler="_lr_toggled"/>
                       </object>
                     </child>
                     <child>
                       <object class="GtkToggleButton" id="rl_toggle">
-                        <property name="icon-name">format-text-direction-rtl-symbolic</property>
+                        <property name="icon-name">direction-rtl-symbolic</property>
                         <property name="width-request">60</property>
                         <property name="group">lr_toggle</property>
                       </object>

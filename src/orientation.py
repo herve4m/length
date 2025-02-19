@@ -29,27 +29,40 @@ logger = logging.getLogger(__name__)
 class OrientationControl(Gtk.Box):
     __gtype_name__ = "OrientationControl"
 
+    h_toggle = Gtk.Template.Child()
+    v_toggle = Gtk.Template.Child()
+
     def __init__(self, application_window) -> None:
         """Initialize the object."""
         super().__init__()
         self.application_window = application_window
+
+    def update_orientation(self) -> None:
+        """Update the toggle buttons according to the current orientation."""
+        w, h = self.application_window.get_default_size()
+        self.h_toggle.set_active(w > h)
+        self.v_toggle.set_active(w <= h)
+
+    def rotate(self, w: int = 0, h: int = 0) -> None:
+        if w == 0 or h == 0:
+            w, h = self.application_window.get_default_size()
+
+        # Although the window should automatically change size when
+        # setting the default size, it is not always the case. As a
+        # workaround, maximizing, unmaximizing, and presenting the
+        # window does the trick.
+        self.application_window.set_default_size(h, w)
+        self.application_window.maximize()
+        self.application_window.unmaximize()
+        self.application_window.present()
 
     @Gtk.Template.Callback()
     def _orientation_toggled(self, toggle) -> None:
         w, h = self.application_window.get_default_size()
         if toggle.get_active():
             if w < h:
-                logger.debug("Going from vertical to horizontal")
-                self.application_window.set_default_size(h, w)
-                # self.application_window.set_visible(False)
-                self.application_window.set_visible(True)
-                # self.application_window.set_resizable(False)
-                # self.application_window.present()
-                # self.application_window.set_resizable(True)
-        else:
-            if w > h:
-                logger.debug("Going from horizontal to vertical")
-                self.application_window.set_default_size(h, w)
-                # self.application_window.set_visible(False)
-                self.application_window.set_visible(True)
-                # self.application_window.present()
+                logger.debug(f"Going from vertical to horizontal w={w} h={h}")
+                self.rotate(w, h)
+        elif w > h:
+            logger.debug(f"Going from horizontal to vertical w={w} h={h}")
+            self.rotate(w, h)

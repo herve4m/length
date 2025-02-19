@@ -27,7 +27,7 @@ from .opacity import OpacityControl
 from .pointer_tracking import PointerTrackingControl
 from .offset import OffsetControl
 
-# from .orientation import OrientationControl
+from .orientation import OrientationControl
 from .settings import Settings
 from .draw_context import DrawContext
 from .monitor_mngt import MonitorMngt, Monitor
@@ -55,6 +55,9 @@ class LengthWindow(Adw.ApplicationWindow):
         self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
 
+        w, h = self.settings.get_value("window-size")
+        self.set_default_size(w, h)
+
         popover = self.menu_button.get_popover()
         self.opacity_control = OpacityControl(self)
         popover.add_child(self.opacity_control, "opacity")
@@ -62,15 +65,11 @@ class LengthWindow(Adw.ApplicationWindow):
         popover.add_child(self.pointer_tracking_control, "pointer_tracking")
         self.offset_control = OffsetControl(self)
         popover.add_child(self.offset_control, "offset")
-        # self.orientation_control = OrientationControl(self)
-        # popover.add_child(self.orientation_control, "orientation")
-
-        w, h = self.settings.get_value("window-size")
-        self.set_default_size(w, h)
+        self.orientation_control = OrientationControl(self)
+        popover.add_child(self.orientation_control, "orientation")
 
     def draw(self, da, ctx, width: int, height: int) -> None:
         """Gtk.DrawingArea drawing function."""
-
         self.context.ctx = ctx
         self.context.width = width
         self.context.height = height
@@ -87,6 +86,7 @@ class LengthWindow(Adw.ApplicationWindow):
             da.set_content_height(h)
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
+        self.orientation_control.update_orientation()
 
     def _on_enter_monitor(self, surface, monitor) -> None:
         """Switch monitor.
@@ -160,12 +160,11 @@ class LengthWindow(Adw.ApplicationWindow):
         elif key_val == Gdk.KEY_p:
             if self.context.track_pointer:
                 self.context.track_locked = not self.context.track_locked
-                self.context.track_pos = (
-                    self.context.pointer_x
-                    if self.context.is_horizontal
-                    else self.context.pointer_y
-                )
+                self.context.track_pos_x = self.context.pointer_x
+                self.context.track_pos_y = self.context.pointer_y
                 self.drawing_area.queue_draw()
+        # elif key_val == Gdk.KEY_r:
+        #     self.orientation_control.rotate()
 
         if unit_changed:
             id = UnitMng.array()[unit_index]["id"]
@@ -188,7 +187,7 @@ class LengthWindow(Adw.ApplicationWindow):
     @Gtk.Template.Callback()
     def _on_leave_event(self, event_controller_key) -> None:
         if self.context.track_pointer and not self.context.track_locked:
-            self.context.pointer_x = self.context.pointer_x = 0.0
+            self.context.pointer_x = self.context.pointer_y = 0.0
             self.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
@@ -196,5 +195,6 @@ class LengthWindow(Adw.ApplicationWindow):
         # Middle button
         if gesture.get_current_button() == 2 and self.context.track_pointer:
             self.context.track_locked = not self.context.track_locked
-            self.context.track_pos = x if self.context.is_horizontal else y
+            self.context.track_pos_x = x
+            self.context.track_pos_y = y
             self.drawing_area.queue_draw()

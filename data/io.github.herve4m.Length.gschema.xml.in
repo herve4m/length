@@ -27,6 +27,18 @@
       <description>Opacity percentage of the Length interface</description>
     </key>
 
+    <key name="track-pointer" type="b">
+      <default>false</default>
+      <summary>Track the pointer</summary>
+      <description>Display the pointer position in the ruler.</description>
+    </key>
+
+    <key name="offset" type="d">
+      <default>0.0</default>
+      <summary>Origin of the Ruler</summary>
+      <description>Point of origin in ruler units.</description>
+    </key>
+
     <key name="calibration" type="aa{ss}">
       <default>[]</default>
       <summary>Monitor Calibration Parameters</summary>
@@ -49,23 +61,11 @@
       <description>Unit to use for the ruler</description>
     </key>
 
-    <key name="track-pointer" type="b">
-      <default>false</default>
-      <summary>Track the pointer</summary>
-      <description>Display the pointer position in the ruler.</description>
-    </key>
-
-    <key name="offset" type="d">
-      <default>0.0</default>
-      <summary>Origin of the Ruler</summary>
-      <description>Point of origin in ruler units.</description>
-    </key>
-
     <key name="direction-left-to-right" type="b">
       <default>true</default>
       <summary>Direction from Left to Right</summary>
       <description>
-        Display the scale from left to right if TRUE, else from right to left.
+        Display the scale from left to right when TRUE, else from right to left.
       </description>
     </key>
 

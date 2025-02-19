@@ -1,0 +1,48 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="rotating">
+
+  <info>
+    <link type="guide" xref="index#start"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Rotate the ruler.</desc>
+  </info>
+
+  <title>Changing the Ruler Orientation</title>
+
+  <media its:translate="no" type="image" src="figures/orientation.png">
+    <p>Changing the ruler's orientation</p>
+  </media>
+
+  <p>You can rotate the ruler in vertical position.</p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item>
+      <p>
+        Click the vertical button to rotate the ruler vertically.
+        Click the horizontal button to rotate the ruler back in the horizontal position.
+      </p>
+    </item>
+  </steps>
+
+  <p>You can also change the orientation of the ruler by dragging its corners.</p>
+</page>

@@ -21,23 +21,39 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <template class="OrientationControl" parent="GtkBox">
-    <property name="homogeneous">true</property>
     <property name="margin-end">18</property>
     <property name="margin-start">18</property>
-    <style>
-      <class name="linked"/>
-    </style>
+    <property name="spacing">12</property>
+    <property name="hexpand">true</property>
     <child>
-      <object class="GtkToggleButton" id="h_toggle">
-        <property name="label" translatable="yes">Horizontal</property>
-        <property name="active">1</property>
-        <signal name="toggled" handler="_orientation_toggled"/>
+      <object class="GtkLabel">
+        <property name="label" translatable="yes">O_rientation</property>
+        <property name="use-underline">true</property>
+        <property name="halign">start</property>
+        <property name="mnemonic-widget">h_toggle</property>
       </object>
     </child>
     <child>
-      <object class="GtkToggleButton">
-        <property name="label" translatable="yes">Vertical</property>
-        <property name="group">h_toggle</property>
+      <object class="GtkBox">
+        <style>
+          <class name="linked"/>
+        </style>
+        <property name="hexpand">true</property>
+        <property name="homogeneous">true</property>
+        <child>
+          <object class="GtkToggleButton" id="h_toggle">
+            <property name="icon-name">horizontal-symbolic</property>
+            <property name="tooltip-text" translatable="yes">Horizontal</property>
+            <signal name="toggled" handler="_orientation_toggled"/>
+          </object>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="v_toggle">
+            <property name="icon-name">vertical-symbolic</property>
+            <property name="tooltip-text" translatable="yes">Vertical</property>
+            <property name="group">h_toggle</property>
+          </object>
+        </child>
       </object>
     </child>
   </template>
