@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-18 16:12+0100\n"
-"PO-Revision-Date: 2025-02-16 17:44+0100\n"
+"PO-Revision-Date: 2025-02-19 20:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
 "Language: it\n"
@@ -138,12 +138,10 @@ msgid "Direction from Left to Right"
 msgstr "Orientamento da sinistra a destra"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:67
-#, fuzzy
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
-"Mostra il righello da sinistra a destra se VERO, altrimenti da destra a "
-"sinistra."
+"Visualizza la scala da sinistra a destra quando è VERO, altrimenti da destra a sinistra."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:74
 msgid "Use default font"
@@ -292,9 +290,8 @@ msgid "Opacity"
 msgstr "Opacità"
 
 #: data/ui/orientation.ui:30
-#, fuzzy
 msgid "O_rientation"
-msgstr "_Direzione"
+msgstr "O_rientamento"
 
 #: data/ui/orientation.ui:46
 msgid "Horizontal"
