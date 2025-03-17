@@ -4,6 +4,15 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.5.0
+======
+
+Minor Changes
+-------------
+
+- Italian and Dutch translations.
+
+
 v0.4.0
 ======
 

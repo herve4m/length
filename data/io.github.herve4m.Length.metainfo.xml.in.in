@@ -67,6 +67,12 @@
   </screenshots>
 
   <releases>
+    <release version="0.5.0" date="2025-03-17">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v050</url>
+      <description translate="no">
+        <p>Add Italian and Dutch translations</p>
+      </description>
+    </release>
     <release version="0.4.0" date="2025-02-19">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v040</url>
       <description translate="no">
