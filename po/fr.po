@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-18 16:12+0100\n"
-"PO-Revision-Date: 2025-03-18 09:08+0100\n"
+"PO-Revision-Date: 2025-03-18 09:13+0100\n"
 "Last-Translator: Hervé Quatremain\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -410,7 +410,9 @@ msgstr "D’accord"
 #. and optionally an email or URL.
 #: src/main.py:153
 msgid "translator-credits"
-msgstr "Hervé Quatremain"
+msgstr ""
+"Hervé Quatremain,\n"
+"Irénée Thirion"
 
 #: src/preferences.py:149
 msgid "Select Font"
