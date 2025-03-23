@@ -474,4 +474,31 @@ msgstr "px"
 msgid "Pixels"
 msgstr "Pixeles"
 
+#~ msgid ""
+#~ "Whether let Length try to compute the monitor size, or let you provide "
+#~ "your monitor size in \"monitor-size\". In some environments, that "
+#~ "computation might fail or report an inaccurate size."
+#~ msgstr ""
+#~ "Se si lascia che Length provi a calcolare la dimensione del monitor o si "
+#~ "lascia che tu fornisca la dimensione del monitor in \"monitor-size\". In "
+#~ "alcuni ambienti, tale calcolo potrebbe fallire o segnalare una dimensione "
+#~ "non accurata."
 
+#~ msgid "Monitor Size"
+#~ msgstr "Dimensioni del monitor"
+
+#~ msgid ""
+#~ "Monitor diagonal size in inches. Used only when \"compute-monitor-size\" "
+#~ "is FALSE."
+#~ msgstr ""
+#~ "Dimensione diagonale del monitor in pollici. Utilizzata solo quando le "
+#~ "\"dimensione-monitor\" è FALSE."
+
+#~ msgid "Compute _Monitor Size"
+#~ msgstr "Calcola le dimensioni dello schermo"
+
+#~ msgid "Changing Length orientation"
+#~ msgstr "Modifica dell'orientamento del righello"
+
+#~ msgid "A ruler to measure objects on screen"
+#~ msgstr "Un righello per misurare gli oggetti sullo schermo"
