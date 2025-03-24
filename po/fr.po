@@ -141,7 +141,7 @@ msgstr "Orientation de gauche à droite"
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
-"La sera affichée de gauche à droite si l’option est définie sur VRAI, sinon "
+"La règle sera affichée de gauche à droite si l’option est définie sur VRAI, sinon "
 "de droite à gauche."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:74
