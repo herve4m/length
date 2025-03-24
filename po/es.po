@@ -1,0 +1,504 @@
+# Spanish translations for length package.
+# Copyright (C) 2025 THE length'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the length package.
+# Haggen <h2gn@protonmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: length\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-18 16:12+0100\n"
+"PO-Revision-Date: 2025-03-22 17:23-0300\n"
+"Last-Translator: Haggen\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: data/io.github.herve4m.Length.desktop.in.in:3
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:7
+msgid "Length"
+msgstr "Longitud"
+
+#: data/io.github.herve4m.Length.desktop.in.in:4
+msgid "Screen ruler"
+msgstr "Regla de pantalla"
+
+#: data/io.github.herve4m.Length.desktop.in.in:5
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:8
+msgid "Measure objects on screen"
+msgstr "Medición de objetos en pantalla"
+
+#: data/io.github.herve4m.Length.desktop.in.in:11
+msgid "GTK;GNOME;ruler;measure;"
+msgstr "GTK;GNOME;regla;medir;;"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:10
+msgid ""
+"GNOME application for measuring distances on screen to help you design and inspect "
+"layouts and graphics. Length includes the following features:"
+msgstr ""
+"Aplicación GNOME para medir distancias en pantalla para ayudarle a diseñar e "
+"inspeccionar diseños y gráficos. Longitud incluye las siguientes características:"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:15
+msgid "Pixels, centimeters, inches, picas, points, or percentages as units"
+msgstr "Píxeles, centímetros, pulgadas, picas, puntos o porcentajes como unidades"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:16
+msgid "Horizontal or vertical orientation"
+msgstr "Orientación horizontal o vertical"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:17
+msgid "Left-to-right or right-to-left orientation"
+msgstr "Orientación de izquierda a derecha o de derecha a izquierda"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:18
+msgid "Transparency levels"
+msgstr "Niveles de transparencia"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:19
+msgid "Track pointer position"
+msgstr "Posición del puntero"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:45
+msgid "Horizontal view of Length with pixels as units"
+msgstr "Vista horizontal con píxeles como unidades"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:49
+msgid "Vertical view of Length with inches as units"
+msgstr "Vista vertical en pulgadas"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:53
+msgid "Length main menu"
+msgstr "Menú principal"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:57
+msgid "Preferences window"
+msgstr "Ventana de preferencias"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:61
+msgid "Pointer tracking enabled"
+msgstr "Seguimiento del puntero habilitado"
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:65
+msgid "Right to left ruler orientation"
+msgstr "Orientación de la regla de derecha a izquierda"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:26
+msgid "Ruler Opacity"
+msgstr "Opacidad de la regla"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:27
+msgid "Opacity percentage of the Length interface"
+msgstr "Porcentaje de opacidad de la interfaz de longitud"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:32
+msgid "Track the pointer"
+msgstr "Seguimiento del puntero"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:33
+msgid "Display the pointer position in the ruler."
+msgstr "Muestra la posición del puntero en la regla."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:38
+msgid "Origin of the Ruler"
+msgstr "Punto de origen de la regla"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:39
+msgid "Point of origin in ruler units."
+msgstr "Punto de origen en unidades de regla."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:44
+msgid "Monitor Calibration Parameters"
+msgstr "Parámetros de calibración del monitor"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:45
+msgid ""
+"For each monitor, specify whether to let the ruler retrieve the monitor size from the "
+"system, or use the provided monitor size for the computations."
+msgstr ""
+"Para cada monitor, especifique si desea que la regla recupere el tamaño del monitor del "
+"sistema o si desea utilizar el tamaño del monitor proporcionado para los cálculos."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:60
+msgid "Ruler Unit"
+msgstr "Unidad de la regla"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:61
+msgid "Unit to use for the ruler"
+msgstr "Unidad a utilizar para la regla"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:66
+msgid "Direction from Left to Right"
+msgstr "Dirección de izquierda a derecha"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:67
+msgid "Display the scale from left to right when TRUE, else from right to left."
+msgstr ""
+"Muestra la escala de izquierda a derecha cuando es VERDADERO, de lo contrario, de "
+"derecha a izquierda."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:74
+msgid "Use default font"
+msgstr "Usar fuente predeterminada"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:75
+msgid "Whether to use the default font"
+msgstr "Si se debe utilizar la fuente predeterminada"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:80
+msgid "Font Name"
+msgstr "Nombre de la fuente"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:81
+msgid "The font to use when \"use-default-font\" is FALSE."
+msgstr "La fuente a utilizar cuando \"use-default-font\" es FALSO."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:88
+msgid "Window Size"
+msgstr "Tamaño de la ventana"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:89
+msgid "Window size (width and height) of the last closed window."
+msgstr "Tamaño de la ventana (ancho y alto) de la última ventana cerrada."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:96
+msgid "Use default color scheme"
+msgstr "Utilizar el esquema de colores por defecto"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:97
+msgid "Whether to use the default color scheme"
+msgstr "Si desea utilizar el esquema de color por defecto"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:102
+msgid "Foreground Color"
+msgstr "Color de primer plano"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:103
+msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
+msgstr "Color (rojo, verde, azul, alfa) para las marcas de la regla y las etiquetas"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:110
+msgid "Background Color"
+msgstr "Color de fondo"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:111
+msgid "Color (red, green, blue, alpha) for the ruler background"
+msgstr "Color (rojo, verde, azul, alfa) para el fondo de la regla"
+
+#: data/ui/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: data/ui/help-overlay.ui:33
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Ayuda"
+
+#: data/ui/help-overlay.ui:39
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Mostrar accesos directos"
+
+#: data/ui/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Preferences Dialog"
+msgstr "Diálogo de preferencias"
+
+#: data/ui/help-overlay.ui:53
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Salir"
+
+#: data/ui/help-overlay.ui:63
+msgctxt "shortcut window"
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: data/ui/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Increase Opacity"
+msgstr "Aumentar la opacidad"
+
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Decrease Opacity"
+msgstr "Disminuir la opacidad"
+
+#: data/ui/help-overlay.ui:81
+msgctxt "shortcut window"
+msgid "Pointer Tracking"
+msgstr "Seguimiento del puntero"
+
+#: data/ui/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Activate/Deactivate"
+msgstr "Activar/Desactivar"
+
+#: data/ui/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Lock/Unlock Position"
+msgstr "Posición de bloqueo/desbloqueo"
+
+#: data/ui/help-overlay.ui:99
+msgctxt "shortcut window"
+msgid "Units"
+msgstr "Unidades"
+
+#: data/ui/help-overlay.ui:102
+msgctxt "shortcut window"
+msgid "Pixels"
+msgstr "Pixeles"
+
+#: data/ui/help-overlay.ui:108
+msgctxt "shortcut window"
+msgid "Centimeters"
+msgstr "Centímetros"
+
+#: data/ui/help-overlay.ui:114
+msgctxt "shortcut window"
+msgid "Inches"
+msgstr "Pulgadas"
+
+#: data/ui/help-overlay.ui:120
+msgctxt "shortcut window"
+msgid "Picas"
+msgstr "Picas"
+
+#: data/ui/help-overlay.ui:126
+msgctxt "shortcut window"
+msgid "Points"
+msgstr "Puntos"
+
+#: data/ui/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Percentages"
+msgstr "Porcentajes"
+
+#: data/ui/offset.ui:30
+msgid "_Offset"
+msgstr "_Desplazamiento"
+
+#: data/ui/opacity.ui:30 data/ui/opacity.ui:48
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: data/ui/orientation.ui:30
+msgid "O_rientation"
+msgstr "O_rientación"
+
+#: data/ui/orientation.ui:46
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: data/ui/orientation.ui:53
+msgid "Vertical"
+msgstr "Vertical"
+
+#: data/ui/pointer_tracking.ui:30
+msgid "_Track Pointer"
+msgstr "_Seguimiento del puntero"
+
+#: data/ui/preferences_display.ui:27
+msgid "Compute Monitor Size"
+msgstr "Tamaño del monitor de la computadora"
+
+#: data/ui/preferences_display.ui:34
+msgid "Custom Monitor Size in Inches"
+msgstr "Tamaño de monitor personalizado en pulgadas"
+
+#: data/ui/preferences.ui:27
+msgid "General"
+msgstr "General"
+
+#: data/ui/preferences.ui:31
+msgid "Scale"
+msgstr "Escala"
+
+#: data/ui/preferences.ui:35
+msgid "_Units"
+msgstr "_Unidades"
+
+#: data/ui/preferences.ui:49
+msgid "_Direction"
+msgstr "_Dirección"
+
+#: data/ui/preferences.ui:81
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: data/ui/preferences.ui:85
+msgid "Use Default _Colors"
+msgstr "Usar _colores predeterminados"
+
+#: data/ui/preferences.ui:97
+msgid "Foreground"
+msgstr "Primer plano"
+
+#: data/ui/preferences.ui:112
+msgid "Background"
+msgstr "Fondo"
+
+#: data/ui/preferences.ui:130
+msgid "Use Default _Font"
+msgstr "Usar _fuente por defecto"
+
+#: data/ui/preferences.ui:144
+msgid "Custom Font"
+msgstr "Fuente personalizada"
+
+#: data/ui/preferences.ui:173
+msgid "Calibrating"
+msgstr "Calibrando"
+
+#: data/ui/preferences.ui:177
+msgid "Displays"
+msgstr "Pantallas"
+
+#: data/ui/window.ui:59
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: data/ui/window.ui:104
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: data/ui/window.ui:108
+msgid "_Keyboard Shortcuts"
+msgstr "_Atajos de teclado"
+
+#: data/ui/window.ui:112
+msgid "_Help"
+msgstr "_Ayuda"
+
+#: data/ui/window.ui:116
+msgid "_About Length"
+msgstr "_Acerca de la Longitud"
+
+#: data/ui/window.ui:122
+msgid "_Quit"
+msgstr "_Salir"
+
+#: src/draw_context.py:135
+msgid "Monitor Size Unknown"
+msgstr "Tamaño del monitor desconocido"
+
+#: src/draw_context.py:138
+#, python-brace-format
+msgid ""
+"The size of the {monitor_name} monitor cannot be determined.\n"
+"Use the Preferences dialog to calibrate Length for your monitor size.\n"
+"In the meantime, computations are done for a "
+msgstr ""
+"No se puede determinar el tamaño del monitor {monitor_name}.\n"
+"Utilice el cuadro de diálogo Preferencias para calibrar Longitud para el tamaño de su "
+"monitor.\n"
+"Mientras tanto, los cálculos se realizan para un "
+
+#: src/draw_context.py:146
+msgid "OK"
+msgstr "OK"
+
+#. Translators: Replace "translator-credits" with your name/username,
+#. and optionally an email or URL.
+#: src/main.py:153
+msgid "translator-credits"
+msgstr "Haggen"
+
+#: src/preferences.py:149
+msgid "Select Font"
+msgstr "Seleccionar fuente"
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_cm.py:29
+msgid "cm"
+msgstr "cm"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_cm.py:31
+msgid "Centimeters"
+msgstr "Centímetros"
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_inch.py:29
+msgid "inch"
+msgstr "pulgada"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_inch.py:31
+msgid "Inches"
+msgstr "Pulgadas"
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_pct.py:29
+msgid "%"
+msgstr "%"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_pct.py:31
+msgid "Percentages"
+msgstr "Porcentajes"
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_pica.py:29
+msgid "pica"
+msgstr "pica"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_pica.py:31
+msgid "Picas"
+msgstr "Picas"
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_point.py:29
+msgid "pt"
+msgstr "pt"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_point.py:31
+msgid "Points"
+msgstr "Puntos"
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_px.py:29
+msgid "px"
+msgstr "px"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_px.py:31
+msgid "Pixels"
+msgstr "Pixeles"
+
+#~ msgid ""
+#~ "Whether let Length try to compute the monitor size, or let you provide "
+#~ "your monitor size in \"monitor-size\". In some environments, that "
+#~ "computation might fail or report an inaccurate size."
+#~ msgstr ""
+#~ "Se si lascia che Length provi a calcolare la dimensione del monitor o si "
+#~ "lascia che tu fornisca la dimensione del monitor in \"monitor-size\". In "
+#~ "alcuni ambienti, tale calcolo potrebbe fallire o segnalare una dimensione "
+#~ "non accurata."
+
+#~ msgid "Monitor Size"
+#~ msgstr "Dimensioni del monitor"
+
+#~ msgid ""
+#~ "Monitor diagonal size in inches. Used only when \"compute-monitor-size\" "
+#~ "is FALSE."
+#~ msgstr ""
+#~ "Dimensione diagonale del monitor in pollici. Utilizzata solo quando le "
+#~ "\"dimensione-monitor\" è FALSE."
+
+#~ msgid "Compute _Monitor Size"
+#~ msgstr "Calcola le dimensioni dello schermo"
+
+#~ msgid "Changing Length orientation"
+#~ msgstr "Modifica dell'orientamento del righello"
+
+#~ msgid "A ruler to measure objects on screen"
+#~ msgstr "Un righello per misurare gli oggetti sullo schermo"
