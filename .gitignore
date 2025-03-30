@@ -62,7 +62,6 @@ coverage.xml
 
 # Translations
 *.mo
-*.pot
 
 # Sphinx documentation
 docs/_build/
