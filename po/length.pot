@@ -1,0 +1,465 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the length package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: length\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-30 13:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/io.github.herve4m.Length.desktop.in.in:3
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:7
+msgid "Length"
+msgstr ""
+
+#: data/io.github.herve4m.Length.desktop.in.in:4
+msgid "Screen ruler"
+msgstr ""
+
+#: data/io.github.herve4m.Length.desktop.in.in:5
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:8
+msgid "Measure objects on screen"
+msgstr ""
+
+#: data/io.github.herve4m.Length.desktop.in.in:11
+msgid "GTK;GNOME;ruler;measure;"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:10
+msgid ""
+"GNOME application for measuring distances on screen to help you design and "
+"inspect layouts and graphics. Length includes the following features:"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:15
+msgid "Pixels, centimeters, inches, picas, points, or percentages as units"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:16
+msgid "Horizontal or vertical orientation"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:17
+msgid "Left-to-right or right-to-left orientation"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:18
+msgid "Transparency levels"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:19
+msgid "Track pointer position"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:45
+msgid "Horizontal view of Length with pixels as units"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:49
+msgid "Vertical view of Length with inches as units"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:53
+msgid "Length main menu"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:57
+msgid "Preferences window"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:61
+msgid "Pointer tracking enabled"
+msgstr ""
+
+#: data/io.github.herve4m.Length.metainfo.xml.in.in:65
+msgid "Right to left ruler orientation"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:26
+msgid "Ruler Opacity"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:27
+msgid "Opacity percentage of the Length interface"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:32
+msgid "Track the pointer"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:33
+msgid "Display the pointer position in the ruler."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:38
+msgid "Origin of the Ruler"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:39
+msgid "Point of origin in ruler units."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:44
+msgid "Monitor Calibration Parameters"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:45
+msgid ""
+"For each monitor, specify whether to let the ruler retrieve the monitor size "
+"from the system, or use the provided monitor size for the computations."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:60
+msgid "Ruler Unit"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:61
+msgid "Unit to use for the ruler"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:66
+msgid "Direction from Left to Right"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:67
+msgid ""
+"Display the scale from left to right when TRUE, else from right to left."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:74
+msgid "Use default font"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:75
+msgid "Whether to use the default font"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:80
+msgid "Font Name"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:81
+msgid "The font to use when \"use-default-font\" is FALSE."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:88
+msgid "Window Size"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:89
+msgid "Window size (width and height) of the last closed window."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:96
+msgid "Use default color scheme"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:97
+msgid "Whether to use the default color scheme"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:102
+msgid "Foreground Color"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:103
+msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:110
+msgid "Background Color"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:111
+msgid "Color (red, green, blue, alpha) for the ruler background"
+msgstr ""
+
+#: data/ui/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/ui/help-overlay.ui:33
+msgctxt "shortcut window"
+msgid "Help"
+msgstr ""
+
+#: data/ui/help-overlay.ui:39
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr ""
+
+#: data/ui/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Preferences Dialog"
+msgstr ""
+
+#: data/ui/help-overlay.ui:53
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: data/ui/help-overlay.ui:63
+msgctxt "shortcut window"
+msgid "Opacity"
+msgstr ""
+
+#: data/ui/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Increase Opacity"
+msgstr ""
+
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Decrease Opacity"
+msgstr ""
+
+#: data/ui/help-overlay.ui:81
+msgctxt "shortcut window"
+msgid "Pointer Tracking"
+msgstr ""
+
+#: data/ui/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Activate/Deactivate"
+msgstr ""
+
+#: data/ui/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Lock/Unlock Position"
+msgstr ""
+
+#: data/ui/help-overlay.ui:99
+msgctxt "shortcut window"
+msgid "Units"
+msgstr ""
+
+#: data/ui/help-overlay.ui:102
+msgctxt "shortcut window"
+msgid "Pixels"
+msgstr ""
+
+#: data/ui/help-overlay.ui:108
+msgctxt "shortcut window"
+msgid "Centimeters"
+msgstr ""
+
+#: data/ui/help-overlay.ui:114
+msgctxt "shortcut window"
+msgid "Inches"
+msgstr ""
+
+#: data/ui/help-overlay.ui:120
+msgctxt "shortcut window"
+msgid "Picas"
+msgstr ""
+
+#: data/ui/help-overlay.ui:126
+msgctxt "shortcut window"
+msgid "Points"
+msgstr ""
+
+#: data/ui/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Percentages"
+msgstr ""
+
+#: data/ui/offset.ui:30
+msgid "_Offset"
+msgstr ""
+
+#: data/ui/opacity.ui:30 data/ui/opacity.ui:48
+msgid "Opacity"
+msgstr ""
+
+#: data/ui/orientation.ui:30
+msgid "O_rientation"
+msgstr ""
+
+#: data/ui/orientation.ui:46
+msgid "Horizontal"
+msgstr ""
+
+#: data/ui/orientation.ui:53
+msgid "Vertical"
+msgstr ""
+
+#: data/ui/pointer_tracking.ui:30
+msgid "_Track Pointer"
+msgstr ""
+
+#: data/ui/preferences_display.ui:27
+msgid "Compute Monitor Size"
+msgstr ""
+
+#: data/ui/preferences_display.ui:34
+msgid "Custom Monitor Size in Inches"
+msgstr ""
+
+#: data/ui/preferences.ui:27
+msgid "General"
+msgstr ""
+
+#: data/ui/preferences.ui:31
+msgid "Scale"
+msgstr ""
+
+#: data/ui/preferences.ui:35
+msgid "_Units"
+msgstr ""
+
+#: data/ui/preferences.ui:49
+msgid "_Direction"
+msgstr ""
+
+#: data/ui/preferences.ui:81
+msgid "Appearance"
+msgstr ""
+
+#: data/ui/preferences.ui:85
+msgid "Use Default _Colors"
+msgstr ""
+
+#: data/ui/preferences.ui:97
+msgid "Foreground"
+msgstr ""
+
+#: data/ui/preferences.ui:112
+msgid "Background"
+msgstr ""
+
+#: data/ui/preferences.ui:130
+msgid "Use Default _Font"
+msgstr ""
+
+#: data/ui/preferences.ui:144
+msgid "Custom Font"
+msgstr ""
+
+#: data/ui/preferences.ui:173
+msgid "Calibrating"
+msgstr ""
+
+#: data/ui/preferences.ui:177
+msgid "Displays"
+msgstr ""
+
+#: data/ui/window.ui:59
+msgid "Main Menu"
+msgstr ""
+
+#: data/ui/window.ui:104
+msgid "_Preferences"
+msgstr ""
+
+#: data/ui/window.ui:108
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/ui/window.ui:112
+msgid "_Help"
+msgstr ""
+
+#: data/ui/window.ui:116
+msgid "_About Length"
+msgstr ""
+
+#: data/ui/window.ui:122
+msgid "_Quit"
+msgstr ""
+
+#: src/draw_context.py:135
+msgid "Monitor Size Unknown"
+msgstr ""
+
+#: src/draw_context.py:138
+#, python-brace-format
+msgid ""
+"The size of the {monitor_name} monitor cannot be determined.\n"
+"Use the Preferences dialog to calibrate Length for your monitor size.\n"
+"In the meantime, computations are done for a "
+msgstr ""
+
+#: src/draw_context.py:146
+msgid "OK"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your name/username,
+#. and optionally an email or URL.
+#: src/main.py:153
+msgid "translator-credits"
+msgstr ""
+
+#: src/preferences.py:149
+msgid "Select Font"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_cm.py:29
+msgid "cm"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_cm.py:31
+msgid "Centimeters"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_inch.py:29
+msgid "inch"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_inch.py:31
+msgid "Inches"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_pct.py:29
+msgid "%"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_pct.py:31
+msgid "Percentages"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_pica.py:29
+msgid "pica"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_pica.py:31
+msgid "Picas"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_point.py:29
+msgid "pt"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_point.py:31
+msgid "Points"
+msgstr ""
+
+#. Short name that is used to display the unit on the ruler
+#: src/unit_px.py:29
+msgid "px"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_px.py:31
+msgid "Pixels"
+msgstr ""
