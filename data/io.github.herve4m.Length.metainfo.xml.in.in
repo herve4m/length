@@ -67,6 +67,12 @@
   </screenshots>
 
   <releases>
+    <release version="0.6.0" date="2025-04-02">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v060</url>
+      <description translate="no">
+        <p>Use version 48 of the GNOME runtime</p>
+      </description>
+    </release>
     <release version="0.5.0" date="2025-03-17">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v050</url>
       <description translate="no">

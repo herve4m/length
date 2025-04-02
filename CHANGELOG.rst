@@ -4,6 +4,15 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.6.0
+======
+
+Minor Changes
+-------------
+
+- Use version 48 of the GNOME runtime.
+
+
 v0.5.0
 ======
 
