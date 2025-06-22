@@ -55,6 +55,7 @@
         <choice value="pica"/>
         <choice value="point"/>
         <choice value="pct"/>
+        <choice value="relpct"/>
       </choices>
       <default>"px"</default>
       <summary>Ruler Unit</summary>
