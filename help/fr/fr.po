@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-02-18 16:37+0100\n"
+"POT-Creation-Date: 2025-06-23 16:33+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
@@ -12,8 +12,8 @@ msgstr ""
 #. (itstool) path: credit/years
 #: ../help/C/adjusting.page:13 ../help/C/calibrating.page:13
 #: ../help/C/colors.page:13 ../help/C/direction.page:13 ../help/C/fonts.page:13
-#: ../help/C/index.page:17 ../help/C/offset.page:13 ../help/C/rotating.page:13
-#: ../help/C/resizing.page:13 ../help/C/tracking.page:13
+#: ../help/C/index.page:17 ../help/C/offset.page:13 ../help/C/resizing.page:13
+#: ../help/C/rotating.page:13 ../help/C/tracking.page:13
 #: ../help/C/transparency.page:13 ../help/C/units.page:14
 msgid "2025"
 msgstr ""
@@ -119,13 +119,13 @@ msgstr "Calibrer les écrans"
 
 #. (itstool) path: page/p
 #. (itstool) path: note/p
-#: ../help/C/calibrating.page:34 ../help/C/units.page:59
+#: ../help/C/calibrating.page:34 ../help/C/units.page:60
 msgid ""
 "To accurately represent some units, <app>Length</app> uses the physical size "
 "of your display."
 msgstr ""
-"Pour représenter certaines unités de façon juste, <app>Longueur</app> utilise "
-"la taille physique de l’écran."
+"Pour représenter certaines unités de façon juste, <app>Longueur</app> "
+"utilise la taille physique de l’écran."
 
 #. (itstool) path: page/p
 #: ../help/C/calibrating.page:36
@@ -173,9 +173,9 @@ msgid ""
 "provide your monitor diagonal size in inches."
 msgstr ""
 "Quand <gui style=\"button\">Calculer la taille de l’écran</gui> est actif, "
-"<app>Longueur</app> utilise la taille de l’écran fournie par le système. Quand "
-"<gui style=\"button\">Calculer la taille de l’écran</gui> est inactif, vous "
-"pouvez indiquer la diagonale de l’écran en pouces."
+"<app>Longueur</app> utilise la taille de l’écran fournie par le système. "
+"Quand <gui style=\"button\">Calculer la taille de l’écran</gui> est inactif, "
+"vous pouvez indiquer la diagonale de l’écran en pouces."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:58 ../help/C/colors.page:59
@@ -371,8 +371,8 @@ msgid ""
 "<app>Length</app> is an application for measuring distances on screen to "
 "help you design and inspect layouts and graphics."
 msgstr ""
-"<app>Longueur</app> permet de mesurer des distances à l’écran pour vous aider "
-"à composer et inspecter des structures et des images."
+"<app>Longueur</app> permet de mesurer des distances à l’écran pour vous "
+"aider à composer et inspecter des structures et des images."
 
 #. (itstool) path: section/title
 #: ../help/C/index.page:40
@@ -426,6 +426,25 @@ msgid "Adjust the offset."
 msgstr "Ajuster l’offset"
 
 #. (itstool) path: info/desc
+#: ../help/C/resizing.page:25
+msgid "Adjust the size of the ruler."
+msgstr "Ajuster la taille de la règle."
+
+#. (itstool) path: page/title
+#: ../help/C/resizing.page:28
+msgid "Resizing the Ruler"
+msgstr "Redimentionner la règle"
+
+#. (itstool) path: page/p
+#: ../help/C/resizing.page:34
+msgid ""
+"You can resize the ruler to adjust it to the object to measure. You resize "
+"the ruler by dragging the edges."
+msgstr ""
+"Vous pouvez redimentionner la règle pour l’ajuster à l’objet à mesurer. "
+"Tirer les bords de la règle pour la redimentionner."
+
+#. (itstool) path: info/desc
 #: ../help/C/rotating.page:25
 msgid "Rotate the ruler."
 msgstr "Orienter la règle"
@@ -446,8 +465,8 @@ msgid ""
 "Click the vertical button to rotate the ruler vertically. Click the "
 "horizontal button to rotate the ruler back in the horizontal position."
 msgstr ""
-"Cliquer le bouton vertical pour orienter la règle verticalement. Cliquer "
-"le bouton horizontal pour orienter la règle horizontalement."
+"Cliquer le bouton vertical pour orienter la règle verticalement. Cliquer le "
+"bouton horizontal pour orienter la règle horizontalement."
 
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:47
@@ -455,25 +474,6 @@ msgid ""
 "You can also change the orientation of the ruler by dragging its corners."
 msgstr ""
 "Vous pouvez aussi changer l’orientation de la règle en tirant sur ses coins."
-
-#. (itstool) path: info/desc
-#: ../help/C/resizing.page:25
-msgid "Adjust the size of the ruler."
-msgstr "Ajuster la taille de la règle."
-
-#. (itstool) path: page/title
-#: ../help/C/resizing.page:28
-msgid "Resizing the Ruler"
-msgstr "Redimentionner la règle"
-
-#. (itstool) path: page/p
-#: ../help/C/resizing.page:34
-msgid ""
-"You can resize the ruler to adjust it to the object to measure. You resize "
-"the ruler by dragging the edges."
-msgstr ""
-"Vous pouvez redimentionner la règle pour l’ajuster à l’objet à mesurer. "
-"Tirer les bords de la règle pour la redimentionner."
 
 #. (itstool) path: info/desc
 #: ../help/C/tracking.page:25
@@ -632,8 +632,8 @@ msgid ""
 "<app>Length</app> comes in several units that you can select from the "
 "<gui>Preferences</gui> dialog."
 msgstr ""
-"<app>Longueur</app> supporte plusieurs unités que vous pouvez sélectionner via "
-"la fenêtre des <gui>Préférences</gui>."
+"<app>Longueur</app> supporte plusieurs unités que vous pouvez sélectionner "
+"via la fenêtre des <gui>Préférences</gui>."
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:42
@@ -680,40 +680,38 @@ msgstr "<key>5</key> pour points (1/72 de pouce)"
 msgid "<key>6</key> for percentage of the display size"
 msgstr "<key>6</key> pour pourcentage de la taille de l’écran"
 
+#. (itstool) path: item/p
+#: ../help/C/units.page:55
+msgid "<key>7</key> for percentage of the ruler size"
+msgstr "<key>7</key> pour pourcentage de la taille de la règle"
+
 #. (itstool) path: note/title
-#: ../help/C/units.page:58
+#: ../help/C/units.page:59
 msgid "Calibrating <app>Length</app>"
 msgstr "Calibrer <app>Longueur</app>"
 
 #. (itstool) path: note/p
-#: ../help/C/units.page:62
+#: ../help/C/units.page:63
 msgid ""
 "In some environments, <app>Length</app> retrieves this information from the "
 "system. Other environments do not provide that size. In that case, you must "
 "calibrate <app>Length</app> for you display."
 msgstr ""
-"Pour certains environements, <app>Longueur</app> obtient cette information du "
-"système. D’autres environements ne fournissent l’information. Dans ce cas, "
-"vous devez calibrer <app>Longueur</app> pour votre écran."
+"Pour certains environements, <app>Longueur</app> obtient cette information "
+"du système. D’autres environements ne fournissent l’information. Dans ce "
+"cas, vous devez calibrer <app>Longueur</app> pour votre écran."
 
 #. (itstool) path: note/p
-#: ../help/C/units.page:67
+#: ../help/C/units.page:68
 msgid ""
 "See <link xref=\"calibrating\"/> for information on configuring <app>Length</"
 "app> for the size of your display."
 msgstr ""
-"Voir <link xref=\"calibrating\"/> pour configurer <app>Longueur</app> pour la "
-"taille de votre écran."
+"Voir <link xref=\"calibrating\"/> pour configurer <app>Longueur</app> pour "
+"la taille de votre écran."
 
-#. (itstool) path: p/link
-#: ../help/C/legal.xml:4
-msgid "Creative Commons Attribution-ShareAlike 4.0 International"
-msgstr ""
-
-#. (itstool) path: license/p
-#: ../help/C/legal.xml:3
-msgid "This work is licensed under a <_:link-1/> license."
-msgstr "Ce travail est sous licence <_:link-1/>."
+#~ msgid "This work is licensed under a <_:link-1/> license."
+#~ msgstr "Ce travail est sous licence <_:link-1/>."
 
 #~ msgid "Resize the ruler by dragging the edges."
 #~ msgstr "Redimentionner la règle en tirant sur les bords."
