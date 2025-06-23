@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-30 13:15+0200\n"
+"POT-Creation-Date: 2025-06-23 15:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,21 +17,21 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.github.herve4m.Length.desktop.in.in:3
+#: data/io.github.herve4m.Length.desktop.in.in:2
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:7
 msgid "Length"
 msgstr ""
 
-#: data/io.github.herve4m.Length.desktop.in.in:4
+#: data/io.github.herve4m.Length.desktop.in.in:3
 msgid "Screen ruler"
 msgstr ""
 
-#: data/io.github.herve4m.Length.desktop.in.in:5
+#: data/io.github.herve4m.Length.desktop.in.in:4
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:8
 msgid "Measure objects on screen"
 msgstr ""
 
-#: data/io.github.herve4m.Length.desktop.in.in:11
+#: data/io.github.herve4m.Length.desktop.in.in:10
 msgid "GTK;GNOME;ruler;measure;"
 msgstr ""
 
@@ -119,68 +119,68 @@ msgid ""
 "from the system, or use the provided monitor size for the computations."
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:60
+#: data/io.github.herve4m.Length.gschema.xml.in:61
 msgid "Ruler Unit"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:61
+#: data/io.github.herve4m.Length.gschema.xml.in:62
 msgid "Unit to use for the ruler"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:66
+#: data/io.github.herve4m.Length.gschema.xml.in:67
 msgid "Direction from Left to Right"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:67
+#: data/io.github.herve4m.Length.gschema.xml.in:68
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:74
+#: data/io.github.herve4m.Length.gschema.xml.in:75
 msgid "Use default font"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:75
+#: data/io.github.herve4m.Length.gschema.xml.in:76
 msgid "Whether to use the default font"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:80
+#: data/io.github.herve4m.Length.gschema.xml.in:81
 msgid "Font Name"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:81
+#: data/io.github.herve4m.Length.gschema.xml.in:82
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:88
+#: data/io.github.herve4m.Length.gschema.xml.in:89
 msgid "Window Size"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:89
+#: data/io.github.herve4m.Length.gschema.xml.in:90
 msgid "Window size (width and height) of the last closed window."
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:96
+#: data/io.github.herve4m.Length.gschema.xml.in:97
 msgid "Use default color scheme"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:97
+#: data/io.github.herve4m.Length.gschema.xml.in:98
 msgid "Whether to use the default color scheme"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:102
+#: data/io.github.herve4m.Length.gschema.xml.in:103
 msgid "Foreground Color"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:103
+#: data/io.github.herve4m.Length.gschema.xml.in:104
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:110
+#: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Background Color"
 msgstr ""
 
-#: data/io.github.herve4m.Length.gschema.xml.in:111
+#: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr ""
 
@@ -272,6 +272,11 @@ msgstr ""
 #: data/ui/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Percentages"
+msgstr ""
+
+#: data/ui/help-overlay.ui:138
+msgctxt "shortcut window"
+msgid "Relative Percentages"
 msgstr ""
 
 #: data/ui/offset.ui:30
@@ -378,19 +383,18 @@ msgstr ""
 msgid "_Quit"
 msgstr ""
 
-#: src/draw_context.py:135
+#: src/draw_context.py:136
 msgid "Monitor Size Unknown"
 msgstr ""
 
-#: src/draw_context.py:138
-#, python-brace-format
+#: src/draw_context.py:140
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
 "In the meantime, computations are done for a "
 msgstr ""
 
-#: src/draw_context.py:146
+#: src/draw_context.py:147
 msgid "OK"
 msgstr ""
 
@@ -425,7 +429,7 @@ msgid "Inches"
 msgstr ""
 
 #. Short name that is used to display the unit on the ruler
-#: src/unit_pct.py:29
+#: src/unit_pct.py:29 src/unit_rel_pct.py:29
 msgid "%"
 msgstr ""
 
@@ -462,4 +466,9 @@ msgstr ""
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_px.py:31
 msgid "Pixels"
+msgstr ""
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_rel_pct.py:31
+msgid "Relative Percentages"
 msgstr ""

@@ -52,6 +52,7 @@
     <item><p><key>4</key> for picas (1/6 of an inch)</p></item>
     <item><p><key>5</key> for points (1/72 of an inch)</p></item>
     <item><p><key>6</key> for percentage of the display size</p></item>
+    <item><p><key>7</key> for percentage of the ruler size</p></item>
   </list>
 
   <note style="tip">
