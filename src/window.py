@@ -55,6 +55,7 @@ class LengthWindow(Adw.ApplicationWindow):
         self.monitors = MonitorMngt(self.settings)
         self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
+        self.style_css_provider = Gtk.CssProvider()
 
         w, h = self.settings.get_value("window-size")
         self.set_default_size(w, h)

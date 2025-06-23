@@ -18,7 +18,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio
+from gi.repository import Gtk, Gio, Gdk
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/opacity.ui")
@@ -40,7 +40,9 @@ class OpacityControl(Gtk.Box):
 
         self.application_window = application_window
 
-        self.opacity_value = application_window.settings.get_int("opacity")
+        self.display = Gdk.Display.get_default()
+        self.opacity_value = self.application_window.settings.get_value("background-color")[3]
+        # XXXXXXXXXXXXXXXX self.opacity_value = application_window.settings.get_int("opacity")
         application_window.settings.bind(
             "opacity", self.opacity_adjustment, "value", Gio.SettingsBindFlags.DEFAULT
         )
@@ -79,4 +81,22 @@ class OpacityControl(Gtk.Box):
         """
         self.opacity_value = int(adjustment.get_value())
         self.opacity_label.set_label(f"{self.opacity_value}%")
-        self.application_window.set_opacity(self.opacity_value / 100.0)
+
+        color_setting = self.application_window.settings.get_value("background-color")
+        color_rgba = Gdk.RGBA()
+        color_rgba.red = color_setting[0]
+        color_rgba.green = color_setting[1]
+        color_rgba.blue = color_setting[2]
+        color_rgba.alpha = self.opacity_value / 100.0
+        rgba = color_rgba.to_string()
+
+        self.application_window.style_css_provider.load_from_string(
+            f"window.length-main {{ background-color: {rgba}; }}"
+        )
+        Gtk.StyleContext.add_provider_for_display(
+            self.display,
+            self.application_window.style_css_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_USER,
+        )
+
+        # self.application_window.set_opacity(self.opacity_value / 100.0)

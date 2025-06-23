@@ -518,9 +518,9 @@ class Unit:
             )
 
         # Background
-        self.context.ctx.set_source_rgba(*self.context.color_bg)
-        self.context.ctx.rectangle(0, 0, self.context.width, self.context.height)
-        self.context.ctx.fill()
+        # self.context.ctx.set_source_rgba(*self.context.color_bg)
+        # self.context.ctx.rectangle(0, 0, self.context.width, self.context.height)
+        # self.context.ctx.fill()
 
         # Foreground context
         self.context.ctx.set_source_rgba(*self.context.color_fg)
