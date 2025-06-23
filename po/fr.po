@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-18 16:12+0100\n"
+"POT-Creation-Date: 2025-06-23 15:18+0200\n"
 "PO-Revision-Date: 2025-03-18 09:13+0100\n"
 "Last-Translator: Hervé Quatremain\n"
 "Language-Team: none\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: data/io.github.herve4m.Length.desktop.in.in:3
+#: data/io.github.herve4m.Length.desktop.in.in:2
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:7
 msgid "Length"
 msgstr "Longueur"
 
-#: data/io.github.herve4m.Length.desktop.in.in:4
+#: data/io.github.herve4m.Length.desktop.in.in:3
 msgid "Screen ruler"
 msgstr "Règle d’écran"
 
-#: data/io.github.herve4m.Length.desktop.in.in:5
+#: data/io.github.herve4m.Length.desktop.in.in:4
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:8
 msgid "Measure objects on screen"
 msgstr "Mesurer des objets à l’écran"
 
-#: data/io.github.herve4m.Length.desktop.in.in:11
+#: data/io.github.herve4m.Length.desktop.in.in:10
 msgid "GTK;GNOME;ruler;measure;"
 msgstr "GTK;GNOME;règle;mesurer;"
 
@@ -125,71 +125,71 @@ msgstr ""
 "Indique pour chaque écran si Longueur obtient la taille de l’écran du "
 "système, ou si les calculs sont fait à partir de la taille d’écran fourni."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:60
+#: data/io.github.herve4m.Length.gschema.xml.in:61
 msgid "Ruler Unit"
 msgstr "Unités de la règle"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:61
+#: data/io.github.herve4m.Length.gschema.xml.in:62
 msgid "Unit to use for the ruler"
 msgstr "Unités à utiliser pour la règle"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:66
+#: data/io.github.herve4m.Length.gschema.xml.in:67
 msgid "Direction from Left to Right"
 msgstr "Orientation de gauche à droite"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:67
+#: data/io.github.herve4m.Length.gschema.xml.in:68
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
-"La règle sera affichée de gauche à droite si l’option est définie sur VRAI, sinon "
-"de droite à gauche."
+"La règle sera affichée de gauche à droite si l’option est définie sur VRAI, "
+"sinon de droite à gauche."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:74
+#: data/io.github.herve4m.Length.gschema.xml.in:75
 msgid "Use default font"
 msgstr "Utiliser la police par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:75
+#: data/io.github.herve4m.Length.gschema.xml.in:76
 msgid "Whether to use the default font"
 msgstr "Indique s’il faut utiliser ou non la police par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:80
+#: data/io.github.herve4m.Length.gschema.xml.in:81
 msgid "Font Name"
 msgstr "Nom de la police"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:81
+#: data/io.github.herve4m.Length.gschema.xml.in:82
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr ""
 "Police à utiliser quand l’option \"use-default-font\" est définie sur FAUX."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:88
+#: data/io.github.herve4m.Length.gschema.xml.in:89
 msgid "Window Size"
 msgstr "Taille de la fenêtre"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:89
+#: data/io.github.herve4m.Length.gschema.xml.in:90
 msgid "Window size (width and height) of the last closed window."
 msgstr "Dimensions (largeur et hauteur) de la dernière fenêtre fermée."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:96
+#: data/io.github.herve4m.Length.gschema.xml.in:97
 msgid "Use default color scheme"
 msgstr "Utiliser le jeu de couleurs par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:97
+#: data/io.github.herve4m.Length.gschema.xml.in:98
 msgid "Whether to use the default color scheme"
 msgstr "Indique s’il faut utiliser ou non le jeu de couleurs par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:102
+#: data/io.github.herve4m.Length.gschema.xml.in:103
 msgid "Foreground Color"
 msgstr "Couleur d’avant-plan"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:103
+#: data/io.github.herve4m.Length.gschema.xml.in:104
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr "Couleur (rouge, vert, bleu, alpha) des marques sur la règle"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:110
+#: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Background Color"
 msgstr "Couleur d’arrière-plan"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:111
+#: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr "Couleur (rouge, vert, bleu, alpha) d’arrière-plan de la règle"
 
@@ -282,6 +282,11 @@ msgstr "Points"
 msgctxt "shortcut window"
 msgid "Percentages"
 msgstr "Pourcentages"
+
+#: data/ui/help-overlay.ui:138
+msgctxt "shortcut window"
+msgid "Relative Percentages"
+msgstr "Pourcentages relatifs"
 
 #: data/ui/offset.ui:30
 msgid "_Offset"
@@ -387,12 +392,11 @@ msgstr "À propos de Longueur"
 msgid "_Quit"
 msgstr "_Quitter"
 
-#: src/draw_context.py:135
+#: src/draw_context.py:136
 msgid "Monitor Size Unknown"
 msgstr "Taille d’écran inconnue"
 
-#: src/draw_context.py:138
-#, python-brace-format
+#: src/draw_context.py:140
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
@@ -402,7 +406,7 @@ msgstr ""
 "Utilisez les Préférences pour calibrer Longueur pour votre taille d’écran.\n"
 "En attendant, les calculs sont faits pour un écran de "
 
-#: src/draw_context.py:146
+#: src/draw_context.py:147
 msgid "OK"
 msgstr "D’accord"
 
@@ -439,7 +443,7 @@ msgid "Inches"
 msgstr "Pouces"
 
 #. Short name that is used to display the unit on the ruler
-#: src/unit_pct.py:29
+#: src/unit_pct.py:29 src/unit_rel_pct.py:29
 msgid "%"
 msgstr "%"
 
@@ -477,6 +481,11 @@ msgstr "px"
 #: src/unit_px.py:31
 msgid "Pixels"
 msgstr "Pixels"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_rel_pct.py:31
+msgid "Relative Percentages"
+msgstr "Pourcentages relatifs"
 
 #~ msgid ""
 #~ "Whether let Length try to compute the monitor size, or let you provide "

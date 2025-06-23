@@ -51,6 +51,7 @@ class DrawContext:
         # Drawing area size
         self.width: int = 0
         self.height: int = 0
+        self.diagonal: float = 0.0
 
         # Pointer position in the Drawing area
         self.pointer_x: float = 0.0

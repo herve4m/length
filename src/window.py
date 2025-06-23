@@ -19,6 +19,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
+import math
 
 from gi.repository import Adw, Gtk, Gdk, GLib
 
@@ -73,6 +74,7 @@ class LengthWindow(Adw.ApplicationWindow):
         self.context.ctx = ctx
         self.context.width = width
         self.context.height = height
+        self.context.diagonal = math.sqrt(width**2 + height**2)
         self.context.refresh_from_settings()
 
         unit = self.settings.get_string("unit")
@@ -152,6 +154,9 @@ class LengthWindow(Adw.ApplicationWindow):
         elif key_val == Gdk.KEY_6:
             unit_changed = True
             unit_index = 5
+        elif key_val == Gdk.KEY_7:
+            unit_changed = True
+            unit_index = 6
         elif key_val == Gdk.KEY_t:
             self.context.track_locked = False
             self.context.track_pointer = not self.context.track_pointer

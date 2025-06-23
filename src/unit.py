@@ -128,7 +128,7 @@ class Unit:
         if y <= 0 or y >= self.context.height:
             return
 
-        px_per_unit = self.px_per_tick_width * self.unit_multiplier
+        px_per_unit = self.px_per_tick_height * self.unit_multiplier
 
         # Convert the y coordinate into unit coordinate
         if self.context.left2right:
@@ -328,6 +328,13 @@ class Unit:
         self.context.ctx.rotate(-math.pi / 2.0)
         self.context.ctx.translate(-self.context.width, 0)
 
+    def px_per_tick_diagonal(self) -> float:
+        return (
+            self.px_per_tick_width
+            if self.context.width >= self.context.height
+            else self.px_per_tick_height
+        )
+
     def _draw_diag_1(self, ctx_text, min_size: int) -> None:
         """Draw the diagonal markings.
 
@@ -345,14 +352,9 @@ class Unit:
         ):
             return
 
-        px_per_tick = (
-            self.px_per_tick_width
-            if self.context.width >= self.context.height
-            else self.px_per_tick_height
-        )
-        diagonal = math.sqrt(self.context.width**2 + self.context.height**2)
-        width_per_diag = self.context.width / diagonal
-        height_per_diag = self.context.height / diagonal
+        px_per_tick = self.px_per_tick_diagonal()
+        width_per_diag = self.context.width / self.context.diagonal
+        height_per_diag = self.context.height / self.context.diagonal
         offset_label_x = height_per_diag * self.tick_max_length / 2
         offset_label_y = width_per_diag * self.tick_max_length / 2
 
@@ -368,11 +370,13 @@ class Unit:
         self.context.ctx.stroke()
         self.context.ctx.set_line_width(1)
 
-        for unit_x in range(1 + offset, math.ceil(diagonal / px_per_tick) + offset):
+        for unit_x in range(
+            1 + offset, math.ceil(self.context.diagonal / px_per_tick) + offset
+        ):
             if self.context.left2right:
                 pos = (unit_x - offset) * px_per_tick
             else:
-                pos = diagonal - ((unit_x - offset) * px_per_tick)
+                pos = self.context.diagonal - ((unit_x - offset) * px_per_tick)
             # X and Y coordinates
             pos_x = pos * width_per_diag
             pos_y = pos * height_per_diag
@@ -432,14 +436,9 @@ class Unit:
         ):
             return
 
-        px_per_tick = (
-            self.px_per_tick_width
-            if self.context.width >= self.context.height
-            else self.px_per_tick_height
-        )
-        diagonal = math.sqrt(self.context.width**2 + self.context.height**2)
-        width_per_diag = self.context.width / diagonal
-        height_per_diag = self.context.height / diagonal
+        px_per_tick = self.px_per_tick_diagonal()
+        width_per_diag = self.context.width / self.context.diagonal
+        height_per_diag = self.context.height / self.context.diagonal
         offset_label_x = height_per_diag * self.tick_max_length / 2
         offset_label_y = width_per_diag * self.tick_max_length / 2
 
@@ -454,11 +453,13 @@ class Unit:
         self.context.ctx.stroke()
         self.context.ctx.set_line_width(1)
 
-        for unit_x in range(1 + offset, math.ceil(diagonal / px_per_tick) + offset):
+        for unit_x in range(
+            1 + offset, math.ceil(self.context.diagonal / px_per_tick) + offset
+        ):
             if self.context.left2right:
                 pos = (unit_x - offset) * px_per_tick
             else:
-                pos = diagonal - ((unit_x - offset) * px_per_tick)
+                pos = self.context.diagonal - ((unit_x - offset) * px_per_tick)
             # X and Y coordinates
             pos_x = pos * width_per_diag
             pos_y = self.context.height - pos * height_per_diag

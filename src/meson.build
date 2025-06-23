@@ -40,6 +40,7 @@ length_sources = [
   'unit_pica.py',
   'unit_point.py',
   'unit_px.py',
+  'unit_rel_pct.py',
   'unit.py',
   'window.py'
 ]

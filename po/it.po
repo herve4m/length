@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-18 16:12+0100\n"
+"POT-Creation-Date: 2025-06-23 15:18+0200\n"
 "PO-Revision-Date: 2025-02-19 20:44+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
@@ -17,21 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/io.github.herve4m.Length.desktop.in.in:3
+#: data/io.github.herve4m.Length.desktop.in.in:2
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:7
 msgid "Length"
 msgstr "Length"
 
-#: data/io.github.herve4m.Length.desktop.in.in:4
+#: data/io.github.herve4m.Length.desktop.in.in:3
 msgid "Screen ruler"
 msgstr "Righello dello schermo"
 
-#: data/io.github.herve4m.Length.desktop.in.in:5
+#: data/io.github.herve4m.Length.desktop.in.in:4
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:8
 msgid "Measure objects on screen"
 msgstr "Misura gli oggetti sullo schermo"
 
-#: data/io.github.herve4m.Length.desktop.in.in:11
+#: data/io.github.herve4m.Length.desktop.in.in:10
 msgid "GTK;GNOME;ruler;measure;"
 msgstr "GTK;GNOME;righello;misura;"
 
@@ -125,69 +125,70 @@ msgstr ""
 "dimensione del monitor dal sistema, oppure utilizzare la dimensione del "
 "monitor fornita per i calcoli."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:60
+#: data/io.github.herve4m.Length.gschema.xml.in:61
 msgid "Ruler Unit"
 msgstr "Unità del righello"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:61
+#: data/io.github.herve4m.Length.gschema.xml.in:62
 msgid "Unit to use for the ruler"
 msgstr "Unità da utilizzare per il righello"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:66
+#: data/io.github.herve4m.Length.gschema.xml.in:67
 msgid "Direction from Left to Right"
 msgstr "Orientamento da sinistra a destra"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:67
+#: data/io.github.herve4m.Length.gschema.xml.in:68
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
 msgstr ""
-"Visualizza la scala da sinistra a destra quando è VERO, altrimenti da destra a sinistra."
+"Visualizza la scala da sinistra a destra quando è VERO, altrimenti da destra "
+"a sinistra."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:74
+#: data/io.github.herve4m.Length.gschema.xml.in:75
 msgid "Use default font"
 msgstr "Utilizza il carattere predefinito"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:75
+#: data/io.github.herve4m.Length.gschema.xml.in:76
 msgid "Whether to use the default font"
 msgstr "Se utilizzare o meno il carattere predefinito"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:80
+#: data/io.github.herve4m.Length.gschema.xml.in:81
 msgid "Font Name"
 msgstr "Nome del carattere"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:81
+#: data/io.github.herve4m.Length.gschema.xml.in:82
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr "Carattere da utilizzare quando \"use-default-font\" è FALSE."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:88
+#: data/io.github.herve4m.Length.gschema.xml.in:89
 msgid "Window Size"
 msgstr "Dimensione della finestra"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:89
+#: data/io.github.herve4m.Length.gschema.xml.in:90
 msgid "Window size (width and height) of the last closed window."
 msgstr "Dimensioni (larghezza e altezza) dell'ultima finestra chiusa."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:96
+#: data/io.github.herve4m.Length.gschema.xml.in:97
 msgid "Use default color scheme"
 msgstr "Utilizza la combinazione di colori predefinita"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:97
+#: data/io.github.herve4m.Length.gschema.xml.in:98
 msgid "Whether to use the default color scheme"
 msgstr "Se utilizzare o meno la combinazione di colori predefinita"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:102
+#: data/io.github.herve4m.Length.gschema.xml.in:103
 msgid "Foreground Color"
 msgstr "Colore di primo piano"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:103
+#: data/io.github.herve4m.Length.gschema.xml.in:104
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr "Colore (rosso, verde, blu, alfa) dei segni sul righello"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:110
+#: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Background Color"
 msgstr "Colore di sfondo"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:111
+#: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr "Colore di sfondo del righello (rosso, verde, blu, alfa)"
 
@@ -279,6 +280,12 @@ msgstr "Points"
 #: data/ui/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Percentages"
+msgstr "Percentuali"
+
+#: data/ui/help-overlay.ui:138
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Relative Percentages"
 msgstr "Percentuali"
 
 #: data/ui/offset.ui:30
@@ -385,12 +392,12 @@ msgstr "Informazioni su Length"
 msgid "_Quit"
 msgstr "_Esci"
 
-#: src/draw_context.py:135
+#: src/draw_context.py:136
 msgid "Monitor Size Unknown"
 msgstr "Dimensioni dello schermo sconosciute"
 
-#: src/draw_context.py:138
-#, python-brace-format
+#: src/draw_context.py:140
+#, fuzzy
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
@@ -401,7 +408,7 @@ msgstr ""
 "dimensione del tuo monitor.\n"
 "Nel frattempo, vengono eseguiti calcoli per un "
 
-#: src/draw_context.py:146
+#: src/draw_context.py:147
 msgid "OK"
 msgstr "OK"
 
@@ -436,7 +443,7 @@ msgid "Inches"
 msgstr "Pollici"
 
 #. Short name that is used to display the unit on the ruler
-#: src/unit_pct.py:29
+#: src/unit_pct.py:29 src/unit_rel_pct.py:29
 msgid "%"
 msgstr "%"
 
@@ -474,6 +481,12 @@ msgstr "px"
 #: src/unit_px.py:31
 msgid "Pixels"
 msgstr "Pixel"
+
+#. Human readable unit name that is used in the Preferences dialog
+#: src/unit_rel_pct.py:31
+#, fuzzy
+msgid "Relative Percentages"
+msgstr "Percentuali"
 
 #~ msgid ""
 #~ "Whether let Length try to compute the monitor size, or let you provide "
