@@ -19,6 +19,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
+import math
 
 from gi.repository import Adw, Gtk, Gdk, GLib
 
@@ -73,6 +74,7 @@ class LengthWindow(Adw.ApplicationWindow):
         self.context.ctx = ctx
         self.context.width = width
         self.context.height = height
+        self.context.diagonal = math.sqrt(width**2 + height**2)
         self.context.refresh_from_settings()
 
         unit = self.settings.get_string("unit")

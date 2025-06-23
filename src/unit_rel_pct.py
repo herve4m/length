@@ -61,3 +61,6 @@ class UnitRelativePct(Unit):
         self.unit_multiplier = 1
         self.px_per_tick_width = context.width / 100
         self.px_per_tick_height = context.height / 100
+
+    def px_per_tick_diagonal(self) -> float:
+        return self.context.diagonal / 100.0
