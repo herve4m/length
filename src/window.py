@@ -92,21 +92,26 @@ class LengthWindow(Adw.ApplicationWindow):
         self.offset_control.update_adjustment(unit, self.unit_obj)
         self.orientation_control.update_orientation()
 
-    def set_background_color(self, rgba=None, default_opacity: float = 1.0) -> None:
-        """Change the background color of Length.
+    def set_background_color(
+        self, use_default_color: bool = None, opacity: int = None
+    ) -> None:
+        """Change the background color of Length."""
+        if use_default_color is None:
+            use_default_color = self.settings.get_boolean("use-default-color")
+        if opacity is None:
+            opacity = self.settings.get_int("opacity")
 
-        :param rgba: Background color. If None, then the default color is used.
-        :type rgba: :py:class:``Gdk.RGBA``
-        :param default_opacity: The window opacity (between 0 and 1) when the
-                                default color is used.
-        :type default_opacity: float
-        """
-        if rgba is None:
-            rgba = Gdk.RGBA()
+        rgba = Gdk.RGBA()
+        rgba.alpha = opacity / 100.0
+        if use_default_color:
             rgba.red = DEFAULT_COLOR_BG[0]
             rgba.green = DEFAULT_COLOR_BG[1]
             rgba.blue = DEFAULT_COLOR_BG[2]
-            rgba.alpha = default_opacity
+        else:
+            color_setting = self.settings.get_value("background-color")
+            rgba.red = color_setting[0]
+            rgba.green = color_setting[1]
+            rgba.blue = color_setting[2]
         rgba_str = rgba.to_string()
         self.style_css_provider.load_from_string(
             f"window.length-main {{ background-color: {rgba_str}; }}"
