@@ -517,11 +517,6 @@ class Unit:
                 min_size if min_size > self.context.height else 0,
             )
 
-        # Background
-        # self.context.ctx.set_source_rgba(*self.context.color_bg)
-        # self.context.ctx.rectangle(0, 0, self.context.width, self.context.height)
-        # self.context.ctx.fill()
-
         # Foreground context
         self.context.ctx.set_source_rgba(*self.context.color_fg)
         self.context.ctx.set_line_width(1)

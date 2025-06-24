@@ -18,12 +18,16 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, Gdk
+from gi.repository import Gtk, Gio, Gdk, GLib
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/opacity.ui")
 class OpacityControl(Gtk.Box):
-    """Manage the opacity of the Length main window."""
+    """Manage the opacity of the Length main window.
+
+    The opacity GSettings key is kept in sync with the alpha channel of the
+    background color.
+    """
 
     __gtype_name__ = "OpacityControl"
 
@@ -41,8 +45,7 @@ class OpacityControl(Gtk.Box):
         self.application_window = application_window
 
         self.display = Gdk.Display.get_default()
-        self.opacity_value = self.application_window.settings.get_value("background-color")[3]
-        # XXXXXXXXXXXXXXXX self.opacity_value = application_window.settings.get_int("opacity")
+        self.opacity_value = application_window.settings.get_int("opacity")
         application_window.settings.bind(
             "opacity", self.opacity_adjustment, "value", Gio.SettingsBindFlags.DEFAULT
         )
@@ -63,17 +66,18 @@ class OpacityControl(Gtk.Box):
 
         Keyboard events (down and left arrow keys) call this method, which
         decrements the opacity in 10% steps.
-        To prevent the window from being completely transparent, the method
-        does not decrease the opacity below 10%.
         """
         self.opacity_value -= 10
-        if self.opacity_value < 10:
-            self.opacity_value = 10
+        if self.opacity_value < 0:
+            self.opacity_value = 0
         self.opacity_adjustment.set_value(self.opacity_value)
 
     @Gtk.Template.Callback()
     def _opacity_changed_event(self, adjustment) -> None:
         """Update the opacity of the Length application window.
+
+        The opacity is synchronized with the alpha channel of the background
+        color.
 
         :param adjustment: The Gtk Adjustment object that the method uses to
                            retrieve the opacity percentage.
@@ -82,21 +86,20 @@ class OpacityControl(Gtk.Box):
         self.opacity_value = int(adjustment.get_value())
         self.opacity_label.set_label(f"{self.opacity_value}%")
 
-        color_setting = self.application_window.settings.get_value("background-color")
-        color_rgba = Gdk.RGBA()
-        color_rgba.red = color_setting[0]
-        color_rgba.green = color_setting[1]
-        color_rgba.blue = color_setting[2]
-        color_rgba.alpha = self.opacity_value / 100.0
-        rgba = color_rgba.to_string()
+        if self.application_window.settings.get_boolean("use-default-color"):
+            self.application_window.set_background_color(
+                default_opacity=self.opacity_value / 100.0
+            )
+        else:
+            color_setting = self.application_window.settings.get_value("background-color")
+            rgba = Gdk.RGBA()
+            rgba.red = color_setting[0]
+            rgba.green = color_setting[1]
+            rgba.blue = color_setting[2]
+            rgba.alpha = self.opacity_value / 100.0
+            self.application_window.set_background_color(rgba)
 
-        self.application_window.style_css_provider.load_from_string(
-            f"window.length-main {{ background-color: {rgba}; }}"
-        )
-        Gtk.StyleContext.add_provider_for_display(
-            self.display,
-            self.application_window.style_css_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_USER,
-        )
-
-        # self.application_window.set_opacity(self.opacity_value / 100.0)
+            self.application_window.settings.set_value(
+                "background-color",
+                GLib.Variant("(dddd)", (rgba.red, rgba.green, rgba.blue, rgba.alpha)),
+            )

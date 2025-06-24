@@ -160,7 +160,11 @@ class PreferencesDialog(Adw.PreferencesDialog):
             self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
-    def _on_use_default_color(self, _widget, _value) -> None:
+    def _on_use_default_color(self, toggle, _value) -> None:
+        if toggle.get_active():
+            self.application_window.set_background_color(
+                default_opacity=self.settings.get_int("opacity") / 100.0
+            )
         self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
@@ -176,9 +180,10 @@ class PreferencesDialog(Adw.PreferencesDialog):
     @Gtk.Template.Callback()
     def _on_bg_color(self, *args) -> None:
         rgba = self.bg_color.get_rgba()
-        if rgba.alpha:
-            self.settings.set_value(
-                "background-color",
-                GLib.Variant("(dddd)", (rgba.red, rgba.green, rgba.blue, rgba.alpha)),
-            )
-            self.application_window.drawing_area.queue_draw()
+        self.settings.set_value(
+            "background-color",
+            GLib.Variant("(dddd)", (rgba.red, rgba.green, rgba.blue, rgba.alpha)),
+        )
+        self.settings.set_int("opacity", int(rgba.alpha * 100))
+        self.application_window.set_background_color(rgba)
+        self.application_window.drawing_area.queue_draw()
