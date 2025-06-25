@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-23 15:18+0200\n"
-"PO-Revision-Date: 2025-02-19 20:44+0100\n"
+"PO-Revision-Date: 2025-06-25 20:18+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
 "Language: it\n"
@@ -78,7 +78,7 @@ msgstr "Menu principale di Length"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:57
 msgid "Preferences window"
-msgstr "Preferenze"
+msgstr "Preferenze della finestra"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:61
 msgid "Pointer tracking enabled"
@@ -283,10 +283,9 @@ msgid "Percentages"
 msgstr "Percentuali"
 
 #: data/ui/help-overlay.ui:138
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Relative Percentages"
-msgstr "Percentuali"
+msgstr "Percentuali relative"
 
 #: data/ui/offset.ui:30
 msgid "_Offset"
@@ -397,15 +396,13 @@ msgid "Monitor Size Unknown"
 msgstr "Dimensioni dello schermo sconosciute"
 
 #: src/draw_context.py:140
-#, fuzzy
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
 "In the meantime, computations are done for a "
 msgstr ""
 "Impossibile determinare la dimensione del monitor {monitor_name}.\n"
-"Utilizza la finestra di dialogo Preferenze per calibrare la Lunghezza per la "
-"dimensione del tuo monitor.\n"
+"Utilizzare la finestra di dialogo Preferenze per calibrare la lunghezza in base alle dimensioni del monitor.\n"
 "Nel frattempo, vengono eseguiti calcoli per un "
 
 #: src/draw_context.py:147
@@ -484,9 +481,8 @@ msgstr "Pixel"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_rel_pct.py:31
-#, fuzzy
 msgid "Relative Percentages"
-msgstr "Percentuali"
+msgstr "Percentuali relative"
 
 #~ msgid ""
 #~ "Whether let Length try to compute the monitor size, or let you provide "
