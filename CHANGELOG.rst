@@ -4,6 +4,25 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.7.0
+======
+
+Minor Changes
+-------------
+
+- Add the relative percentage unit, which enables percentage to be relative to
+  the dimensions of the ruler itself [`#27`_]
+
+.. _#27: https://github.com/herve4m/length/issues/27
+
+Bugfixes
+--------
+
+- Fix the alpha channel of the custom background color getting ignored [`#28`_].
+
+.. _#28: https://github.com/herve4m/length/issues/28
+
+
 v0.6.0
 ======
 
