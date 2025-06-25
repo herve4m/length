@@ -18,12 +18,16 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio
+from gi.repository import Gtk, Gio, Gdk
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/opacity.ui")
 class OpacityControl(Gtk.Box):
-    """Manage the opacity of the Length main window."""
+    """Manage the opacity of the Length main window.
+
+    The opacity GSettings key is kept in sync with the alpha channel of the
+    background color.
+    """
 
     __gtype_name__ = "OpacityControl"
 
@@ -40,6 +44,7 @@ class OpacityControl(Gtk.Box):
 
         self.application_window = application_window
 
+        self.display = Gdk.Display.get_default()
         self.opacity_value = application_window.settings.get_int("opacity")
         application_window.settings.bind(
             "opacity", self.opacity_adjustment, "value", Gio.SettingsBindFlags.DEFAULT
@@ -61,17 +66,18 @@ class OpacityControl(Gtk.Box):
 
         Keyboard events (down and left arrow keys) call this method, which
         decrements the opacity in 10% steps.
-        To prevent the window from being completely transparent, the method
-        does not decrease the opacity below 10%.
         """
         self.opacity_value -= 10
-        if self.opacity_value < 10:
-            self.opacity_value = 10
+        if self.opacity_value < 0:
+            self.opacity_value = 0
         self.opacity_adjustment.set_value(self.opacity_value)
 
     @Gtk.Template.Callback()
     def _opacity_changed_event(self, adjustment) -> None:
         """Update the opacity of the Length application window.
+
+        The opacity is synchronized with the alpha channel of the background
+        color.
 
         :param adjustment: The Gtk Adjustment object that the method uses to
                            retrieve the opacity percentage.
@@ -79,4 +85,4 @@ class OpacityControl(Gtk.Box):
         """
         self.opacity_value = int(adjustment.get_value())
         self.opacity_label.set_label(f"{self.opacity_value}%")
-        self.application_window.set_opacity(self.opacity_value / 100.0)
+        self.application_window.set_background_color(opacity=self.opacity_value)

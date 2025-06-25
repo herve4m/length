@@ -43,7 +43,6 @@
       <p>
         Adjust the opacity percentage.
         A 100% opacity means that the ruler is not transparent at all, and it masks the objects behind it.
-        Because a 0% opacity would render the ruler completely transparent, you cannot reduce the opacity below 10%.
       </p>
     </item>
   </steps>

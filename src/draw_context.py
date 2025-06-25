@@ -24,6 +24,8 @@ from gi.repository import Pango, Adw
 
 logger = logging.getLogger(__name__)
 
+DEFAULT_COLOR_BG: list[float] = [1.0, 1.0, 1.0, 1.0]
+
 
 class DrawContext:
     """Store the parameters required for drawing the ruler."""
@@ -72,7 +74,7 @@ class DrawContext:
 
         # Colors (RGBA)
         self.color_fg: list[float] = [0.0, 0.0, 0.0, 1.0]
-        self.color_bg: list[float] = [1.0, 1.0, 1.0, 1.0]
+        self.color_bg: list[float] = DEFAULT_COLOR_BG
         self.color_track: list[float] = [1.0, 0.0, 0.0, 1.0]
 
         # Font
@@ -95,11 +97,13 @@ class DrawContext:
         # Colors
         if self.settings.get_boolean("use-default-color"):
             self.color_fg = [0.0, 0.0, 0.0, 1.0]
-            self.color_bg = [1.0, 1.0, 1.0, 1.0]
+            self.color_bg = DEFAULT_COLOR_BG
             logger.debug("Get settings: use-default-color: True")
         else:
             self.color_fg = self.settings.get_value("foreground-color")
-            self.color_bg = self.settings.get_value("background-color")
+            color_setting = self.settings.get_value("background-color")
+            # Overwrite the alpha channel that comes from the opacity setting
+            self.color_bg = [color_setting[0], color_setting[1], color_setting[2], 1.0]
             logger.debug("Get settings: use-default-color: False")
             logger.debug(f"Get settings:  foreground-color: {self.color_fg}")
             logger.debug(f"Get settings:  background-color: {self.color_bg}")

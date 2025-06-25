@@ -30,7 +30,7 @@ from .offset import OffsetControl
 
 from .orientation import OrientationControl
 from .settings import Settings
-from .draw_context import DrawContext
+from .draw_context import DrawContext, DEFAULT_COLOR_BG
 from .monitor_mngt import MonitorMngt, Monitor
 
 logger = logging.getLogger(__name__)
@@ -55,6 +55,8 @@ class LengthWindow(Adw.ApplicationWindow):
         self.monitors = MonitorMngt(self.settings)
         self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None
+        self.style_css_provider = Gtk.CssProvider()
+        self.display = Gdk.Display.get_default()
 
         w, h = self.settings.get_value("window-size")
         self.set_default_size(w, h)
@@ -89,6 +91,36 @@ class LengthWindow(Adw.ApplicationWindow):
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
         self.orientation_control.update_orientation()
+
+    def set_background_color(
+        self, use_default_color: bool = None, opacity: int = None
+    ) -> None:
+        """Change the background color of Length."""
+        if use_default_color is None:
+            use_default_color = self.settings.get_boolean("use-default-color")
+        if opacity is None:
+            opacity = self.settings.get_int("opacity")
+
+        rgba = Gdk.RGBA()
+        rgba.alpha = opacity / 100.0
+        if use_default_color:
+            rgba.red = DEFAULT_COLOR_BG[0]
+            rgba.green = DEFAULT_COLOR_BG[1]
+            rgba.blue = DEFAULT_COLOR_BG[2]
+        else:
+            color_setting = self.settings.get_value("background-color")
+            rgba.red = color_setting[0]
+            rgba.green = color_setting[1]
+            rgba.blue = color_setting[2]
+        rgba_str = rgba.to_string()
+        self.style_css_provider.load_from_string(
+            f"window.length-main {{ background-color: {rgba_str}; }}"
+        )
+        Gtk.StyleContext.add_provider_for_display(
+            self.display,
+            self.style_css_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_USER,
+        )
 
     def _on_enter_monitor(self, surface, monitor) -> None:
         """Switch monitor.
