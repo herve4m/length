@@ -67,6 +67,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.7.0" date="2025-06-25">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v070</url>
+      <description translate="no">
+        <p>Add the relative percentage unit, which enables percentage to be relative to the dimensions of the ruler itself</p>
+        <p>The alpha channel of the custom background color is now used for the ruler opacity</p>
+      </description>
+    </release>
     <release version="0.6.0" date="2025-04-02">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v060</url>
       <description translate="no">
