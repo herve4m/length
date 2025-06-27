@@ -59,6 +59,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
         self.application_window = application_window
         self.settings = application_window.settings
         self.monitors = application_window.monitors
+        self.initializing = True
 
         # Length units
         unit_list = Gio.ListStore.new(Unit)
@@ -120,6 +121,8 @@ class PreferencesDialog(Adw.PreferencesDialog):
         for monitor in self.monitors.monitor_list:
             self.display_group.add(PreferencesDisplay(application_window, monitor))
 
+        self.initializing = False
+
     def sync_units(self, unit_id: str) -> None:
         """Ensure the unit combo box reflect the provided unit."""
         for i, unit in enumerate(UnitMng.array()):
@@ -166,8 +169,8 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
     @Gtk.Template.Callback()
     def _on_fg_color(self, *args) -> None:
-        rgba = self.fg_color.get_rgba()
-        if rgba.alpha:
+        if not self.initializing:
+            rgba = self.fg_color.get_rgba()
             self.settings.set_value(
                 "foreground-color",
                 GLib.Variant("(dddd)", (rgba.red, rgba.green, rgba.blue, rgba.alpha)),
@@ -176,12 +179,12 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
     @Gtk.Template.Callback()
     def _on_bg_color(self, *args) -> None:
-        rgba = self.bg_color.get_rgba()
-        self.settings.set_value(
-            "background-color",
-            GLib.Variant("(dddd)", (rgba.red, rgba.green, rgba.blue, rgba.alpha)),
-        )
-        if not self.use_default_color.get_active():
+        if not self.initializing:
+            rgba = self.bg_color.get_rgba()
+            self.settings.set_value(
+                "background-color",
+                GLib.Variant("(dddd)", (rgba.red, rgba.green, rgba.blue, rgba.alpha)),
+            )
             opacity = int(rgba.alpha * 100)
             self.settings.set_int("opacity", opacity)
             self.application_window.set_background_color(opacity=opacity)
