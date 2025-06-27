@@ -46,6 +46,7 @@ class OpacityControl(Gtk.Box):
 
         self.display = Gdk.Display.get_default()
         self.opacity_value = application_window.settings.get_int("opacity")
+        self.opacity_label.set_label(f"{self.opacity_value}%")
         application_window.settings.bind(
             "opacity", self.opacity_adjustment, "value", Gio.SettingsBindFlags.DEFAULT
         )

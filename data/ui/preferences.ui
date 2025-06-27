@@ -102,7 +102,7 @@
                         <property name="dialog">
                           <object class="GtkColorDialog"></object>
                         </property>
-                        <signal name="notify" handler="_on_fg_color"/>
+                        <signal name="notify::rgba" handler="_on_fg_color"/>
                       </object>
                     </child>
                   </object>
@@ -117,7 +117,7 @@
                         <property name="dialog">
                           <object class="GtkColorDialog"></object>
                         </property>
-                        <signal name="notify" handler="_on_bg_color"/>
+                        <signal name="notify::rgba" handler="_on_bg_color"/>
                       </object>
                     </child>
                   </object>

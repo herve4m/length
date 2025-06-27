@@ -71,6 +71,8 @@ class LengthWindow(Adw.ApplicationWindow):
         self.orientation_control = OrientationControl(self)
         popover.add_child(self.orientation_control, "orientation")
 
+        self.set_background_color()
+
     def draw(self, da, ctx, width: int, height: int) -> None:
         """Gtk.DrawingArea drawing function."""
         self.context.ctx = ctx
