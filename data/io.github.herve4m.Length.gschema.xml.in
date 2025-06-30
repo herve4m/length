@@ -20,6 +20,12 @@
 -->
 <schemalist gettext-domain="length">
   <schema id="@application_id@" path="@application_schema_path@">
+    <key name="scale" type="d">
+      <default>1.0</default>
+      <summary>Scale factor</summary>
+      <description>Reduce or enlarge the scale of the units.</description>
+    </key>
+
     <key name="opacity" type="i">
       <default>100</default>
       <range min="0" max="100"/>

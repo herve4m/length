@@ -81,6 +81,11 @@
   <menu id="primary_menu">
     <section>
       <item>
+        <attribute name="custom">scale</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
         <attribute name="custom">opacity</attribute>
       </item>
     </section>

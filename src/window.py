@@ -24,9 +24,10 @@ import math
 from gi.repository import Adw, Gtk, Gdk, GLib
 
 from .unit_mng import UnitMng
+from .offset import OffsetControl
 from .opacity import OpacityControl
 from .pointer_tracking import PointerTrackingControl
-from .offset import OffsetControl
+from .scale import ScaleControl
 
 from .orientation import OrientationControl
 from .settings import Settings
@@ -62,6 +63,10 @@ class LengthWindow(Adw.ApplicationWindow):
         self.set_default_size(w, h)
 
         popover = self.menu_button.get_popover()
+
+        self.scale_control = ScaleControl(self)
+        popover.add_child(self.scale_control, "scale")
+
         self.opacity_control = OpacityControl(self)
         popover.add_child(self.opacity_control, "opacity")
         self.pointer_tracking_control = PointerTrackingControl(self)
