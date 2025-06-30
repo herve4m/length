@@ -41,7 +41,10 @@ class UnitInch(Unit):
     #  ]
     offset_adjustment = [0.0, -200.0, 200.0, 0.125, 1.0, 0.0]
     # Number of decimals to display in the spin button
-    offset_decimals = 3
+    offset_decimals: int = 3
+
+    # Whether the ruler units can be scale
+    scalable: bool = True
 
     def __init__(self, context) -> None:
         """Initialize the object.

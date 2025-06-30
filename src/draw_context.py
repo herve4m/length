@@ -72,6 +72,9 @@ class DrawContext:
         # Offset (in ruler units)
         self.offset: float = 0.0
 
+        # Scaling factor
+        self.scale: float = 1.0
+
         # Colors (RGBA)
         self.color_fg: list[float] = [0.0, 0.0, 0.0, 1.0]
         self.color_bg: list[float] = DEFAULT_COLOR_BG
@@ -90,9 +93,11 @@ class DrawContext:
         """Reload the parameter from GSettings."""
         self.track_pointer = self.settings.get_boolean("track-pointer")
         self.offset = self.settings.get_double("offset")
+        self.scale = self.settings.get_double("scale")
 
         logger.debug(f"Get settings:     track-pointer: {self.track_pointer}")
         logger.debug(f"Get settings:            offset: {self.offset}")
+        logger.debug(f"Get settings:             scale: {self.scale}")
 
         # Colors
         if self.settings.get_boolean("use-default-color"):

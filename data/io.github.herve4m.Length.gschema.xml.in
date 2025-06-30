@@ -20,12 +20,6 @@
 -->
 <schemalist gettext-domain="length">
   <schema id="@application_id@" path="@application_schema_path@">
-    <key name="scale" type="d">
-      <default>1.0</default>
-      <summary>Scale factor</summary>
-      <description>Reduce or enlarge the scale of the units.</description>
-    </key>
-
     <key name="opacity" type="i">
       <default>100</default>
       <range min="0" max="100"/>
@@ -43,6 +37,12 @@
       <default>0.0</default>
       <summary>Origin of the Ruler</summary>
       <description>Point of origin in ruler units.</description>
+    </key>
+
+    <key name="scale" type="d">
+      <default>1.0</default>
+      <summary>Scale factor</summary>
+      <description>Reduce or enlarge the scale of the units.</description>
     </key>
 
     <key name="calibration" type="aa{ss}">

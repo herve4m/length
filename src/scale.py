@@ -18,7 +18,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk  # , Gio, Gdk
+from gi.repository import Gtk, Gio
 
 
 @Gtk.Template(resource_path="/io/github/herve4m/Length/ui/scale.ui")
@@ -28,6 +28,8 @@ class ScaleControl(Gtk.Box):
     __gtype_name__ = "ScaleControl"
 
     scale_label = Gtk.Template.Child()
+    scale_spin = Gtk.Template.Child()
+    scale_adjustment = Gtk.Template.Child()
 
     def __init__(self, application_window) -> None:
         """Initialize the object.
@@ -38,90 +40,20 @@ class ScaleControl(Gtk.Box):
         super().__init__()
 
         self.application_window = application_window
-        self.scale: float = application_window.settings.get_double("scale")
-        self.scale_label.set_label(f"{self.scale}")
+        self.scale_label.set_mnemonic_widget(self.scale_spin)
+        self._unit = None
 
-        # self.display = Gdk.Display.get_default()
-        # self.opacity_value = application_window.settings.get_int("opacity")
-        # self.opacity_label.set_label(f"{self.opacity_value}%")
-        # application_window.settings.bind(
-        #     "opacity", self.opacity_adjustment, "value", Gio.SettingsBindFlags.DEFAULT
-        # )
+        application_window.settings.bind(
+            "scale", self.scale_adjustment, "value", Gio.SettingsBindFlags.DEFAULT
+        )
 
-    # def increment_value(self) -> None:
-    #     """Increase the opacity of the Length application window.
-
-    #     Keyboard events (up and right arrow keys) call this method, which
-    #     increments the opacity in 10% steps.
-    #     """
-    #     self.opacity_value += 10
-    #     if self.opacity_value > 100:
-    #         self.opacity_value = 100
-    #     self.opacity_adjustment.set_value(self.opacity_value)
-
-    # def decrement_value(self) -> None:
-    #     """Decrease the opacity of the Length application window.
-
-    #     Keyboard events (down and left arrow keys) call this method, which
-    #     decrements the opacity in 10% steps.
-    #     """
-    #     self.opacity_value -= 10
-    #     if self.opacity_value < 0:
-    #         self.opacity_value = 0
-    #     self.opacity_adjustment.set_value(self.opacity_value)
-
-    def set_label(self):
-        self.scale = round(self.scale, 1)
-        if self.scale > 0.0:
-            self.application_window.settings.set_double("scale", self.scale)
-            self.scale_label.set_label(f"{self.scale}")
+    def update_adjustment(self, unit: str, unit_obj) -> None:
+        """Update the GtkAdjustment for the offset GtkSpinButton."""
+        if self._unit == unit:
+            return
+        self._unit = unit
+        self.scale_spin.set_sensitive(unit_obj.scalable)
 
     @Gtk.Template.Callback()
-    def _scale_in(self, _widget) -> None:
-        """Update the opacity of the Length application window.
-
-        The opacity is synchronized with the alpha channel of the background
-        color.
-
-        :param adjustment: The Gtk Adjustment object that the method uses to
-                           retrieve the opacity percentage.
-        :type adjustment: :py:class:``Gtk.Adjustment``
-        """
-        # self.opacity_value = int(adjustment.get_value())
-        self.scale += 0.1
-        self.set_label()
-        # self.application_window.set_background_color(opacity=self.opacity_value)
-
-    @Gtk.Template.Callback()
-    def _scale_out(self, _widget) -> None:
-        """Update the opacity of the Length application window.
-
-        The opacity is synchronized with the alpha channel of the background
-        color.
-
-        :param adjustment: The Gtk Adjustment object that the method uses to
-                           retrieve the opacity percentage.
-        :type adjustment: :py:class:``Gtk.Adjustment``
-        """
-        # self.opacity_value = int(adjustment.get_value())
-        self.scale -= 0.1
-        if self.scale > 0.0:
-            self.scale -= 0.1
-        self.set_label()
-        # self.application_window.set_background_color(opacity=self.opacity_value)
-
-    @Gtk.Template.Callback()
-    def _scale_reset(self, _widget) -> None:
-        """Update the opacity of the Length application window.
-
-        The opacity is synchronized with the alpha channel of the background
-        color.
-
-        :param adjustment: The Gtk Adjustment object that the method uses to
-                           retrieve the opacity percentage.
-        :type adjustment: :py:class:``Gtk.Adjustment``
-        """
-        # self.opacity_value = int(adjustment.get_value())
-        self.scale = 1.0
-        self.set_label()
-        # self.application_window.set_background_color(opacity=self.opacity_value)
+    def _on_value_changed(self, adjustment) -> None:
+        print("Changed")

@@ -63,16 +63,14 @@ class LengthWindow(Adw.ApplicationWindow):
         self.set_default_size(w, h)
 
         popover = self.menu_button.get_popover()
-
-        self.scale_control = ScaleControl(self)
-        popover.add_child(self.scale_control, "scale")
-
         self.opacity_control = OpacityControl(self)
         popover.add_child(self.opacity_control, "opacity")
         self.pointer_tracking_control = PointerTrackingControl(self)
         popover.add_child(self.pointer_tracking_control, "pointer_tracking")
         self.offset_control = OffsetControl(self)
         popover.add_child(self.offset_control, "offset")
+        self.scale_control = ScaleControl(self)
+        popover.add_child(self.scale_control, "scale")
         self.orientation_control = OrientationControl(self)
         popover.add_child(self.orientation_control, "orientation")
 
@@ -97,6 +95,7 @@ class LengthWindow(Adw.ApplicationWindow):
             da.set_content_height(h)
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
+        self.scale_control.update_adjustment(unit, self.unit_obj)
         self.orientation_control.update_orientation()
 
     def set_background_color(
