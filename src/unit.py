@@ -57,6 +57,8 @@ class Unit:
             return
 
         px_per_unit = self.px_per_tick_width * self.unit_multiplier
+        if self.scalable and self.context.scale != 1.0:
+            px_per_unit *= self.context.scale
 
         # Convert the x coordinate into unit coordinate
         if self.context.left2right:
@@ -129,6 +131,8 @@ class Unit:
             return
 
         px_per_unit = self.px_per_tick_height * self.unit_multiplier
+        if self.scalable and self.context.scale != 1.0:
+            px_per_unit *= self.context.scale
 
         # Convert the y coordinate into unit coordinate
         if self.context.left2right:
@@ -217,6 +221,12 @@ class Unit:
         if width < self.MIN_LENGTH or width <= min_size:
             return
 
+        if self.scalable and self.context.scale != 1.0:
+            px_per_tick *= self.context.scale
+            scale_indicator = "*"
+        else:
+            scale_indicator = ""
+
         offset = self.unit2tick(self.context.offset)
         ticks = sorted(self.ticks.keys())
         nb_tick_types = len(self.ticks)
@@ -241,7 +251,7 @@ class Unit:
                         # Append the unit name to the label if the unit name
                         # has not been displayed yet
                         if not unit_name_displayed:
-                            label = f"{tick_val} {self.short_name}"
+                            label = f"{tick_val} {self.short_name} {scale_indicator}"
                             e = ctx_text.get_extents(label)
                             half_text_w = e.width / 2.0
                             # If the label would overwrite the menu button,
@@ -353,6 +363,8 @@ class Unit:
             return
 
         px_per_tick = self.px_per_tick_diagonal()
+        if self.scalable and self.context.scale != 1.0:
+            px_per_tick *= self.context.scale
         width_per_diag = self.context.width / self.context.diagonal
         height_per_diag = self.context.height / self.context.diagonal
         offset_label_x = height_per_diag * self.tick_max_length / 2
@@ -437,6 +449,8 @@ class Unit:
             return
 
         px_per_tick = self.px_per_tick_diagonal()
+        if self.scalable and self.context.scale != 1.0:
+            px_per_tick *= self.context.scale
         width_per_diag = self.context.width / self.context.diagonal
         height_per_diag = self.context.height / self.context.diagonal
         offset_label_x = height_per_diag * self.tick_max_length / 2

@@ -86,7 +86,7 @@ class DrawContext:
         # Font for the pointer tracking label
         self.font_desc_small = None
 
-        # Scale direction
+        # Ruler direction
         self.left2right: bool = True
 
     def refresh_from_settings(self) -> None:

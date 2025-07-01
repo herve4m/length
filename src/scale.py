@@ -48,12 +48,12 @@ class ScaleControl(Gtk.Box):
         )
 
     def update_adjustment(self, unit: str, unit_obj) -> None:
-        """Update the GtkAdjustment for the offset GtkSpinButton."""
+        """Make the GtkSpinButton sensitive if the unit support scalling."""
         if self._unit == unit:
             return
         self._unit = unit
         self.scale_spin.set_sensitive(unit_obj.scalable)
 
     @Gtk.Template.Callback()
-    def _on_value_changed(self, adjustment) -> None:
-        print("Changed")
+    def _on_value_changed(self, _adjustment) -> None:
+        self.application_window.drawing_area.queue_draw()
