@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-02 20:10+0200\n"
-"PO-Revision-Date: 2025-06-25 20:18+0100\n"
+"PO-Revision-Date: 2025-07-02 20:18+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
 "Language: it\n"
@@ -114,11 +114,11 @@ msgstr "Punto di origine nell'unità righello."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:44
 msgid "Scale factor"
-msgstr ""
+msgstr "Fattore di scala"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:45
 msgid "Reduce or enlarge the scale of the units."
-msgstr ""
+msgstr "Ridurre o ingrandire la scala delle unità."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:50
 msgid "Monitor Calibration Parameters"
@@ -376,9 +376,8 @@ msgid "Displays"
 msgstr "Display"
 
 #: data/ui/scale.ui:30
-#, fuzzy
 msgid "_Scale"
-msgstr "Scala"
+msgstr "_Scala"
 
 #: data/ui/window.ui:59
 msgid "Main Menu"
@@ -409,16 +408,14 @@ msgid "Monitor Size Unknown"
 msgstr "Dimensioni dello schermo sconosciute"
 
 #: src/draw_context.py:148
-#, fuzzy, python-brace-format
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
 "In the meantime, computations are done for a {diag_inch} inches monitor."
 msgstr ""
 "Impossibile determinare la dimensione del monitor {monitor_name}.\n"
-"Utilizzare la finestra di dialogo Preferenze per calibrare la lunghezza in "
-"base alle dimensioni del monitor.\n"
-"Nel frattempo, vengono eseguiti calcoli per un "
+"Utilizzare la finestra di dialogo Preferenze per calibrare la lunghezza in base alle dimensioni del monitor.\n"
+"Nel frattempo, vengono eseguiti calcoli per un monitor da {diag_inch} pollici."
 
 #: src/draw_context.py:155
 msgid "OK"
