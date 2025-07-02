@@ -57,6 +57,8 @@ class Unit:
             return
 
         px_per_unit = self.px_per_tick_width * self.unit_multiplier
+        if self.scalable and self.context.scale != 1.0:
+            px_per_unit *= self.context.scale
 
         # Convert the x coordinate into unit coordinate
         if self.context.left2right:
@@ -129,6 +131,8 @@ class Unit:
             return
 
         px_per_unit = self.px_per_tick_height * self.unit_multiplier
+        if self.scalable and self.context.scale != 1.0:
+            px_per_unit *= self.context.scale
 
         # Convert the y coordinate into unit coordinate
         if self.context.left2right:
@@ -217,11 +221,25 @@ class Unit:
         if width < self.MIN_LENGTH or width <= min_size:
             return
 
+        # If the unit is scalable and the scaling factor is not 1
+        if self.scalable and round(self.context.scale, 2) != 1.0:
+            px_per_tick *= self.context.scale
+            # Scale indicator in the ruler to remind the user that a scale
+            # factor is applied.
+            # If there is not enough space between two ticks to display the
+            # factor, then only display a (x).
+            scale_indicator_long = f"(x{self.context.scale:.2f})"
+            scale_indicator_short = "(x)"
+        else:
+            scale_indicator_long = scale_indicator_short = ""
+
         offset = self.unit2tick(self.context.offset)
         ticks = sorted(self.ticks.keys())
         nb_tick_types = len(self.ticks)
         unit_name_displayed = False
+        scale_factor_displayed = False
 
+        # Foreach unit tick
         for unit_x in range(1 + offset, math.ceil(width / px_per_tick) + offset):
             # pos_x is the X coordinate of the tick
             if self.context.left2right:
@@ -238,29 +256,56 @@ class Unit:
                     # Draw the label
                     if self.ticks[ticks[i]]["label"]:
                         tick_val = round(unit_x / self.unit_multiplier)
-                        # Append the unit name to the label if the unit name
-                        # has not been displayed yet
-                        if not unit_name_displayed:
-                            label = f"{tick_val} {self.short_name}"
-                            e = ctx_text.get_extents(label)
-                            half_text_w = e.width / 2.0
-                            # If the label would overwrite the menu button,
-                            # then do not show the unit name
-                            if pos_x - half_text_w <= self.MIN_LENGTH:
-                                label = f"{tick_val}"
-                            else:
-                                unit_name_displayed = True
-                        else:
-                            label = f"{tick_val}"
-
+                        label = f"{tick_val}"
                         e = ctx_text.get_extents(label)
                         half_text_w = e.width / 2.0
                         # Do not draw the label if it goes beyond the width of
                         # the ruler
                         if pos_x + half_text_w < width:
                             x = pos_x - half_text_w
+                            # Do not draw the label if it will overwrite the
+                            # menu button
                             if x > self.MIN_LENGTH:
                                 ctx_text.draw_text(x, self.tick_max_length, label)
+                                # Draw unit after the first label
+                                if not unit_name_displayed:
+                                    ctx_text.draw_text(
+                                        x + e.width + 2, self.tick_max_length, self.short_name
+                                    )
+                                    unit_name_displayed = True
+
+                                # Draw the scaling factor in the tick
+                                # following the unit
+                                elif not scale_factor_displayed:
+                                    # Compute the position of the next tick
+                                    # to verify whether there is enough space
+                                    # to draw the scaling factor
+                                    if self.context.left2right:
+                                        next_pos_x = (
+                                            unit_x + ticks[i] - offset
+                                        ) * px_per_tick + 0.5
+                                    else:
+                                        next_pos_x = width - (
+                                            (unit_x - ticks[i] - offset) * px_per_tick + 0.5
+                                        )
+                                    scale_e = ctx_text.get_extents(scale_indicator_long)
+
+                                    # Draw the full factor if enough space is available
+                                    if x + e.width + 5 + scale_e.width < next_pos_x - 10:
+                                        ctx_text.draw_text(
+                                            x + e.width + 5,
+                                            self.tick_max_length,
+                                            scale_indicator_long,
+                                        )
+
+                                    # Otherwise, use the short version "(x)"
+                                    else:
+                                        ctx_text.draw_text(
+                                            x + e.width + 5,
+                                            self.tick_max_length,
+                                            scale_indicator_short,
+                                        )
+                                    scale_factor_displayed = True
 
                             # If the ruler is wide, then draw also the label at
                             # the bottom
@@ -353,6 +398,8 @@ class Unit:
             return
 
         px_per_tick = self.px_per_tick_diagonal()
+        if self.scalable and self.context.scale != 1.0:
+            px_per_tick *= self.context.scale
         width_per_diag = self.context.width / self.context.diagonal
         height_per_diag = self.context.height / self.context.diagonal
         offset_label_x = height_per_diag * self.tick_max_length / 2
@@ -437,6 +484,8 @@ class Unit:
             return
 
         px_per_tick = self.px_per_tick_diagonal()
+        if self.scalable and self.context.scale != 1.0:
+            px_per_tick *= self.context.scale
         width_per_diag = self.context.width / self.context.diagonal
         height_per_diag = self.context.height / self.context.diagonal
         offset_label_x = height_per_diag * self.tick_max_length / 2

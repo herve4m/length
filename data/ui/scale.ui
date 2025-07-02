@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  Copyright 2025 Hervé Quatremain
+
+  This file is part of Length.
+
+  Length is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  Length is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  Length. If not, see <https://www.gnu.org/licenses/>.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="ScaleControl" parent="GtkBox">
+    <property name="margin-end">18</property>
+    <property name="margin-start">18</property>
+    <property name="spacing">12</property>
+    <property name="hexpand">true</property>
+    <child>
+      <object class="GtkLabel" id="scale_label">
+        <property name="label" translatable="yes">_Scale</property>
+        <property name="use-underline">true</property>
+        <property name="halign">start</property>
+        <property name="hexpand">true</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSpinButton" id="scale_spin">
+        <property name="digits">2</property>
+        <property name="climb-rate">0.05</property>
+        <property name="adjustment">
+          <object class="GtkAdjustment" id="scale_adjustment">
+            <property name="lower">0.0</property>
+            <property name="upper">1000.0</property>
+            <property name="value">1.0</property>
+            <property name="page-increment">0.1</property>
+            <property name="step-increment">0.01</property>
+            <signal name="value-changed" handler="_on_value_changed"/>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

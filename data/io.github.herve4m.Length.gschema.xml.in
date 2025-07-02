@@ -39,6 +39,12 @@
       <description>Point of origin in ruler units.</description>
     </key>
 
+    <key name="scale" type="d">
+      <default>1.0</default>
+      <summary>Scale factor</summary>
+      <description>Reduce or enlarge the scale of the units.</description>
+    </key>
+
     <key name="calibration" type="aa{ss}">
       <default>[]</default>
       <summary>Monitor Calibration Parameters</summary>

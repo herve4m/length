@@ -41,7 +41,10 @@ class UnitPct(Unit):
     #  ]
     offset_adjustment = [0.0, -900.0, 900.0, 1.0, 5.0, 0.0]
     # Number of decimals to display in the spin button
-    offset_decimals = 0
+    offset_decimals: int = 0
+
+    # Whether the ruler units can be scale
+    scalable: bool = False
 
     def __init__(self, context) -> None:
         """Initialize the object.

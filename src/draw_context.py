@@ -72,6 +72,9 @@ class DrawContext:
         # Offset (in ruler units)
         self.offset: float = 0.0
 
+        # Scaling factor
+        self.scale: float = 1.0
+
         # Colors (RGBA)
         self.color_fg: list[float] = [0.0, 0.0, 0.0, 1.0]
         self.color_bg: list[float] = DEFAULT_COLOR_BG
@@ -83,16 +86,18 @@ class DrawContext:
         # Font for the pointer tracking label
         self.font_desc_small = None
 
-        # Scale direction
+        # Ruler direction
         self.left2right: bool = True
 
     def refresh_from_settings(self) -> None:
         """Reload the parameter from GSettings."""
         self.track_pointer = self.settings.get_boolean("track-pointer")
         self.offset = self.settings.get_double("offset")
+        self.scale = self.settings.get_double("scale")
 
         logger.debug(f"Get settings:     track-pointer: {self.track_pointer}")
         logger.debug(f"Get settings:            offset: {self.offset}")
+        logger.debug(f"Get settings:             scale: {self.scale}")
 
         # Colors
         if self.settings.get_boolean("use-default-color"):
@@ -140,12 +145,14 @@ class DrawContext:
             dialog.set_heading(_("Monitor Size Unknown"))
             dialog.set_body(
                 _(
-                    f"The size of the {monitor_name} monitor cannot be determined.\n"
+                    "The size of the {monitor_name} monitor cannot be determined.\n"
                     "Use the Preferences dialog to calibrate Length for "
                     "your monitor size.\n"
-                    "In the meantime, computations are done for a "
-                    f"{round(self.current_monitor.diag_inch, 1)} "
+                    "In the meantime, computations are done for a {diag_inch} "
                     "inches monitor."
+                ).format(
+                    monitor_name=monitor_name,
+                    diag_inch=round(self.current_monitor.diag_inch, 1),
                 )
             )
             dialog.add_response("ok", _("OK"))

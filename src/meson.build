@@ -32,6 +32,7 @@ length_sources = [
   'pointer_tracking.py',
   'preferences_display.py',
   'preferences.py',
+  'scale.py',
   'settings.py',
   'unit_cm.py',
   'unit_inch.py',

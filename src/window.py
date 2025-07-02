@@ -24,9 +24,10 @@ import math
 from gi.repository import Adw, Gtk, Gdk, GLib
 
 from .unit_mng import UnitMng
+from .offset import OffsetControl
 from .opacity import OpacityControl
 from .pointer_tracking import PointerTrackingControl
-from .offset import OffsetControl
+from .scale import ScaleControl
 
 from .orientation import OrientationControl
 from .settings import Settings
@@ -68,6 +69,8 @@ class LengthWindow(Adw.ApplicationWindow):
         popover.add_child(self.pointer_tracking_control, "pointer_tracking")
         self.offset_control = OffsetControl(self)
         popover.add_child(self.offset_control, "offset")
+        self.scale_control = ScaleControl(self)
+        popover.add_child(self.scale_control, "scale")
         self.orientation_control = OrientationControl(self)
         popover.add_child(self.orientation_control, "orientation")
 
@@ -92,6 +95,7 @@ class LengthWindow(Adw.ApplicationWindow):
             da.set_content_height(h)
 
         self.offset_control.update_adjustment(unit, self.unit_obj)
+        self.scale_control.update_adjustment(unit, self.unit_obj)
         self.orientation_control.update_orientation()
 
     def set_background_color(
