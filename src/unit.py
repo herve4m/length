@@ -221,16 +221,18 @@ class Unit:
         if width < self.MIN_LENGTH or width <= min_size:
             return
 
-        if self.scalable and self.context.scale != 1.0:
+        if self.scalable and round(self.context.scale, 2) != 1.0:
             px_per_tick *= self.context.scale
-            scale_indicator = "*"
+            scale_indicator_long = f"(x{self.context.scale:.2f})"
+            scale_indicator_short = "(x)"
         else:
-            scale_indicator = ""
+            scale_indicator_long = scale_indicator_short = ""
 
         offset = self.unit2tick(self.context.offset)
         ticks = sorted(self.ticks.keys())
         nb_tick_types = len(self.ticks)
         unit_name_displayed = False
+        scale_factor_displayed = False
 
         for unit_x in range(1 + offset, math.ceil(width / px_per_tick) + offset):
             # pos_x is the X coordinate of the tick
@@ -248,20 +250,21 @@ class Unit:
                     # Draw the label
                     if self.ticks[ticks[i]]["label"]:
                         tick_val = round(unit_x / self.unit_multiplier)
-                        # Append the unit name to the label if the unit name
-                        # has not been displayed yet
-                        if not unit_name_displayed:
-                            label = f"{tick_val} {self.short_name} {scale_indicator}"
-                            e = ctx_text.get_extents(label)
-                            half_text_w = e.width / 2.0
-                            # If the label would overwrite the menu button,
-                            # then do not show the unit name
-                            if pos_x - half_text_w <= self.MIN_LENGTH:
-                                label = f"{tick_val}"
-                            else:
-                                unit_name_displayed = True
-                        else:
-                            label = f"{tick_val}"
+                        label = f"{tick_val}"
+                        # # Append the unit name to the label if the unit name
+                        # # has not been displayed yet
+                        # if not unit_name_displayed:
+                        #     label = f"{tick_val} {self.short_name} {scale_indicator}"
+                        #     e = ctx_text.get_extents(label)
+                        #     half_text_w = e.width / 2.0
+                        #     # If the label would overwrite the menu button,
+                        #     # then do not show the unit name
+                        #     if pos_x - half_text_w <= self.MIN_LENGTH:
+                        #         label = f"{tick_val}"
+                        #     else:
+                        #         unit_name_displayed = True
+                        # else:
+                        #     label = f"{tick_val}"
 
                         e = ctx_text.get_extents(label)
                         half_text_w = e.width / 2.0
@@ -271,6 +274,36 @@ class Unit:
                             x = pos_x - half_text_w
                             if x > self.MIN_LENGTH:
                                 ctx_text.draw_text(x, self.tick_max_length, label)
+                                if not unit_name_displayed:
+                                    ctx_text.draw_text(
+                                        x + e.width + 2, self.tick_max_length, self.short_name
+                                    )
+                                    unit_name_displayed = True
+                                elif not scale_factor_displayed:
+                                    if self.context.left2right:
+                                        next_pos_x = (
+                                            unit_x + ticks[i] - offset
+                                        ) * px_per_tick + 0.5
+                                    else:
+                                        next_pos_x = width - (
+                                            (unit_x - ticks[i] - offset) * px_per_tick + 0.5
+                                        )
+                                    scale_e = ctx_text.get_extents(scale_indicator_long)
+
+                                    if x + e.width + 5 + scale_e.width < next_pos_x - 10:
+                                        ctx_text.draw_text(
+                                            x + e.width + 5,
+                                            self.tick_max_length,
+                                            scale_indicator_long,
+                                        )
+                                    else:
+                                        ctx_text.draw_text(
+                                            x + e.width + 5,
+                                            self.tick_max_length,
+                                            scale_indicator_short,
+                                        )
+
+                                    scale_factor_displayed = True
 
                             # If the ruler is wide, then draw also the label at
                             # the bottom
