@@ -67,6 +67,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.8.1" date="2025-07-02">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v081</url>
+      <description translate="no">
+        <p>Add the scaling factor feature, which enables to scale the units to adjust the ruler to the object to measure when this object is zoomed, for example</p>
+        <p>Fix the alpha channel being ignore when opacity is set to zero</p>
+      </description>
+    </release>
     <release version="0.7.0" date="2025-06-25">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v070</url>
       <description translate="no">
