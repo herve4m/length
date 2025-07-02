@@ -145,12 +145,14 @@ class DrawContext:
             dialog.set_heading(_("Monitor Size Unknown"))
             dialog.set_body(
                 _(
-                    f"The size of the {monitor_name} monitor cannot be determined.\n"
+                    "The size of the {monitor_name} monitor cannot be determined.\n"
                     "Use the Preferences dialog to calibrate Length for "
                     "your monitor size.\n"
-                    "In the meantime, computations are done for a "
-                    f"{round(self.current_monitor.diag_inch, 1)} "
+                    "In the meantime, computations are done for a {diag_inch} "
                     "inches monitor."
+                ).format(
+                    monitor_name=monitor_name,
+                    diag_inch=round(self.current_monitor.diag_inch, 1),
                 )
             )
             dialog.add_response("ok", _("OK"))

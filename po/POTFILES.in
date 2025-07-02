@@ -10,6 +10,7 @@ data/ui/orientation.ui
 data/ui/pointer_tracking.ui
 data/ui/preferences_display.ui
 data/ui/preferences.ui
+data/ui/scale.ui
 data/ui/window.ui
 src/draw_context.py
 src/main.py

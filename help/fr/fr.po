@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-06-23 16:33+0200\n"
+"POT-Creation-Date: 2025-07-02 20:39+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
@@ -13,8 +13,9 @@ msgstr ""
 #: ../help/C/adjusting.page:13 ../help/C/calibrating.page:13
 #: ../help/C/colors.page:13 ../help/C/direction.page:13 ../help/C/fonts.page:13
 #: ../help/C/index.page:17 ../help/C/offset.page:13 ../help/C/resizing.page:13
-#: ../help/C/rotating.page:13 ../help/C/tracking.page:13
-#: ../help/C/transparency.page:13 ../help/C/units.page:14
+#: ../help/C/rotating.page:13 ../help/C/scale.page:13
+#: ../help/C/tracking.page:13 ../help/C/transparency.page:13
+#: ../help/C/units.page:14
 msgid "2025"
 msgstr ""
 
@@ -62,7 +63,7 @@ msgstr ""
 "flèches. Appuyer sur <key>Esc</key> pour sortir du mode clavier."
 
 #. (itstool) path: page/p
-#: ../help/C/adjusting.page:44 ../help/C/transparency.page:53
+#: ../help/C/adjusting.page:44 ../help/C/transparency.page:52
 msgid ""
 "To prevent the object to measure from covering the ruler, right click the "
 "ruler and select <gui style=\"menuitem\">Always on Top</gui>:"
@@ -76,7 +77,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: ../help/C/adjusting.page:46 ../help/C/transparency.page:55
+#: ../help/C/adjusting.page:46 ../help/C/transparency.page:54
 msgctxt "_"
 msgid ""
 "external ref='figures/always-on-top.png' "
@@ -84,7 +85,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: media/p
-#: ../help/C/adjusting.page:47 ../help/C/transparency.page:56
+#: ../help/C/adjusting.page:47 ../help/C/transparency.page:55
 msgid ""
 "Use the context menu and select <gui style=\"menuitem\">Always on Top</gui>."
 msgstr ""
@@ -141,8 +142,9 @@ msgstr ""
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:43 ../help/C/colors.page:37
 #: ../help/C/direction.page:37 ../help/C/fonts.page:37 ../help/C/offset.page:37
-#: ../help/C/rotating.page:37 ../help/C/tracking.page:41
-#: ../help/C/transparency.page:40 ../help/C/units.page:38
+#: ../help/C/rotating.page:37 ../help/C/scale.page:40
+#: ../help/C/tracking.page:41 ../help/C/transparency.page:40
+#: ../help/C/units.page:38
 msgid ""
 "Click the menu button (<_:media-1/>) in the left-side corner of the ruler."
 msgstr "Cliquer le menu (<_:media-1/>) dans le coin gauche de la règle."
@@ -390,7 +392,7 @@ msgid "Preferences"
 msgstr "Préférences"
 
 #. (itstool) path: info/desc
-#: ../help/C/offset.page:25
+#: ../help/C/offset.page:25 ../help/C/scale.page:25
 msgid "Change the unit origin."
 msgstr "Changer le point d’origine"
 
@@ -474,6 +476,40 @@ msgid ""
 "You can also change the orientation of the ruler by dragging its corners."
 msgstr ""
 "Vous pouvez aussi changer l’orientation de la règle en tirant sur ses coins."
+
+#. (itstool) path: page/title
+#: ../help/C/scale.page:28
+msgid "Changing the Scaling Factor"
+msgstr "Changer l’échelle des unités de la règle"
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/scale.page:30
+msgctxt "_"
+msgid "external ref='figures/scale.png' md5='22f7cd10d8d5eefaf5643acfc9210bbf'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/scale.page:31
+msgid "Changing the scaling factor"
+msgstr "Changer le facteur d’échelle des unités"
+
+#. (itstool) path: page/p
+#: ../help/C/scale.page:34
+msgid ""
+"You can scale the ruler's unit by a factor. When you define a scaling "
+"factor, a reminder is displayed on the ruler."
+msgstr ""
+Vous pouvez changer l’échelle des unités par un facteur. Quand vous "
+"définissez une échelle, un indicateur est affiché sur la règle."
+
+#. (itstool) path: item/p
+#: ../help/C/scale.page:42
+msgid "Adjust the scaling factor."
+msgstr "Ajuster l’échelle."
 
 #. (itstool) path: info/desc
 #: ../help/C/tracking.page:25
@@ -580,16 +616,13 @@ msgstr ""
 #: ../help/C/transparency.page:43
 msgid ""
 "Adjust the opacity percentage. A 100% opacity means that the ruler is not "
-"transparent at all, and it masks the objects behind it. Because a 0% opacity "
-"would render the ruler completely transparent, you cannot reduce the opacity "
-"below 10%."
+"transparent at all, and it masks the objects behind it."
 msgstr ""
 "Ajuster l’opacité de la règle en pourcentage. Avec une opacité de 100 %, la "
-"règle est opaque et masque les objects derrière elle. Vous ne pouvez pas "
-"réduire l’opacité au-delà de 10 %, sinon la règle deviendrait transparente."
+"règle est opaque et masque les objects derrière elle."
 
 #. (itstool) path: page/p
-#: ../help/C/transparency.page:51
+#: ../help/C/transparency.page:50
 msgid ""
 "Alternatively, you can adjust the opacity by using the arrow keys: "
 "<key>Left</key> or <key>Down</key> to reduce the opacity and render the "
