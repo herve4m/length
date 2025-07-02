@@ -4,6 +4,25 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.8.1
+======
+
+Minor Changes
+-------------
+
+- Add the scaling factor feature, which enables to scale the units to adjust
+  the ruler to the object to measure when this object is zoomed,
+  for example[`#34`_]
+
+.. _#34: https://github.com/herve4m/length/issues/34
+
+Bugfixes
+--------
+
+- Fix the alpha channel being ignore when opacity is set to zero [`#33`_].
+
+.. _#33: https://github.com/herve4m/length/issues/33
+
 v0.7.0
 ======
 
