@@ -503,7 +503,7 @@ msgid ""
 "You can scale the ruler's unit by a factor. When you define a scaling "
 "factor, a reminder is displayed on the ruler."
 msgstr ""
-Vous pouvez changer l’échelle des unités par un facteur. Quand vous "
+"Vous pouvez changer l’échelle des unités par un facteur. Quand vous "
 "définissez une échelle, un indicateur est affiché sur la règle."
 
 #. (itstool) path: item/p
