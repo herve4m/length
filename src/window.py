@@ -236,8 +236,11 @@ class LengthWindow(Adw.ApplicationWindow):
     @Gtk.Template.Callback()
     def _on_button_pressed_event(self, gesture, n_press: int, x: float, y: float) -> None:
         # Middle button
-        if gesture.get_current_button() == 2 and self.context.track_pointer:
-            self.context.track_locked = not self.context.track_locked
-            self.context.track_pos_x = x
-            self.context.track_pos_y = y
-            self.drawing_area.queue_draw()
+        if gesture.get_current_button() == 2:
+            if self.context.track_pointer:
+                self.context.track_locked = not self.context.track_locked
+                self.context.track_pos_x = x
+                self.context.track_pos_y = y
+                self.drawing_area.queue_draw()
+            else:
+                self.orientation_control.rotate()
