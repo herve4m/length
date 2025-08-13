@@ -4,6 +4,23 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.9.0
+======
+
+Minor Changes
+-------------
+
+- Change orientation on middle click[`#41`_].
+- Ukrainian and Russian translations.
+
+.. _#41: https://github.com/herve4m/length/issues/41
+
+Bugfixes
+--------
+
+- Fix wrong mode for the `src/length.in` file.
+- Prevent the scaling factor from being set to zero.
+
 v0.8.1
 ======
 
