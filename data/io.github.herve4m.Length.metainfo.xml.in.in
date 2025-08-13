@@ -67,6 +67,14 @@
   </screenshots>
 
   <releases>
+    <release version="0.9.0" date="2025-08-13">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v090</url>
+      <description translate="no">
+        <p>Change orientation on middle click</p>
+        <p>Add Ukrainian and Russian translations</p>
+        <p>Prevent the scaling factor from being set to zero</p>
+      </description>
+    </release>
     <release version="0.8.1" date="2025-07-02">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v081</url>
       <description translate="no">
