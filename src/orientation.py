@@ -20,7 +20,7 @@
 
 import logging
 
-from gi.repository import Gtk
+from gi.repository import Gtk, Gdk, GdkWayland
 
 logger = logging.getLogger(__name__)
 
@@ -36,6 +36,7 @@ class OrientationControl(Gtk.Box):
         """Initialize the object."""
         super().__init__()
         self.application_window = application_window
+        self.is_wayland = isinstance(Gdk.Display.get_default(), GdkWayland.WaylandDisplay)
 
     def update_orientation(self) -> None:
         """Update the toggle buttons according to the current orientation."""
@@ -48,13 +49,14 @@ class OrientationControl(Gtk.Box):
             w, h = self.application_window.get_default_size()
 
         # Although the window should automatically change size when
-        # setting the default size, it is not always the case. As a
-        # workaround, maximizing, unmaximizing, and presenting the
-        # window does the trick.
+        # setting the default size, it is not always the case on
+        # non-Wayland systems. As a workaround, maximizing,
+        # unmaximizing, and presenting the window does the trick.
         self.application_window.set_default_size(h, w)
-        self.application_window.maximize()
-        self.application_window.unmaximize()
-        self.application_window.present()
+        if not self.is_wayland:
+            self.application_window.maximize()
+            self.application_window.unmaximize()
+            self.application_window.present()
 
     @Gtk.Template.Callback()
     def _orientation_toggled(self, toggle) -> None:
