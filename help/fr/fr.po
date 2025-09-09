@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-08-12 17:09+0200\n"
+"POT-Creation-Date: 2025-09-09 07:54+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
@@ -473,11 +473,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:47
 msgid ""
-"You can also change the orientation of the ruler by dragging its corners or "
-"by clicking the mouse middle button."
+"You can also change the orientation of the ruler by dragging its corners, by "
+"clicking the mouse middle button, or by pressing <key>R</key>."
 msgstr ""
-"Vous pouvez aussi changer l’orientation de la règle en tirant sur ses coins "
-"ou en cliquant le bouton du milieu de la souris."
+"Vous pouvez aussi changer l’orientation de la règle en tirant sur ses coins, "
+"en cliquant le bouton du milieu de la souris, ou en appuyant sur <key>R</key>."
 
 #. (itstool) path: page/title
 #: ../help/C/scale.page:28
