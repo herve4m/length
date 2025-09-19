@@ -46,8 +46,6 @@
       <p>
         To lock the position of the tracker, press <key>P</key>.
         Press <key>P</key> again to unlock the tracker.
-        Alternatively, use the middle mouse button to lock and unlock the tracker.
-        In some environments however, the middle mouse button might be associated with another function.
       </p>
     </item>
   </steps>

@@ -47,14 +47,26 @@ class OrientationControl(Gtk.Box):
         if w == 0 or h == 0:
             w, h = self.application_window.get_default_size()
 
-        # Although the window should automatically change size when
-        # setting the default size, it is not always the case. As a
-        # workaround, maximizing, unmaximizing, and presenting the
-        # window does the trick.
+        # You cannot programmatically rotate the window with Gtk 4.
+        # As a messy workaround, maximizing, unmaximizing, and
+        # presenting the window does the trick. See
+        # https://discourse.gnome.org/t/programmatically-set-window-size/31339/6
         self.application_window.set_default_size(h, w)
         self.application_window.maximize()
         self.application_window.unmaximize()
         self.application_window.present()
+
+        if (
+            self.application_window.context.track_pointer
+            and self.application_window.context.track_locked
+        ):
+            (
+                self.application_window.context.track_pos_x,
+                self.application_window.context.track_pos_y,
+            ) = (
+                self.application_window.context.track_pos_y,
+                self.application_window.context.track_pos_x,
+            )
 
     @Gtk.Template.Callback()
     def _orientation_toggled(self, toggle) -> None:
