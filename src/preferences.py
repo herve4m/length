@@ -44,6 +44,8 @@ class PreferencesDialog(Adw.PreferencesDialog):
     unit_comborow = Gtk.Template.Child()
     lr_toggle = Gtk.Template.Child()
     rl_toggle = Gtk.Template.Child()
+    diagonal_switchrow = Gtk.Template.Child()
+    angle_switchrow = Gtk.Template.Child()
     use_default_font = Gtk.Template.Child()
     font_name = Gtk.Template.Child()
     use_default_color = Gtk.Template.Child()
@@ -84,6 +86,14 @@ class PreferencesDialog(Adw.PreferencesDialog):
             Gio.SettingsBindFlags.DEFAULT,
         )
         self.rl_toggle.set_active(not self.settings.get_boolean("direction-left-to-right"))
+
+        self.settings.bind(
+            "show-diagonals", self.diagonal_switchrow, "active", Gio.SettingsBindFlags.DEFAULT
+        )
+
+        self.settings.bind(
+            "show-angles", self.angle_switchrow, "active", Gio.SettingsBindFlags.DEFAULT
+        )
 
         self.settings.bind(
             "use-default-font",
@@ -139,6 +149,14 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
     @Gtk.Template.Callback()
     def _lr_toggled(self, _widget) -> None:
+        self.application_window.drawing_area.queue_draw()
+
+    @Gtk.Template.Callback()
+    def _on_diagonal(self, toggle, _value) -> None:
+        self.application_window.drawing_area.queue_draw()
+
+    @Gtk.Template.Callback()
+    def _on_angle(self, toggle, _value) -> None:
         self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()

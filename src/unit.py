@@ -548,6 +548,66 @@ class Unit:
             self.context.ctx.line_to(pos_x + offset_x, pos_y + offset_y)
         self.context.ctx.stroke()
 
+    def _draw_angles(self, ctx_text, min_size: int) -> None:
+        """Draw the angle markings.
+
+        :param ctx_text: The text context.
+        :type ctx_text: :py:class:``CtxText``
+        :param min_size: The minimum window width and height under which the
+                         markings are not drawn.
+        :type min_size: int
+        """
+        if (
+            self.context.width < self.MIN_LENGTH
+            or self.context.width <= min_size
+            or self.context.height < self.MIN_LENGTH
+            or self.context.height <= min_size
+        ):
+            return
+
+        width_per_diag = self.context.width / self.context.diagonal
+        height_per_diag = self.context.height / self.context.diagonal
+
+        # Compute the parameters for the first angle
+        angle_1 = math.asin(self.context.height / self.context.diagonal)
+        angle_deg_1 = math.degrees(angle_1)
+        radius_1 = self.context.width - angle_deg_1 * (self.context.width - 100) / 90
+        legend_1 = f"{angle_deg_1:.1f}°"
+        e_1 = ctx_text.get_extents(legend_1)
+        legend_x_1 = radius_1 * math.cos(angle_1 / 2)
+        legend_y_1 = radius_1 * math.sin(angle_1 / 2)
+
+        # Compute the parameters for the second angle
+        angle_2 = math.pi + angle_1
+        angle_deg_2 = 90 - angle_deg_1
+        radius_2 = angle_deg_1 * (self.context.height - 100) / 90
+        legend_2 = f"{angle_deg_2:.1f}°"
+        e_2 = ctx_text.get_extents(legend_2)
+        a = math.radians(90 - angle_deg_2 / 2)
+        legend_x_2 = self.context.width - radius_2 * math.cos(a) - e_2.width
+        legend_y_2 = self.context.height - radius_2 * math.sin(a) - e_2.height
+
+        # Draw the diagonals
+        self.context.ctx.set_line_width(0.2)
+        # Do not draw on the menu button
+        self.context.ctx.move_to(min_size * width_per_diag, min_size * height_per_diag)
+        self.context.ctx.line_to(self.context.width, self.context.height)
+        self.context.ctx.move_to(0, self.context.height)
+        self.context.ctx.line_to(self.context.width, 0)
+        self.context.ctx.stroke()
+
+        # Draw the angles if enough space is available
+        if legend_x_1 + e_1.width < self.context.width:
+            self.context.ctx.arc(0, 0, radius_1, 0, angle_1)
+            ctx_text.draw_text(legend_x_1, legend_y_1, legend_1)
+            self.context.ctx.stroke()
+        if legend_x_2 > 0 and legend_y_2 + e_2.height < self.context.height - self.MIN_LENGTH:
+            self.context.ctx.arc(
+                self.context.width, self.context.height, radius_2, angle_2, 4.71238898
+            )
+            ctx_text.draw_text(legend_x_2, legend_y_2, legend_2)
+            self.context.ctx.stroke()
+
     def draw(self):
         """Draw the ruler.
 
@@ -572,8 +632,12 @@ class Unit:
 
         self._draw_horizontal(ctx_text, min_size)
         self._draw_vertical(ctx_text, min_size)
-        self._draw_diag_1(ctx_text, min_size)
-        self._draw_diag_2(ctx_text, min_size)
+        if self.context.settings.get_boolean("show-diagonals"):
+            self._draw_diag_1(ctx_text, min_size)
+            self._draw_diag_2(ctx_text, min_size)
+
+        if self.context.settings.get_boolean("show-angles"):
+            self._draw_angles(ctx_text, min_size)
 
         if self.context.track_pointer:
             self._draw_track_horizontal(min_size)

@@ -73,6 +73,22 @@
                 </child>
               </object>
             </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="diagonal_switchrow">
+                <property name="title" translatable="yes">Dia_gonals</property>
+                <property name="use-underline">true</property>
+                <signal name="notify::active" handler="_on_diagonal"/>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="angle_switchrow">
+                <property name="title" translatable="yes">_Angles</property>
+                <property name="use-underline">true</property>
+                <signal name="notify::active" handler="_on_angle"/>
+              </object>
+            </child>
           </object>
         </child>
 
