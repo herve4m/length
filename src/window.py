@@ -206,6 +206,10 @@ class LengthWindow(Adw.ApplicationWindow):
                 self.context.track_pos_x = self.context.pointer_x
                 self.context.track_pos_y = self.context.pointer_y
                 self.drawing_area.queue_draw()
+        #
+        # You cannot programmatically rotate the window with Gtk 4. See
+        # https://discourse.gnome.org/t/programmatically-set-window-size/31339/6
+        #
         # elif key_val == Gdk.KEY_r:
         #     self.orientation_control.rotate()
 
@@ -235,12 +239,6 @@ class LengthWindow(Adw.ApplicationWindow):
 
     @Gtk.Template.Callback()
     def _on_button_pressed_event(self, gesture, n_press: int, x: float, y: float) -> None:
-        # Middle button
+        # Rotate on middle button click
         if gesture.get_current_button() == 2:
-            if self.context.track_pointer:
-                self.context.track_locked = not self.context.track_locked
-                self.context.track_pos_x = x
-                self.context.track_pos_y = y
-                self.drawing_area.queue_draw()
-            else:
-                self.orientation_control.rotate()
+            self.orientation_control.rotate()

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-07-02 20:41+0200\n"
+"POT-Creation-Date: 2025-09-19 14:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -379,7 +379,7 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:47
-msgid "You can also change the orientation of the ruler by dragging its corners."
+msgid "You can also change the orientation of the ruler by dragging its corners or by clicking the mouse middle button."
 msgstr ""
 
 #. (itstool) path: page/title
@@ -449,11 +449,11 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: ../help/C/tracking.page:46
-msgid "To lock the position of the tracker, press <key>P</key>. Press <key>P</key> again to unlock the tracker. Alternatively, use the middle mouse button to lock and unlock the tracker. In some environments however, the middle mouse button might be associated with another function."
+msgid "To lock the position of the tracker, press <key>P</key>. Press <key>P</key> again to unlock the tracker."
 msgstr ""
 
 #. (itstool) path: page/p
-#: ../help/C/tracking.page:55
+#: ../help/C/tracking.page:53
 msgid "You can also enable and disable the tracker by pressing <key>T</key>."
 msgstr ""
 

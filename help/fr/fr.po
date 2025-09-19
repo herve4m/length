@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-08-12 17:09+0200\n"
+"POT-Creation-Date: 2025-09-19 14:22+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
@@ -559,18 +559,13 @@ msgstr "Activer <gui style=\"button\">Suivre le pointeur</gui>."
 #: ../help/C/tracking.page:46
 msgid ""
 "To lock the position of the tracker, press <key>P</key>. Press <key>P</key> "
-"again to unlock the tracker. Alternatively, use the middle mouse button to "
-"lock and unlock the tracker. In some environments however, the middle mouse "
-"button might be associated with another function."
+"again to unlock the tracker."
 msgstr ""
 "Pour vérouiller la position du pointeur, appuyer sur <key>P</key>. Appuyer "
-"sur <key>P</key> de nouveau pour dévérouiller le pointeur. Vous pouvez aussi "
-"utiliser le bouton du milieu de la souris pour vérouiller et dévérouiller le "
-"pointeur. Certains environements utiliser le bouton du milieu de la souris "
-"pour d’autres fonctions."
+"sur <key>P</key> de nouveau pour dévérouiller le pointeur."
 
 #. (itstool) path: page/p
-#: ../help/C/tracking.page:55
+#: ../help/C/tracking.page:53
 msgid "You can also enable and disable the tracker by pressing <key>T</key>."
 msgstr ""
 "Vous pouvez aussi activer et désactiver le suivi du pointeur en appuyant sur "
@@ -744,6 +739,18 @@ msgid ""
 msgstr ""
 "Voir <link xref=\"calibrating\"/> pour configurer <app>Longueur</app> pour "
 "la taille de votre écran."
+
+#~ msgid ""
+#~ "To lock the position of the tracker, press <key>P</key>. Press <key>P</"
+#~ "key> again to unlock the tracker. Alternatively, use the middle mouse "
+#~ "button to lock and unlock the tracker. In some environments however, the "
+#~ "middle mouse button might be associated with another function."
+#~ msgstr ""
+#~ "Pour vérouiller la position du pointeur, appuyer sur <key>P</key>. "
+#~ "Appuyer sur <key>P</key> de nouveau pour dévérouiller le pointeur. Vous "
+#~ "pouvez aussi utiliser le bouton du milieu de la souris pour vérouiller et "
+#~ "dévérouiller le pointeur. Certains environements utiliser le bouton du "
+#~ "milieu de la souris pour d’autres fonctions."
 
 #~ msgid "This work is licensed under a <_:link-1/> license."
 #~ msgstr "Ce travail est sous licence <_:link-1/>."
