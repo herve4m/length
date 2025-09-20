@@ -206,6 +206,26 @@ class LengthWindow(Adw.ApplicationWindow):
                 self.context.track_pos_x = self.context.pointer_x
                 self.context.track_pos_y = self.context.pointer_y
                 self.drawing_area.queue_draw()
+        elif key_val == Gdk.KEY_m:
+            v = self.settings.get_boolean("show-markings")
+            self.settings.set_boolean("show-markings", not v)
+            self.drawing_area.queue_draw()
+        elif key_val == Gdk.KEY_g:
+            v = self.settings.get_boolean("show-grid")
+            self.settings.set_boolean("show-grid", not v)
+            self.drawing_area.queue_draw()
+        elif key_val == Gdk.KEY_i:
+            v = self.settings.get_boolean("show-diagonals")
+            self.settings.set_boolean("show-diagonals", not v)
+            self.drawing_area.queue_draw()
+        elif key_val == Gdk.KEY_a:
+            v = self.settings.get_boolean("show-angles")
+            self.settings.set_boolean("show-angles", not v)
+            self.drawing_area.queue_draw()
+        elif key_val == Gdk.KEY_d:
+            v = self.settings.get_boolean("direction-left-to-right")
+            self.settings.set_boolean("direction-left-to-right", not v)
+            self.drawing_area.queue_draw()
         #
         # You cannot programmatically rotate the window with Gtk 4. See
         # https://discourse.gnome.org/t/programmatically-set-window-size/31339/6

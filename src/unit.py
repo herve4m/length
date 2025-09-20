@@ -194,6 +194,7 @@ class Unit:
         self,
         ctx_text,
         min_size: int,
+        show_grid: bool = True,
         px_per_tick: float = 0.0,
         width: int = 0,
         height: int = 0,
@@ -330,7 +331,8 @@ class Unit:
 
             # Draw the grid
             if (
-                show_when_wide
+                show_grid
+                and show_when_wide
                 and pos_x > self.MIN_LENGTH
                 and width - pos_x > self.MIN_LENGTH
                 and height > 10 * ctx_text.default_height
@@ -346,7 +348,7 @@ class Unit:
                 self.context.ctx.stroke()
                 self.context.ctx.set_line_width(1)
 
-    def _draw_vertical(self, ctx_text, min_size: int) -> None:
+    def _draw_vertical(self, ctx_text, min_size: int, show_grid: bool) -> None:
         """Draw the vertical markings.
 
         :param ctx_text: The text context.
@@ -364,6 +366,7 @@ class Unit:
         self._draw_horizontal(
             ctx_text,
             min_size,
+            show_grid,
             self.px_per_tick_height,
             self.context.height,
             self.context.width,
@@ -548,6 +551,163 @@ class Unit:
             self.context.ctx.line_to(pos_x + offset_x, pos_y + offset_y)
         self.context.ctx.stroke()
 
+    def _draw_angles(self, ctx_text, min_size: int) -> None:
+        """Draw the angle markings.
+
+        :param ctx_text: The text context.
+        :type ctx_text: :py:class:``CtxText``
+        :param min_size: The minimum window width and height under which the
+                         markings are not drawn.
+        :type min_size: int
+        """
+        if (
+            self.context.width < self.MIN_LENGTH
+            or self.context.width <= min_size
+            or self.context.height < self.MIN_LENGTH
+            or self.context.height <= min_size
+        ):
+            return
+
+        width_per_diag = self.context.width / self.context.diagonal
+        height_per_diag = self.context.height / self.context.diagonal
+
+        # ________________________________
+        # |\    1a                 1b   /|
+        # |   \                      /   |
+        # | 2a   \                /   2b |
+        # |         \     3    /         |
+        # |             \  /             |
+        # |           4                  |
+        # |            /   \             |
+        # |         /          \         |
+        # | 2c   /                \   2d |
+        # |   /                      \   |
+        # |/   1c                 1d   \ |
+        # --------------------------------
+
+        # Compute the angles
+        angle_1 = math.asin(self.context.height / self.context.diagonal)
+        angle_deg_1 = math.degrees(angle_1)
+        legend_1 = f"{angle_deg_1:.1f}°"
+        extend_1 = ctx_text.get_extents(legend_1)
+        radius_1 = self.context.width / 3
+
+        angle_2 = math.pi / 2 - angle_1
+        angle_deg_2 = 90 - angle_deg_1
+        legend_2 = f"{angle_deg_2:.1f}°"
+        extend_2 = ctx_text.get_extents(legend_2)
+        radius_2 = self.context.height / 3
+
+        legend_3 = f"{2 * angle_deg_2:.1f}°"
+        extend_3 = ctx_text.get_extents(legend_3)
+        radius_3 = self.context.height / 10
+
+        legend_4 = f"{2 * angle_deg_1:.1f}°"
+        extend_4 = ctx_text.get_extents(legend_4)
+        radius_4 = self.context.width / 10
+
+        # Compute the legend positions
+        legend_x_1a = radius_1 * math.cos(angle_1 / 2)
+        legend_y_1a = radius_1 * math.sin(angle_1 / 2)
+
+        legend_x_1b = self.context.width - legend_x_1a - extend_1.width
+        legend_y_1b = legend_y_1a
+
+        legend_x_1c = legend_x_1a
+        legend_y_1c = self.context.height - legend_y_1a - extend_1.height
+
+        legend_x_1d = self.context.width - legend_x_1a - extend_1.width
+        legend_y_1d = self.context.height - legend_y_1a - extend_1.height
+
+        legend_x_2a = radius_2 * math.cos((math.pi - angle_2) / 2)
+        legend_y_2a = radius_2 * math.sin((math.pi - angle_2) / 2)
+
+        legend_x_2b = self.context.width - legend_x_2a - extend_2.width
+        legend_y_2b = legend_y_2a
+
+        legend_x_2c = legend_x_2a
+        legend_y_2c = self.context.height - legend_y_2a - extend_2.height
+
+        legend_x_2d = self.context.width - legend_x_2a - extend_2.width
+        legend_y_2d = self.context.height - legend_y_2a - extend_2.height
+
+        legend_x_3 = self.context.width / 2 - extend_3.width / 2
+        legend_y_3 = self.context.height / 2 - radius_3 - extend_3.height
+
+        legend_x_4 = self.context.width / 2 + radius_4 + 2
+        legend_y_4 = self.context.height / 2 - extend_4.height / 2
+
+        # Draw the diagonals
+        self.context.ctx.set_line_width(0.2)
+        # Do not draw on the menu button
+        self.context.ctx.move_to(min_size * width_per_diag, min_size * height_per_diag)
+        self.context.ctx.line_to(self.context.width, self.context.height)
+        self.context.ctx.move_to(0, self.context.height)
+        self.context.ctx.line_to(self.context.width, 0)
+        self.context.ctx.stroke()
+
+        # 1a
+        self.context.ctx.arc(0, 0, radius_1, 0, angle_1)
+        ctx_text.draw_text(legend_x_1a, legend_y_1a, legend_1)
+        self.context.ctx.stroke()
+
+        # 1b
+        self.context.ctx.arc(self.context.width, 0, radius_1, math.pi - angle_1, math.pi)
+        ctx_text.draw_text(legend_x_1b, legend_y_1b, legend_1)
+        self.context.ctx.stroke()
+
+        # 1c
+        self.context.ctx.arc(0, self.context.height, radius_1, -angle_1, 0)
+        ctx_text.draw_text(legend_x_1c, legend_y_1c, legend_1)
+        self.context.ctx.stroke()
+
+        # 1d
+        self.context.ctx.arc(
+            self.context.width, self.context.height, radius_1, math.pi, math.pi + angle_1
+        )
+        ctx_text.draw_text(legend_x_1d, legend_y_1d, legend_1)
+        self.context.ctx.stroke()
+
+        # 2a
+        self.context.ctx.arc(0, 0, radius_2, angle_1, math.pi / 2)
+        ctx_text.draw_text(legend_x_2a, legend_y_2a, legend_2)
+        self.context.ctx.stroke()
+
+        # 2b
+        self.context.ctx.arc(self.context.width, 0, radius_2, math.pi / 2, math.pi - angle_1)
+        ctx_text.draw_text(legend_x_2b, legend_y_2b, legend_2)
+        self.context.ctx.stroke()
+
+        # 2c
+        self.context.ctx.arc(0, self.context.height, radius_2, 3 * math.pi / 2, -angle_1)
+        ctx_text.draw_text(legend_x_2c, legend_y_2c, legend_2)
+        self.context.ctx.stroke()
+
+        # 2d
+        self.context.ctx.arc(
+            self.context.width, self.context.height, radius_2, math.pi + angle_1, -math.pi / 2
+        )
+        ctx_text.draw_text(legend_x_2d, legend_y_2d, legend_2)
+        self.context.ctx.stroke()
+
+        # 3
+        self.context.ctx.arc(
+            self.context.width / 2,
+            self.context.height / 2,
+            radius_3,
+            math.pi + angle_1,
+            -angle_1,
+        )
+        ctx_text.draw_text(legend_x_3, legend_y_3, legend_3)
+        self.context.ctx.stroke()
+
+        # 4
+        self.context.ctx.arc(
+            self.context.width / 2, self.context.height / 2, radius_4, -angle_1, angle_1
+        )
+        ctx_text.draw_text(legend_x_4, legend_y_4, legend_4)
+        self.context.ctx.stroke()
+
     def draw(self):
         """Draw the ruler.
 
@@ -570,10 +730,18 @@ class Unit:
         self.context.ctx.set_source_rgba(*self.context.color_fg)
         self.context.ctx.set_line_width(1)
 
-        self._draw_horizontal(ctx_text, min_size)
-        self._draw_vertical(ctx_text, min_size)
-        self._draw_diag_1(ctx_text, min_size)
-        self._draw_diag_2(ctx_text, min_size)
+        if self.context.settings.get_boolean("show-markings"):
+            # Whether do draw the grid
+            show_grid = self.context.settings.get_boolean("show-grid")
+            self._draw_horizontal(ctx_text, min_size, show_grid)
+            self._draw_vertical(ctx_text, min_size, show_grid)
+
+        if self.context.settings.get_boolean("show-diagonals"):
+            self._draw_diag_1(ctx_text, min_size)
+            self._draw_diag_2(ctx_text, min_size)
+
+        if self.context.settings.get_boolean("show-angles"):
+            self._draw_angles(ctx_text, min_size)
 
         if self.context.track_pointer:
             self._draw_track_horizontal(min_size)

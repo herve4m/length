@@ -22,7 +22,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Selecting the colors of the ruler.</desc>
+    <desc>Select the colors of the ruler.</desc>
   </info>
 
   <title>Changing Colors</title>
@@ -31,7 +31,7 @@
     <p><app>Length</app> in different colors</p>
   </media>
 
-  <p>You can change the color of ruler and the color of the markings.</p>
+  <p>You can change the color of the ruler and the color of the markings.</p>
 
   <steps>
     <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>

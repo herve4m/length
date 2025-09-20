@@ -25,7 +25,7 @@
     <desc>Change the unit origin.</desc>
   </info>
 
-  <title>Changing the Offset</title>
+  <title>Setting an Offset</title>
 
   <media type="image" src="figures/offset.png">
     <p>Changing the origin</p>

@@ -10,6 +10,7 @@
 - Update the `help.pot` file from the pages in the `C` directory:
 
 ```
+$ cd help
 $ itstool -o help.pot ../help/C/*.page
 ```
 

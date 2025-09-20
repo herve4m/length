@@ -24,7 +24,7 @@
     <child>
       <object class="GtkShortcutsSection">
         <property name="section-name">shortcuts</property>
-        <property name="max-height">20</property>
+        <property name="max-height">15</property>
         <child>
           <object class="GtkShortcutsGroup">
             <property name="title" translatable="yes" context="shortcut window">General</property>
@@ -53,6 +53,42 @@
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
                 <property name="action-name">app.quit</property>
                 <property name="accelerator">&lt;Ctrl&gt;q</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes" context="shortcut window">Layers</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Show/Hide Markings</property>
+                <property name="accelerator">m</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Show/Hide Grid</property>
+                <property name="accelerator">g</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Show/Hide Diagonals</property>
+                <property name="accelerator">i</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Show/Hide Angles</property>
+                <property name="accelerator">a</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">Left-to-right/Right-to-left</property>
+                <property name="accelerator">d</property>
               </object>
             </child>
           </object>

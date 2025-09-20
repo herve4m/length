@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-09-19 14:22+0200\n"
+"POT-Creation-Date: 2025-09-20 17:22+0200\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
@@ -12,10 +12,10 @@ msgstr ""
 #. (itstool) path: credit/years
 #: ../help/C/adjusting.page:13 ../help/C/calibrating.page:13
 #: ../help/C/colors.page:13 ../help/C/direction.page:13 ../help/C/fonts.page:13
-#: ../help/C/index.page:17 ../help/C/offset.page:13 ../help/C/resizing.page:13
-#: ../help/C/rotating.page:13 ../help/C/scale.page:13
-#: ../help/C/tracking.page:13 ../help/C/transparency.page:13
-#: ../help/C/units.page:14
+#: ../help/C/index.page:17 ../help/C/layers.page:13 ../help/C/offset.page:13
+#: ../help/C/resizing.page:13 ../help/C/rotating.page:13
+#: ../help/C/scale.page:13 ../help/C/tracking.page:13
+#: ../help/C/transparency.page:13 ../help/C/units.page:14
 msgid "2025"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr ""
 #: ../help/C/adjusting.page:32
 msgid ""
 "To align the ruler with the object's window, drag the ruler while pressing "
-"<key>Ctrl</key>. When the ruler gets close to the object's edge, the rule "
+"<key>Ctrl</key>. When the ruler gets close to the object's edge, the ruler "
 "snaps to the window."
 msgstr ""
 "Déplacer la règle tout en appuyant sur <key>Ctrl</key> pour aligner la règle "
@@ -132,17 +132,17 @@ msgstr ""
 #: ../help/C/calibrating.page:36
 msgid ""
 "In some environments, <app>Length</app> retrieves this information from the "
-"system. Other environments to do provide that size. In that case, you must "
+"system. Other environments do not provide that size. In that case, you must "
 "calibrate <app>Length</app> for you display:"
 msgstr ""
-"Dans certains environements, <app>Longueur</app> obtient l’information du "
-"système. D’autres environements ne fournissent pas l’information. Dans ce "
-"cas, indiquez à <app>Longueur</app> la taille de l’écran :"
+"Pour certains environements, <app>Longueur</app> obtient cette information "
+"du système. D’autres environements ne fournissent pas l’information. Dans ce "
+"cas, vous devez calibrer <app>Longueur</app> pour votre écran."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:43 ../help/C/colors.page:37
-#: ../help/C/direction.page:37 ../help/C/fonts.page:37 ../help/C/offset.page:37
-#: ../help/C/rotating.page:37 ../help/C/scale.page:40
+#: ../help/C/direction.page:37 ../help/C/fonts.page:37 ../help/C/layers.page:64
+#: ../help/C/offset.page:37 ../help/C/rotating.page:37 ../help/C/scale.page:40
 #: ../help/C/tracking.page:41 ../help/C/transparency.page:40
 #: ../help/C/units.page:38
 msgid ""
@@ -151,7 +151,8 @@ msgstr "Cliquer le menu (<_:media-1/>) dans le coin gauche de la règle."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:45 ../help/C/colors.page:39
-#: ../help/C/direction.page:39 ../help/C/fonts.page:39 ../help/C/units.page:40
+#: ../help/C/direction.page:39 ../help/C/fonts.page:39 ../help/C/layers.page:66
+#: ../help/C/units.page:40
 msgid "Go to <gui style=\"menuitem\">Preferences</gui>."
 msgstr "Sélectionner <gui style=\"menuitem\">Préférences</gui>."
 
@@ -181,7 +182,8 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:58 ../help/C/colors.page:59
-#: ../help/C/direction.page:43 ../help/C/fonts.page:56 ../help/C/units.page:44
+#: ../help/C/direction.page:43 ../help/C/fonts.page:56 ../help/C/layers.page:75
+#: ../help/C/units.page:44
 msgid "Close the <gui>Preferences</gui> dialog."
 msgstr "Fermer la fenêtre <gui>Préférences</gui>."
 
@@ -199,7 +201,7 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: ../help/C/colors.page:25
-msgid "Selecting the colors of the ruler."
+msgid "Select the colors of the ruler."
 msgstr "Sélectionner les couleurs de la règle."
 
 #. (itstool) path: page/title
@@ -209,7 +211,7 @@ msgstr "Changer les couleurs"
 
 #. (itstool) path: page/p
 #: ../help/C/colors.page:34
-msgid "You can change the color of ruler and the color of the markings."
+msgid "You can change the color of the ruler and the color of the markings."
 msgstr "Vous pouvez changer la couleur de la règle et de ses inscriptions."
 
 #. (itstool) path: item/p
@@ -272,10 +274,15 @@ msgstr "Vous pouvez changer la direction des inscriptions."
 #: ../help/C/direction.page:41
 msgid ""
 "In the <gui style=\"tab\">General</gui> page, click the left-to-right "
-"direction button (<_:media-1/>), or the right-to-left button (<_:media-2/>)."
+"direction button (<_:media-1/>) or the right-to-left button (<_:media-2/>)."
 msgstr ""
 "Dans la page <gui style=\"tab\">Général</gui>, cliquer le bouton gauche à "
 "droite (<_:media-1/>) ou le bouton droite à gauche (<_:media-2/>)."
+
+#. (itstool) path: page/p
+#: ../help/C/direction.page:46
+msgid "You can also switch direction by pressing <key>D</key>."
+msgstr "Vous pouvez aussi changer la direction en appuyant sur <key>D</key>."
 
 #. (itstool) path: info/desc
 #: ../help/C/fonts.page:25
@@ -392,13 +399,102 @@ msgid "Preferences"
 msgstr "Préférences"
 
 #. (itstool) path: info/desc
+#: ../help/C/layers.page:25
+msgid "Select the measuring tools."
+msgstr "Choisir les outils de mesure."
+
+#. (itstool) path: page/title
+#: ../help/C/layers.page:28
+msgid "Selecting Measuring Tools"
+msgstr "Choisir les outils de mesure"
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:30
+msgid "<app>Length</app> provide several measuring tools organized in layers."
+msgstr "<app>Longueur</app> fournit plusieurs outils organisés en couches."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:32
+msgid "The markings layer displays the rulers markings."
+msgstr "La couche des inscriptions affiche les marques sur la règle."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:38
+msgid ""
+"To help you measure large objects when the ruler is expanded, you can "
+"activate the grid."
+msgstr ""
+"Pour mesurer de grands objets quand la règle est étirée, activez la grille."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:44
+msgid "The diagonal layer displays diagonals rulers."
+msgstr "La couche des diagonales affiche la règle en diagonale."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:50
+msgid "Activate the angle layer to measure angles."
+msgstr "Activez la couche des angles pour mesurer des angles."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:56
+msgid ""
+"You can activate several layers for using several tools at the same time. "
+"For example, the marking and grid layers are enabled by default."
+msgstr ""
+"Vous pouvez activer plusieurs outils à la fois. "
+"Les couches des inscriptions et de la grille sont toutes les deux "
+"activées par défaut."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:61
+msgid "You activate layers from the <gui>Preferences</gui> dialog."
+msgstr "Activez les outils via la fenêtre des <gui>Préférences</gui>."
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:69
+msgid ""
+"In the <gui style=\"tab\">General</gui> page, in the <gui "
+"style=\"group\">Layers</gui> section, use the checkboxes to enable or "
+"disable the layers."
+msgstr ""
+"Activez ou désactivez les outils dans la page <gui style=\"tab\">Général</gui>, "
+"dans la section <gui style=\"group\">Outils</gui>."
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:78
+msgid "Alternatively, use the keyboard shortcuts:"
+msgstr ""
+"Vous pouvez aussi utiliser les racourcis clavier :"
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:80
+msgid "<key>m</key> for the marking layer"
+msgstr "<key>m</key> pour les inscriptions"
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:81
+msgid "<key>g</key> for the grid layer"
+msgstr "<key>g</key> pour la grille"
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:82
+msgid "<key>i</key> for the diagonal layer"
+msgstr "<key>i</key> pour les diagonales"
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:83
+msgid "<key>a</key> for the angle layer"
+msgstr "<key>a</key> pour les angles"
+
+#. (itstool) path: info/desc
 #: ../help/C/offset.page:25 ../help/C/scale.page:25
 msgid "Change the unit origin."
 msgstr "Changer le point d’origine"
 
 #. (itstool) path: page/title
 #: ../help/C/offset.page:28
-msgid "Changing the Offset"
+msgid "Setting an Offset"
 msgstr "Ajouter un offset"
 
 #. (itstool) path: page/media
@@ -440,8 +536,8 @@ msgstr "Redimentionner la règle"
 #. (itstool) path: page/p
 #: ../help/C/resizing.page:34
 msgid ""
-"You can resize the ruler to adjust it to the object to measure. You resize "
-"the ruler by dragging the edges."
+"You can resize the ruler for adjusting it to the object to measure. You "
+"resize the ruler by dragging the edges."
 msgstr ""
 "Vous pouvez redimentionner la règle pour l’ajuster à l’objet à mesurer. "
 "Tirer les bords de la règle pour la redimentionner."
@@ -573,7 +669,7 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: ../help/C/transparency.page:25
-msgid "Adjust the transparency to measure objects behind the ruler."
+msgid "Adjust the transparency for measuring objects behind the ruler."
 msgstr "Ajuster la transparence pour mesurer les objets derrière la règle."
 
 #. (itstool) path: page/title
@@ -659,7 +755,7 @@ msgstr "Changer l’unité de la règle"
 #. (itstool) path: page/p
 #: ../help/C/units.page:35
 msgid ""
-"<app>Length</app> comes in several units that you can select from the "
+"<app>Length</app> comes with several units that you can select from the "
 "<gui>Preferences</gui> dialog."
 msgstr ""
 "<app>Longueur</app> supporte plusieurs unités que vous pouvez sélectionner "
@@ -734,11 +830,20 @@ msgstr ""
 #. (itstool) path: note/p
 #: ../help/C/units.page:68
 msgid ""
-"See <link xref=\"calibrating\"/> for information on configuring <app>Length</"
-"app> for the size of your display."
+"See <link xref=\"calibrating\"/> for more information about configuring "
+"<app>Length</app> for the size of your display."
 msgstr ""
 "Voir <link xref=\"calibrating\"/> pour configurer <app>Longueur</app> pour "
 "la taille de votre écran."
+
+#~ msgid ""
+#~ "In some environments, <app>Length</app> retrieves this information from "
+#~ "the system. Other environments to do provide that size. In that case, you "
+#~ "must calibrate <app>Length</app> for you display:"
+#~ msgstr ""
+#~ "Dans certains environements, <app>Longueur</app> obtient l’information du "
+#~ "système. D’autres environements ne fournissent pas l’information. Dans ce "
+#~ "cas, indiquez à <app>Longueur</app> la taille de l’écran :"
 
 #~ msgid ""
 #~ "To lock the position of the tracker, press <key>P</key>. Press <key>P</"

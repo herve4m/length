@@ -1,0 +1,85 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="layers">
+
+  <info>
+    <link type="guide" xref="index#preferences"/>
+
+    <revision pkgversion="0.4.0" docversion="0.1.0" version="0.1.0" date="2025-02-08" status="final"/>
+
+    <credit type="author copyright">
+      <name its:translate="no">Hervé Quatremain</name>
+      <years>2025</years>
+    </credit>
+
+    <!--
+    <credit type="translator">
+      <name its:translate="no">Your Name</name>
+      <years>2025</years>
+    </credit>
+    -->
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Select the measuring tools.</desc>
+  </info>
+
+  <title>Selecting Measuring Tools</title>
+
+  <p><app>Length</app> provide several measuring tools organized in layers.</p>
+
+  <p>The markings layer displays the rulers markings.</p>
+
+  <media its:translate="no" type="image" src="figures/layer-markings.png">
+    <p>Ruler's markings</p>
+  </media>
+
+  <p>To help you measure large objects when the ruler is expanded, you can activate the grid.</p>
+
+  <media its:translate="no" type="image" src="figures/layer-grid.png">
+    <p>Ruler's grid</p>
+  </media>
+
+  <p>The diagonal layer displays diagonals rulers.</p>
+
+  <media its:translate="no" type="image" src="figures/layer-diagonals.png">
+    <p>Diagonal rulers</p>
+  </media>
+
+  <p>Activate the angle layer to measure angles.</p>
+
+  <media its:translate="no" type="image" src="figures/layer-angles.png">
+    <p>Measuring angles</p>
+  </media>
+
+  <p>
+    You can activate several layers for using several tools at the same time.
+    For example, the marking and grid layers are enabled by default.
+  </p>
+
+  <p>You activate layers from the <gui>Preferences</gui> dialog.</p>
+
+  <steps>
+    <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
+
+    <item><p>Go to <gui style="menuitem">Preferences</gui>.</p></item>
+
+    <item>
+      <p>In the <gui style="tab">General</gui> page, in the <gui style="group">Layers</gui> section, use the checkboxes to enable or disable the layers.</p>
+      <media its:translate="no" type="image" src="figures/layer-preferences.png">
+        <p>Activating layers</p>
+      </media>
+    </item>
+
+    <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
+  </steps>
+
+  <p>Alternatively, use the keyboard shortcuts:</p>
+  <list>
+    <item><p><key>m</key> for the marking layer</p></item>
+    <item><p><key>g</key> for the grid layer</p></item>
+    <item><p><key>i</key> for the diagonal layer</p></item>
+    <item><p><key>a</key> for the angle layer</p></item>
+  </list>
+</page>

@@ -41,27 +41,27 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/horizontal-pixels.png</image>
+      <image>https://raw.githubusercontent.com/herve4m/length/main/data/media/screenshots/horizontal-pixels.png</image>
       <caption>Horizontal view of Length with pixels as units</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/vertical-inches.png</image>
+      <image>https://raw.githubusercontent.com/herve4m/length/main/data/media/screenshots/vertical-inches.png</image>
       <caption>Vertical view of Length with inches as units</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/menu.png</image>
+      <image>https://raw.githubusercontent.com/herve4m/length/main/data/media/screenshots/menu.png</image>
       <caption>Length main menu</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/preferences.png</image>
+      <image>https://raw.githubusercontent.com/herve4m/length/main/data/media/screenshots/preferences.png</image>
       <caption>Preferences window</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/track-pointer.png</image>
+      <image>https://raw.githubusercontent.com/herve4m/length/main/data/media/screenshots/track-pointer.png</image>
       <caption>Pointer tracking enabled</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/herve4m/length/refs/tags/@version@/data/media/screenshots/right-to-left.png</image>
+      <image>https://raw.githubusercontent.com/herve4m/length/main/data/media/screenshots/right-to-left.png</image>
       <caption>Right to left ruler orientation</caption>
     </screenshot>
   </screenshots>

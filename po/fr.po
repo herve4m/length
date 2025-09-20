@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-02 20:10+0200\n"
+"POT-Creation-Date: 2025-09-20 14:53+0200\n"
 "PO-Revision-Date: 2025-03-18 09:13+0100\n"
 "Last-Translator: Hervé Quatremain\n"
 "Language-Team: none\n"
@@ -153,51 +153,83 @@ msgstr ""
 "sinon de droite à gauche."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:81
+msgid "Show the Ruler Markings"
+msgstr "Affiche les graduations"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:82
+msgid "Display the ticks on the ruler."
+msgstr "Affiche les graduations sur la règle."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:87
+msgid "Show the Grid"
+msgstr "Affiche la grille"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:88
+msgid "Display a grid when the ruler is expanded."
+msgstr "Affiche la grille de coordonnées"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:93
+msgid "Show Dialogals"
+msgstr "Affiche les diagonales"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:94
+msgid "Display the diagonal rulers."
+msgstr "Afficher les règles en diagonale."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:99
+msgid "Show Angles"
+msgstr "Affiche les angles"
+
+#: data/io.github.herve4m.Length.gschema.xml.in:100
+msgid "Display the diagonal angles."
+msgstr "Affiche les mesures d’angles."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:105
 msgid "Use default font"
 msgstr "Utiliser la police par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:82
+#: data/io.github.herve4m.Length.gschema.xml.in:106
 msgid "Whether to use the default font"
-msgstr "Indique s’il faut utiliser ou non la police par défaut"
+msgstr "Indique s’il faut utiliser ou non la police par défaut."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:87
+#: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Font Name"
 msgstr "Nom de la police"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:88
+#: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr ""
 "Police à utiliser quand l’option \"use-default-font\" est définie sur FAUX."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:95
+#: data/io.github.herve4m.Length.gschema.xml.in:119
 msgid "Window Size"
 msgstr "Taille de la fenêtre"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:96
+#: data/io.github.herve4m.Length.gschema.xml.in:120
 msgid "Window size (width and height) of the last closed window."
 msgstr "Dimensions (largeur et hauteur) de la dernière fenêtre fermée."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:103
+#: data/io.github.herve4m.Length.gschema.xml.in:127
 msgid "Use default color scheme"
 msgstr "Utiliser le jeu de couleurs par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:104
+#: data/io.github.herve4m.Length.gschema.xml.in:128
 msgid "Whether to use the default color scheme"
 msgstr "Indique s’il faut utiliser ou non le jeu de couleurs par défaut"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:109
+#: data/io.github.herve4m.Length.gschema.xml.in:133
 msgid "Foreground Color"
 msgstr "Couleur d’avant-plan"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:110
+#: data/io.github.herve4m.Length.gschema.xml.in:134
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr "Couleur (rouge, vert, bleu, alpha) des marques sur la règle"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:117
+#: data/io.github.herve4m.Length.gschema.xml.in:141
 msgid "Background Color"
 msgstr "Couleur d’arrière-plan"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:118
+#: data/io.github.herve4m.Length.gschema.xml.in:142
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr "Couleur (rouge, vert, bleu, alpha) d’arrière-plan de la règle"
 
@@ -228,70 +260,100 @@ msgstr "Quitter"
 
 #: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
+msgid "Layers"
+msgstr "Outils"
+
+#: data/ui/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Show/Hide Markings"
+msgstr "Afficher/cacher les graduations"
+
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show/Hide Grid"
+msgstr "Afficher/cacher la grille"
+
+#: data/ui/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Show/Hide Diagonals"
+msgstr "Afficher/cacher les diagonales"
+
+#: data/ui/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Show/Hide Angles"
+msgstr "Afficher/cacher les angles"
+
+#: data/ui/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Left-to-right/Right-to-left"
+msgstr "Gauche à droite/droite à gauche"
+
+#: data/ui/help-overlay.ui:99
+msgctxt "shortcut window"
 msgid "Opacity"
 msgstr "Opacité"
 
-#: data/ui/help-overlay.ui:66
+#: data/ui/help-overlay.ui:102
 msgctxt "shortcut window"
 msgid "Increase Opacity"
 msgstr "Augmenter l’opacité"
 
-#: data/ui/help-overlay.ui:72
+#: data/ui/help-overlay.ui:108
 msgctxt "shortcut window"
 msgid "Decrease Opacity"
 msgstr "Réduire l’opacité"
 
-#: data/ui/help-overlay.ui:81
+#: data/ui/help-overlay.ui:117
 msgctxt "shortcut window"
 msgid "Pointer Tracking"
 msgstr "Suivi du pointeur"
 
-#: data/ui/help-overlay.ui:84
+#: data/ui/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Activate/Deactivate"
 msgstr "Activer / Désactiver"
 
-#: data/ui/help-overlay.ui:90
+#: data/ui/help-overlay.ui:126
 msgctxt "shortcut window"
 msgid "Lock/Unlock Position"
 msgstr "Verrouiller / Déverrouiller la position"
 
-#: data/ui/help-overlay.ui:99
+#: data/ui/help-overlay.ui:135
 msgctxt "shortcut window"
 msgid "Units"
 msgstr "Unités"
 
-#: data/ui/help-overlay.ui:102
+#: data/ui/help-overlay.ui:138
 msgctxt "shortcut window"
 msgid "Pixels"
 msgstr "Pixels"
 
-#: data/ui/help-overlay.ui:108
+#: data/ui/help-overlay.ui:144
 msgctxt "shortcut window"
 msgid "Centimeters"
 msgstr "Centimètres"
 
-#: data/ui/help-overlay.ui:114
+#: data/ui/help-overlay.ui:150
 msgctxt "shortcut window"
 msgid "Inches"
 msgstr "Pouces"
 
-#: data/ui/help-overlay.ui:120
+#: data/ui/help-overlay.ui:156
 msgctxt "shortcut window"
 msgid "Picas"
 msgstr "Picas"
 
-#: data/ui/help-overlay.ui:126
+#: data/ui/help-overlay.ui:162
 msgctxt "shortcut window"
 msgid "Points"
 msgstr "Points"
 
-#: data/ui/help-overlay.ui:132
+#: data/ui/help-overlay.ui:168
 msgctxt "shortcut window"
 msgid "Percentages"
 msgstr "Pourcentages"
 
-#: data/ui/help-overlay.ui:138
+#: data/ui/help-overlay.ui:174
 msgctxt "shortcut window"
 msgid "Relative Percentages"
 msgstr "Pourcentages relatifs"
@@ -345,34 +407,54 @@ msgid "_Direction"
 msgstr "_Direction"
 
 #: data/ui/preferences.ui:81
+msgid "Layers"
+msgstr "Outils"
+
+#: data/ui/preferences.ui:85
+msgid "Ruler _Markings"
+msgstr "Graduations"
+
+#: data/ui/preferences.ui:93
+msgid "_Grid"
+msgstr "_Grille"
+
+#: data/ui/preferences.ui:102
+msgid "D_iagonals"
+msgstr "D_iagonales"
+
+#: data/ui/preferences.ui:110
+msgid "_Angles"
+msgstr "_Angles"
+
+#: data/ui/preferences.ui:120
 msgid "Appearance"
 msgstr "Apparence"
 
-#: data/ui/preferences.ui:85
+#: data/ui/preferences.ui:124
 msgid "Use Default _Colors"
 msgstr "Utiliser les _couleurs par défaut"
 
-#: data/ui/preferences.ui:97
+#: data/ui/preferences.ui:136
 msgid "Foreground"
 msgstr "Avant-plan"
 
-#: data/ui/preferences.ui:112
+#: data/ui/preferences.ui:151
 msgid "Background"
 msgstr "Arrière-plan"
 
-#: data/ui/preferences.ui:130
+#: data/ui/preferences.ui:169
 msgid "Use Default _Font"
 msgstr "Utiliser la police par dé_faut"
 
-#: data/ui/preferences.ui:144
+#: data/ui/preferences.ui:183
 msgid "Custom Font"
 msgstr "Police personnalisée"
 
-#: data/ui/preferences.ui:173
+#: data/ui/preferences.ui:212
 msgid "Calibrating"
 msgstr "Calibration"
 
-#: data/ui/preferences.ui:177
+#: data/ui/preferences.ui:216
 msgid "Displays"
 msgstr "Écrans"
 
@@ -409,6 +491,7 @@ msgid "Monitor Size Unknown"
 msgstr "Taille d’écran inconnue"
 
 #: src/draw_context.py:148
+#, python-brace-format
 msgid ""
 "The size of the {monitor_name} monitor cannot be determined.\n"
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
@@ -418,7 +501,7 @@ msgstr ""
 "Utilisez les Préférences pour calibrer Longueur pour votre taille d’écran.\n"
 "En attendant, les calculs sont faits pour un écran de {diag_inch} pouces."
 
-#: src/draw_context.py:155
+#: src/draw_context.py:158
 msgid "OK"
 msgstr "D’accord"
 
@@ -430,7 +513,7 @@ msgstr ""
 "Hervé Quatremain,\n"
 "Irénée Thirion"
 
-#: src/preferences.py:152
+#: src/preferences.py:176
 msgid "Select Font"
 msgstr "Choisir la police"
 
