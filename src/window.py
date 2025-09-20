@@ -226,7 +226,6 @@ class LengthWindow(Adw.ApplicationWindow):
             v = self.settings.get_boolean("direction-left-to-right")
             self.settings.set_boolean("direction-left-to-right", not v)
             self.drawing_area.queue_draw()
-
         #
         # You cannot programmatically rotate the window with Gtk 4. See
         # https://discourse.gnome.org/t/programmatically-set-window-size/31339/6

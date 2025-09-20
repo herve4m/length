@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-02 20:10+0200\n"
+"POT-Creation-Date: 2025-09-20 14:53+0200\n"
 "PO-Revision-Date: 2025-03-15 18:22+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -153,50 +153,84 @@ msgid ""
 msgstr "Toon de schaal van links naar rechts in plaats van andersom."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:81
+msgid "Show the Ruler Markings"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:82
+#, fuzzy
+msgid "Display the ticks on the ruler."
+msgstr "Toon de cursorlocatie op de liniaal."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:87
+msgid "Show the Grid"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:88
+msgid "Display a grid when the ruler is expanded."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:93
+msgid "Show Dialogals"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:94
+#, fuzzy
+msgid "Display the diagonal rulers."
+msgstr "Toon de cursorlocatie op de liniaal."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:99
+msgid "Show Angles"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:100
+msgid "Display the diagonal angles."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:105
 msgid "Use default font"
 msgstr "Standaardlettertype gebruiken"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:82
+#: data/io.github.herve4m.Length.gschema.xml.in:106
 msgid "Whether to use the default font"
 msgstr "Of het standaardlettertype dient te worden gebruikt."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:87
+#: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Font Name"
 msgstr "Lettertypenaam"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:88
+#: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr "De naam van het lettertype indien afwijkend."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:95
+#: data/io.github.herve4m.Length.gschema.xml.in:119
 msgid "Window Size"
 msgstr "Vensterafmetingen"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:96
+#: data/io.github.herve4m.Length.gschema.xml.in:120
 msgid "Window size (width and height) of the last closed window."
 msgstr "De vensterafmetingen (breedte en hoogte) van het vorige venster."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:103
+#: data/io.github.herve4m.Length.gschema.xml.in:127
 msgid "Use default color scheme"
 msgstr "Standaardkleuren gebruiken"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:104
+#: data/io.github.herve4m.Length.gschema.xml.in:128
 msgid "Whether to use the default color scheme"
 msgstr "Of de standaardkleuren dienen te worden gebruikt."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:109
+#: data/io.github.herve4m.Length.gschema.xml.in:133
 msgid "Foreground Color"
 msgstr "Voorgrondkleur"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:110
+#: data/io.github.herve4m.Length.gschema.xml.in:134
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr "Kleur (rood, groen, blauw, alfa) van de bediening en labels."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:117
+#: data/io.github.herve4m.Length.gschema.xml.in:141
 msgid "Background Color"
 msgstr "Achtergrondkleur"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:118
+#: data/io.github.herve4m.Length.gschema.xml.in:142
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr "Kleur (rood, groen, blauw, alfa) van de liniaalachtergrond."
 
@@ -227,70 +261,101 @@ msgstr "Afsluiten"
 
 #: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
+msgid "Layers"
+msgstr ""
+
+#: data/ui/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Show/Hide Markings"
+msgstr ""
+
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show/Hide Grid"
+msgstr ""
+
+#: data/ui/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Show/Hide Diagonals"
+msgstr ""
+
+#: data/ui/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Show/Hide Angles"
+msgstr ""
+
+#: data/ui/help-overlay.ui:90
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Left-to-right/Right-to-left"
+msgstr "Van-links-naar-rechts of van-rechts-naar-links;"
+
+#: data/ui/help-overlay.ui:99
+msgctxt "shortcut window"
 msgid "Opacity"
 msgstr "Doorzichtigheid"
 
-#: data/ui/help-overlay.ui:66
+#: data/ui/help-overlay.ui:102
 msgctxt "shortcut window"
 msgid "Increase Opacity"
 msgstr "Doorzichtigheid verhogen"
 
-#: data/ui/help-overlay.ui:72
+#: data/ui/help-overlay.ui:108
 msgctxt "shortcut window"
 msgid "Decrease Opacity"
 msgstr "Doorzichtigheid verlagen"
 
-#: data/ui/help-overlay.ui:81
+#: data/ui/help-overlay.ui:117
 msgctxt "shortcut window"
 msgid "Pointer Tracking"
 msgstr "Cursor volgen"
 
-#: data/ui/help-overlay.ui:84
+#: data/ui/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Activate/Deactivate"
 msgstr "Aan/Uit"
 
-#: data/ui/help-overlay.ui:90
+#: data/ui/help-overlay.ui:126
 msgctxt "shortcut window"
 msgid "Lock/Unlock Position"
 msgstr "Locatie vastzetten/losmaken"
 
-#: data/ui/help-overlay.ui:99
+#: data/ui/help-overlay.ui:135
 msgctxt "shortcut window"
 msgid "Units"
 msgstr "Eenheden"
 
-#: data/ui/help-overlay.ui:102
+#: data/ui/help-overlay.ui:138
 msgctxt "shortcut window"
 msgid "Pixels"
 msgstr "Pixels"
 
-#: data/ui/help-overlay.ui:108
+#: data/ui/help-overlay.ui:144
 msgctxt "shortcut window"
 msgid "Centimeters"
 msgstr "Centimeters"
 
-#: data/ui/help-overlay.ui:114
+#: data/ui/help-overlay.ui:150
 msgctxt "shortcut window"
 msgid "Inches"
 msgstr "Inches"
 
-#: data/ui/help-overlay.ui:120
+#: data/ui/help-overlay.ui:156
 msgctxt "shortcut window"
 msgid "Picas"
 msgstr "Pica's"
 
-#: data/ui/help-overlay.ui:126
+#: data/ui/help-overlay.ui:162
 msgctxt "shortcut window"
 msgid "Points"
 msgstr "Punten"
 
-#: data/ui/help-overlay.ui:132
+#: data/ui/help-overlay.ui:168
 msgctxt "shortcut window"
 msgid "Percentages"
 msgstr "Percentages"
 
-#: data/ui/help-overlay.ui:138
+#: data/ui/help-overlay.ui:174
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Relative Percentages"
@@ -345,34 +410,54 @@ msgid "_Direction"
 msgstr "Rich_ting"
 
 #: data/ui/preferences.ui:81
+msgid "Layers"
+msgstr ""
+
+#: data/ui/preferences.ui:85
+msgid "Ruler _Markings"
+msgstr ""
+
+#: data/ui/preferences.ui:93
+msgid "_Grid"
+msgstr ""
+
+#: data/ui/preferences.ui:102
+msgid "D_iagonals"
+msgstr ""
+
+#: data/ui/preferences.ui:110
+msgid "_Angles"
+msgstr ""
+
+#: data/ui/preferences.ui:120
 msgid "Appearance"
 msgstr "Vormgeving"
 
-#: data/ui/preferences.ui:85
+#: data/ui/preferences.ui:124
 msgid "Use Default _Colors"
 msgstr "Standaard_kleuren gebruiken"
 
-#: data/ui/preferences.ui:97
+#: data/ui/preferences.ui:136
 msgid "Foreground"
 msgstr "Voorgrond"
 
-#: data/ui/preferences.ui:112
+#: data/ui/preferences.ui:151
 msgid "Background"
 msgstr "Achtergrond"
 
-#: data/ui/preferences.ui:130
+#: data/ui/preferences.ui:169
 msgid "Use Default _Font"
 msgstr "Standaardlettert_ype gebruiken"
 
-#: data/ui/preferences.ui:144
+#: data/ui/preferences.ui:183
 msgid "Custom Font"
 msgstr "Ander lettertype"
 
-#: data/ui/preferences.ui:173
+#: data/ui/preferences.ui:212
 msgid "Calibrating"
 msgstr "Calibreren"
 
-#: data/ui/preferences.ui:177
+#: data/ui/preferences.ui:216
 msgid "Displays"
 msgstr "Beeldschermen"
 
@@ -417,7 +502,7 @@ msgid ""
 "In the meantime, computations are done for a {diag_inch} inches monitor."
 msgstr "Open het voorkeurenvenster om de schermafmetingen te bepalen."
 
-#: src/draw_context.py:155
+#: src/draw_context.py:158
 msgid "OK"
 msgstr "Oké"
 
@@ -427,7 +512,7 @@ msgstr "Oké"
 msgid "translator-credits"
 msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 
-#: src/preferences.py:152
+#: src/preferences.py:176
 msgid "Select Font"
 msgstr "Kies een lettertype"
 

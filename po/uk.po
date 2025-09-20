@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-02 20:10+0200\n"
+"POT-Creation-Date: 2025-09-20 14:53+0200\n"
 "PO-Revision-Date: 2025-07-05 19:29+0300\n"
 "Last-Translator: freeducks-debug <applesause454@gmail.com>\n"
 "Language-Team: \n"
@@ -154,51 +154,85 @@ msgstr ""
 "наліво."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:81
+msgid "Show the Ruler Markings"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:82
+#, fuzzy
+msgid "Display the ticks on the ruler."
+msgstr "Відображати позицію курсору на лінійці."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:87
+msgid "Show the Grid"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:88
+msgid "Display a grid when the ruler is expanded."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:93
+msgid "Show Dialogals"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:94
+#, fuzzy
+msgid "Display the diagonal rulers."
+msgstr "Відображати позицію курсору на лінійці."
+
+#: data/io.github.herve4m.Length.gschema.xml.in:99
+msgid "Show Angles"
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:100
+msgid "Display the diagonal angles."
+msgstr ""
+
+#: data/io.github.herve4m.Length.gschema.xml.in:105
 msgid "Use default font"
 msgstr "Використовувати стандартний шрифт"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:82
+#: data/io.github.herve4m.Length.gschema.xml.in:106
 msgid "Whether to use the default font"
 msgstr "Чи слід використовувати стандартний шрифт"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:87
+#: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Font Name"
 msgstr "Назва шрифту"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:88
+#: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "The font to use when \"use-default-font\" is FALSE."
 msgstr ""
 "Шрифт, який буде використовуватися якщо \"use-default-font\" НІ (FALSE)."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:95
+#: data/io.github.herve4m.Length.gschema.xml.in:119
 msgid "Window Size"
 msgstr "Розмір вікна"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:96
+#: data/io.github.herve4m.Length.gschema.xml.in:120
 msgid "Window size (width and height) of the last closed window."
 msgstr "Розмір вікна (ширина і висота) останнього закритого вікна."
 
-#: data/io.github.herve4m.Length.gschema.xml.in:103
+#: data/io.github.herve4m.Length.gschema.xml.in:127
 msgid "Use default color scheme"
 msgstr "Використовувати стандартні кольори"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:104
+#: data/io.github.herve4m.Length.gschema.xml.in:128
 msgid "Whether to use the default color scheme"
 msgstr "Чи варто використовувати стандартні кольори"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:109
+#: data/io.github.herve4m.Length.gschema.xml.in:133
 msgid "Foreground Color"
 msgstr "Колір переднього фону"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:110
+#: data/io.github.herve4m.Length.gschema.xml.in:134
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
 msgstr "Колір (червоний, зелений, синій, альфа) для позначок і написів"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:117
+#: data/io.github.herve4m.Length.gschema.xml.in:141
 msgid "Background Color"
 msgstr "Колір фону"
 
-#: data/io.github.herve4m.Length.gschema.xml.in:118
+#: data/io.github.herve4m.Length.gschema.xml.in:142
 msgid "Color (red, green, blue, alpha) for the ruler background"
 msgstr "Колір (червоний, зелений, синій, альфа) для заднього фону лінійки"
 
@@ -229,70 +263,101 @@ msgstr "Вийти"
 
 #: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
+msgid "Layers"
+msgstr ""
+
+#: data/ui/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Show/Hide Markings"
+msgstr ""
+
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show/Hide Grid"
+msgstr ""
+
+#: data/ui/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Show/Hide Diagonals"
+msgstr ""
+
+#: data/ui/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Show/Hide Angles"
+msgstr ""
+
+#: data/ui/help-overlay.ui:90
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Left-to-right/Right-to-left"
+msgstr "Напрямок зліва-направо або справа-наліво"
+
+#: data/ui/help-overlay.ui:99
+msgctxt "shortcut window"
 msgid "Opacity"
 msgstr "Прозорість"
 
-#: data/ui/help-overlay.ui:66
+#: data/ui/help-overlay.ui:102
 msgctxt "shortcut window"
 msgid "Increase Opacity"
 msgstr "Збільшити прозорість"
 
-#: data/ui/help-overlay.ui:72
+#: data/ui/help-overlay.ui:108
 msgctxt "shortcut window"
 msgid "Decrease Opacity"
 msgstr "Зменшити прозорість"
 
-#: data/ui/help-overlay.ui:81
+#: data/ui/help-overlay.ui:117
 msgctxt "shortcut window"
 msgid "Pointer Tracking"
 msgstr "Відстежування курсору"
 
-#: data/ui/help-overlay.ui:84
+#: data/ui/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Activate/Deactivate"
 msgstr "Ввімкнути/вимкнути"
 
-#: data/ui/help-overlay.ui:90
+#: data/ui/help-overlay.ui:126
 msgctxt "shortcut window"
 msgid "Lock/Unlock Position"
 msgstr "Заблокувати/розблокувати позицію"
 
-#: data/ui/help-overlay.ui:99
+#: data/ui/help-overlay.ui:135
 msgctxt "shortcut window"
 msgid "Units"
 msgstr "Одиниці вимірювання"
 
-#: data/ui/help-overlay.ui:102
+#: data/ui/help-overlay.ui:138
 msgctxt "shortcut window"
 msgid "Pixels"
 msgstr "Пікселі"
 
-#: data/ui/help-overlay.ui:108
+#: data/ui/help-overlay.ui:144
 msgctxt "shortcut window"
 msgid "Centimeters"
 msgstr "Сантиметри"
 
-#: data/ui/help-overlay.ui:114
+#: data/ui/help-overlay.ui:150
 msgctxt "shortcut window"
 msgid "Inches"
 msgstr "Дюйми"
 
-#: data/ui/help-overlay.ui:120
+#: data/ui/help-overlay.ui:156
 msgctxt "shortcut window"
 msgid "Picas"
 msgstr "Піка (Пайка)"
 
-#: data/ui/help-overlay.ui:126
+#: data/ui/help-overlay.ui:162
 msgctxt "shortcut window"
 msgid "Points"
 msgstr "Точки"
 
-#: data/ui/help-overlay.ui:132
+#: data/ui/help-overlay.ui:168
 msgctxt "shortcut window"
 msgid "Percentages"
 msgstr "Проценти"
 
-#: data/ui/help-overlay.ui:138
+#: data/ui/help-overlay.ui:174
 msgctxt "shortcut window"
 msgid "Relative Percentages"
 msgstr "Відносні проценти"
@@ -346,34 +411,54 @@ msgid "_Direction"
 msgstr "_Напрямок"
 
 #: data/ui/preferences.ui:81
+msgid "Layers"
+msgstr ""
+
+#: data/ui/preferences.ui:85
+msgid "Ruler _Markings"
+msgstr ""
+
+#: data/ui/preferences.ui:93
+msgid "_Grid"
+msgstr ""
+
+#: data/ui/preferences.ui:102
+msgid "D_iagonals"
+msgstr ""
+
+#: data/ui/preferences.ui:110
+msgid "_Angles"
+msgstr ""
+
+#: data/ui/preferences.ui:120
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
-#: data/ui/preferences.ui:85
+#: data/ui/preferences.ui:124
 msgid "Use Default _Colors"
 msgstr "Використовувати стандартні _кольори"
 
-#: data/ui/preferences.ui:97
+#: data/ui/preferences.ui:136
 msgid "Foreground"
 msgstr "Передній фон"
 
-#: data/ui/preferences.ui:112
+#: data/ui/preferences.ui:151
 msgid "Background"
 msgstr "Задній фон"
 
-#: data/ui/preferences.ui:130
+#: data/ui/preferences.ui:169
 msgid "Use Default _Font"
 msgstr "Використовувати стандартний _шрифт"
 
-#: data/ui/preferences.ui:144
+#: data/ui/preferences.ui:183
 msgid "Custom Font"
 msgstr "Власний шрифт"
 
-#: data/ui/preferences.ui:173
+#: data/ui/preferences.ui:212
 msgid "Calibrating"
 msgstr "Калібрування"
 
-#: data/ui/preferences.ui:177
+#: data/ui/preferences.ui:216
 msgid "Displays"
 msgstr "Монітори"
 
@@ -421,7 +506,7 @@ msgstr ""
 "вашого монітору.\n"
 "Тим часом, був виконано розрахунок для {diag_inch} дюймового монітору."
 
-#: src/draw_context.py:155
+#: src/draw_context.py:158
 msgid "OK"
 msgstr "Добре"
 
@@ -431,7 +516,7 @@ msgstr "Добре"
 msgid "translator-credits"
 msgstr "freeducks-debug"
 
-#: src/preferences.py:152
+#: src/preferences.py:176
 msgid "Select Font"
 msgstr "Обрати шрифт"
 
