@@ -194,6 +194,7 @@ class Unit:
         self,
         ctx_text,
         min_size: int,
+        show_grid: bool = True,
         px_per_tick: float = 0.0,
         width: int = 0,
         height: int = 0,
@@ -330,7 +331,8 @@ class Unit:
 
             # Draw the grid
             if (
-                show_when_wide
+                show_grid
+                and show_when_wide
                 and pos_x > self.MIN_LENGTH
                 and width - pos_x > self.MIN_LENGTH
                 and height > 10 * ctx_text.default_height
@@ -346,7 +348,7 @@ class Unit:
                 self.context.ctx.stroke()
                 self.context.ctx.set_line_width(1)
 
-    def _draw_vertical(self, ctx_text, min_size: int) -> None:
+    def _draw_vertical(self, ctx_text, min_size: int, show_grid: bool) -> None:
         """Draw the vertical markings.
 
         :param ctx_text: The text context.
@@ -364,6 +366,7 @@ class Unit:
         self._draw_horizontal(
             ctx_text,
             min_size,
+            show_grid,
             self.px_per_tick_height,
             self.context.height,
             self.context.width,
@@ -568,10 +571,25 @@ class Unit:
         width_per_diag = self.context.width / self.context.diagonal
         height_per_diag = self.context.height / self.context.diagonal
 
+        # ________________________________
+        # |\    1                  1    /|
+        # |   \                      /   |
+        # | 2    \                /   2  |
+        # |         \          /         |
+        # |             \  /             |
+        # |                              |
+        # |            /   \             |
+        # |         /          \         |
+        # | 2    /                \   2  |
+        # |   /                      \   |
+        # |/   1                  1    \ |
+        # --------------------------------
+
         # Compute the parameters for the first angle
         angle_1 = math.asin(self.context.height / self.context.diagonal)
         angle_deg_1 = math.degrees(angle_1)
-        radius_1 = self.context.width - angle_deg_1 * (self.context.width - 100) / 90
+        # radius_1 = self.context.width - angle_deg_1 * self.context.width / 90
+        radius_1 = self.context.width / 3
         legend_1 = f"{angle_deg_1:.1f}°"
         e_1 = ctx_text.get_extents(legend_1)
         legend_x_1 = radius_1 * math.cos(angle_1 / 2)
@@ -580,7 +598,8 @@ class Unit:
         # Compute the parameters for the second angle
         angle_2 = math.pi + angle_1
         angle_deg_2 = 90 - angle_deg_1
-        radius_2 = angle_deg_1 * (self.context.height - 100) / 90
+        # radius_2 = angle_deg_1 * (self.context.height - 100) / 90
+        radius_2 = self.context.height / 3
         legend_2 = f"{angle_deg_2:.1f}°"
         e_2 = ctx_text.get_extents(legend_2)
         a = math.radians(90 - angle_deg_2 / 2)
@@ -597,7 +616,9 @@ class Unit:
         self.context.ctx.stroke()
 
         # Draw the angles if enough space is available
-        if legend_x_1 + e_1.width < self.context.width:
+        if (
+            legend_x_1 + e_1.width < self.context.width
+        ):  # and legend_x_1 > min_size and legend_y_1 > min_size:
             self.context.ctx.arc(0, 0, radius_1, 0, angle_1)
             ctx_text.draw_text(legend_x_1, legend_y_1, legend_1)
             self.context.ctx.stroke()
@@ -630,8 +651,11 @@ class Unit:
         self.context.ctx.set_source_rgba(*self.context.color_fg)
         self.context.ctx.set_line_width(1)
 
-        self._draw_horizontal(ctx_text, min_size)
-        self._draw_vertical(ctx_text, min_size)
+        # Whether do draw the grid
+        show_grid = self.context.settings.get_boolean("show-grid")
+
+        self._draw_horizontal(ctx_text, min_size, show_grid)
+        self._draw_vertical(ctx_text, min_size, show_grid)
         if self.context.settings.get_boolean("show-diagonals"):
             self._draw_diag_1(ctx_text, min_size)
             self._draw_diag_2(ctx_text, min_size)

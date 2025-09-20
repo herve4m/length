@@ -76,6 +76,12 @@
       </description>
     </key>
 
+    <key name="show-grid" type="b">
+      <default>true</default>
+      <summary>Show the Grid</summary>
+      <description>Display a grid when the ruler is expanded.</description>
+    </key>
+
     <key name="show-diagonals" type="b">
       <default>false</default>
       <summary>Show Dialogals</summary>

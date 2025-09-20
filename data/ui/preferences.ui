@@ -75,8 +75,16 @@
             </child>
 
             <child>
+              <object class="AdwSwitchRow" id="grid_switchrow">
+                <property name="title" translatable="yes">_Grid</property>
+                <property name="use-underline">true</property>
+                <signal name="notify::active" handler="_on_grid"/>
+              </object>
+            </child>
+
+            <child>
               <object class="AdwSwitchRow" id="diagonal_switchrow">
-                <property name="title" translatable="yes">Dia_gonals</property>
+                <property name="title" translatable="yes">D_iagonals</property>
                 <property name="use-underline">true</property>
                 <signal name="notify::active" handler="_on_diagonal"/>
               </object>
