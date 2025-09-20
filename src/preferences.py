@@ -44,6 +44,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
     unit_comborow = Gtk.Template.Child()
     lr_toggle = Gtk.Template.Child()
     rl_toggle = Gtk.Template.Child()
+    marking_switchrow = Gtk.Template.Child()
     grid_switchrow = Gtk.Template.Child()
     diagonal_switchrow = Gtk.Template.Child()
     angle_switchrow = Gtk.Template.Child()
@@ -87,6 +88,10 @@ class PreferencesDialog(Adw.PreferencesDialog):
             Gio.SettingsBindFlags.DEFAULT,
         )
         self.rl_toggle.set_active(not self.settings.get_boolean("direction-left-to-right"))
+
+        self.settings.bind(
+            "show-markings", self.marking_switchrow, "active", Gio.SettingsBindFlags.DEFAULT
+        )
 
         self.settings.bind(
             "show-grid", self.grid_switchrow, "active", Gio.SettingsBindFlags.DEFAULT
@@ -157,15 +162,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
         self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
-    def _on_grid(self, toggle, _value) -> None:
-        self.application_window.drawing_area.queue_draw()
-
-    @Gtk.Template.Callback()
-    def _on_diagonal(self, toggle, _value) -> None:
-        self.application_window.drawing_area.queue_draw()
-
-    @Gtk.Template.Callback()
-    def _on_angle(self, toggle, _value) -> None:
+    def _refresh_ui(self, toggle, _value) -> None:
         self.application_window.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()

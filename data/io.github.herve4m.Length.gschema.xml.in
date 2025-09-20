@@ -76,6 +76,12 @@
       </description>
     </key>
 
+    <key name="show-markings" type="b">
+      <default>true</default>
+      <summary>Show the Ruler Markings</summary>
+      <description>Display the ticks on the ruler.</description>
+    </key>
+
     <key name="show-grid" type="b">
       <default>true</default>
       <summary>Show the Grid</summary>

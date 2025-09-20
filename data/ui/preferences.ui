@@ -73,12 +73,27 @@
                 </child>
               </object>
             </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Layers</property>
+
+            <child>
+              <object class="AdwSwitchRow" id="marking_switchrow">
+                <property name="title" translatable="yes">Ruler _Markings</property>
+                <property name="use-underline">true</property>
+                <signal name="notify::active" handler="_refresh_ui"/>
+              </object>
+            </child>
 
             <child>
               <object class="AdwSwitchRow" id="grid_switchrow">
                 <property name="title" translatable="yes">_Grid</property>
                 <property name="use-underline">true</property>
-                <signal name="notify::active" handler="_on_grid"/>
+                <property name="active" bind-source="marking_switchrow" bind-property="active" bind-flags="sync-create"/>
+                <signal name="notify::active" handler="_refresh_ui"/>
               </object>
             </child>
 
@@ -86,7 +101,7 @@
               <object class="AdwSwitchRow" id="diagonal_switchrow">
                 <property name="title" translatable="yes">D_iagonals</property>
                 <property name="use-underline">true</property>
-                <signal name="notify::active" handler="_on_diagonal"/>
+                <signal name="notify::active" handler="_refresh_ui"/>
               </object>
             </child>
 
@@ -94,7 +109,7 @@
               <object class="AdwSwitchRow" id="angle_switchrow">
                 <property name="title" translatable="yes">_Angles</property>
                 <property name="use-underline">true</property>
-                <signal name="notify::active" handler="_on_angle"/>
+                <signal name="notify::active" handler="_refresh_ui"/>
               </object>
             </child>
           </object>

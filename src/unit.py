@@ -730,11 +730,12 @@ class Unit:
         self.context.ctx.set_source_rgba(*self.context.color_fg)
         self.context.ctx.set_line_width(1)
 
-        # Whether do draw the grid
-        show_grid = self.context.settings.get_boolean("show-grid")
+        if self.context.settings.get_boolean("show-markings"):
+            # Whether do draw the grid
+            show_grid = self.context.settings.get_boolean("show-grid")
+            self._draw_horizontal(ctx_text, min_size, show_grid)
+            self._draw_vertical(ctx_text, min_size, show_grid)
 
-        self._draw_horizontal(ctx_text, min_size, show_grid)
-        self._draw_vertical(ctx_text, min_size, show_grid)
         if self.context.settings.get_boolean("show-diagonals"):
             self._draw_diag_1(ctx_text, min_size)
             self._draw_diag_2(ctx_text, min_size)
