@@ -261,7 +261,7 @@ msgstr "Quitter"
 #: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
 msgid "Layers"
-msgstr "Couches"
+msgstr "Outils"
 
 #: data/ui/help-overlay.ui:66
 msgctxt "shortcut window"
@@ -408,7 +408,7 @@ msgstr "_Direction"
 
 #: data/ui/preferences.ui:81
 msgid "Layers"
-msgstr "Couches"
+msgstr "Outils"
 
 #: data/ui/preferences.ui:85
 msgid "Ruler _Markings"

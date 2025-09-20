@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-19 14:22+0200\n"
+"POT-Creation-Date: 2025-09-20 17:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: ../help/C/direction.page:13
 #: ../help/C/fonts.page:13
 #: ../help/C/index.page:17
+#: ../help/C/layers.page:13
 #: ../help/C/offset.page:13
 #: ../help/C/resizing.page:13
 #: ../help/C/rotating.page:13
@@ -48,7 +49,7 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: ../help/C/adjusting.page:32
-msgid "To align the ruler with the object's window, drag the ruler while pressing <key>Ctrl</key>. When the ruler gets close to the object's edge, the rule snaps to the window."
+msgid "To align the ruler with the object's window, drag the ruler while pressing <key>Ctrl</key>. When the ruler gets close to the object's edge, the ruler snaps to the window."
 msgstr ""
 
 #. (itstool) path: page/p
@@ -113,7 +114,7 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: ../help/C/calibrating.page:36
-msgid "In some environments, <app>Length</app> retrieves this information from the system. Other environments to do provide that size. In that case, you must calibrate <app>Length</app> for you display:"
+msgid "In some environments, <app>Length</app> retrieves this information from the system. Other environments do not provide that size. In that case, you must calibrate <app>Length</app> for you display:"
 msgstr ""
 
 #. (itstool) path: item/p
@@ -121,6 +122,7 @@ msgstr ""
 #: ../help/C/colors.page:37
 #: ../help/C/direction.page:37
 #: ../help/C/fonts.page:37
+#: ../help/C/layers.page:64
 #: ../help/C/offset.page:37
 #: ../help/C/rotating.page:37
 #: ../help/C/scale.page:40
@@ -135,6 +137,7 @@ msgstr ""
 #: ../help/C/colors.page:39
 #: ../help/C/direction.page:39
 #: ../help/C/fonts.page:39
+#: ../help/C/layers.page:66
 #: ../help/C/units.page:40
 msgid "Go to <gui style=\"menuitem\">Preferences</gui>."
 msgstr ""
@@ -154,6 +157,7 @@ msgstr ""
 #: ../help/C/colors.page:59
 #: ../help/C/direction.page:43
 #: ../help/C/fonts.page:56
+#: ../help/C/layers.page:75
 #: ../help/C/units.page:44
 msgid "Close the <gui>Preferences</gui> dialog."
 msgstr ""
@@ -165,7 +169,7 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: ../help/C/colors.page:25
-msgid "Selecting the colors of the ruler."
+msgid "Select the colors of the ruler."
 msgstr ""
 
 #. (itstool) path: page/title
@@ -175,7 +179,7 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: ../help/C/colors.page:34
-msgid "You can change the color of ruler and the color of the markings."
+msgid "You can change the color of the ruler and the color of the markings."
 msgstr ""
 
 #. (itstool) path: item/p
@@ -210,7 +214,12 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: ../help/C/direction.page:41
-msgid "In the <gui style=\"tab\">General</gui> page, click the left-to-right direction button (<_:media-1/>), or the right-to-left button (<_:media-2/>)."
+msgid "In the <gui style=\"tab\">General</gui> page, click the left-to-right direction button (<_:media-1/>) or the right-to-left button (<_:media-2/>)."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/direction.page:46
+msgid "You can also switch direction by pressing <key>D</key>."
 msgstr ""
 
 #. (itstool) path: info/desc
@@ -307,6 +316,81 @@ msgid "Preferences"
 msgstr ""
 
 #. (itstool) path: info/desc
+#: ../help/C/layers.page:25
+msgid "Select the measuring tools."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/layers.page:28
+msgid "Selecting Measuring Tools"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:30
+msgid "<app>Length</app> provide several measuring tools organized in layers."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:32
+msgid "The markings layer displays the rulers markings."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:38
+msgid "To help you measure large objects when the ruler is expanded, you can activate the grid."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:44
+msgid "The diagonal layer displays diagonals rulers."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:50
+msgid "Activate the angle layer to measure angles."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:56
+msgid "You can activate several layers for using several tools at the same time. For example, the marking and grid layers are enabled by default."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:61
+msgid "You activate layers from the <gui>Preferences</gui> dialog."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:69
+msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Layers</gui> section, use the checkboxes to enable or disable the layers."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:78
+msgid "Alternatively, use the keyboard shortcuts:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:80
+msgid "<key>m</key> for the marking layer"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:81
+msgid "<key>g</key> for the grid layer"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:82
+msgid "<key>i</key> for the diagonal layer"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:83
+msgid "<key>a</key> for the angle layer"
+msgstr ""
+
+#. (itstool) path: info/desc
 #: ../help/C/offset.page:25
 #: ../help/C/scale.page:25
 msgid "Change the unit origin."
@@ -314,7 +398,7 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: ../help/C/offset.page:28
-msgid "Changing the Offset"
+msgid "Setting an Offset"
 msgstr ""
 
 #. (itstool) path: page/media
@@ -354,7 +438,7 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: ../help/C/resizing.page:34
-msgid "You can resize the ruler to adjust it to the object to measure. You resize the ruler by dragging the edges."
+msgid "You can resize the ruler for adjusting it to the object to measure. You resize the ruler by dragging the edges."
 msgstr ""
 
 #. (itstool) path: info/desc
@@ -459,7 +543,7 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: ../help/C/transparency.page:25
-msgid "Adjust the transparency to measure objects behind the ruler."
+msgid "Adjust the transparency for measuring objects behind the ruler."
 msgstr ""
 
 #. (itstool) path: page/title
@@ -524,7 +608,7 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: ../help/C/units.page:35
-msgid "<app>Length</app> comes in several units that you can select from the <gui>Preferences</gui> dialog."
+msgid "<app>Length</app> comes with several units that you can select from the <gui>Preferences</gui> dialog."
 msgstr ""
 
 #. (itstool) path: item/p
@@ -584,5 +668,5 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: ../help/C/units.page:68
-msgid "See <link xref=\"calibrating\"/> for information on configuring <app>Length</app> for the size of your display."
+msgid "See <link xref=\"calibrating\"/> for more information about configuring <app>Length</app> for the size of your display."
 msgstr ""

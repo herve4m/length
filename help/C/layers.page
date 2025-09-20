@@ -58,7 +58,7 @@
     For example, the marking and grid layers are enabled by default.
   </p>
 
-  <p>You activate layers from the <gui style="menuitem">Preferences</gui> menu.</p>
+  <p>You activate layers from the <gui>Preferences</gui> dialog.</p>
 
   <steps>
     <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
