@@ -32,7 +32,7 @@
     <p>Changing the ruler's unit</p>
   </media>
 
-  <p><app>Length</app> comes in several units that you can select from the <gui>Preferences</gui> dialog.</p>
+  <p><app>Length</app> comes with several units that you can select from the <gui>Preferences</gui> dialog.</p>
 
   <steps>
     <item><p>Click the menu button (<media its:translate="no" type="image" src="figures/open-menu-symbolic.svg"/>) in the left-side corner of the ruler.</p></item>
@@ -66,7 +66,7 @@
       In that case, you must calibrate <app>Length</app> for you display.
     </p>
     <p>
-      See <link xref="calibrating"/> for information on configuring <app>Length</app> for the size of your display.
+      See <link xref="calibrating"/> for more information about configuring <app>Length</app> for the size of your display.
     </p>
   </note>
 </page>

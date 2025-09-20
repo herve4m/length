@@ -22,7 +22,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Adjust the transparency to measure objects behind the ruler.</desc>
+    <desc>Adjust the transparency for measuring objects behind the ruler.</desc>
   </info>
 
   <title>Adjusting Transparency</title>
