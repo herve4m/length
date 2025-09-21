@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-20 14:53+0200\n"
-"PO-Revision-Date: 2025-07-02 20:18+0100\n"
+"PO-Revision-Date: 2025-09-21 08:48+0200\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Zorin OS\n"
 "Language: it\n"
@@ -154,37 +154,35 @@ msgstr ""
 
 #: data/io.github.herve4m.Length.gschema.xml.in:81
 msgid "Show the Ruler Markings"
-msgstr ""
+msgstr "Mostra i segni del righello"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:82
-#, fuzzy
 msgid "Display the ticks on the ruler."
-msgstr "Mostra la posizione del puntatore sul righello."
+msgstr "Visualizza i segni di spunta sul righello."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:87
 msgid "Show the Grid"
-msgstr ""
+msgstr "Mostra la griglia"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:88
 msgid "Display a grid when the ruler is expanded."
-msgstr ""
+msgstr "Visualizza una griglia quando il righello è espanso."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:93
 msgid "Show Dialogals"
-msgstr ""
+msgstr "Mostra diagonali"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:94
-#, fuzzy
 msgid "Display the diagonal rulers."
-msgstr "Mostra la posizione del puntatore sul righello."
+msgstr "Visualizza le diagonale dei righelli."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:99
 msgid "Show Angles"
-msgstr ""
+msgstr "Mostra angoli"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:100
 msgid "Display the diagonal angles."
-msgstr ""
+msgstr "Mostra la diagonale degli angoli."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:105
 msgid "Use default font"
@@ -262,33 +260,32 @@ msgstr "Esci"
 #: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
 msgid "Layers"
-msgstr ""
+msgstr "Livelli"
 
 #: data/ui/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Show/Hide Markings"
-msgstr ""
+msgstr "Mostra/Nascondi segni"
 
 #: data/ui/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Show/Hide Grid"
-msgstr ""
+msgstr "Mostra/Nascondi griglia"
 
 #: data/ui/help-overlay.ui:78
 msgctxt "shortcut window"
 msgid "Show/Hide Diagonals"
-msgstr ""
+msgstr "Mostra/Nascondi diagonali"
 
 #: data/ui/help-overlay.ui:84
 msgctxt "shortcut window"
 msgid "Show/Hide Angles"
-msgstr ""
+msgstr "Mostra/Nascondi angoli"
 
 #: data/ui/help-overlay.ui:90
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Left-to-right/Right-to-left"
-msgstr "Orientamento da sinistra a destra o da destra a sinistra"
+msgstr "Da sinistra a destra/Da destra a sinistra"
 
 #: data/ui/help-overlay.ui:99
 msgctxt "shortcut window"
@@ -410,23 +407,23 @@ msgstr "_Direzione"
 
 #: data/ui/preferences.ui:81
 msgid "Layers"
-msgstr ""
+msgstr "Livelli"
 
 #: data/ui/preferences.ui:85
 msgid "Ruler _Markings"
-msgstr ""
+msgstr "Segni _Righello"
 
 #: data/ui/preferences.ui:93
 msgid "_Grid"
-msgstr ""
+msgstr "_Griglia"
 
 #: data/ui/preferences.ui:102
 msgid "D_iagonals"
-msgstr ""
+msgstr "D_iagonali"
 
 #: data/ui/preferences.ui:110
 msgid "_Angles"
-msgstr ""
+msgstr "_Angoli"
 
 #: data/ui/preferences.ui:120
 msgid "Appearance"
