@@ -638,7 +638,7 @@ class Unit:
         legend_y_4 = self.context.height / 2 - extend_4.height / 2
 
         # Draw the diagonals
-        self.context.ctx.set_line_width(0.2)
+        self.context.ctx.set_line_width(1)
         # Do not draw on the menu button
         self.context.ctx.move_to(min_size * width_per_diag, min_size * height_per_diag)
         self.context.ctx.line_to(self.context.width, self.context.height)
