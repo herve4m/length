@@ -4,6 +4,22 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.10.0
+======
+
+Minor Changes
+-------------
+
+- Disable middle click for locking the position of the mouse tracker.
+  Now only the P keyboard shortcut remains to lock the tracker [`#44`_].
+- Add angles measurement.
+- The grid and diagonal rulers can now be disabled from the Preferences dialog.
+- Add keyboard shortcuts for showing/hiding the markings (M), the grid (G),
+  the diagonal rulers (I), and the angles (A).
+- Add a keyboard shortcut (D) for switching between left-to-right and right-to-left.
+
+.. _#44: https://github.com/herve4m/length/issues/44
+
 v0.9.0
 ======
 

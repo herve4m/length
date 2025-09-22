@@ -67,6 +67,19 @@
   </screenshots>
 
   <releases>
+    <release version="0.10.0" date="2025-09-22">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0100</url>
+      <description translate="no">
+        <p>
+          Disable middle click for locking the position of the mouse tracker.
+          Now only the P keyboard shortcut remains to lock the tracker.
+        </p>
+        <p>Add angles measurement</p>
+        <p>The grid and diagonal rulers can now be disabled from the Preferences dialog</p>
+        <p>Add keyboard shortcuts for showing/hiding the markings (M), the grid (G), the diagonal rulers (I), and the angles (A)</p>
+        <p>Add a keyboard shortcut (D) for switching between left-to-right and right-to-left</p>
+      </description>
+    </release>
     <release version="0.9.0" date="2025-08-13">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v090</url>
       <description translate="no">
