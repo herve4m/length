@@ -377,10 +377,10 @@ class Unit:
         self.context.ctx.translate(-self.context.width, 0)
 
     def px_per_tick_diagonal(self) -> float:
-        return (
-            self.px_per_tick_width
-            if self.context.width >= self.context.height
-            else self.px_per_tick_height
+        angle = math.atan2(self.context.height, self.context.width)
+        return math.sqrt(
+            self.px_per_tick_width**2 * math.cos(angle) ** 2
+            + self.px_per_tick_height**2 * math.sin(angle) ** 2
         )
 
     def _draw_diag_1(self, ctx_text, min_size: int) -> None:
