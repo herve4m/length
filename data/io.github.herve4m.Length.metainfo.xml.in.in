@@ -67,6 +67,12 @@
   </screenshots>
 
   <releases>
+    <release version="0.10.1" date="2025-09-29">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0101</url>
+      <description translate="no">
+        <p>Fix inaccurate measures for the diagonal rulers</p>
+      </description>
+    </release>
     <release version="0.10.0" date="2025-09-22">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0100</url>
       <description translate="no">

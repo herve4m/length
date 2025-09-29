@@ -4,6 +4,16 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.10.1
+======
+
+Bugfixes
+--------
+
+- Fix inaccurate measures for the diagonal rulers [`#51`_].
+
+.. _#51: https://github.com/herve4m/length/issues/51
+
 v0.10.0
 ======
 
