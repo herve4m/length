@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-09-20 17:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+
+#. (itstool) path: credit/years
+#: ../help/C/adjusting.page:13
+#: ../help/C/calibrating.page:13
+#: ../help/C/colors.page:13
+#: ../help/C/direction.page:13
+#: ../help/C/fonts.page:13
+#: ../help/C/index.page:17
+#: ../help/C/layers.page:13
+#: ../help/C/offset.page:13
+#: ../help/C/resizing.page:13
+#: ../help/C/rotating.page:13
+#: ../help/C/scale.page:13
+#: ../help/C/tracking.page:13
+#: ../help/C/transparency.page:13
+#: ../help/C/units.page:14
+msgid "2025"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/adjusting.page:25
+msgid "Adjust the position of the ruler to accurately measure objects."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/adjusting.page:28
+msgid "Adjusting the Ruler Accurately"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/adjusting.page:30
+msgid "To accurately measure objects, you might have to precisely position the ruler."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/adjusting.page:32
+msgid "To align the ruler with the object's window, drag the ruler while pressing <key>Ctrl</key>. When the ruler gets close to the object's edge, the ruler snaps to the window."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/adjusting.page:37
+msgid "You can also move the ruler by using the arrow keys. Press <keyseq><key>Alt</key><key>F7</key></keyseq> and use the arrow keys to move the ruler. For an accurate adjustment, press <key>Ctrl</key> while moving the ruler with the arrow keys. Press <key>Esc</key> to exit the keyboard mode."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/adjusting.page:44
+#: ../help/C/transparency.page:52
+msgid "To prevent the object to measure from covering the ruler, right click the ruler and select <gui style=\"menuitem\">Always on Top</gui>:"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/adjusting.page:46
+#: ../help/C/transparency.page:54
+msgctxt "_"
+msgid "external ref='figures/always-on-top.png' md5='b4952aa1693a4c67b60f565d391b4d1c'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/adjusting.page:47
+#: ../help/C/transparency.page:55
+msgid "Use the context menu and select <gui style=\"menuitem\">Always on Top</gui>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/calibrating.page:25
+msgid "Provide your monitor size to accurately measure distances."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/calibrating.page:28
+msgid "Calibrating Displays"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/calibrating.page:30
+msgctxt "_"
+msgid "external ref='figures/calibrating.png' md5='3426808090b9ac263ae69ccc008bfd7c'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/calibrating.page:31
+msgid "Calibrating the monitors"
+msgstr ""
+
+#. (itstool) path: page/p
+#. (itstool) path: note/p
+#: ../help/C/calibrating.page:34
+#: ../help/C/units.page:60
+msgid "To accurately represent some units, <app>Length</app> uses the physical size of your display."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/calibrating.page:36
+msgid "In some environments, <app>Length</app> retrieves this information from the system. Other environments do not provide that size. In that case, you must calibrate <app>Length</app> for you display:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/calibrating.page:43
+#: ../help/C/colors.page:37
+#: ../help/C/direction.page:37
+#: ../help/C/fonts.page:37
+#: ../help/C/layers.page:64
+#: ../help/C/offset.page:37
+#: ../help/C/rotating.page:37
+#: ../help/C/scale.page:40
+#: ../help/C/tracking.page:41
+#: ../help/C/transparency.page:40
+#: ../help/C/units.page:38
+msgid "Click the menu button (<_:media-1/>) in the left-side corner of the ruler."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/calibrating.page:45
+#: ../help/C/colors.page:39
+#: ../help/C/direction.page:39
+#: ../help/C/fonts.page:39
+#: ../help/C/layers.page:66
+#: ../help/C/units.page:40
+msgid "Go to <gui style=\"menuitem\">Preferences</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/calibrating.page:48
+msgid "The <gui style=\"tab\">Calibrating</gui> page lists your displays. For each display, you can let <app>Length</app> compute your display size, or you can provide your monitor diagonal size in inches."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/calibrating.page:52
+msgid "When <gui style=\"button\">Compute Monitor Size</gui> is enabled, <app>Length</app> retrieves the monitor size from the system. When the <gui style=\"button\">Compute Monitor Size</gui> checkbox is cleared, you can provide your monitor diagonal size in inches."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/calibrating.page:58
+#: ../help/C/colors.page:59
+#: ../help/C/direction.page:43
+#: ../help/C/fonts.page:56
+#: ../help/C/layers.page:75
+#: ../help/C/units.page:44
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr ""
+
+#. (itstool) path: note/p
+#: ../help/C/calibrating.page:62
+msgid "You must provide your display size when <app>Length</app> cannot retrieve the size from the system. If you do not provide the size, then <app>Length</app> bases its computations on a 24 inches monitor, which might result in inaccurate measures for the selected unit."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/colors.page:25
+msgid "Select the colors of the ruler."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/colors.page:28
+msgid "Changing Colors"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/colors.page:34
+msgid "You can change the color of the ruler and the color of the markings."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/colors.page:42
+msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Appearance</gui> section, clear the <gui style=\"button\">Use Default Colors</gui> checkbox. When <gui style=\"button\">Use Default Colors</gui> is enabled, the ruler is white and the markings are black. When the <gui style=\"button\">Use Default Colors</gui> checkbox is cleared, you can select the colors."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/colors.page:50
+msgid "To select a color for the markings, click <gui style=\"button\">Foreground</gui>. In the color selection window, you can pick a color from the available colors. If your color is not available, then click the <gui style=\"button\">Custom</gui> (<gui style=\"button\">+</gui>) button and enter the red, green, and blue components of the color."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/colors.page:57
+msgid "To select a color for the ruler, click <gui style=\"button\">Background</gui>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/direction.page:25
+msgid "Display markings from left-to-right or from right-to-left."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/direction.page:28
+msgid "Changing Markings Direction"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/direction.page:34
+msgid "You can change the direction of the ruler markings."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/direction.page:41
+msgid "In the <gui style=\"tab\">General</gui> page, click the left-to-right direction button (<_:media-1/>) or the right-to-left button (<_:media-2/>)."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/direction.page:46
+msgid "You can also switch direction by pressing <key>D</key>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/fonts.page:25
+msgid "Select a font the ruler markings."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/fonts.page:28
+msgid "Changing Fonts"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/fonts.page:30
+msgctxt "_"
+msgid "external ref='figures/fonts.png' md5='e10e77095a05f3f2e8114a04e64c33ee'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/fonts.page:31
+msgid "<app>Length</app> using different fonts for the markings"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/fonts.page:34
+msgid "You can change the font used for the ruler markings."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/fonts.page:42
+msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Appearance</gui> section, clear the <gui style=\"button\">Use Default Font</gui> checkbox. When <gui style=\"button\">Use Default Font</gui> is enabled, the ruler uses the font that comes with <app>Length</app>. When the <gui style=\"button\">Use Default Font</gui> checkbox is cleared, you can select a custom font."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/fonts.page:50
+msgid "To select a font for the ruler markings, click <gui style=\"button\">Custom Font</gui>. In the font selection window, you can pick a font and a size."
+msgstr ""
+
+#. (itstool) path: info/title
+#: ../help/C/index.page:7
+msgctxt "link:trail"
+msgid "Length"
+msgstr ""
+
+#. (itstool) path: info/title
+#: ../help/C/index.page:8
+msgctxt "link"
+msgid "Length"
+msgstr ""
+
+#. (itstool) path: info/title
+#: ../help/C/index.page:9
+msgctxt "text"
+msgid "Length"
+msgstr ""
+
+#. (itstool) path: info/keywords
+#: ../help/C/index.page:11
+msgid "length, ruler, measure"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/index.page:29
+msgid "Learn to use <app>Length</app> for measuring objects on screen."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/index.page:32
+msgid "<_:media-1/> Length"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/index.page:37
+msgid "<app>Length</app> is an application for measuring distances on screen to help you design and inspect layouts and graphics."
+msgstr ""
+
+#. (itstool) path: section/title
+#: ../help/C/index.page:40
+msgid "Getting Started"
+msgstr ""
+
+#. (itstool) path: section/title
+#: ../help/C/index.page:44
+msgid "Using <app>Length</app>"
+msgstr ""
+
+#. (itstool) path: section/title
+#: ../help/C/index.page:48
+msgid "Preferences"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/layers.page:25
+msgid "Select the measuring tools."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/layers.page:28
+msgid "Selecting Measuring Tools"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:30
+msgid "<app>Length</app> provide several measuring tools organized in layers."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:32
+msgid "The markings layer displays the rulers markings."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:38
+msgid "To help you measure large objects when the ruler is expanded, you can activate the grid."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:44
+msgid "The diagonal layer displays diagonals rulers."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:50
+msgid "Activate the angle layer to measure angles."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:56
+msgid "You can activate several layers for using several tools at the same time. For example, the marking and grid layers are enabled by default."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:61
+msgid "You activate layers from the <gui>Preferences</gui> dialog."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:69
+msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Layers</gui> section, use the checkboxes to enable or disable the layers."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/layers.page:78
+msgid "Alternatively, use the keyboard shortcuts:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:80
+msgid "<key>m</key> for the marking layer"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:81
+msgid "<key>g</key> for the grid layer"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:82
+msgid "<key>i</key> for the diagonal layer"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/layers.page:83
+msgid "<key>a</key> for the angle layer"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/offset.page:25
+#: ../help/C/scale.page:25
+msgid "Change the unit origin."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/offset.page:28
+msgid "Setting an Offset"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/offset.page:30
+msgctxt "_"
+msgid "external ref='figures/offset.png' md5='288eedbbb659e9e9b489d3952c74b881'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/offset.page:31
+msgid "Changing the origin"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/offset.page:34
+msgid "You can change the origin of the ruler by adding an offset."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/offset.page:39
+msgid "Adjust the offset."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/resizing.page:25
+msgid "Adjust the size of the ruler."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/resizing.page:28
+msgid "Resizing the Ruler"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/resizing.page:34
+msgid "You can resize the ruler for adjusting it to the object to measure. You resize the ruler by dragging the edges."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/rotating.page:25
+msgid "Rotate the ruler."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/rotating.page:28
+msgid "Changing the Ruler Orientation"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/rotating.page:34
+msgid "You can rotate the ruler in vertical position."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/rotating.page:40
+msgid "Click the vertical button to rotate the ruler vertically. Click the horizontal button to rotate the ruler back in the horizontal position."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/rotating.page:47
+msgid "You can also change the orientation of the ruler by dragging its corners or by clicking the mouse middle button."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/scale.page:28
+msgid "Changing the Scaling Factor"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/scale.page:30
+msgctxt "_"
+msgid "external ref='figures/scale.png' md5='22f7cd10d8d5eefaf5643acfc9210bbf'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/scale.page:31
+msgid "Changing the scaling factor"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/scale.page:34
+msgid "You can scale the ruler's unit by a factor. When you define a scaling factor, a reminder is displayed on the ruler."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/scale.page:42
+msgid "Adjust the scaling factor."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/tracking.page:25
+msgid "Display the pointer position."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/tracking.page:28
+msgid "Tracking the Pointer"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/tracking.page:30
+msgctxt "_"
+msgid "external ref='figures/tracking.png' md5='8b52fffea40918b68117aa58d12e9048'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/tracking.page:31
+msgid "Pointer tracking enabled"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/tracking.page:34
+msgid "For accurate measurements, you can activate the pointer tracker. When activated, the ruler shows the current pointer position. You can also lock the tracker to mark a position in the ruler."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/tracking.page:43
+msgid "Enable the <gui style=\"button\">Track Pointer</gui> checkbox."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/tracking.page:46
+msgid "To lock the position of the tracker, press <key>P</key>. Press <key>P</key> again to unlock the tracker."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/tracking.page:53
+msgid "You can also enable and disable the tracker by pressing <key>T</key>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/transparency.page:25
+msgid "Adjust the transparency for measuring objects behind the ruler."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/transparency.page:28
+msgid "Adjusting Transparency"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/transparency.page:30
+msgctxt "_"
+msgid "external ref='figures/transparency.png' md5='cb5ac8fe605f9084d4cc99cc77987a3e'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/transparency.page:31
+msgid "Making the ruler semitransparent"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/transparency.page:34
+msgid "To help you measure objects behind the ruler, you can adjust the ruler's opacity. By making the ruler semitransparent, you can see the objects behind the ruler."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/transparency.page:43
+msgid "Adjust the opacity percentage. A 100% opacity means that the ruler is not transparent at all, and it masks the objects behind it."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/transparency.page:50
+msgid "Alternatively, you can adjust the opacity by using the arrow keys: <key>Left</key> or <key>Down</key> to reduce the opacity and render the ruler semitransparent, and <key>Right</key> or <key>Up</key> to increase the opacity."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: ../help/C/units.page:26
+msgid "Change the unit of the ruler markings."
+msgstr ""
+
+#. (itstool) path: page/title
+#: ../help/C/units.page:29
+msgid "Selecting Units"
+msgstr ""
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: ../help/C/units.page:31
+msgctxt "_"
+msgid "external ref='figures/units.png' md5='6da6944cf19c5fd55115fb0b952bdd97'"
+msgstr ""
+
+#. (itstool) path: media/p
+#: ../help/C/units.page:32
+msgid "Changing the ruler's unit"
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/units.page:35
+msgid "<app>Length</app> comes with several units that you can select from the <gui>Preferences</gui> dialog."
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:42
+msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Scale</gui> section, select the ruler's unit."
+msgstr ""
+
+#. (itstool) path: page/p
+#: ../help/C/units.page:47
+msgid "Alternatively, use the number keys to switch between units:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:49
+msgid "<key>1</key> for pixels"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:50
+msgid "<key>2</key> for centimeters"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:51
+msgid "<key>3</key> for inches"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:52
+msgid "<key>4</key> for picas (1/6 of an inch)"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:53
+msgid "<key>5</key> for points (1/72 of an inch)"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:54
+msgid "<key>6</key> for percentage of the display size"
+msgstr ""
+
+#. (itstool) path: item/p
+#: ../help/C/units.page:55
+msgid "<key>7</key> for percentage of the ruler size"
+msgstr ""
+
+#. (itstool) path: note/title
+#: ../help/C/units.page:59
+msgid "Calibrating <app>Length</app>"
+msgstr ""
+
+#. (itstool) path: note/p
+#: ../help/C/units.page:63
+msgid "In some environments, <app>Length</app> retrieves this information from the system. Other environments do not provide that size. In that case, you must calibrate <app>Length</app> for you display."
+msgstr ""
+
+#. (itstool) path: note/p
+#: ../help/C/units.page:68
+msgid "See <link xref=\"calibrating\"/> for more information about configuring <app>Length</app> for the size of your display."
+msgstr ""
