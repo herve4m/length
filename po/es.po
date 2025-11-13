@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 14:53+0200\n"
+"POT-Creation-Date: 2025-11-13 17:16+0100\n"
 "PO-Revision-Date: 2025-03-22 17:23-0300\n"
 "Last-Translator: Haggen\n"
 "Language-Team: \n"
@@ -543,11 +543,6 @@ msgstr "pulgada"
 msgid "Inches"
 msgstr "Pulgadas"
 
-#. Short name that is used to display the unit on the ruler
-#: src/unit_pct.py:29 src/unit_rel_pct.py:29
-msgid "%"
-msgstr "%"
-
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_pct.py:31
 msgid "Percentages"
@@ -588,6 +583,9 @@ msgstr "Pixeles"
 #, fuzzy
 msgid "Relative Percentages"
 msgstr "Porcentajes"
+
+#~ msgid "%"
+#~ msgstr "%"
 
 #~ msgid ""
 #~ "Whether let Length try to compute the monitor size, or let you provide "

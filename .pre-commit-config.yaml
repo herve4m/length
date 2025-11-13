@@ -12,7 +12,7 @@ repos:
         types:
           - yaml
   - repo: https://github.com/psf/black
-    rev: 25.9.0
+    rev: 25.11.0
     hooks:
       - id: black
         name: black

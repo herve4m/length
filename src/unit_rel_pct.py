@@ -26,7 +26,7 @@ class UnitRelativePct(Unit):
     # Identifier of the unit in the "unit" GSettings option
     id: str = "relpct"
     # Short name that is used to display the unit on the ruler
-    short_name: str = _("%")
+    short_name: str = "%"
     # Human readable unit name that is used in the Preferences dialog
     long_name: str = _("Relative Percentages")
 

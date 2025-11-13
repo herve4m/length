@@ -38,3 +38,7 @@ Prepare and submit pull requests as follows:
    Make sure to run `pre-commit` before submitting your code.
 
 For more details of forks and pull request, see the [Creating a pull request from a fork](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) and [How to create a pull request in GitHub](https://opensource.com/article/19/7/create-pull-request-github) documentations.
+
+## Contributing Translations
+
+You can contribute to Lenght translations with [Weblate](https://hosted.weblate.org/projects/length/).
