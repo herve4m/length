@@ -7,7 +7,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr ""
+msgstr "Hervé Quatremain, 2025"
 
 #. (itstool) path: credit/years
 #: ../help/C/adjusting.page:13 ../help/C/calibrating.page:13
@@ -17,7 +17,7 @@ msgstr ""
 #: ../help/C/scale.page:13 ../help/C/tracking.page:13
 #: ../help/C/transparency.page:13 ../help/C/units.page:14
 msgid "2025"
-msgstr ""
+msgstr "2025"
 
 #. (itstool) path: info/desc
 #: ../help/C/adjusting.page:25
@@ -324,7 +324,7 @@ msgid ""
 "that comes with <app>Length</app>. When the <gui style=\"button\">Use "
 "Default Font</gui> checkbox is cleared, you can select a custom font."
 msgstr ""
-" Dans la page <gui style=\"tab\">Général</gui>, dans la section <gui "
+"Dans la page <gui style=\"tab\">Général</gui>, dans la section <gui "
 "style=\"group\">Apparence</gui>, décocher <gui style=\"button\">Utiliser la "
 "police par défaut</gui>. Quand <gui style=\"button\">Utiliser la police par "
 "défaut</gui> est actif, la police est celle qui vient avec <app>Longueur</"
