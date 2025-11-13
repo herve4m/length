@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 14:53+0200\n"
+"POT-Creation-Date: 2025-11-13 17:16+0100\n"
 "PO-Revision-Date: 2025-07-05 19:29+0300\n"
 "Last-Translator: freeducks-debug <applesause454@gmail.com>\n"
 "Language-Team: \n"
@@ -540,11 +540,6 @@ msgstr "дюйм"
 msgid "Inches"
 msgstr "Дюйми"
 
-#. Short name that is used to display the unit on the ruler
-#: src/unit_pct.py:29 src/unit_rel_pct.py:29
-msgid "%"
-msgstr "%"
-
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_pct.py:31
 msgid "Percentages"
@@ -584,3 +579,6 @@ msgstr "Пікселі"
 #: src/unit_rel_pct.py:31
 msgid "Relative Percentages"
 msgstr "Відносні проценти"
+
+#~ msgid "%"
+#~ msgstr "%"
