@@ -41,4 +41,4 @@ For more details of forks and pull request, see the [Creating a pull request fro
 
 ## Contributing Translations
 
-You can contribute to Lenght translations with [Weblate](https://hosted.weblate.org/projects/length/).
+You can contribute to Length translations with [Weblate](https://hosted.weblate.org/projects/length/).

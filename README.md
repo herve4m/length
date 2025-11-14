@@ -2,6 +2,7 @@
 
 [![Pre-commit](https://github.com/herve4m/length/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/herve4m/length/actions/workflows/pre-commit.yml)
 [![Build Validation](https://github.com/herve4m/length/actions/workflows/build-lint.yml/badge.svg)](https://github.com/herve4m/length/actions/workflows/build-lint.yml)
+[![Translation status](https://hosted.weblate.org/widget/length/svg-badge.svg)](https://hosted.weblate.org/engage/length/)
 
 Length is a GNOME application that enables you to measure distances on screen.
 You can use it to design and inspect layouts and graphics.
@@ -38,6 +39,8 @@ We welcome community contributions to this project.
 If you find problems, then please open an [issue](https://github.com/herve4m/length/issues) or create a [pull request](https://github.com/herve4m/length/pulls).
 
 More information about contributing can be found in the [Contribution Guidelines](https://github.com/herve4m/length/blob/main/CONTRIBUTING.md).
+
+You can also contribute to Length translations with [Weblate](https://hosted.weblate.org/projects/length/).
 
 
 ## Release Notes
