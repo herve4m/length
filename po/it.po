@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-13 17:16+0100\n"
-"PO-Revision-Date: 2025-09-21 08:48+0200\n"
-"Last-Translator: Albano Battistella\n"
-"Language-Team: Zorin OS\n"
+"PO-Revision-Date: 2025-12-01 13:00+0000\n"
+"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/length/length/it/"
+">\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: data/io.github.herve4m.Length.desktop.in.in:2
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:7
@@ -340,7 +342,7 @@ msgstr "Pollici"
 #: data/ui/help-overlay.ui:156
 msgctxt "shortcut window"
 msgid "Picas"
-msgstr ""
+msgstr "Picas"
 
 #: data/ui/help-overlay.ui:162
 msgctxt "shortcut window"
@@ -544,17 +546,17 @@ msgstr "Percentuali"
 #. Short name that is used to display the unit on the ruler
 #: src/unit_pica.py:29
 msgid "pica"
-msgstr ""
+msgstr "pica"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_pica.py:31
 msgid "Picas"
-msgstr ""
+msgstr "Picas"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_point.py:29
 msgid "pt"
-msgstr ""
+msgstr "pt"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_point.py:31
