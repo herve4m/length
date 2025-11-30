@@ -2,19 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2025-09-20 17:22+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-12-01 13:00+0000\n"
+"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/length/"
+"help-documentation/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr ""
+msgstr "Albano Battistella >albanobattistella@gmail.com>"
 
 #. (itstool) path: credit/years
 #: ../help/C/adjusting.page:13
@@ -32,38 +34,52 @@ msgstr ""
 #: ../help/C/transparency.page:13
 #: ../help/C/units.page:14
 msgid "2025"
-msgstr ""
+msgstr "2025"
 
 #. (itstool) path: info/desc
 #: ../help/C/adjusting.page:25
 msgid "Adjust the position of the ruler to accurately measure objects."
 msgstr ""
+"Regola la posizione del righello per misurare con precisione gli oggetti."
 
 #. (itstool) path: page/title
 #: ../help/C/adjusting.page:28
 msgid "Adjusting the Ruler Accurately"
-msgstr ""
+msgstr "Regolazione accurata del righello"
 
 #. (itstool) path: page/p
 #: ../help/C/adjusting.page:30
 msgid "To accurately measure objects, you might have to precisely position the ruler."
 msgstr ""
+"Per misurare con precisione gli oggetti, potrebbe essere necessario "
+"posizionare con precisione il righello."
 
 #. (itstool) path: page/p
 #: ../help/C/adjusting.page:32
 msgid "To align the ruler with the object's window, drag the ruler while pressing <key>Ctrl</key>. When the ruler gets close to the object's edge, the ruler snaps to the window."
 msgstr ""
+"Per allineare il righello alla finestra dell'oggetto, trascinalo tenendo "
+"premuto <key>Ctrl</key>. Quando il righello si avvicina al bordo "
+"dell'oggetto, si aggancia alla finestra."
 
 #. (itstool) path: page/p
 #: ../help/C/adjusting.page:37
 msgid "You can also move the ruler by using the arrow keys. Press <keyseq><key>Alt</key><key>F7</key></keyseq> and use the arrow keys to move the ruler. For an accurate adjustment, press <key>Ctrl</key> while moving the ruler with the arrow keys. Press <key>Esc</key> to exit the keyboard mode."
 msgstr ""
+"È anche possibile spostare il righello utilizzando i tasti freccia. Premere "
+"<keyseq><key>Alt</key><key>F7</key></keyseq> e utilizzare i tasti freccia "
+"per spostare il righello. Per una regolazione più precisa, premere "
+"<key>Ctrl</key> mentre si sposta il righello con i tasti freccia. Premere "
+"<key>Esc</key> per uscire dalla modalità tastiera."
 
 #. (itstool) path: page/p
 #: ../help/C/adjusting.page:44
 #: ../help/C/transparency.page:52
 msgid "To prevent the object to measure from covering the ruler, right click the ruler and select <gui style=\"menuitem\">Always on Top</gui>:"
 msgstr ""
+"Per evitare che l'oggetto da misurare copra il righello, fare clic con il "
+"pulsante destro del mouse sul righello e selezionare <gui style=\"menuitem\""
+">Sempre in primo piano</gui>:"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -75,22 +91,27 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/always-on-top.png' md5='b4952aa1693a4c67b60f565d391b4d1c'"
 msgstr ""
+"riferimento esterno='figures/always-on-top.png' "
+"md5='b4952aa1693a4c67b60f565d391b4d1c'"
 
 #. (itstool) path: media/p
 #: ../help/C/adjusting.page:47
 #: ../help/C/transparency.page:55
 msgid "Use the context menu and select <gui style=\"menuitem\">Always on Top</gui>."
 msgstr ""
+"Utilizzare il menu contestuale e selezionare <gui style=\"menuitem\">Sempre "
+"in primo piano</gui>."
 
 #. (itstool) path: info/desc
 #: ../help/C/calibrating.page:25
 msgid "Provide your monitor size to accurately measure distances."
 msgstr ""
+"Indica le dimensioni del tuo monitor per misurare con precisione le distanze."
 
 #. (itstool) path: page/title
 #: ../help/C/calibrating.page:28
 msgid "Calibrating Displays"
-msgstr ""
+msgstr "Calibrazione dei monitor"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -101,11 +122,13 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/calibrating.png' md5='3426808090b9ac263ae69ccc008bfd7c'"
 msgstr ""
+"riferimento esterno='figures/calibrating.png' "
+"md5='3426808090b9ac263ae69ccc008bfd7c'"
 
 #. (itstool) path: media/p
 #: ../help/C/calibrating.page:31
 msgid "Calibrating the monitors"
-msgstr ""
+msgstr "Calibrazione dei monitor"
 
 #. (itstool) path: page/p
 #. (itstool) path: note/p
@@ -113,11 +136,16 @@ msgstr ""
 #: ../help/C/units.page:60
 msgid "To accurately represent some units, <app>Length</app> uses the physical size of your display."
 msgstr ""
+"Per rappresentare accuratamente alcune unità, <app>Lunghezza</app> utilizza "
+"le dimensioni fisiche del monitor."
 
 #. (itstool) path: page/p
 #: ../help/C/calibrating.page:36
 msgid "In some environments, <app>Length</app> retrieves this information from the system. Other environments do not provide that size. In that case, you must calibrate <app>Length</app> for you display:"
 msgstr ""
+"In alcuni ambienti, <app>Length</app> recupera queste informazioni dal "
+"sistema. Altri ambienti non forniscono questa dimensione. In tal caso, è "
+"necessario calibrare <app>Length</app> per la visualizzazione:"
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:43
@@ -133,6 +161,8 @@ msgstr ""
 #: ../help/C/units.page:38
 msgid "Click the menu button (<_:media-1/>) in the left-side corner of the ruler."
 msgstr ""
+"Fare clic sul pulsante del menu (<_:media-1/>) nell'angolo sinistro del "
+"righello."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:45
@@ -142,17 +172,26 @@ msgstr ""
 #: ../help/C/layers.page:66
 #: ../help/C/units.page:40
 msgid "Go to <gui style=\"menuitem\">Preferences</gui>."
-msgstr ""
+msgstr "Vai a <gui style=\"menuitem\">Preferenze</gui>."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:48
 msgid "The <gui style=\"tab\">Calibrating</gui> page lists your displays. For each display, you can let <app>Length</app> compute your display size, or you can provide your monitor diagonal size in inches."
 msgstr ""
+"La pagina <gui style=\"tab\">Calibrazione</gui> elenca i tuoi monitor. Per "
+"ogni monitor, puoi lasciare che <app>Length</app> calcoli le dimensioni del "
+"monitor oppure puoi specificare la dimensione diagonale del monitor in "
+"pollici."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:52
 msgid "When <gui style=\"button\">Compute Monitor Size</gui> is enabled, <app>Length</app> retrieves the monitor size from the system. When the <gui style=\"button\">Compute Monitor Size</gui> checkbox is cleared, you can provide your monitor diagonal size in inches."
 msgstr ""
+"Quando <gui style=\"button\">Calcola dimensioni monitor</gui> è abilitato, "
+"<app>ength</app> recupera le dimensioni del monitor dal sistema. Quando la "
+"casella di controllo <gui style=\"button\">Calcola dimensioni monitor</gui> "
+"è deselezionata, è possibile specificare la dimensione diagonale del monitor "
+"in pollici."
 
 #. (itstool) path: item/p
 #: ../help/C/calibrating.page:58
@@ -162,77 +201,98 @@ msgstr ""
 #: ../help/C/layers.page:75
 #: ../help/C/units.page:44
 msgid "Close the <gui>Preferences</gui> dialog."
-msgstr ""
+msgstr "Chiudere la finestra di dialogo <gui>Preferenze</gui>."
 
 #. (itstool) path: note/p
 #: ../help/C/calibrating.page:62
 msgid "You must provide your display size when <app>Length</app> cannot retrieve the size from the system. If you do not provide the size, then <app>Length</app> bases its computations on a 24 inches monitor, which might result in inaccurate measures for the selected unit."
 msgstr ""
+"È necessario specificare le dimensioni del monitor quando <app>Length</app> "
+"non riesce a recuperarle dal sistema. Se non si specificano le dimensioni, "
+"<app>Length</app> baserà i suoi calcoli su un monitor da 24 pollici, il che "
+"potrebbe comportare misurazioni imprecise per l'unità selezionata."
 
 #. (itstool) path: info/desc
 #: ../help/C/colors.page:25
 msgid "Select the colors of the ruler."
-msgstr ""
+msgstr "Seleziona i colori del righello."
 
 #. (itstool) path: page/title
 #: ../help/C/colors.page:28
 msgid "Changing Colors"
-msgstr ""
+msgstr "Cambiamento Colori"
 
 #. (itstool) path: page/p
 #: ../help/C/colors.page:34
 msgid "You can change the color of the ruler and the color of the markings."
-msgstr ""
+msgstr "È possibile modificare il colore del righello e il colore dei segni."
 
 #. (itstool) path: item/p
 #: ../help/C/colors.page:42
 msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Appearance</gui> section, clear the <gui style=\"button\">Use Default Colors</gui> checkbox. When <gui style=\"button\">Use Default Colors</gui> is enabled, the ruler is white and the markings are black. When the <gui style=\"button\">Use Default Colors</gui> checkbox is cleared, you can select the colors."
 msgstr ""
+"Nella pagina <gui style=\"tab\">Generale</gui>, nella sezione <gui style="
+"\"group\">Aspetto</gui>, deseleziona la casella di controllo <gui style="
+"\"button\">Usa colori predefiniti</gui>. Quando l'opzione <gui style="
+"\"button\">Usa colori predefiniti</gui> è abilitata, il righello è bianco e "
+"i segni sono neri. Quando la casella di controllo <gui style=\"button\">Usa "
+"colori predefiniti</gui> è deselezionata, è possibile selezionare i colori."
 
 #. (itstool) path: item/p
 #: ../help/C/colors.page:50
 msgid "To select a color for the markings, click <gui style=\"button\">Foreground</gui>. In the color selection window, you can pick a color from the available colors. If your color is not available, then click the <gui style=\"button\">Custom</gui> (<gui style=\"button\">+</gui>) button and enter the red, green, and blue components of the color."
 msgstr ""
+"Per selezionare un colore per i contrassegni, clicca su <gui style=\"button\""
+">Primo piano</gui>. Nella finestra di selezione del colore, puoi scegliere "
+"un colore tra quelli disponibili. Se il colore desiderato non è disponibile, "
+"clicca sul pulsante <gui style=\"button\">Personalizzato</gui> "
+"(<gui style=\"button\">+</gui>) e inserisci le componenti rosso, verde e blu "
+"del colore."
 
 #. (itstool) path: item/p
 #: ../help/C/colors.page:57
 msgid "To select a color for the ruler, click <gui style=\"button\">Background</gui>."
 msgstr ""
+"Per selezionare un colore per il righello, fare clic su <gui style=\"button\""
+">Sfondo</gui>."
 
 #. (itstool) path: info/desc
 #: ../help/C/direction.page:25
 msgid "Display markings from left-to-right or from right-to-left."
-msgstr ""
+msgstr "Visualizzare le marcature da sinistra a destra o da destra a sinistra."
 
 #. (itstool) path: page/title
 #: ../help/C/direction.page:28
 msgid "Changing Markings Direction"
-msgstr ""
+msgstr "Cambiamento della direzione delle marcature"
 
 #. (itstool) path: page/p
 #: ../help/C/direction.page:34
 msgid "You can change the direction of the ruler markings."
-msgstr ""
+msgstr "È possibile modificare la direzione dei segni del righello."
 
 #. (itstool) path: item/p
 #: ../help/C/direction.page:41
 msgid "In the <gui style=\"tab\">General</gui> page, click the left-to-right direction button (<_:media-1/>) or the right-to-left button (<_:media-2/>)."
 msgstr ""
+"Nella pagina <gui style=\"tab\">Generale</gui>, fare clic sul pulsante di "
+"direzione da sinistra a destra (<_:media-1/>) o sul pulsante da destra a "
+"sinistra (<_:media-2/>)."
 
 #. (itstool) path: page/p
 #: ../help/C/direction.page:46
 msgid "You can also switch direction by pressing <key>D</key>."
-msgstr ""
+msgstr "È anche possibile cambiare direzione premendo <key>D</key>."
 
 #. (itstool) path: info/desc
 #: ../help/C/fonts.page:25
 msgid "Select a font the ruler markings."
-msgstr ""
+msgstr "Seleziona un font per i segni del righello."
 
 #. (itstool) path: page/title
 #: ../help/C/fonts.page:28
 msgid "Changing Fonts"
-msgstr ""
+msgstr "Cambiare i Font"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -243,165 +303,192 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/fonts.png' md5='e10e77095a05f3f2e8114a04e64c33ee'"
 msgstr ""
+"riferimento esterno='figures/fonts.png' "
+"md5='e10e77095a05f3f2e8114a04e64c33ee'"
 
 #. (itstool) path: media/p
 #: ../help/C/fonts.page:31
 msgid "<app>Length</app> using different fonts for the markings"
-msgstr ""
+msgstr "<app>Length</app> utilizzando diversi font per le marcature"
 
 #. (itstool) path: page/p
 #: ../help/C/fonts.page:34
 msgid "You can change the font used for the ruler markings."
-msgstr ""
+msgstr "È possibile modificare il font utilizzato per i segni del righello."
 
 #. (itstool) path: item/p
 #: ../help/C/fonts.page:42
 msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Appearance</gui> section, clear the <gui style=\"button\">Use Default Font</gui> checkbox. When <gui style=\"button\">Use Default Font</gui> is enabled, the ruler uses the font that comes with <app>Length</app>. When the <gui style=\"button\">Use Default Font</gui> checkbox is cleared, you can select a custom font."
 msgstr ""
+"Nella pagina <gui style=\"tab\">Generale</gui>, nella sezione <gui style="
+"\"group\">Aspetto</gui>, deseleziona la casella di controllo <gui style="
+"\"button\">Usa carattere predefinito</gui>. Quando <gui style=\"button\">Usa "
+"carattere predefinito</gui> è abilitato, il righello utilizza il carattere "
+"fornito con <app>Lunghezza</app>. Quando la casella di controllo <gui style="
+"\"button\">Usa carattere predefinito</gui> è deselezionata, è possibile "
+"selezionare un carattere personalizzato."
 
 #. (itstool) path: item/p
 #: ../help/C/fonts.page:50
 msgid "To select a font for the ruler markings, click <gui style=\"button\">Custom Font</gui>. In the font selection window, you can pick a font and a size."
 msgstr ""
+"Per selezionare un font per i segni del righello, clicca su <gui style="
+"\"button\">Carattere personalizzato</gui>. Nella finestra di selezione del "
+"font, puoi scegliere un font e una dimensione."
 
 #. (itstool) path: info/title
 #: ../help/C/index.page:7
 msgctxt "link:trail"
 msgid "Length"
-msgstr ""
+msgstr "Length"
 
 #. (itstool) path: info/title
 #: ../help/C/index.page:8
 msgctxt "link"
 msgid "Length"
-msgstr ""
+msgstr "Length"
 
 #. (itstool) path: info/title
 #: ../help/C/index.page:9
 msgctxt "text"
 msgid "Length"
-msgstr ""
+msgstr "Length"
 
 #. (itstool) path: info/keywords
 #: ../help/C/index.page:11
 msgid "length, ruler, measure"
-msgstr ""
+msgstr "lunghezza, righello, misura"
 
 #. (itstool) path: info/desc
 #: ../help/C/index.page:29
 msgid "Learn to use <app>Length</app> for measuring objects on screen."
 msgstr ""
+"Impara a usare <app>Length</app> per misurare gli oggetti sullo schermo."
 
 #. (itstool) path: page/title
 #: ../help/C/index.page:32
 msgid "<_:media-1/> Length"
-msgstr ""
+msgstr "<_:media-1/> Length"
 
 #. (itstool) path: page/p
 #: ../help/C/index.page:37
 msgid "<app>Length</app> is an application for measuring distances on screen to help you design and inspect layouts and graphics."
 msgstr ""
+"<app>Length</app> è un'applicazione per misurare le distanze sullo schermo, "
+"utile per progettare e ispezionare layout e grafici."
 
 #. (itstool) path: section/title
 #: ../help/C/index.page:40
 msgid "Getting Started"
-msgstr ""
+msgstr "Iniziare"
 
 #. (itstool) path: section/title
 #: ../help/C/index.page:44
 msgid "Using <app>Length</app>"
-msgstr ""
+msgstr "Utilizzo di <app>Length</app>"
 
 #. (itstool) path: section/title
 #: ../help/C/index.page:48
 msgid "Preferences"
-msgstr ""
+msgstr "Preferenze"
 
 #. (itstool) path: info/desc
 #: ../help/C/layers.page:25
 msgid "Select the measuring tools."
-msgstr ""
+msgstr "Selezionare gli strumenti di misura."
 
 #. (itstool) path: page/title
 #: ../help/C/layers.page:28
 msgid "Selecting Measuring Tools"
-msgstr ""
+msgstr "Selezione degli strumenti di misurazione"
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:30
 msgid "<app>Length</app> provide several measuring tools organized in layers."
 msgstr ""
+"<app>Length</app> fornisce diversi strumenti di misurazione organizzati in "
+"livelli."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:32
 msgid "The markings layer displays the rulers markings."
-msgstr ""
+msgstr "Il livello dei segni mostra i segni dei righelli."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:38
 msgid "To help you measure large objects when the ruler is expanded, you can activate the grid."
 msgstr ""
+"Per aiutarti a misurare oggetti di grandi dimensioni quando il righello è "
+"espanso, puoi attivare la griglia."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:44
 msgid "The diagonal layer displays diagonals rulers."
-msgstr ""
+msgstr "Il livello diagonale mostra i righelli diagonali."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:50
 msgid "Activate the angle layer to measure angles."
-msgstr ""
+msgstr "Attiva il livello angolo per misurare gli angoli."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:56
 msgid "You can activate several layers for using several tools at the same time. For example, the marking and grid layers are enabled by default."
 msgstr ""
+"È possibile attivare più livelli per utilizzare più strumenti "
+"contemporaneamente. Ad esempio, i livelli di marcatura e griglia sono "
+"abilitati per impostazione predefinita."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:61
 msgid "You activate layers from the <gui>Preferences</gui> dialog."
 msgstr ""
+"È possibile attivare i livelli dalla finestra di dialogo "
+"<gui>Preferenze</gui>."
 
 #. (itstool) path: item/p
 #: ../help/C/layers.page:69
 msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Layers</gui> section, use the checkboxes to enable or disable the layers."
 msgstr ""
+"Nella pagina <gui style=\"tab\">Generale</gui>, nella sezione <gui style="
+"\"group\">Livelli</gui>, utilizzare le caselle di controllo per abilitare o "
+"disabilitare i livelli."
 
 #. (itstool) path: page/p
 #: ../help/C/layers.page:78
 msgid "Alternatively, use the keyboard shortcuts:"
-msgstr ""
+msgstr "In alternativa, utilizzare le scorciatoie da tastiera:"
 
 #. (itstool) path: item/p
 #: ../help/C/layers.page:80
 msgid "<key>m</key> for the marking layer"
-msgstr ""
+msgstr "<key>m</key> per lo strato di marcatura"
 
 #. (itstool) path: item/p
 #: ../help/C/layers.page:81
 msgid "<key>g</key> for the grid layer"
-msgstr ""
+msgstr "<key>g</key> per il livello della griglia"
 
 #. (itstool) path: item/p
 #: ../help/C/layers.page:82
 msgid "<key>i</key> for the diagonal layer"
-msgstr ""
+msgstr "<key>i</key> per lo strato diagonale"
 
 #. (itstool) path: item/p
 #: ../help/C/layers.page:83
 msgid "<key>a</key> for the angle layer"
-msgstr ""
+msgstr "<key>a</key> per lo strato angolare"
 
 #. (itstool) path: info/desc
 #: ../help/C/offset.page:25
 #: ../help/C/scale.page:25
 msgid "Change the unit origin."
-msgstr ""
+msgstr "Cambia l'origine dell'unità."
 
 #. (itstool) path: page/title
 #: ../help/C/offset.page:28
 msgid "Setting an Offset"
-msgstr ""
+msgstr "Impostazione di un offset"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -412,66 +499,76 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/offset.png' md5='288eedbbb659e9e9b489d3952c74b881'"
 msgstr ""
+"riferimento esterno='figures/offset.png' "
+"md5='288eedbbb659e9e9b489d3952c74b881'"
 
 #. (itstool) path: media/p
 #: ../help/C/offset.page:31
 msgid "Changing the origin"
-msgstr ""
+msgstr "Cambiare l'origine"
 
 #. (itstool) path: page/p
 #: ../help/C/offset.page:34
 msgid "You can change the origin of the ruler by adding an offset."
 msgstr ""
+"È possibile modificare l'origine del righello aggiungendo uno scostamento."
 
 #. (itstool) path: item/p
 #: ../help/C/offset.page:39
 msgid "Adjust the offset."
-msgstr ""
+msgstr "Regola l'offset."
 
 #. (itstool) path: info/desc
 #: ../help/C/resizing.page:25
 msgid "Adjust the size of the ruler."
-msgstr ""
+msgstr "Regola la dimensione del righello."
 
 #. (itstool) path: page/title
 #: ../help/C/resizing.page:28
 msgid "Resizing the Ruler"
-msgstr ""
+msgstr "Ridimensionamento del righello"
 
 #. (itstool) path: page/p
 #: ../help/C/resizing.page:34
 msgid "You can resize the ruler for adjusting it to the object to measure. You resize the ruler by dragging the edges."
 msgstr ""
+"È possibile ridimensionare il righello per adattarlo all'oggetto da "
+"misurare. Per ridimensionare il righello, trascinarne i bordi."
 
 #. (itstool) path: info/desc
 #: ../help/C/rotating.page:25
 msgid "Rotate the ruler."
-msgstr ""
+msgstr "Ruota il righello."
 
 #. (itstool) path: page/title
 #: ../help/C/rotating.page:28
 msgid "Changing the Ruler Orientation"
-msgstr ""
+msgstr "Modifica dell'orientamento del righello"
 
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:34
 msgid "You can rotate the ruler in vertical position."
-msgstr ""
+msgstr "È possibile ruotare il righello in posizione verticale."
 
 #. (itstool) path: item/p
 #: ../help/C/rotating.page:40
 msgid "Click the vertical button to rotate the ruler vertically. Click the horizontal button to rotate the ruler back in the horizontal position."
 msgstr ""
+"Fare clic sul pulsante verticale per ruotare il righello verticalmente. Fare "
+"clic sul pulsante orizzontale per ruotare nuovamente il righello in "
+"posizione orizzontale."
 
 #. (itstool) path: page/p
 #: ../help/C/rotating.page:47
 msgid "You can also change the orientation of the ruler by dragging its corners or by clicking the mouse middle button."
 msgstr ""
+"È anche possibile modificare l'orientamento del righello trascinandone gli "
+"angoli o cliccando con il tasto centrale del mouse."
 
 #. (itstool) path: page/title
 #: ../help/C/scale.page:28
 msgid "Changing the Scaling Factor"
-msgstr ""
+msgstr "Modifica del fattore di scala"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -482,31 +579,36 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/scale.png' md5='22f7cd10d8d5eefaf5643acfc9210bbf'"
 msgstr ""
+"riferimento esterno='figures/scale.png' "
+"md5='22f7cd10d8d5eefaf5643acfc9210bbf'"
 
 #. (itstool) path: media/p
 #: ../help/C/scale.page:31
 msgid "Changing the scaling factor"
-msgstr ""
+msgstr "Modifica del fattore di scala"
 
 #. (itstool) path: page/p
 #: ../help/C/scale.page:34
 msgid "You can scale the ruler's unit by a factor. When you define a scaling factor, a reminder is displayed on the ruler."
 msgstr ""
+"È possibile ridimensionare l'unità di misura del righello in base a un "
+"fattore. Quando si definisce un fattore di scala, sul righello viene "
+"visualizzato un promemoria."
 
 #. (itstool) path: item/p
 #: ../help/C/scale.page:42
 msgid "Adjust the scaling factor."
-msgstr ""
+msgstr "Regola il fattore di scala."
 
 #. (itstool) path: info/desc
 #: ../help/C/tracking.page:25
 msgid "Display the pointer position."
-msgstr ""
+msgstr "Visualizza la posizione del puntatore."
 
 #. (itstool) path: page/title
 #: ../help/C/tracking.page:28
 msgid "Tracking the Pointer"
-msgstr ""
+msgstr "Tracciamento del puntatore"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -517,41 +619,53 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/tracking.png' md5='8b52fffea40918b68117aa58d12e9048'"
 msgstr ""
+"riferimento esterno='figures/tracking.png' "
+"md5='8b52fffea40918b68117aa58d12e9048'"
 
 #. (itstool) path: media/p
 #: ../help/C/tracking.page:31
 msgid "Pointer tracking enabled"
-msgstr ""
+msgstr "Tracciamento del puntatore abilitato"
 
 #. (itstool) path: page/p
 #: ../help/C/tracking.page:34
 msgid "For accurate measurements, you can activate the pointer tracker. When activated, the ruler shows the current pointer position. You can also lock the tracker to mark a position in the ruler."
 msgstr ""
+"Per misurazioni precise, è possibile attivare il tracciamento del puntatore. "
+"Quando attivato, il righello mostra la posizione corrente del puntatore. È "
+"anche possibile bloccare il tracciamento per contrassegnare una posizione "
+"sul righello."
 
 #. (itstool) path: item/p
 #: ../help/C/tracking.page:43
 msgid "Enable the <gui style=\"button\">Track Pointer</gui> checkbox."
 msgstr ""
+"Abilita la casella di controllo <gui style=\"button\">Tracciamento del "
+"puntatore</gui>."
 
 #. (itstool) path: item/p
 #: ../help/C/tracking.page:46
 msgid "To lock the position of the tracker, press <key>P</key>. Press <key>P</key> again to unlock the tracker."
 msgstr ""
+"Per bloccare la posizione del tracciamento, premere <key>P</key>. Premere "
+"nuovamente <key>P</key> per sbloccare il tracciamento."
 
 #. (itstool) path: page/p
 #: ../help/C/tracking.page:53
 msgid "You can also enable and disable the tracker by pressing <key>T</key>."
 msgstr ""
+"È anche possibile abilitare e disabilitare il tracciamento premendo "
+"<tasto>T</tasto>."
 
 #. (itstool) path: info/desc
 #: ../help/C/transparency.page:25
 msgid "Adjust the transparency for measuring objects behind the ruler."
-msgstr ""
+msgstr "Regola la trasparenza per misurare gli oggetti dietro il righello."
 
 #. (itstool) path: page/title
 #: ../help/C/transparency.page:28
 msgid "Adjusting Transparency"
-msgstr ""
+msgstr "Regolazione della trasparenza"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -562,36 +676,47 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/transparency.png' md5='cb5ac8fe605f9084d4cc99cc77987a3e'"
 msgstr ""
+"riferimento esterno='figures/transparency.png' "
+"md5='cb5ac8fe605f9084d4cc99cc77987a3e'"
 
 #. (itstool) path: media/p
 #: ../help/C/transparency.page:31
 msgid "Making the ruler semitransparent"
-msgstr ""
+msgstr "Rendere il righello semitrasparente"
 
 #. (itstool) path: page/p
 #: ../help/C/transparency.page:34
 msgid "To help you measure objects behind the ruler, you can adjust the ruler's opacity. By making the ruler semitransparent, you can see the objects behind the ruler."
 msgstr ""
+"Per aiutarti a misurare gli oggetti dietro il righello, puoi regolarne "
+"l'opacità. Rendendo il righello semitrasparente, puoi vedere gli oggetti "
+"dietro di esso."
 
 #. (itstool) path: item/p
 #: ../help/C/transparency.page:43
 msgid "Adjust the opacity percentage. A 100% opacity means that the ruler is not transparent at all, and it masks the objects behind it."
 msgstr ""
+"Regola la percentuale di opacità. Un'opacità del 100% significa che il "
+"righello non è affatto trasparente e maschera gli oggetti dietro di esso."
 
 #. (itstool) path: page/p
 #: ../help/C/transparency.page:50
 msgid "Alternatively, you can adjust the opacity by using the arrow keys: <key>Left</key> or <key>Down</key> to reduce the opacity and render the ruler semitransparent, and <key>Right</key> or <key>Up</key> to increase the opacity."
 msgstr ""
+"In alternativa, puoi regolare l'opacità utilizzando i tasti freccia: "
+"<key>Sinistra</key> o <key>Giù</key> per ridurre l'opacità e rendere il "
+"righello semitrasparente, e <key>Destra</key> o <key>Su</key> per aumentare "
+"l'opacità."
 
 #. (itstool) path: info/desc
 #: ../help/C/units.page:26
 msgid "Change the unit of the ruler markings."
-msgstr ""
+msgstr "Cambia l'unità di misura dei segni sul righello."
 
 #. (itstool) path: page/title
 #: ../help/C/units.page:29
 msgid "Selecting Units"
-msgstr ""
+msgstr "Selezione delle unità"
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -602,73 +727,86 @@ msgstr ""
 msgctxt "_"
 msgid "external ref='figures/units.png' md5='6da6944cf19c5fd55115fb0b952bdd97'"
 msgstr ""
+"riferimento esterno='figures/units.png' "
+"md5='6da6944cf19c5fd55115fb0b952bdd97'"
 
 #. (itstool) path: media/p
 #: ../help/C/units.page:32
 msgid "Changing the ruler's unit"
-msgstr ""
+msgstr "Modifica dell'unità di misura del righello"
 
 #. (itstool) path: page/p
 #: ../help/C/units.page:35
 msgid "<app>Length</app> comes with several units that you can select from the <gui>Preferences</gui> dialog."
 msgstr ""
+"<app>Length</app> è dotato di diverse unità che puoi selezionare dalla "
+"finestra di dialogo <gui>Preferenze</gui>."
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:42
 msgid "In the <gui style=\"tab\">General</gui> page, in the <gui style=\"group\">Scale</gui> section, select the ruler's unit."
 msgstr ""
+"Nella pagina <gui style=\"tab\">Generale</gui>, nella sezione <gui style="
+"\"group\">Scala</gui>, seleziona l'unità di misura del righello."
 
 #. (itstool) path: page/p
 #: ../help/C/units.page:47
 msgid "Alternatively, use the number keys to switch between units:"
 msgstr ""
+"In alternativa, utilizzare i tasti numerici per passare da un'unità "
+"all'altra:"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:49
 msgid "<key>1</key> for pixels"
-msgstr ""
+msgstr "<key>1</key> per i pixel"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:50
 msgid "<key>2</key> for centimeters"
-msgstr ""
+msgstr "<key>2</key> per centimetri"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:51
 msgid "<key>3</key> for inches"
-msgstr ""
+msgstr "<key>3</key> per pollici"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:52
 msgid "<key>4</key> for picas (1/6 of an inch)"
-msgstr ""
+msgstr "<key>4</key> per pica (1/6 di pollice)"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:53
 msgid "<key>5</key> for points (1/72 of an inch)"
-msgstr ""
+msgstr "<key>5</key> per punti (1/72 di pollice)"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:54
 msgid "<key>6</key> for percentage of the display size"
-msgstr ""
+msgstr "<key>6</key> per la percentuale della dimensione dello schermo"
 
 #. (itstool) path: item/p
 #: ../help/C/units.page:55
 msgid "<key>7</key> for percentage of the ruler size"
-msgstr ""
+msgstr "<key>7</key> per la percentuale della dimensione del righello"
 
 #. (itstool) path: note/title
 #: ../help/C/units.page:59
 msgid "Calibrating <app>Length</app>"
-msgstr ""
+msgstr "Calibrazione di <app>Length</app>"
 
 #. (itstool) path: note/p
 #: ../help/C/units.page:63
 msgid "In some environments, <app>Length</app> retrieves this information from the system. Other environments do not provide that size. In that case, you must calibrate <app>Length</app> for you display."
 msgstr ""
+"In alcuni ambienti, <app>Length</app> recupera queste informazioni dal "
+"sistema. Altri ambienti non forniscono questa dimensione. In tal caso, è "
+"necessario calibrare <app>Length</app> per il monitor."
 
 #. (itstool) path: note/p
 #: ../help/C/units.page:68
 msgid "See <link xref=\"calibrating\"/> for more information about configuring <app>Length</app> for the size of your display."
 msgstr ""
+"Per maggiori informazioni sulla configurazione di <app>Length</app> per le "
+"dimensioni del monitor, vedere <link xref=\"calibrating\"/>."
