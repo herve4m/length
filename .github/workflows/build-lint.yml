@@ -24,7 +24,7 @@ jobs:
           flatpak remote-add --user --if-not-exists gnome-nightly \
             https://nightly.gnome.org/gnome-nightly.flatpakrepo
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Build the flatpak package
         run: |
