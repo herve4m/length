@@ -1,6 +1,6 @@
 # orientation.py
 #
-# Copyright 2025 Hervé Quatremain
+# Copyright 2025, 2026 Hervé Quatremain
 #
 # This file is part of Length.
 #
@@ -42,6 +42,7 @@ class OrientationControl(Gtk.Box):
         w, h = self.application_window.get_default_size()
         self.h_toggle.set_active(w > h)
         self.v_toggle.set_active(w <= h)
+        self._set_class(w, h)
 
     def rotate(self, w: int = 0, h: int = 0) -> None:
         if w == 0 or h == 0:
@@ -55,6 +56,7 @@ class OrientationControl(Gtk.Box):
         self.application_window.maximize()
         self.application_window.unmaximize()
         self.application_window.present()
+        self._set_class(h, w)
 
         if (
             self.application_window.context.track_pointer
@@ -67,6 +69,15 @@ class OrientationControl(Gtk.Box):
                 self.application_window.context.track_pos_y,
                 self.application_window.context.track_pos_x,
             )
+
+    def _set_class(self, w: int, h: int):
+        """Add the horizontal or vertical CSS class to the application window."""
+        if w > h:
+            self.application_window.remove_css_class("vertical")
+            self.application_window.add_css_class("horizontal")
+        else:
+            self.application_window.remove_css_class("horizontal")
+            self.application_window.add_css_class("vertical")
 
     @Gtk.Template.Callback()
     def _orientation_toggled(self, toggle) -> None:

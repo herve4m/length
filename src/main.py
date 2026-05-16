@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2025 Hervé Quatremain
+# Copyright 2025, 2026 Hervé Quatremain
 #
 # This file is part of Length.
 #
@@ -83,13 +83,11 @@ class LengthApplication(Adw.Application):
         options = options.end().unpack()
 
         if "version" in options:
-            print(
-                f"""Length {self.version}
-Copyright (C) 2025 Hervé Quatremain
+            print(f"""Length {self.version}
+Copyright (C) 2025, 2026 Hervé Quatremain
 License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law."""
-            )
+There is NO WARRANTY, to the extent permitted by law.""")
             return 0
         if "debug" in options:
             logging.basicConfig(level=logging.DEBUG)
@@ -143,7 +141,7 @@ There is NO WARRANTY, to the extent permitted by law."""
                 developer_name="Hervé Quatremain",
                 version=self.version,
                 developers=["Hervé Quatremain"],
-                copyright="© 2025 Hervé Quatremain",
+                copyright="© 2025, 2026 Hervé Quatremain",
                 issue_url="https://github.com/herve4m/length/issues",
                 license_type=Gtk.License.GPL_3_0,
                 website="https://github.com/herve4m/length",

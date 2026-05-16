@@ -67,6 +67,12 @@
   </screenshots>
 
   <releases>
+    <release version="0.10.2" date="2026-05-16">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0102</url>
+      <description translate="no">
+        <p>Add the vertical or horizontal CSS class to the application window</p>
+      </description>
+    </release>
     <release version="0.10.1" date="2025-09-29">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0101</url>
       <description translate="no">
