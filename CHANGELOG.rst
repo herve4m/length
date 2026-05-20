@@ -4,6 +4,16 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.10.2
+======
+
+Bugfixes
+--------
+
+- Add the vertical or horizontal CSS class to the application window [`#59`_].
+
+.. _#59: https://github.com/herve4m/length/issues/59
+
 v0.10.1
 ======
 
