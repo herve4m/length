@@ -8,478 +8,484 @@ msgstr ""
 "Project-Id-Version: length\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-13 17:16+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-06-03 15:01+0000\n"
+"Last-Translator: Türkçe Çevirmen <tr@li.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/length/length/"
+"tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
 
 #: data/io.github.herve4m.Length.desktop.in.in:2
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:7
 msgid "Length"
-msgstr ""
+msgstr "Length"
 
 #: data/io.github.herve4m.Length.desktop.in.in:3
 msgid "Screen ruler"
-msgstr ""
+msgstr "Ekran cetveli"
 
 #: data/io.github.herve4m.Length.desktop.in.in:4
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:8
 msgid "Measure objects on screen"
-msgstr ""
+msgstr "Ekrandaki nesneleri ölç"
 
 #: data/io.github.herve4m.Length.desktop.in.in:10
 msgid "GTK;GNOME;ruler;measure;"
-msgstr ""
+msgstr "GTK;GNOME;cetvel;ölç;"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:10
 msgid ""
 "GNOME application for measuring distances on screen to help you design and "
 "inspect layouts and graphics. Length includes the following features:"
 msgstr ""
+"Ekrandaki mesafeleri ölçerek düzen ve grafik tasarlamanıza ve incelemenize "
+"yardımcı olan GNOME uygulaması. Length şu özellikleri içerir:"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:15
 msgid "Pixels, centimeters, inches, picas, points, or percentages as units"
-msgstr ""
+msgstr "Birim olarak piksel, santimetre, inç, pika, nokta veya yüzde"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:16
 msgid "Horizontal or vertical orientation"
-msgstr ""
+msgstr "Yatay veya dikey yönlendirme"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:17
 msgid "Left-to-right or right-to-left orientation"
-msgstr ""
+msgstr "Soldan sağa veya sağdan sola yönlendirme"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:18
 msgid "Transparency levels"
-msgstr ""
+msgstr "Saydamlık seviyeleri"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:19
 msgid "Track pointer position"
-msgstr ""
+msgstr "İmleç konumunu izle"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:45
 msgid "Horizontal view of Length with pixels as units"
-msgstr ""
+msgstr "Birim olarak piksel ile Length yatay görünümü"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:49
 msgid "Vertical view of Length with inches as units"
-msgstr ""
+msgstr "Birim olarak inç ile Length dikey görünümü"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:53
 msgid "Length main menu"
-msgstr ""
+msgstr "Length ana menüsü"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:57
 msgid "Preferences window"
-msgstr ""
+msgstr "Tercihler penceresi"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:61
 msgid "Pointer tracking enabled"
-msgstr ""
+msgstr "İmleç izleme etkin"
 
 #: data/io.github.herve4m.Length.metainfo.xml.in.in:65
 msgid "Right to left ruler orientation"
-msgstr ""
+msgstr "Sağdan sola cetvel yönlendirmesi"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:26
 msgid "Ruler Opacity"
-msgstr ""
+msgstr "Cetvel Saydamlığı"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:27
 msgid "Opacity percentage of the Length interface"
-msgstr ""
+msgstr "Length arayüzünün saydamlık yüzdesi"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:32
 msgid "Track the pointer"
-msgstr ""
+msgstr "İmleci izle"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:33
 msgid "Display the pointer position in the ruler."
-msgstr ""
+msgstr "Cetvelde imleç konumunu görüntüle."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:38
 msgid "Origin of the Ruler"
-msgstr ""
+msgstr "Cetvelin Başlangıç Noktası"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:39
 msgid "Point of origin in ruler units."
-msgstr ""
+msgstr "Cetvel birimlerinde başlangıç noktası."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:44
 msgid "Scale factor"
-msgstr ""
+msgstr "Ölçek faktörü"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:45
 msgid "Reduce or enlarge the scale of the units."
-msgstr ""
+msgstr "Birimlerin ölçeğini küçült veya büyüt."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:50
 msgid "Monitor Calibration Parameters"
-msgstr ""
+msgstr "Monitör Kalibrasyon Parametreleri"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:51
 msgid ""
 "For each monitor, specify whether to let the ruler retrieve the monitor size "
 "from the system, or use the provided monitor size for the computations."
 msgstr ""
+"Her monitör için, cetvelin monitör boyutunu sistemden almasını mı yoksa "
+"hesaplamalar için sağlanan monitör boyutunu kullanmasını mı belirtin."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:67
 msgid "Ruler Unit"
-msgstr ""
+msgstr "Cetvel Birimi"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:68
 msgid "Unit to use for the ruler"
-msgstr ""
+msgstr "Cetvel için kullanılacak birim"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:73
 msgid "Direction from Left to Right"
-msgstr ""
+msgstr "Soldan Sağa Yön"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:74
 msgid ""
 "Display the scale from left to right when TRUE, else from right to left."
-msgstr ""
+msgstr "DOĞRU olduğunda ölçeği soldan sağa, aksi durumda sağdan sola görüntüle."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:81
 msgid "Show the Ruler Markings"
-msgstr ""
+msgstr "Cetvel İşaretlerini Göster"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:82
 msgid "Display the ticks on the ruler."
-msgstr ""
+msgstr "Cetvel üzerindeki çentikleri göster."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:87
 msgid "Show the Grid"
-msgstr ""
+msgstr "Izgarayı Göster"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:88
 msgid "Display a grid when the ruler is expanded."
-msgstr ""
+msgstr "Cetvel genişletildiğinde bir ızgara göster."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:93
 msgid "Show Dialogals"
-msgstr ""
+msgstr "Köşegenleri Göster"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:94
 msgid "Display the diagonal rulers."
-msgstr ""
+msgstr "Köşegen cetvellerini göster."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:99
 msgid "Show Angles"
-msgstr ""
+msgstr "Açıları Göster"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:100
 msgid "Display the diagonal angles."
-msgstr ""
+msgstr "Köşegen açılarını göster."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:105
 msgid "Use default font"
-msgstr ""
+msgstr "Varsayılan yazı tipini kullan"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:106
 msgid "Whether to use the default font"
-msgstr ""
+msgstr "Varsayılan yazı tipinin kullanılıp kullanılmayacağı"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:111
 msgid "Font Name"
-msgstr ""
+msgstr "Yazı Tipi Adı"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:112
 msgid "The font to use when \"use-default-font\" is FALSE."
-msgstr ""
+msgstr "\"use-default-font\" YANLIŞ olduğunda kullanılacak yazı tipi."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:119
 msgid "Window Size"
-msgstr ""
+msgstr "Pencere Boyutu"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:120
 msgid "Window size (width and height) of the last closed window."
-msgstr ""
+msgstr "Son kapatılan pencerenin boyutu (genişlik ve yükseklik)."
 
 #: data/io.github.herve4m.Length.gschema.xml.in:127
 msgid "Use default color scheme"
-msgstr ""
+msgstr "Varsayılan renk şemasını kullan"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:128
 msgid "Whether to use the default color scheme"
-msgstr ""
+msgstr "Varsayılan renk şemasının kullanılıp kullanılmayacağı"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:133
 msgid "Foreground Color"
-msgstr ""
+msgstr "Ön Plan Rengi"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:134
 msgid "Color (red, green, blue, alpha) for the ruler ticks and the labels"
-msgstr ""
+msgstr "Cetvel çentikleri ve etiketleri için renk (kırmızı, yeşil, mavi, alfa)"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:141
 msgid "Background Color"
-msgstr ""
+msgstr "Arka Plan Rengi"
 
 #: data/io.github.herve4m.Length.gschema.xml.in:142
 msgid "Color (red, green, blue, alpha) for the ruler background"
-msgstr ""
+msgstr "Cetvel arka planı için renk (kırmızı, yeşil, mavi, alfa)"
 
 #: data/ui/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: data/ui/help-overlay.ui:33
 msgctxt "shortcut window"
 msgid "Help"
-msgstr ""
+msgstr "Yardım"
 
 #: data/ui/help-overlay.ui:39
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Kısayolları Göster"
 
 #: data/ui/help-overlay.ui:46
 msgctxt "shortcut window"
 msgid "Preferences Dialog"
-msgstr ""
+msgstr "Tercihler Penceresi"
 
 #: data/ui/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Çık"
 
 #: data/ui/help-overlay.ui:63
 msgctxt "shortcut window"
 msgid "Layers"
-msgstr ""
+msgstr "Katmanlar"
 
 #: data/ui/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Show/Hide Markings"
-msgstr ""
+msgstr "İşaretleri Göster/Gizle"
 
 #: data/ui/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Show/Hide Grid"
-msgstr ""
+msgstr "Izgarayı Göster/Gizle"
 
 #: data/ui/help-overlay.ui:78
 msgctxt "shortcut window"
 msgid "Show/Hide Diagonals"
-msgstr ""
+msgstr "Köşegenleri Göster/Gizle"
 
 #: data/ui/help-overlay.ui:84
 msgctxt "shortcut window"
 msgid "Show/Hide Angles"
-msgstr ""
+msgstr "Açıları Göster/Gizle"
 
 #: data/ui/help-overlay.ui:90
 msgctxt "shortcut window"
 msgid "Left-to-right/Right-to-left"
-msgstr ""
+msgstr "Soldan sağa/Sağdan sola"
 
 #: data/ui/help-overlay.ui:99
 msgctxt "shortcut window"
 msgid "Opacity"
-msgstr ""
+msgstr "Saydamlık"
 
 #: data/ui/help-overlay.ui:102
 msgctxt "shortcut window"
 msgid "Increase Opacity"
-msgstr ""
+msgstr "Saydamlığı Artır"
 
 #: data/ui/help-overlay.ui:108
 msgctxt "shortcut window"
 msgid "Decrease Opacity"
-msgstr ""
+msgstr "Saydamlığı Azalt"
 
 #: data/ui/help-overlay.ui:117
 msgctxt "shortcut window"
 msgid "Pointer Tracking"
-msgstr ""
+msgstr "İmleç İzleme"
 
 #: data/ui/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Activate/Deactivate"
-msgstr ""
+msgstr "Etkinleştir/Devre Dışı Bırak"
 
 #: data/ui/help-overlay.ui:126
 msgctxt "shortcut window"
 msgid "Lock/Unlock Position"
-msgstr ""
+msgstr "Konumu Kilitle/Kilidi Aç"
 
 #: data/ui/help-overlay.ui:135
 msgctxt "shortcut window"
 msgid "Units"
-msgstr ""
+msgstr "Birimler"
 
 #: data/ui/help-overlay.ui:138
 msgctxt "shortcut window"
 msgid "Pixels"
-msgstr ""
+msgstr "Pikseller"
 
 #: data/ui/help-overlay.ui:144
 msgctxt "shortcut window"
 msgid "Centimeters"
-msgstr ""
+msgstr "Santimetre"
 
 #: data/ui/help-overlay.ui:150
 msgctxt "shortcut window"
 msgid "Inches"
-msgstr ""
+msgstr "İnç"
 
 #: data/ui/help-overlay.ui:156
 msgctxt "shortcut window"
 msgid "Picas"
-msgstr ""
+msgstr "Pika"
 
 #: data/ui/help-overlay.ui:162
 msgctxt "shortcut window"
 msgid "Points"
-msgstr ""
+msgstr "Nokta"
 
 #: data/ui/help-overlay.ui:168
 msgctxt "shortcut window"
 msgid "Percentages"
-msgstr ""
+msgstr "Yüzdeler"
 
 #: data/ui/help-overlay.ui:174
 msgctxt "shortcut window"
 msgid "Relative Percentages"
-msgstr ""
+msgstr "Göreceli Yüzdeler"
 
 #: data/ui/offset.ui:30
 msgid "_Offset"
-msgstr ""
+msgstr "Konum _Farkı"
 
 #: data/ui/opacity.ui:30 data/ui/opacity.ui:48
 msgid "Opacity"
-msgstr ""
+msgstr "Saydamlık"
 
 #: data/ui/orientation.ui:30
 msgid "O_rientation"
-msgstr ""
+msgstr "_Yönlendirme"
 
 #: data/ui/orientation.ui:46
 msgid "Horizontal"
-msgstr ""
+msgstr "Yatay"
 
 #: data/ui/orientation.ui:53
 msgid "Vertical"
-msgstr ""
+msgstr "Dikey"
 
 #: data/ui/pointer_tracking.ui:30
 msgid "_Track Pointer"
-msgstr ""
+msgstr "_İmleci İzle"
 
 #: data/ui/preferences_display.ui:27
 msgid "Compute Monitor Size"
-msgstr ""
+msgstr "Monitör Boyutunu Hesapla"
 
 #: data/ui/preferences_display.ui:34
 msgid "Custom Monitor Size in Inches"
-msgstr ""
+msgstr "Özel Monitör Boyutu (inç)"
 
 #: data/ui/preferences.ui:27
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: data/ui/preferences.ui:31
 msgid "Scale"
-msgstr ""
+msgstr "Ölçek"
 
 #: data/ui/preferences.ui:35
 msgid "_Units"
-msgstr ""
+msgstr "_Birimler"
 
 #: data/ui/preferences.ui:49
 msgid "_Direction"
-msgstr ""
+msgstr "_Yön"
 
 #: data/ui/preferences.ui:81
 msgid "Layers"
-msgstr ""
+msgstr "Katmanlar"
 
 #: data/ui/preferences.ui:85
 msgid "Ruler _Markings"
-msgstr ""
+msgstr "Cetvel _İşaretleri"
 
 #: data/ui/preferences.ui:93
 msgid "_Grid"
-msgstr ""
+msgstr "_Izgara"
 
 #: data/ui/preferences.ui:102
 msgid "D_iagonals"
-msgstr ""
+msgstr "K_öşegenler"
 
 #: data/ui/preferences.ui:110
 msgid "_Angles"
-msgstr ""
+msgstr "_Açılar"
 
 #: data/ui/preferences.ui:120
 msgid "Appearance"
-msgstr ""
+msgstr "Görünüm"
 
 #: data/ui/preferences.ui:124
 msgid "Use Default _Colors"
-msgstr ""
+msgstr "Varsayılan _Renkleri Kullan"
 
 #: data/ui/preferences.ui:136
 msgid "Foreground"
-msgstr ""
+msgstr "Ön Plan"
 
 #: data/ui/preferences.ui:151
 msgid "Background"
-msgstr ""
+msgstr "Arka Plan"
 
 #: data/ui/preferences.ui:169
 msgid "Use Default _Font"
-msgstr ""
+msgstr "Varsayılan _Yazı Tipini Kullan"
 
 #: data/ui/preferences.ui:183
 msgid "Custom Font"
-msgstr ""
+msgstr "Özel Yazı Tipi"
 
 #: data/ui/preferences.ui:212
 msgid "Calibrating"
-msgstr ""
+msgstr "Kalibrasyon"
 
 #: data/ui/preferences.ui:216
 msgid "Displays"
-msgstr ""
+msgstr "Ekranlar"
 
 #: data/ui/scale.ui:30
 msgid "_Scale"
-msgstr ""
+msgstr "_Ölçek"
 
 #: data/ui/window.ui:59
 msgid "Main Menu"
-msgstr ""
+msgstr "Ana Menü"
 
 #: data/ui/window.ui:109
 msgid "_Preferences"
-msgstr ""
+msgstr "_Tercihler"
 
 #: data/ui/window.ui:113
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klavye Kısayolları"
 
 #: data/ui/window.ui:117
 msgid "_Help"
-msgstr ""
+msgstr "_Yardım"
 
 #: data/ui/window.ui:121
 msgid "_About Length"
-msgstr ""
+msgstr "Length _Hakkında"
 
 #: data/ui/window.ui:127
 msgid "_Quit"
-msgstr ""
+msgstr "_Çık"
 
 #: src/draw_context.py:145
 msgid "Monitor Size Unknown"
-msgstr ""
+msgstr "Monitör Boyutu Bilinmiyor"
 
 #: src/draw_context.py:148
 #, python-brace-format
@@ -488,77 +494,81 @@ msgid ""
 "Use the Preferences dialog to calibrate Length for your monitor size.\n"
 "In the meantime, computations are done for a {diag_inch} inches monitor."
 msgstr ""
+"{monitor_name} monitörünün boyutu belirlenemiyor.\n"
+"Monitör boyutunuza göre Length'i kalibre etmek için Tercihler penceresini "
+"kullanın.\n"
+"Bu süre içinde hesaplamalar {diag_inch} inçlik bir monitör için yapılır."
 
 #: src/draw_context.py:158
 msgid "OK"
-msgstr ""
+msgstr "Tamam"
 
 #. Translators: Replace "translator-credits" with your name/username,
 #. and optionally an email or URL.
 #: src/main.py:153
 msgid "translator-credits"
-msgstr ""
+msgstr "Türkçe Çevirmen <usncb@yandex.com>"
 
 #: src/preferences.py:176
 msgid "Select Font"
-msgstr ""
+msgstr "Yazı Tipi Seç"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_cm.py:29
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_cm.py:31
 msgid "Centimeters"
-msgstr ""
+msgstr "Santimetre"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_inch.py:29
 msgid "inch"
-msgstr ""
+msgstr "inç"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_inch.py:31
 msgid "Inches"
-msgstr ""
+msgstr "İnç"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_pct.py:31
 msgid "Percentages"
-msgstr ""
+msgstr "Yüzdeler"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_pica.py:29
 msgid "pica"
-msgstr ""
+msgstr "pika"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_pica.py:31
 msgid "Picas"
-msgstr ""
+msgstr "Pika"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_point.py:29
 msgid "pt"
-msgstr ""
+msgstr "pt"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_point.py:31
 msgid "Points"
-msgstr ""
+msgstr "Nokta"
 
 #. Short name that is used to display the unit on the ruler
 #: src/unit_px.py:29
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_px.py:31
 msgid "Pixels"
-msgstr ""
+msgstr "Piksel"
 
 #. Human readable unit name that is used in the Preferences dialog
 #: src/unit_rel_pct.py:31
 msgid "Relative Percentages"
-msgstr ""
+msgstr "Göreceli Yüzdeler"
