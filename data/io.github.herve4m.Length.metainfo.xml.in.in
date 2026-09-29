@@ -67,6 +67,12 @@
   </screenshots>
 
   <releases>
+    <release version="0.11.0" date="2026-09-29">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0110</url>
+      <description translate="no">
+        <p>When the pointer is locked, display the delta between the locked position and the current pointer position</p>
+      </description>
+    </release>
     <release version="0.10.2" date="2026-05-16">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0102</url>
       <description translate="no">

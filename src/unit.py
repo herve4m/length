@@ -116,6 +116,47 @@ class Unit:
         )
         self.context.ctx.stroke()
 
+        if self.context.track_locked:
+            curr_x = self.context.pointer_x
+            if 0 < curr_x < self.context.width:
+                if self.context.left2right:
+                    unit_curr_x = curr_x / px_per_unit + self.context.offset
+                else:
+                    unit_curr_x = (
+                        self.context.width - curr_x
+                    ) / px_per_unit + self.context.offset
+                delta = unit_curr_x - unit_x
+                if px_per_unit == 1:
+                    delta_label = f"{round(delta):+d}"
+                    delta_label_max = f"+{round(max_x)} "
+                else:
+                    delta_label = f"{delta:+.2f}"
+                    delta_label_max = f"+{max_x:.2f} "
+
+                extends_delta_bg = ctx_text.get_extents(delta_label_max)
+
+                self.context.ctx.set_source_rgba(*(self.context.color_track))
+                self.context.ctx.move_to(curr_x, 0)
+                self.context.ctx.line_to(curr_x, self.context.height)
+                self.context.ctx.stroke()
+
+                self.context.ctx.rectangle(
+                    curr_x - extends_delta_bg.width / 2,
+                    self.context.height / 2 - extends_delta_bg.height / 2,
+                    extends_delta_bg.width,
+                    extends_delta_bg.height,
+                )
+                self.context.ctx.fill()
+
+                extends_delta = ctx_text.get_extents(delta_label)
+                self.context.ctx.set_source_rgba(*(self.context.color_bg))
+                ctx_text.draw_text(
+                    curr_x - extends_delta.width / 2,
+                    self.context.height / 2 - extends_delta.height / 2,
+                    delta_label,
+                )
+                self.context.ctx.stroke()
+
     def _draw_track_vertical(self, min_size: int):
         """Draw the pointer tracking vertical line.
 
@@ -189,6 +230,47 @@ class Unit:
             self.context.width / 2 - extends.width / 2, y - extends.height / 2, label
         )
         self.context.ctx.stroke()
+
+        if self.context.track_locked:
+            curr_y = self.context.pointer_y
+            if 0 < curr_y < self.context.height:
+                if self.context.left2right:
+                    unit_curr_y = curr_y / px_per_unit + self.context.offset
+                else:
+                    unit_curr_y = (
+                        self.context.height - curr_y
+                    ) / px_per_unit + self.context.offset
+                delta = unit_curr_y - unit_y
+                if px_per_unit == 1:
+                    delta_label = f"{round(delta):+d}"
+                    delta_label_max = f"+{round(max_y)} "
+                else:
+                    delta_label = f"{delta:+.2f}"
+                    delta_label_max = f"+{max_y:.2f} "
+
+                extends_delta_bg = ctx_text.get_extents(delta_label_max)
+
+                self.context.ctx.set_source_rgba(*(self.context.color_track))
+                self.context.ctx.move_to(0, curr_y)
+                self.context.ctx.line_to(self.context.width, curr_y)
+                self.context.ctx.stroke()
+
+                self.context.ctx.rectangle(
+                    self.context.width / 2 - extends_delta_bg.width / 2,
+                    curr_y - extends_delta_bg.height / 2,
+                    extends_delta_bg.width,
+                    extends_delta_bg.height,
+                )
+                self.context.ctx.fill()
+
+                extends_delta = ctx_text.get_extents(delta_label)
+                self.context.ctx.set_source_rgba(*(self.context.color_bg))
+                ctx_text.draw_text(
+                    self.context.width / 2 - extends_delta.width / 2,
+                    curr_y - extends_delta.height / 2,
+                    delta_label,
+                )
+                self.context.ctx.stroke()
 
     def _draw_horizontal(
         self,

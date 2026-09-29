@@ -4,6 +4,16 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.11.0
+======
+
+Minor Changes
+-------------
+
+- When the pointer is locked, display the delta between the locked position and the current pointer position [`#65`_].
+
+.. _#65: https://github.com/herve4m/length/issues/65
+
 v0.10.2
 ======
 
