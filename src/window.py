@@ -248,12 +248,12 @@ class LengthWindow(Adw.ApplicationWindow):
     def _on_motion_event(self, event_controller_key, x: float, y: float) -> None:
         self.context.pointer_x = x
         self.context.pointer_y = y
-        if self.context.track_pointer and not self.context.track_locked:
+        if self.context.track_pointer:
             self.drawing_area.queue_draw()
 
     @Gtk.Template.Callback()
     def _on_leave_event(self, event_controller_key) -> None:
-        if self.context.track_pointer and not self.context.track_locked:
+        if self.context.track_pointer:
             self.context.pointer_x = self.context.pointer_y = 0.0
             self.drawing_area.queue_draw()
 
