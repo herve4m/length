@@ -281,6 +281,11 @@ class Unit:
         if not self.context.track_locked:
             return
 
+        if self.context.width < self.MIN_LENGTH or self.context.width <= min_size:
+            return
+        if self.context.height < self.MIN_LENGTH or self.context.height <= min_size:
+            return
+
         curr_x = self.context.pointer_x
         curr_y = self.context.pointer_y
         if not (0 < curr_x < self.context.width and 0 < curr_y < self.context.height):
@@ -323,7 +328,7 @@ class Unit:
         mid_x = (lock_x + curr_x) / 2
         mid_y = (lock_y + curr_y) / 2
 
-        self.context.ctx.set_source_rgba(*(self.context.color_fg))
+        self.context.ctx.set_source_rgba(*(self.context.color_track))
         self.context.ctx.rectangle(
             mid_x - extends_bg.width / 2,
             mid_y - extends_bg.height / 2,
