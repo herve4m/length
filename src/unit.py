@@ -272,6 +272,75 @@ class Unit:
                 )
                 self.context.ctx.stroke()
 
+    def _draw_track_diagonal(self, min_size: int) -> None:
+        """Draw the diagonal distance line between the locked and current positions.
+
+        :param min_size: The minimum window size under which the line is not drawn.
+        :type min_size: int
+        """
+        if not self.context.track_locked:
+            return
+
+        curr_x = self.context.pointer_x
+        curr_y = self.context.pointer_y
+        if not (0 < curr_x < self.context.width and 0 < curr_y < self.context.height):
+            return
+
+        lock_x = self.context.track_pos_x
+        lock_y = self.context.track_pos_y
+
+        px_per_unit_w = self.px_per_tick_width * self.unit_multiplier
+        px_per_unit_h = self.px_per_tick_height * self.unit_multiplier
+        if self.scalable and self.context.scale != 1.0:
+            px_per_unit_w *= self.context.scale
+            px_per_unit_h *= self.context.scale
+
+        delta_x = (curr_x - lock_x) / px_per_unit_w
+        delta_y = (curr_y - lock_y) / px_per_unit_h
+        distance = math.sqrt(delta_x**2 + delta_y**2)
+
+        max_dist = math.sqrt(
+            (self.context.width / px_per_unit_w) ** 2
+            + (self.context.height / px_per_unit_h) ** 2
+        )
+        if px_per_unit_w == 1 and px_per_unit_h == 1:
+            label = str(round(distance))
+            label_max = str(round(max_dist)) + " "
+        else:
+            label = f"{distance:.2f}"
+            label_max = f"{max_dist:.2f} "
+
+        ctx_text = CtxText(self.context.ctx, self.context.font_desc_small)
+        extends_bg = ctx_text.get_extents(label_max)
+
+        self.context.ctx.set_source_rgba(*(self.context.color_track))
+        self.context.ctx.set_line_width(2)
+        self.context.ctx.move_to(lock_x, lock_y)
+        self.context.ctx.line_to(curr_x, curr_y)
+        self.context.ctx.stroke()
+        self.context.ctx.set_line_width(1)
+
+        mid_x = (lock_x + curr_x) / 2
+        mid_y = (lock_y + curr_y) / 2
+
+        self.context.ctx.set_source_rgba(*(self.context.color_fg))
+        self.context.ctx.rectangle(
+            mid_x - extends_bg.width / 2,
+            mid_y - extends_bg.height / 2,
+            extends_bg.width,
+            extends_bg.height,
+        )
+        self.context.ctx.fill()
+
+        extends = ctx_text.get_extents(label)
+        self.context.ctx.set_source_rgba(*(self.context.color_bg))
+        ctx_text.draw_text(
+            mid_x - extends.width / 2,
+            mid_y - extends.height / 2,
+            label,
+        )
+        self.context.ctx.stroke()
+
     def _draw_horizontal(
         self,
         ctx_text,
@@ -826,6 +895,7 @@ class Unit:
             self._draw_angles(ctx_text, min_size)
 
         if self.context.track_pointer:
+            self._draw_track_diagonal(min_size)
             self._draw_track_horizontal(min_size)
             self._draw_track_vertical(min_size)
 
