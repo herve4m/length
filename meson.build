@@ -9,10 +9,8 @@ gnome = import('gnome')
 
 if get_option('development')
   application_id = 'io.github.herve4m.Length.Devel'
-  application_schema_path = '/io/github/herve4m/Length/Devel/'
 else
   application_id = 'io.github.herve4m.Length'
-  application_schema_path = '/io/github/herve4m/Length/'
 endif
 
 subdir('data')

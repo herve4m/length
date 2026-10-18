@@ -1,6 +1,6 @@
 # settings.py
 #
-# Copyright 2025 Hervé Quatremain
+# Copyright 2025, 2026 Hervé Quatremain
 #
 # This file is part of Length.
 #
@@ -27,7 +27,10 @@ class Settings(Gio.Settings):
         super().__init__()
 
     @classmethod
-    def new(cls, application_id: str):
-        settings = Gio.Settings.new(application_id)
+    def new(cls, schema_id: str, path: str):
+        # The schema is relocatable (it does not declare a fixed path), so the
+        # storage path must be provided at run time. This is what allows each
+        # instance to keep its settings separate.
+        settings = Gio.Settings.new_with_path(schema_id, path)
         settings.__class__ = Settings
         return settings

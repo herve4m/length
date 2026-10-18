@@ -35,13 +35,37 @@ from .preferences import PreferencesDialog
 class LengthApplication(Adw.Application):
     """The main application singleton class."""
 
-    def __init__(self, version: str, application_id: str) -> None:
-        """Initialize the object."""
-        super().__init__(
-            application_id=application_id, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
-        )
+    def __init__(self, version: str, application_id: str, instance_id: int = None) -> None:
+        """Initialize the object.
+
+        :param version: The application version.
+        :param application_id: The base application ID, which is also the
+                               GSettings schema ID.
+        :param instance_id: When set, run as an independent instance that keeps
+                            its settings separate from the other instances. The
+                            default instance (``None``) keeps the regular
+                            single-instance behavior.
+        """
+        flags = Gio.ApplicationFlags.HANDLES_COMMAND_LINE
+        # Independent instances must be allowed to coexist as separate
+        # processes instead of forwarding to the already-running one. Keeping
+        # the base application ID (rather than a per-instance ID) ensures the
+        # windows still match the installed desktop file and icon.
+        if instance_id is not None:
+            flags |= Gio.ApplicationFlags.NON_UNIQUE
+        super().__init__(application_id=application_id, flags=flags)
 
         self.set_resource_base_path("/io/github/herve4m/Length")
+
+        # The schema is relocatable and shares the ID of the application. The
+        # storage path follows the GNOME convention (the ID with the dots
+        # replaced by slashes); independent instances use a dedicated subpath.
+        self.schema_id = application_id
+        base_path = "/" + application_id.replace(".", "/") + "/"
+        if instance_id is None:
+            self.settings_path = base_path
+        else:
+            self.settings_path = f"{base_path}instance{instance_id}/"
 
         # Command-line options
         opt = GLib.OptionEntry()
@@ -56,6 +80,19 @@ class LengthApplication(Adw.Application):
         opt.flags = GLib.OptionFlags.NONE
         opt.arg_data = None
         opt.description = "Output debug messages"
+        options.append(opt)
+
+        # The value of this option is consumed before the application is built
+        # (see the main() function). It is still registered here so that it
+        # appears in --help and is accepted by the command-line parser.
+        opt = GLib.OptionEntry()
+        opt.long_name = "instance-id"
+        opt.short_name = ord("i")
+        opt.flags = GLib.OptionFlags.NONE
+        opt.arg = GLib.OptionArg.INT
+        opt.arg_data = None
+        opt.description = "Run an independent instance with its own settings"
+        opt.arg_description = "N"
         options.append(opt)
 
         self.add_main_option_entries(options)
@@ -171,7 +208,51 @@ There is NO WARRANTY, to the extent permitted by law.""")
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
 
+def _parse_instance_id(argv):
+    """Extract the --instance-id/-i value from the command-line arguments.
+
+    The application ID uniqueness flag and the settings path depend on this
+    value, both of which must be known before the application is built and
+    registered on the bus. The normal command-line handling (do_command_line)
+    runs too late for that, so the value is read directly from ``argv`` here.
+
+    :param argv: The command-line arguments (including the program name).
+    :return: The instance number as a positive integer, or ``None`` when the
+             option is absent.
+    :raises ValueError: When the option is present but its value is not a
+                        positive integer.
+    """
+    raw = None
+    i = 1
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--instance-id" or arg == "-i":
+            raw = argv[i + 1] if i + 1 < len(argv) else ""
+            i += 2
+            continue
+        if arg.startswith("--instance-id="):
+            raw = arg.split("=", 1)[1]
+        elif arg.startswith("-i") and len(arg) > 2:
+            raw = arg[2:]
+        i += 1
+
+    if raw is None:
+        return None
+    try:
+        value = int(raw)
+    except ValueError:
+        raise ValueError(f"invalid instance ID '{raw}': expected a positive integer")
+    if value < 1:
+        raise ValueError(f"invalid instance ID '{raw}': expected a positive integer")
+    return value
+
+
 def main(version, application_id):
     """The application's entry point."""
-    app = LengthApplication(version, application_id)
+    try:
+        instance_id = _parse_instance_id(sys.argv)
+    except ValueError as e:
+        print(f"length: {e}", file=sys.stderr)
+        return 1
+    app = LengthApplication(version, application_id, instance_id)
     return app.run(sys.argv)

@@ -7,39 +7,43 @@ Length Release Notes
 v0.12.0
 =======
 
+Minor Changes
+-------------
+
+- Add support for running several independent instances of the application.
+  Use the ``--instance-id`` (``-i``) option with a positive integer to start an instance that keeps its settings separate from the other instances, for example ``length -i 1`` and ``length -i 2``.
+  Running the application without the option keeps the previous single-instance behavior [`#68`_].
+
+  Each instance stores its settings under its own path (``/io/github/herve4m/Length/instanceN/``), so changing a preference in one instance does not affect the others.
+  This is made possible by turning the GSettings schema into a relocatable schema.
+
+.. _#68: https://github.com/herve4m/length/issues/68
+
 Bugfixes
 --------
 
-- Fix the GSettings schema path, which was inverted between the production and
-  the development builds. The production application stored its settings under
-  ``/io/github/herve4m/Length/Devel/`` (the path intended for the development
-  build) instead of ``/io/github/herve4m/Length/``, and the development build
-  used the production path. As a result, the development build overwrote the
-  settings of the stable application. The schema now uses the path that matches
-  its application ID.
+- Fix the GSettings schema path, which was inverted between the production and the development builds.
+  The production application stored its settings under ``/io/github/herve4m/Length/Devel/`` (the path intended for the development build) instead of ``/io/github/herve4m/Length/``, and the development build used the production path.
+  As a result, the development build overwrote the settings of the stable application.
+  The application now derives its settings path from its application ID at run time, so the default instance uses the path that matches its ID.
 
-  Because of this fix, the production application looks for its settings at the
-  corrected path and no longer sees the values stored under the old
-  ``/Devel/`` path, so your preferences (such as the window size) appear to be
-  reset to their defaults.
+  Because of this fix, the production application looks for its settings at the corrected path and no longer sees the values stored under the old ``/Devel/`` path, so your preferences (such as the window size) appear to be reset to their defaults.
 
-  To keep your existing settings, close the application and migrate them before
-  running the new version. The command to use depends on the GSettings backend.
+  To keep your existing settings, close the application and migrate them before running the new version.
+  The command to use depends on the GSettings backend.
 
-  Most Flatpak installations use the keyfile backend. If the file
-  ``~/.var/app/io.github.herve4m.Length/config/glib-2.0/settings/keyfile``
-  exists, run::
+  Most Flatpak installations use the keyfile backend.
+  If the file ``~/.var/app/io.github.herve4m.Length/config/glib-2.0/settings/keyfile`` exists, then run::
 
     sed -i 's#^\[io/github/herve4m/Length/Devel\]$#[io/github/herve4m/Length]#' \
       ~/.var/app/io.github.herve4m.Length/config/glib-2.0/settings/keyfile
 
-  Otherwise, the settings are stored in dconf (for example, with a non-Flatpak
-  installation). In that case, run::
+  Otherwise, the settings are stored in dconf (for example, with a non-Flatpak installation).
+  In that case, run::
 
     dconf dump /io/github/herve4m/Length/Devel/ | dconf load /io/github/herve4m/Length/
 
-  After confirming that your settings have migrated, and only if you do not also
-  run the development build, you can remove the old entries::
+  After confirming that your settings have migrated, and only if you do not also run the development build, you can remove the old entries::
 
     dconf reset -f /io/github/herve4m/Length/Devel/
 
