@@ -4,6 +4,45 @@ Length Release Notes
 
 .. contents:: Topics
 
+v0.12.0
+=======
+
+Bugfixes
+--------
+
+- Fix the GSettings schema path, which was inverted between the production and
+  the development builds. The production application stored its settings under
+  ``/io/github/herve4m/Length/Devel/`` (the path intended for the development
+  build) instead of ``/io/github/herve4m/Length/``, and the development build
+  used the production path. As a result, the development build overwrote the
+  settings of the stable application. The schema now uses the path that matches
+  its application ID.
+
+  Because of this fix, the production application looks for its settings at the
+  corrected path and no longer sees the values stored under the old
+  ``/Devel/`` path, so your preferences (such as the window size) appear to be
+  reset to their defaults.
+
+  To keep your existing settings, close the application and migrate them before
+  running the new version. The command to use depends on the GSettings backend.
+
+  Most Flatpak installations use the keyfile backend. If the file
+  ``~/.var/app/io.github.herve4m.Length/config/glib-2.0/settings/keyfile``
+  exists, run::
+
+    sed -i 's#^\[io/github/herve4m/Length/Devel\]$#[io/github/herve4m/Length]#' \
+      ~/.var/app/io.github.herve4m.Length/config/glib-2.0/settings/keyfile
+
+  Otherwise, the settings are stored in dconf (for example, with a non-Flatpak
+  installation). In that case, run::
+
+    dconf dump /io/github/herve4m/Length/Devel/ | dconf load /io/github/herve4m/Length/
+
+  After confirming that your settings have migrated, and only if you do not also
+  run the development build, you can remove the old entries::
+
+    dconf reset -f /io/github/herve4m/Length/Devel/
+
 v0.11.1
 ======
 
