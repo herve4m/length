@@ -67,6 +67,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.12.0" date="2026-10-18">
+      <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0120</url>
+      <description translate="no">
+        <p>Add support for running several independent instances of the application</p>
+        <p>Fix wrong configuration path (GSettings schema path)</p>
+      </description>
+    </release>
     <release version="0.11.1" date="2026-09-30">
       <url type="details">https://github.com/herve4m/length/blob/main/CHANGELOG.rst#v0111</url>
       <description translate="no">

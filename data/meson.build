@@ -52,7 +52,6 @@ test('Validate appstream file', appstreamcli,
 #
 
 schema_conf = configuration_data()
-schema_conf.set('application_schema_path', application_schema_path)
 schema_conf.set('application_id', application_id)
 configure_file(
           input: 'io.github.herve4m.Length.gschema.xml.in',

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2025 Hervé Quatremain
+  Copyright 2025, 2026 Hervé Quatremain
 
   This file is part of Length.
 
@@ -19,7 +19,7 @@
   SPDX-License-Identifier: GPL-3.0-or-later
 -->
 <schemalist gettext-domain="length">
-  <schema id="@application_id@" path="@application_schema_path@">
+  <schema id="@application_id@">
     <key name="opacity" type="i">
       <default>100</default>
       <range min="0" max="100"/>

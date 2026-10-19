@@ -1,6 +1,6 @@
 # window.py
 #
-# Copyright 2025 Hervé Quatremain
+# Copyright 2025, 2026 Hervé Quatremain
 #
 # This file is part of Length.
 #
@@ -52,7 +52,9 @@ class LengthWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.application = kwargs["application"]
-        self.settings = Settings.new(self.application.get_application_id())
+        self.settings = Settings.new(
+            self.application.schema_id, self.application.settings_path
+        )
         self.monitors = MonitorMngt(self.settings)
         self.context = DrawContext(self.settings, self.monitors)
         self.unit_obj = None

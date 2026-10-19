@@ -1,5 +1,5 @@
 project('length',
-          version: '0.11.1',
+          version: '0.12.0',
     meson_version: '>= 1.1.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
@@ -9,10 +9,8 @@ gnome = import('gnome')
 
 if get_option('development')
   application_id = 'io.github.herve4m.Length.Devel'
-  application_schema_path = '/io/github/herve4m/Length/'
 else
   application_id = 'io.github.herve4m.Length'
-  application_schema_path = '/io/github/herve4m/Length/Devel/'
 endif
 
 subdir('data')
